@@ -337,7 +337,7 @@ export default function BlogPost() {
               <FaEnvelope /> Let's Talk Property
             </Button>
             <Typography className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">
-              Home, Handled.
+              Reimagining Real Estate
             </Typography>
           </div>
         </aside>

@@ -17,16 +17,16 @@ export default function Hero() {
           <div className="mx-auto max-w-prose text-center">
             {/* Tagline / Sub-header */}
             <span className="inline-block px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-              Okaloosa County
+              Lindsey Howard
             </span>
 
-            <h1 className="text-5xl font-extrabold text-gray-900 sm:text-8xl dark:text-white leading-[0.9] tracking-tighter">
-              Home,<br />
-              <span className="text-sky-600 italic">Handled.</span>
+            <h1 className="text-2xl font-extrabold text-gray-900 sm:text-6xl dark:text-white leading-[0.9] tracking-tighter">
+              Closing,<br />
+              <span className="text-sky-600 italic">No Compromise.</span>
             </h1>
 
             <p className="mt-8 text-base text-pretty text-gray-700 sm:text-xl/relaxed dark:text-gray-400 max-w-lg mx-auto">
-              Deploying <span className="text-sky-400 font-mono">high-performance</span> marketing and structural precision to the Panhandle. Where local expertise meets a <span className="text-white font-semibold underline decoration-sky-500 underline-offset-4">developer’s edge</span>.
+              Your goals are my mission. I approach every deal with <span className="text-sky-400 font-mono">relentless focus</span> and determination, ensuring every step moves you closer to success.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">

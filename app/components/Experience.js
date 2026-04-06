@@ -6,43 +6,43 @@ const events = [
   {
     id: 1,
     type: 'Milestone',
-    title: 'Florida Real Estate Associate',
-    date: '2026',
+    title: 'Florida Real Estate Associate (Pending)',
+    date: '04/14/2026',
     icon: <FaHouseUser className="text-white h-4 w-4" />,
     iconBg: 'bg-sky-600',
     dotColor: 'bg-green-500',
     content: [
-      'Completed 63-hour pre-licensing curriculum.',
-      'Specialized focus on residential contracts and Unit 6 Spanish Villas compliance.',
-      'Integrating tech-forward marketing strategies for local Panhandle listings.'
+      'Focused on market research and property analysis for the Florida Panhandle.',
+      'Implementing professional follow-up systems to organize and grow a client pipeline.',
+      'Prioritizing contract and document accuracy for future residential transactions.'
     ]
   },
   {
     id: 2,
     type: 'Project',
-    title: 'Florida RE Master Drill',
-    date: 'Active',
+    title: 'Digital Solutions & Development',
+    date: '2021 - 2025',
     icon: <FaCode className="text-white h-4 w-4" />,
     iconBg: 'bg-sky-500',
-    dotColor: 'bg-sky-400',
+    dotColor: 'bg-amber-500',
     content: [
-      'Launched full-stack interactive exam prep application.',
-      'Developed with Next.js 15 and Node.js for high-performance state management.',
-      'Implementing real-time data tracking for student progress.'
+      'Strengthened branding knowledge directly applicable to real estate digital listings.',
+      'Managed complex project timelines with clear, consistent client communication.',
+      'Expertise in Full Stack development, including state management and user experience.'
     ]
   },
   {
     id: 3,
     type: 'Grit',
-    title: 'Trade & Technical Operations',
-    date: 'Current',
+    title: 'Sales & Client Operations',
+    date: '2016 - 2021',
     icon: <FaCheck className="text-white h-4 w-4" />,
     iconBg: 'bg-slate-700',
-    dotColor: 'bg-blue-400',
+    dotColor: 'bg-blue-200',
     content: [
-      'Residential painting expertise for property staging and listing preparation.',
-      'Automotive mechanical aptitude applied to property detail analysis.',
-      'High-volume service experience managing opening-shift logistics.'
+      'Built and maintained long-term client relationships through consistent, reliable follow-up.',
+      'Developed mechanical aptitude and technical accuracy through service documentation and inspections.',
+      'Experienced in delivering high-level customer service under tight deadlines.'
     ]
   }
 ];
