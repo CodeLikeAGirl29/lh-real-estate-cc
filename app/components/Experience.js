@@ -9,7 +9,7 @@ const events = [
     title: 'Florida Real Estate Associate',
     date: '2026',
     icon: <FaHouseUser className="text-white h-4 w-4" />,
-    iconBg: 'bg-indigo-600',
+    iconBg: 'bg-sky-600',
     dotColor: 'bg-green-500',
     content: [
       'Completed 63-hour pre-licensing curriculum.',
@@ -23,8 +23,8 @@ const events = [
     title: 'Florida RE Master Drill',
     date: 'Active',
     icon: <FaCode className="text-white h-4 w-4" />,
-    iconBg: 'bg-indigo-500',
-    dotColor: 'bg-indigo-400',
+    iconBg: 'bg-sky-500',
+    dotColor: 'bg-sky-400',
     content: [
       'Launched full-stack interactive exam prep application.',
       'Developed with Next.js 15 and Node.js for high-performance state management.',
@@ -51,14 +51,14 @@ export default function Experience() {
   return (
     <div className="bg-gray-900 py-24" id="experience">
       <div className="max-w-2xl mx-auto px-6 lg:px-8">
-        {/* Title with Indigo accents to match Stats section */}
+        {/* Title with emerald accents to match Stats section */}
         <div className="flex flex-col items-center gap-2 mb-16">
           <h2 className="text-4xl font-serif font-bold text-white tracking-tight">
             Experience
           </h2>
           <div className="flex gap-2">
-            <span className="w-12 h-[3px] bg-indigo-500 rounded"></span>
-            <span className="w-6 h-[3px] bg-indigo-500 rounded"></span>
+            <span className="w-12 h-[3px] bg-sky-500 rounded"></span>
+            <span className="w-6 h-[3px] bg-sky-500 rounded"></span>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function Experience() {
                     {/* Icon Circle */}
                     <div>
                       <div className="relative px-1">
-                        <div className={`h-8 w-8 ${event.iconBg} rounded-full ring-8 ring-gray-900 flex items-center justify-center shadow-lg shadow-indigo-500/10`}>
+                        <div className={`h-8 w-8 ${event.iconBg} rounded-full ring-8 ring-gray-900 flex items-center justify-center shadow-lg shadow-sky-500/10`}>
                           {event.icon}
                         </div>
                       </div>
@@ -87,12 +87,12 @@ export default function Experience() {
                       <div className="flex justify-between items-start mb-1">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                           <span className="font-bold text-lg text-white tracking-tight">{event.title}</span>
-                          <span className="inline-flex items-center bg-white/5 rounded-full border border-white/10 px-2.5 py-0.5 text-[10px] font-bold text-indigo-400 uppercase tracking-widest">
+                          <span className="inline-flex items-center bg-white/5 rounded-full border border-white/10 px-2.5 py-0.5 text-[10px] font-bold text-sky-400 uppercase tracking-widest">
                             <span className={`h-1.5 w-1.5 rounded-full ${event.dotColor} mr-2`} aria-hidden="true"></span>
                             {event.type}
                           </span>
                         </div>
-                        <span className="whitespace-nowrap text-xs font-mono font-bold text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded border border-indigo-500/20">
+                        <span className="whitespace-nowrap text-xs font-mono font-bold text-sky-400 bg-sky-500/10 px-2 py-1 rounded border border-sky-500/20">
                           {event.date}
                         </span>
                       </div>
@@ -101,7 +101,7 @@ export default function Experience() {
                         <ul className="space-y-2">
                           {event.content.map((item, index) => (
                             <li key={index} className="flex gap-2">
-                              <span className="text-indigo-500 font-bold">›</span>
+                              <span className="text-sky-500 font-bold">›</span>
                               {item}
                             </li>
                           ))}

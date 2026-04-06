@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* Brand/Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 text-2xl font-bold tracking-tighter text-white">
-            LINDSEY<span className="text-indigo-500">.DEV</span>
+            LINDSEY<span className="text-sky-500">.DEV</span>
           </Link>
         </div>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-semibold text-white hover:text-indigo-400 transition-colors"
+              className="text-sm font-semibold text-white hover:text-sky-400 transition-colors"
             >
               {link.name}
             </Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="mailto:the.wifey91@gmail.com"
-            className="rounded-full bg-indigo-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-indigo-500 transition-all"
+            className="rounded-full bg-sky-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-sky-500 transition-all"
           >
             CONTACT ME &rarr;
           </a>
@@ -99,8 +99,8 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <a
-                  href="mailto:the.wifey91@gmail.com"
-                  className="mt-10 block text-center rounded-xl bg-indigo-600 py-4 text-lg font-bold text-white"
+                  href="mailto:lindseykdev@gmail.com"
+                  className="mt-10 block text-center rounded-xl bg-sky-600 py-4 text-lg font-bold text-white"
                 >
                   Get in Touch
                 </a>

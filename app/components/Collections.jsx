@@ -36,7 +36,7 @@ export default function Collections() {
 
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Featured Collections</h2>
-          <span className="mt-2 block h-1 w-12 bg-indigo-600 rounded"></span>
+          <span className="mt-2 block h-1 w-12 bg-sky-600 rounded"></span>
         </div>
 
         {/* The Horizontal Grid Container */}
@@ -56,7 +56,7 @@ export default function Collections() {
 
               <div className="p-4 sm:p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <time className="block text-xs font-mono text-indigo-500 font-bold uppercase tracking-widest">
+                  <time className="block text-xs font-mono text-sky-500 font-bold uppercase tracking-widest">
                     {project.date}
                   </time>
                   <span className="text-[10px] bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-gray-500 dark:text-gray-400 font-bold">
@@ -65,7 +65,7 @@ export default function Collections() {
                 </div>
 
                 <Link href={`/projects/${project.slug}`}>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white hover:text-indigo-600">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white hover:text-sky-600">
                     {project.title}
                   </h3>
                 </Link>
@@ -74,10 +74,10 @@ export default function Collections() {
                   {project.desc}
                 </p>
 
-                <div className="mt-6 flex items-center gap-1 text-sm font-bold text-indigo-600">
+                <div className="mt-6 flex items-center gap-1 text-sm font-bold text-sky-600">
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="mt-6 flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-400"
+                    className="mt-6 flex items-center gap-1 text-sm font-bold text-sky-600 hover:text-sky-400"
                   >
                     View Project <span>&rarr;</span>
                   </Link>

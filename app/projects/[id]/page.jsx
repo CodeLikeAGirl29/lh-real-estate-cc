@@ -14,7 +14,7 @@ const projectContent = {
     image: "/images/okaloosa-beach.jpg", // Place your beach photo here!
     content: (
       <>
-        <Typography className="mb-6 font-normal !text-gray-400 text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-indigo-500 first-letter:mr-3 first-letter:float-left">
+        <Typography className="mb-6 font-normal !text-gray-400 text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-sky-500 first-letter:mr-3 first-letter:float-left">
           Okaloosa County isn’t just a destination; it’s a high-performance ecosystem.
           Whether you’re eyeing a second-floor unit in **Spanish Villas** or a beachfront
           investment in **Destin**, understanding the "infrastructure" of the Emerald Coast
@@ -29,7 +29,7 @@ const projectContent = {
           residential pockets of **Shalimar**, FWB is where the real community lives.
         </Typography>
 
-        <div className="my-10 p-6 bg-white/5 border-l-4 border-indigo-500 rounded-r-xl">
+        <div className="my-10 p-6 bg-white/5 border-l-4 border-sky-500 rounded-r-xl">
           <p className="text-white italic font-serif text-xl">
             "In Okaloosa, we don't just sell the sun; we sell the lifestyle, handled."
           </p>
@@ -76,7 +76,7 @@ export default function ProjectPost() {
       <section className="p-8 pt-24 lg:pt-32">
         <div className="mx-auto max-w-screen-md">
           {/* Breadcrumb Navigation */}
-          <Link href="/#projects" className="flex items-center gap-2 text-indigo-500 mb-6 font-bold text-sm uppercase tracking-widest hover:text-indigo-400 transition-colors">
+          <Link href="/#projects" className="flex items-center gap-2 text-sky-500 mb-6 font-bold text-sm uppercase tracking-widest hover:text-sky-400 transition-colors">
             <FaArrowLeft /> Back to Collections
           </Link>
 
@@ -87,7 +87,7 @@ export default function ProjectPost() {
           />
 
           <div className="flex items-center gap-4 mb-4">
-            <Typography variant="small" className="font-bold uppercase tracking-widest !text-indigo-500">
+            <Typography variant="small" className="font-bold uppercase tracking-widest !text-sky-500">
               {project.tags}
             </Typography>
           </div>
@@ -102,22 +102,22 @@ export default function ProjectPost() {
 
           <div className="flex gap-4 mb-8">
             <span className="flex items-center gap-2 text-xs font-mono text-gray-500 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-              <FaMapLocationDot className="text-indigo-500" /> Okaloosa County, FL
+              <FaMapLocationDot className="text-sky-500" /> Okaloosa County, FL
             </span>
             <span className="flex items-center gap-2 text-xs font-mono text-gray-500 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-              <FaUmbrellaBeach className="text-indigo-500" /> Emerald Coast
+              <FaUmbrellaBeach className="text-sky-500" /> Emerald Coast
             </span>
           </div>
 
-          <Typography className="font-normal !text-gray-400 text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-indigo-500 first-letter:mr-3 first-letter:float-left">
+          <Typography className="font-normal !text-gray-400 text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-sky-500 first-letter:mr-3 first-letter:float-left">
             {project.content}
           </Typography>
 
           {/* Travel Guide Call to Action */}
-          <div className="mt-16 p-8 rounded-2xl bg-indigo-600/10 border border-indigo-500/20 flex flex-col items-center text-center">
+          <div className="mt-16 p-8 rounded-2xl bg-sky-600/10 border border-sky-500/20 flex flex-col items-center text-center">
             <h4 className="text-xl font-bold text-white mb-2">Planning a move to the Panhandle?</h4>
             <p className="text-gray-400 text-sm mb-6 max-w-sm">Get the technical breakdown on the best neighborhoods, school districts, and investment zones in Okaloosa County.</p>
-            <Button size="lg" className="bg-indigo-600 hover:bg-indigo-500 flex items-center gap-2">
+            <Button size="lg" className="bg-sky-600 hover:bg-sky-500 flex items-center gap-2">
               Get My Local Insider Guide <FaMapLocationDot />
             </Button>
           </div>

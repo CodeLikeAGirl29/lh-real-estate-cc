@@ -10,10 +10,10 @@ export default function AboutStats() {
         {/* Header with Local Context */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-800 pb-10">
           <div className="flex flex-col gap-2">
-            <h2 className="text-5xl font-serif font-bold tracking-tight">The <span className="text-indigo-500">Professional</span> Spec</h2>
+            <h2 className="text-5xl font-serif font-bold tracking-tight">The <span className="text-sky-500">Professional</span> Spec</h2>
             <div className="flex gap-2 mt-2">
-              <span className="w-16 h-[4px] bg-indigo-500 rounded"></span>
-              <span className="w-8 h-[4px] bg-indigo-500 rounded"></span>
+              <span className="w-16 h-[4px] bg-sky-500 rounded"></span>
+              <span className="w-8 h-[4px] bg-sky-500 rounded"></span>
             </div>
             <p className="mt-4 text-xl text-gray-400 font-medium">
               <span className="text-white">Fort Walton Beach, FL</span>
@@ -21,10 +21,10 @@ export default function AboutStats() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <span className="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-widest text-indigo-400">
+            <span className="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-widest text-sky-400">
               Real Estate Sales Associate (Candidate)
             </span>
-            <span className="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-widest text-indigo-400">
+            <span className="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-widest text-sky-400">
               Full-Stack Developer
             </span>
           </div>
@@ -35,7 +35,7 @@ export default function AboutStats() {
           {/* Left Column: Real Estate Core */}
           <div className="flex flex-col gap-8">
             <h3 className="text-2xl font-bold flex items-center gap-3">
-              <FaLocationDot className="text-indigo-500" /> Market Expertise
+              <FaLocationDot className="text-sky-500" /> Market Expertise
             </h3>
             <div className="space-y-6">
               <SkillBar label="Florida Real Estate Law" percentage="95%" description="Unit 6 Specialist & Regulatory Compliance" />
@@ -44,8 +44,8 @@ export default function AboutStats() {
               <SkillBar label="Contract Negotiation" percentage="85%" description="Strategic Advocacy & Mechanical Detail" />
             </div>
 
-            <div className="mt-8 p-6 bg-indigo-600/10 rounded-2xl border border-indigo-500/20">
-              <h4 className="font-bold text-indigo-400 mb-2">Structural Insight</h4>
+            <div className="mt-8 p-6 bg-sky-600/10 rounded-2xl border border-sky-500/20">
+              <h4 className="font-bold text-sky-400 mb-2">Structural Insight</h4>
               <p className="text-sm text-gray-300 leading-relaxed">
                 My background in automotive technology and residential painting gives me a distinct advantage. I don't just see a house; I see its systems. I bring a hands-on understanding of property maintenance to every client consultation.
               </p>
@@ -55,7 +55,7 @@ export default function AboutStats() {
           {/* Right Column: Tech Infrastructure */}
           <div className="flex flex-col gap-8">
             <h3 className="text-2xl font-bold flex items-center gap-3">
-              <FaCode className="text-indigo-500" /> Technical Infrastructure
+              <FaCode className="text-sky-500" /> Technical Infrastructure
             </h3>
             <div className="space-y-6">
               <SkillBar label="React / Next.js / Node" percentage="94%" description="Building custom Prop-Tech solutions" />
@@ -85,10 +85,10 @@ export default function AboutStats() {
             <p className="text-gray-400 text-sm">Let's discuss how my tech-forward approach benefits your listing.</p>
           </div>
           <div className="flex gap-4">
-            <button className="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-full font-bold transition">
+            <button className="px-8 py-3 bg-sky-600 hover:bg-sky-500 rounded-full font-bold transition">
               Download CV
             </button>
-            <button className="px-8 py-3 border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white rounded-full font-bold transition">
+            <button className="px-8 py-3 border border-sky-500 text-sky-400 hover:bg-sky-500 hover:text-white rounded-full font-bold transition">
               Contact Lindsey
             </button>
           </div>
@@ -107,11 +107,11 @@ function SkillBar({ label, percentage, description }) {
           <span className="text-gray-100 block text-lg">{label}</span>
           <span className="text-xs text-gray-500 font-medium tracking-wide italic">{description}</span>
         </div>
-        <span className="text-indigo-400 text-xl font-serif">{percentage}</span>
+        <span className="text-sky-400 text-xl font-serif">{percentage}</span>
       </div>
       <div className="w-full bg-gray-800 rounded-full h-2.5 mt-1 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(79,70,229,0.4)]"
+          className="h-full bg-gradient-to-r from-sky-600 to-sky-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(79,70,229,0.4)]"
           style={{ width: percentage }}
         ></div>
       </div>

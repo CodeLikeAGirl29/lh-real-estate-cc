@@ -31,22 +31,22 @@ export default function AboutBlueprint() {
 
           {/* Left Side: The Narrative */}
           <div className="lg:col-span-5">
-            <div className="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-widest mb-6">
+            <div className="inline-block px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold uppercase tracking-widest mb-6">
               Strategic Foundation
             </div>
             <h2 className="text-5xl font-serif font-bold text-gray-900 leading-[1.1]">
-              The <span className="text-indigo-600 underline decoration-indigo-200 underline-offset-8">Hybrid</span> <br />
+              The <span className="text-sky-600 underline decoration-sky-200 underline-offset-8">Hybrid</span> <br />
               Advantage
             </h2>
             <p className="mt-8 text-lg text-gray-600 leading-relaxed">
-              Most agents use technology. <span className="text-indigo-600 underline decoration-indigo-200 underline-offset-8">I build it</span>. By combining my Florida Real Estate licensure prep with 5+ years of mechanical and software engineering, I offer a level of property analysis that simply didn't exist in Fort Walton Beach until now.
+              Most agents use technology. <span className="text-sky-600 underline decoration-sky-200 underline-offset-8">I build it</span>. By combining my Florida Real Estate licensure prep with 5+ years of mechanical and software engineering, I offer a level of property analysis that simply didn't exist in Fort Walton Beach until now.
             </p>
             <div className="mt-10 flex items-center gap-6">
               <div className="flex -space-x-3 overflow-hidden">
                 {/* Visual representation of your "Triple Threat" skills */}
-                <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">RE</div>
+                <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-sky-600 flex items-center justify-center text-white font-bold text-xs">RE</div>
                 <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-slate-800 flex items-center justify-center text-white font-bold text-xs">JS</div>
-                <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-indigo-400 flex items-center justify-center text-white font-bold text-xs">MECH</div>
+                <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-eme  rald-400 flex items-center justify-center text-white font-bold text-xs">MECH</div>
               </div>
               <span className="text-sm font-semibold text-gray-500 uppercase tracking-tighter">
                 Triple-Threat Methodology
@@ -59,9 +59,9 @@ export default function AboutBlueprint() {
             {specifications.map((spec) => (
               <div
                 key={spec.id}
-                className="group flex flex-col md:flex-row gap-6 p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-500 transition-all duration-300"
+                className="group flex flex-col md:flex-row gap-6 p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-emer  ald-500 transition-all duration-300"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-emera ld-50 text-emer ald-600 text-2xl group-hover:bg-emera  ld-600 group-hover:text-white transition-colors">
                   {spec.icon}
                 </div>
                 <div>
@@ -75,10 +75,10 @@ export default function AboutBlueprint() {
 
             {/* The "Blueprint" Footer Tag */}
             <div className="mt-4 flex items-center justify-between px-4 py-3 bg-slate-900 rounded-lg">
-              <span className="text-[10px] font-mono text-indigo-400 uppercase tracking-[0.2em]">
+              <span className="text-[10px] font-mono text-emer  ald-400 uppercase tracking-[0.2em]">
                 System Log: Lindsey Howard // Portfolio Ver. 2026.04
               </span>
-              <FaArrowRight className="text-indigo-400 size-3" />
+              <FaArrowRight className="text-em  erald-400 size-3" />
             </div>
           </div>
 

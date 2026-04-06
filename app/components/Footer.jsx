@@ -10,16 +10,16 @@ export default function Footer() {
         {/* Navigation Links */}
         <ul className="flex gap-x-10 gap-y-4 justify-center flex-wrap mb-12">
           <li>
-            <a href="#about" className="text-[15px] text-slate-400 hover:text-indigo-400 transition-colors">About</a>
+            <a href="#about" className="text-[15px] text-slate-400 hover:text-sky-400 transition-colors">About</a>
           </li>
           <li>
-            <a href="#projects" className="text-[15px] text-slate-400 hover:text-indigo-400 transition-colors">Projects</a>
+            <a href="#projects" className="text-[15px] text-slate-400 hover:text-sky-400 transition-colors">Projects</a>
           </li>
           <li>
-            <a href="#experience" className="text-[15px] text-slate-400 hover:text-indigo-400 transition-colors">Experience</a>
+            <a href="#experience" className="text-[15px] text-slate-400 hover:text-sky-400 transition-colors">Experience</a>
           </li>
           <li>
-            <a href="mailto:the.wifey91@gmail.com" className="text-[15px] text-slate-400 hover:text-indigo-400 transition-colors">Contact</a>
+            <a href="mailto:the.wifey91@gmail.com" className="text-[15px] text-slate-400 hover:text-sky-400 transition-colors">Contact</a>
           </li>
         </ul>
 
@@ -30,7 +30,7 @@ export default function Footer() {
           <ul className="flex flex-wrap justify-center gap-8 mt-8">
             <li>
               <a href="https://github.com/codelikeagirl29" target="_blank" rel="noreferrer" className="block transform hover:scale-110 transition-transform">
-                <FaGithub className="w-8 h-8 text-white hover:text-indigo-400" />
+                <FaGithub className="w-8 h-8 text-white hover:text-sky-400" />
               </a>
             </li>
             <li>
@@ -45,7 +45,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="#" className="block transform hover:scale-110 transition-transform">
-                <FaXTwitter className="w-8 h-8 text-white hover:text-indigo-400" />
+                <FaXTwitter className="w-8 h-8 text-white hover:text-blue-400" />
               </a>
             </li>
           </ul>
@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Bottom Credits */}
         <div className="border-t border-white/10 pt-8 mt-16">
           <p className="text-[14px] text-slate-500 font-mono">
-            © {new Date().getFullYear()} <span className="text-indigo-500 font-bold">LINDSEY.DEV</span> // Built with Next.js & Tailwind CSS
+            © {new Date().getFullYear()} <span className="text-sky-500 font-bold">LINDSEY.DEV</span> // Built with Next.js & Tailwind CSS
           </p>
           <p className="text-[11px] text-slate-600 mt-2 italic">
             Fort Walton Beach, Florida | Prop-Tech Innovation

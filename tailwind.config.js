@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        indigo: {
+        emerald: {
           500: '#6366f1',
           600: '#4f46e5',
         }
