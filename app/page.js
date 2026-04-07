@@ -4,6 +4,7 @@ import AboutBlueprint from "./components/AboutBlueprint";
 import AboutStats from "./components/AboutStats";
 import Collections from "./components/Collections";
 import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
 
       {/* 5. Professional Log (The Career Journey) */}
       <Experience />
-
+      <Contact />
       {/* 6. Footer (The Connection) */}
       <Footer />
     </main>

@@ -18,6 +18,7 @@ export default function Navbar() {
     { name: "Innovations", href: "/#projects" },
     { name: "Experience", href: "/#experience" },
     { name: "The Ledger", href: "/blog" },
+    { name: 'About', href: '/about' }
   ];
 
   return (

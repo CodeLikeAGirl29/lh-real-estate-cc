@@ -24,7 +24,7 @@ export default function Footer() {
         </ul>
 
         <div className="mt-12">
-          <h6 className="text-[15px] text-slate-400 font-medium tracking-widest uppercase">Connect with the developer</h6>
+          <h6 className="text-[15px] text-slate-400 font-medium tracking-widest uppercase">Connect with me!</h6>
 
           {/* Social Icons - Using React-Icons for consistency */}
           <ul className="flex flex-wrap justify-center gap-8 mt-8">

@@ -7,82 +7,72 @@ const specifications = [
     id: 1,
     icon: <FaFingerprint />,
     title: "The Identity",
-    content: "A 35-year-old Panhandle local who knows that Unit 6 in Spanish Villas is on the second floor. I don't just live in Fort Walton Beach; I understand its infrastructure."
+    content: "Decades of local immersion combined with a developer's eye. I provide a high-resolution view of Fort Walton Beach real estate, from zoning nuances to the long-term potential of specific coastal blocks."
   },
   {
     id: 2,
     icon: <FaRoad />,
     title: "The Work Ethic",
-    content: "From the high-pressure morning shifts at Burger King to mastering the fine details of residential painting, I’ve traded the brush and wrench for the code editor to build a smarter way to move property."
+    content: "Built on high-pressure service and technical precision. I’ve traded the wrench and the brush for the code editor to build a more efficient way to move property."
   },
   {
     id: 3,
     icon: <FaLaptopCode />,
     title: "The Engine",
-    content: "The 'Florida Real Estate Master Drill' isn't just a project—it's proof. I build full-stack tools (Next.js/Node) that ensure I am the most prepared agent in the room."
+    content: "The 'Florida Real Estate Master Drill' is my proof of concept. I build full-stack tools (Next.js/Node) to ensure I am the most prepared agent in the room."
   }
 ];
 
 export default function AboutBlueprint() {
   return (
-    <section className="bg-gray-50 py-24 sm:py-32 border-y border-gray-200" id="blueprint">
+    <section className="bg-gray-900 py-24 border-t border-white/5" id="blueprint">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
 
-          {/* Left Side: The Narrative */}
-          <div className="lg:col-span-5">
-            <div className="inline-block px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold uppercase tracking-widest mb-6">
-              Strategic Foundation
-            </div>
-            <h2 className="text-5xl font-serif font-bold text-gray-900 leading-[1.1]">
-              The <span className="text-sky-600 underline decoration-sky-200 underline-offset-8">Hybrid</span> <br />
-              Advantage
-            </h2>
-            <p className="mt-8 text-lg text-gray-600 leading-relaxed">
-              Most agents use technology. <span className="text-sky-600 underline decoration-sky-200 underline-offset-8">I build it</span>. By combining my Florida Real Estate licensure prep with 5+ years of mechanical and software engineering, I offer a level of property analysis that simply didn't exist in Fort Walton Beach until now.
-            </p>
-            <div className="mt-10 flex items-center gap-6">
-              <div className="flex -space-x-3 overflow-hidden">
-                {/* Visual representation of your "Triple Threat" skills */}
-                <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-sky-600 flex items-center justify-center text-white font-bold text-xs">RE</div>
-                <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-slate-800 flex items-center justify-center text-white font-bold text-xs">JS</div>
-                <div className="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-eme  rald-400 flex items-center justify-center text-white font-bold text-xs">MECH</div>
-              </div>
-              <span className="text-sm font-semibold text-gray-500 uppercase tracking-tighter">
-                Triple-Threat Methodology
-              </span>
-            </div>
-          </div>
-
-          {/* Right Side: The Technical Breakdown */}
-          <div className="lg:col-span-7 grid gap-6">
-            {specifications.map((spec) => (
-              <div
-                key={spec.id}
-                className="group flex flex-col md:flex-row gap-6 p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-emer  ald-500 transition-all duration-300"
-              >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-emera ld-50 text-emer ald-600 text-2xl group-hover:bg-emera  ld-600 group-hover:text-white transition-colors">
-                  {spec.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{spec.title}</h3>
-                  <p className="text-gray-500 leading-7">
-                    {spec.content}
-                  </p>
-                </div>
-              </div>
-            ))}
-
-            {/* The "Blueprint" Footer Tag */}
-            <div className="mt-4 flex items-center justify-between px-4 py-3 bg-slate-900 rounded-lg">
-              <span className="text-[10px] font-mono text-emer  ald-400 uppercase tracking-[0.2em]">
-                System Log: Lindsey Howard // Portfolio Ver. 2026.04
-              </span>
-              <FaArrowRight className="text-em  erald-400 size-3" />
-            </div>
-          </div>
-
+        {/* Header Area */}
+        <div className="max-w-2xl mb-20">
+          <h2 className="text-sm font-mono font-bold text-primary-500 uppercase tracking-[0.3em] mb-4">
+            [ Strategic Foundation ]
+          </h2>
+          <h3 className="text-4xl md:text-6xl font-display font-black text-white uppercase leading-none">
+            The Hybrid <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">Advantage</span>
+          </h3>
+          <p className="mt-6 text-lg font-sans text-gray-400 leading-relaxed">
+            Most agents use technology. <span className="text-white border-b border-primary-500">I build it.</span> Combining real estate licensure with 5+ years of engineering to provide analysis that didn't exist in FWB until now.
+          </p>
         </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {specifications.map((spec) => (
+            <div
+              key={spec.id}
+              className="relative p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/[0.07] transition-all duration-300"
+            >
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500 text-white text-xl shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                {spec.icon}
+              </div>
+              <h4 className="text-xl font-display font-bold text-white mb-3 uppercase tracking-tight">
+                {spec.title}
+              </h4>
+              <p className="text-gray-400 font-sans leading-relaxed text-sm">
+                {spec.content}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Footer System Log */}
+        <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-8">
+          <div className="flex items-center gap-4">
+            <span className="h-2 w-2 rounded-full bg-primary-500 animate-pulse" />
+            <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+              L. Howard // System Active // FWB_FL
+            </span>
+          </div>
+          <FaArrowRight className="text-primary-500 animate-bounce-x" />
+        </div>
+
       </div>
     </section>
   );

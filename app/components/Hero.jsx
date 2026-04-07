@@ -10,7 +10,7 @@ export default function Hero() {
       <section className="relative bg-white lg:grid lg:h-screen lg:place-content-center dark:bg-gray-900 overflow-hidden">
         {/* Optional: Subtle background accent for that "Dev" feel */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-sky-500 blur-[120px] rounded-full"></div>
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-500 blur-[120px] rounded-full"></div>
         </div>
 
         <div className="mx-auto w-screen max-w-7xl px-4 py-32 sm:px-6 lg:px-8 relative z-10">
@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               {/* Primary Action */}
               <a
-                className="inline-block rounded-full bg-sky-600 px-10 py-4 text-sm font-bold text-white shadow-xl shadow-sky-500/20 transition-all hover:bg-sky-700 hover:scale-105 active:scale-95"
+                className="inline-block rounded-full bg-sky-600 px-10 py-4 text-sm font-bold text-white shadow-xl shadow-sky-500/20 transition-all hover:bg-sky-700 hover:scale-105 active:scale-95 focus:ring-blue-500"
                 href="#projects"
               >
                 View Innovations
