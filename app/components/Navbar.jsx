@@ -22,15 +22,15 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/80 backdrop-blur-md border-b border-white/5 py-2" : "bg-transparent py-4"
+<header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-gray-950 border-b ${scrolled ? "border-white/10 py-2" : "border-white/5 py-4"
         }`}
     >
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         {/* Brand/Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 text-2xl font-bold tracking-tighter text-white">
-            LINDSEY<span className="text-sky-500">.DEV</span>
+            LINDSEY H {" "}<span className="text-sky-500"> REAL ESTATE</span>
           </Link>
         </div>
 

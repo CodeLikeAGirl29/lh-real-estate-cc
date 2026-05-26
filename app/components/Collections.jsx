@@ -4,6 +4,22 @@ import Link from 'next/link';
 
 const projects = [
   {
+    id: "master-drill",
+    title: "The Master Drill: Engineering a Smarter Way to Study",
+    date: "May 2026",
+    desc: "A full-stack study environment engineered from scratch using Next.js. Replaces passive flashcards with programmatic state tracking and logic-driven retention systems for the Florida real estate exam.",
+    image: "/images/master-drill-ui.jpg",
+    tags: "PropTech / Web Development"
+  },
+  {
+    id: "shadow-slate",
+    title: "Shadow + Slate: Engineering Interactive Space Curation",
+    date: "May 2026",
+    desc: "A highly responsive, interactive mood board canvas for real estate professionals and interior designers. Built with TypeScript and React Konva to enable fluid drag-and-drop mechanics and real-time spatial transformations.",
+    image: "/images/shadow-slate-ui.jpg",
+    tags: "PropTech / Interior Design"
+  },
+  {
     id: "okaloosa-guide",
     title: "Okaloosa Guide",
     date: "April 2026",
