@@ -64,7 +64,7 @@ export default function Collections() {
                   </span>
                 </div>
 
-                <Link href={`/projects/${project.slug}`}>
+                <Link href={`/projects/${project.id}`}>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white hover:text-sky-600">
                     {project.title}
                   </h3>
@@ -76,7 +76,7 @@ export default function Collections() {
 
                 <div className="mt-6 flex items-center gap-1 text-sm font-bold text-sky-600">
                   <Link
-                    href={`/projects/${project.slug}`}
+                    href={`/projects/${project.id}`}
                     className="mt-6 flex items-center gap-1 text-sm font-bold text-sky-600 hover:text-sky-400"
                   >
                     View Project <span>&rarr;</span>

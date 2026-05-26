@@ -57,7 +57,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="h-4 w-px bg-white/20 ml-2" /> {/* Divider */}
-          <a href="https://github.com/codelikeagirl29" target="_blank" className="text-gray-400 hover:text-white transition">
+          <a href="https://github.com/codelikeagirl29" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
             <FaGithub size={18} />
           </a>
           <a href="#" className="text-gray-400 hover:text-white transition">
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="mailto:the.wifey91@gmail.com"
+            href="mailto:lindseykdev@gmail.com"
             className="rounded-full bg-sky-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-sky-500 transition-all"
           >
             CONTACT ME &rarr;
