@@ -18,9 +18,9 @@ const blogPosts = {
     content: (
       <>
         <Typography className="mb-6 font-normal text-gray-400 text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-sky-400 first-letter:mr-3 first-letter:float-left">
-          Why is Fort Walton Beach the Panhandle's Best Kept Secret? When people
-          think of the Florida Panhandle, they usually think of the neon lights
-          of Destin. But for those of us who live and work here,{" "}
+          Why is Fort Walton Beach the Panhandle&apos;s Best Kept Secret? When
+          people think of the Florida Panhandle, they usually think of the neon
+          lights of Destin. But for those of us who live and work here,{" "}
           <strong>Fort Walton Beach</strong> is the true engine of the Emerald
           Coast.
         </Typography>
@@ -32,26 +32,27 @@ const blogPosts = {
           As a developer, I look at property through the lens of infrastructure.
           Fort Walton Beach offers something Destin often lacks:{" "}
           <strong>Stability</strong>. With proximity to Eglin AFB and Hurlburt
-          Field, the rental market here isn't just seasonal—it's year-round.
+          Field, the rental market here isn&apos;t just seasonal—it&apos;s
+          year-round.
         </Typography>
 
         <div className="my-10 p-8 bg-sky-500/5 border-l-4 border-sky-500 rounded-r-xl">
           <Typography className="text-white italic font-serif text-xl leading-relaxed">
-            "Don't just buy a view; buy a system. FWB properties, especially
-            around the secondary residential tiers, offer the best CAP rates in
-            Okaloosa County."
+            &quot;Don&apos;t just buy a view; buy a system. FWB properties,
+            especially around the secondary residential tiers, offer the best
+            CAP rates in Okaloosa County.&quot;
           </Typography>
         </div>
 
         <h3 className="text-2xl font-bold text-white mt-10 mb-4">
-          The 'Unit 6' Standard
+          The &apos;Unit 6&apos; Standard
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Whether you're looking at <strong>Spanish Villas</strong> or new
+          Whether you&apos;re looking at <strong>Spanish Villas</strong> or new
           construction near Shalimar, you have to understand local compliance.
-          My 'Master Drill' approach ensures that every property I represent
-          meets the strict structural and legal standards required for long-term
-          Florida ownership.
+          My &apos;Master Drill&apos; approach ensures that every property I
+          represent meets the strict structural and legal standards required for
+          long-term Florida ownership.
         </Typography>
 
         <h3 className="text-2xl font-bold text-white mt-12 mb-4">
@@ -59,12 +60,12 @@ const blogPosts = {
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
           Current data-points to watch: the $171 million Brooks Bridge
-          replacement project. For a developer, this isn't just about traffic
-          flow; it's about the literal expansion of the "walkable" footprint of
-          downtown FWB. We are seeing a compression of value between the
-          mainland and the island. Properties within a 2-mile radius of the new
-          landing sites are currently undervalued when you factor in the
-          projected 2027 transit efficiency.
+          replacement project. For a developer, this isn&apos;t just about
+          traffic flow; it&apos;s about the literal expansion of the
+          &quot;walkable&quot; footprint of downtown FWB. We are seeing a
+          compression of value between the mainland and the island. Properties
+          within a 2-mile radius of the new landing sites are currently
+          undervalued when you factor in the projected 2027 transit efficiency.
         </Typography>
       </>
     ),
@@ -79,9 +80,9 @@ const blogPosts = {
       <>
         <Typography className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
           Moving past the aesthetics to analyze the raw data. When we talk about
-          "growth zones" in Okaloosa County, we aren't just looking at where the
-          water is prettiest—we're looking at where the fiber optics are being
-          laid and where the zoning permits are shifting.
+          growth zones in Okaloosa County, we aren&apos;t just looking at where
+          the water is prettiest—we&apos;re looking at where the fiber optics
+          are being laid and where the zoning permits are shifting.
         </Typography>
 
         <h3 className="text-2xl font-bold text-white mt-12 mb-4">
@@ -91,8 +92,8 @@ const blogPosts = {
         <Typography className="mb-6 text-gray-400 text-lg">
           We are seeing a massive influx of tech-enabled property management.
           For an investor, this means lower overhead and higher transparency. If
-          your property isn't integrated into a modern digital stack, you're
-          leaving yield on the table.
+          your property isn&apos;t integrated into a modern digital stack,
+          you&apos;re leaving yield on the table.
         </Typography>
       </>
     ),
@@ -107,11 +108,11 @@ const blogPosts = {
     content: (
       <>
         <Typography className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
-          There’s a certain kind of peace you only understand once you’ve stood
-          barefoot in the soft, sugar-white sand of Florida’s Emerald Coast. The
-          kind where the breeze carries salt and sunshine in equal measure, and
-          time slows just enough for you to realize—you’re exactly where you’re
-          meant to be.
+          There&apos;s a certain kind of peace you only understand once
+          you&apos;ve stood barefoot in the soft, sugar-white sand of
+          Florida&apos;s Emerald Coast. The kind where the breeze carries salt
+          and sunshine in equal measure, and time slows just enough for you to
+          realize—you&apos;re exactly where you&apos;re meant to be.
         </Typography>
         <Typography className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
           Welcome to the Emerald Coast. Not just a destination, but a way of
@@ -122,21 +123,22 @@ const blogPosts = {
           Where the Water Changes Everything
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          The first thing people notice is the water. It’s not just blue—it’s
-          that unreal, glassy emerald that looks like it belongs in a postcard.
-          Mornings here begin quietly. Coffee on the balcony. The distant rhythm
-          of waves. Maybe a dolphin sighting if you’re lucky.
+          The first thing people notice is the water. It&apos;s not just
+          blue—it&apos;s that unreal, glassy emerald that looks like it belongs
+          in a postcard. Mornings here begin quietly. Coffee on the balcony. The
+          distant rhythm of waves. Maybe a dolphin sighting if you&apos;re
+          lucky.
         </Typography>
         <Typography className="mb-6 text-gray-400 text-lg">
-          But what keeps people here isn’t just the view—it’s how life starts to
-          feel simpler. Handled.
+          But what keeps people here isn&apos;t just the view—it&apos;s how life
+          starts to feel simpler. Handled.
         </Typography>
 
         <h3 className="text-2xl font-bold text-white mt-12 mb-4">
           The Rhythm of Coastal Living
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Life along the coast doesn’t rush you. It invites you. Afternoons
+          Life along the coast doesn&apos;t rush you. It invites you. Afternoons
           might mean a walk along the shoreline, stopping at a beachside café
           for something fresh and local. Evenings are for sunsets that paint the
           sky in soft pinks and fiery oranges—nature showing off without
@@ -145,9 +147,9 @@ const blogPosts = {
 
         <div className="my-10 p-8 bg-indigo-500/5 border-l-4 border-indigo-500 rounded-r-xl">
           <Typography className="text-white italic font-serif text-xl leading-relaxed">
-            "Owning a piece of this coastline isn’t just about property—it’s
-            about possibility. A place where 'home' feels like a permanent
-            getaway."
+            &quot;Owning a piece of this coastline isn&apos;t just about
+            property—it&apos;s about possibility. A place where home feels like
+            a permanent getaway.&quot;
           </Typography>
         </div>
 
@@ -155,11 +157,11 @@ const blogPosts = {
           More Than a Vacation
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Visitors come for a week and leave with a question they didn’t expect:{" "}
-          <em>What would it look like to stay?</em> Because the Emerald Coast
-          has a way of shifting your priorities. Suddenly, you’re thinking less
-          about hustle and more about balance. Less about “someday” and more
-          about now.
+          Visitors come for a week and leave with a question they didn&apos;t
+          expect: <em>What would it look like to stay?</em> Because the Emerald
+          Coast has a way of shifting your priorities. Suddenly, you&apos;re
+          thinking less about hustle and more about balance. Less about someday
+          and more about now.
         </Typography>
 
         {/* INSIDER PICKS SECTION */}
@@ -233,15 +235,15 @@ const blogPosts = {
           The Insider Perspective
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Living here isn’t about escaping reality—it’s about redefining it.
-          It’s knowing where to catch the best sunrise. Which hidden spots
-          locals love. It’s understanding that luxury isn’t always about
-          extravagance—it’s about ease.
+          Living here isn&apos;t about escaping reality—it&apos;s about
+          redefining it. It&apos;s knowing where to catch the best sunrise.
+          Which hidden spots locals love. It&apos;s understanding that luxury
+          isn&apos;t always about extravagance—it&apos;s about ease.
         </Typography>
 
         <Typography className="mb-12 text-gray-400 text-lg">
-          The Emerald Coast doesn’t ask you to change your life completely. It
-          simply shows you what life could feel like when it’s aligned,
+          The Emerald Coast doesn&apos;t ask you to change your life completely.
+          It simply shows you what life could feel like when it&apos;s aligned,
           intentional, and just a little more peaceful. Once you experience it,
           one thing becomes clear: Some places you visit. Others… you live.
         </Typography>
@@ -294,7 +296,7 @@ const blogPosts = {
           The Defense Moat
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Pensacola’s economy is anchored by a{" "}
+          Pensacola&apos;s economy is anchored by a{" "}
           <strong>$7.8 billion military impact</strong>. With over 41,000
           defense-related jobs and a massive veteran population, the rental
           market here has a built-in "moat" that protects against standard
