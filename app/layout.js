@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
       <body className="font-sans bg-slate-50 text-slate-900 antialiased">
         {children}
         <footer className="py-10 text-center text-sm text-slate-400">
-          © 2026 Lindsey Howard. Built with Next.js & React.
+          © 2026 Lindsey Howard. Built with ❤︎ & 📖.
         </footer>
       </body>
     </html>
