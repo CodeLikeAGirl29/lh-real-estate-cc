@@ -10,8 +10,7 @@ import { FaArrowLeft, FaClock, FaTag, FaEnvelope } from "react-icons/fa6";
 // This is your "Database". Add new guides here!
 const blogPosts = {
   "okaloosa-insider": {
-    title:
-      "The Okaloosa Blueprint",
+    title: "The Okaloosa Blueprint",
     date: "April 6, 2026",
     category: "Local Guide",
     readTime: "6 min read",
@@ -19,9 +18,11 @@ const blogPosts = {
     content: (
       <>
         <Typography className="mb-6 font-normal text-gray-400 text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-sky-400 first-letter:mr-3 first-letter:float-left">
-          Why is Fort Walton Beach the Panhandle's Best Kept Secret? When people think of the Florida Panhandle, they usually think of the
-          neon lights of Destin. But for those of us who live and work here,
-          **Fort Walton Beach** is the true engine of the Emerald Coast.
+          Why is Fort Walton Beach the Panhandle's Best Kept Secret? When people
+          think of the Florida Panhandle, they usually think of the neon lights
+          of Destin. But for those of us who live and work here,{" "}
+          <strong>Fort Walton Beach</strong> is the true engine of the Emerald
+          Coast.
         </Typography>
 
         <h3 className="text-2xl font-bold text-white mt-12 mb-4">
@@ -29,9 +30,9 @@ const blogPosts = {
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
           As a developer, I look at property through the lens of infrastructure.
-          Fort Walton Beach offers something Destin often lacks: **Stability**.
-          With proximity to Eglin AFB and Hurlburt Field, the rental market here
-          isn't just seasonal—it's year-round.
+          Fort Walton Beach offers something Destin often lacks:{" "}
+          <strong>Stability</strong>. With proximity to Eglin AFB and Hurlburt
+          Field, the rental market here isn't just seasonal—it's year-round.
         </Typography>
 
         <div className="my-10 p-8 bg-sky-500/5 border-l-4 border-sky-500 rounded-r-xl">
@@ -46,11 +47,11 @@ const blogPosts = {
           The 'Unit 6' Standard
         </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Whether you're looking at **Spanish Villas** or new construction near
-          Shalimar, you have to understand local compliance. My 'Master Drill'
-          approach ensures that every property I represent meets the strict
-          structural and legal standards required for long-term Florida
-          ownership.
+          Whether you're looking at <strong>Spanish Villas</strong> or new
+          construction near Shalimar, you have to understand local compliance.
+          My 'Master Drill' approach ensures that every property I represent
+          meets the strict structural and legal standards required for long-term
+          Florida ownership.
         </Typography>
 
         <h3 className="text-2xl font-bold text-white mt-12 mb-4">
@@ -106,60 +107,109 @@ const blogPosts = {
     content: (
       <>
         <Typography className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
-          There’s a certain kind of peace you only understand once you’ve stood barefoot in the soft, sugar-white sand of Florida’s Emerald Coast. The kind where the breeze carries salt and sunshine in equal measure, and time slows just enough for you to realize—you’re exactly where you’re meant to be.
+          There’s a certain kind of peace you only understand once you’ve stood
+          barefoot in the soft, sugar-white sand of Florida’s Emerald Coast. The
+          kind where the breeze carries salt and sunshine in equal measure, and
+          time slows just enough for you to realize—you’re exactly where you’re
+          meant to be.
         </Typography>
         <Typography className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
-          Welcome to the Emerald Coast. Not just a destination, but a way of living… <strong>handled.</strong>
+          Welcome to the Emerald Coast. Not just a destination, but a way of
+          living… <strong>handled.</strong>
         </Typography>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">Where the Water Changes Everything</h3>
+        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+          Where the Water Changes Everything
+        </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          The first thing people notice is the water. It’s not just blue—it’s that unreal, glassy emerald that looks like it belongs in a postcard. Mornings here begin quietly. Coffee on the balcony. The distant rhythm of waves. Maybe a dolphin sighting if you’re lucky.
+          The first thing people notice is the water. It’s not just blue—it’s
+          that unreal, glassy emerald that looks like it belongs in a postcard.
+          Mornings here begin quietly. Coffee on the balcony. The distant rhythm
+          of waves. Maybe a dolphin sighting if you’re lucky.
         </Typography>
         <Typography className="mb-6 text-gray-400 text-lg">
-          But what keeps people here isn’t just the view—it’s how life starts to feel simpler. Handled.
+          But what keeps people here isn’t just the view—it’s how life starts to
+          feel simpler. Handled.
         </Typography>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">The Rhythm of Coastal Living</h3>
+        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+          The Rhythm of Coastal Living
+        </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Life along the coast doesn’t rush you. It invites you. Afternoons might mean a walk along the shoreline, stopping at a beachside café for something fresh and local. Evenings are for sunsets that paint the sky in soft pinks and fiery oranges—nature showing off without apology.
+          Life along the coast doesn’t rush you. It invites you. Afternoons
+          might mean a walk along the shoreline, stopping at a beachside café
+          for something fresh and local. Evenings are for sunsets that paint the
+          sky in soft pinks and fiery oranges—nature showing off without
+          apology.
         </Typography>
 
         <div className="my-10 p-8 bg-indigo-500/5 border-l-4 border-indigo-500 rounded-r-xl">
           <Typography className="text-white italic font-serif text-xl leading-relaxed">
-            "Owning a piece of this coastline isn’t just about property—it’s about possibility. A place where 'home' feels like a permanent getaway."
+            "Owning a piece of this coastline isn’t just about property—it’s
+            about possibility. A place where 'home' feels like a permanent
+            getaway."
           </Typography>
         </div>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">More Than a Vacation</h3>
+        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+          More Than a Vacation
+        </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Visitors come for a week and leave with a question they didn’t expect: <em>What would it look like to stay?</em> Because the Emerald Coast has a way of shifting your priorities. Suddenly, you’re thinking less about hustle and more about balance. Less about “someday” and more about now.
+          Visitors come for a week and leave with a question they didn’t expect:{" "}
+          <em>What would it look like to stay?</em> Because the Emerald Coast
+          has a way of shifting your priorities. Suddenly, you’re thinking less
+          about hustle and more about balance. Less about “someday” and more
+          about now.
         </Typography>
 
         {/* INSIDER PICKS SECTION */}
         <div className="mt-16 mb-12 p-10 bg-white/5 border border-white/10 rounded-3xl">
           <h3 className="text-3xl font-bold text-white mb-2">Insider Picks</h3>
-          <p className="text-indigo-400 font-medium mb-8">What to Do on the Emerald Coast</p>
+          <p className="text-indigo-400 font-medium mb-8">
+            What to Do on the Emerald Coast
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">🌊 Start Your Day on the Water</h4>
-              <Typography className="text-gray-400">Rent a paddleboard or kayak and glide across the calm Gulf waters while the world is still quiet.</Typography>
+              <h4 className="text-xl font-semibold text-white">
+                🌊 Start Your Day on the Water
+              </h4>
+              <Typography className="text-gray-400">
+                Rent a paddleboard or kayak and glide across the calm Gulf
+                waters while the world is still quiet.
+              </Typography>
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">☕ Your Go-To Coffee Spot</h4>
-              <Typography className="text-gray-400">Try <strong>Capriccio Café</strong> or <strong>Black Bear Bread Co.</strong>—perfect for that “coffee + coastal breeze” ritual.</Typography>
+              <h4 className="text-xl font-semibold text-white">
+                ☕ Your Go-To Coffee Spot
+              </h4>
+              <Typography className="text-gray-400">
+                Try <strong>Capriccio Café</strong> or{" "}
+                <strong>Black Bear Bread Co.</strong>—perfect for that “coffee +
+                coastal breeze” ritual.
+              </Typography>
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">🐚 Beach Hop Like a Local</h4>
-              <Typography className="text-gray-400">Explore 30A. Each stretch of shoreline has its own personality—from lively to tucked-away quiet.</Typography>
+              <h4 className="text-xl font-semibold text-white">
+                🐚 Beach Hop Like a Local
+              </h4>
+              <Typography className="text-gray-400">
+                Explore 30A. Each stretch of shoreline has its own
+                personality—from lively to tucked-away quiet.
+              </Typography>
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">🍤 Eat Like You Live Here</h4>
-              <Typography className="text-gray-400">Fresh seafood is non-negotiable. <strong>The Back Porch</strong> or <strong>Shunk Gulley</strong> offer the perfect mix of flavor and view.</Typography>
+              <h4 className="text-xl font-semibold text-white">
+                🍤 Eat Like You Live Here
+              </h4>
+              <Typography className="text-gray-400">
+                Fresh seafood is non-negotiable. <strong>The Back Porch</strong>{" "}
+                or <strong>Shunk Gulley</strong> offer the perfect mix of flavor
+                and view.
+              </Typography>
             </div>
           </div>
         </div>
@@ -172,24 +222,35 @@ const blogPosts = {
             className="w-full h-[450px] object-cover"
           />
           <div className="bg-white/5 p-4">
-            <p className="text-sm text-gray-500 italic text-center">The secret to the Emerald Coast? Doing the right things, at the right pace.</p>
+            <p className="text-sm text-gray-500 italic text-center">
+              The secret to the Emerald Coast? Doing the right things, at the
+              right pace.
+            </p>
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">The Insider Perspective</h3>
+        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+          The Insider Perspective
+        </h3>
         <Typography className="mb-6 text-gray-400 text-lg">
-          Living here isn’t about escaping reality—it’s about redefining it. It’s knowing where to catch the best sunrise. Which hidden spots locals love. It’s understanding that luxury isn’t always about extravagance—it’s about ease.
+          Living here isn’t about escaping reality—it’s about redefining it.
+          It’s knowing where to catch the best sunrise. Which hidden spots
+          locals love. It’s understanding that luxury isn’t always about
+          extravagance—it’s about ease.
         </Typography>
 
         <Typography className="mb-12 text-gray-400 text-lg">
-          The Emerald Coast doesn’t ask you to change your life completely. It simply shows you what life could feel like when it’s aligned, intentional, and just a little more peaceful. Once you experience it, one thing becomes clear: Some places you visit. Others… you live.
+          The Emerald Coast doesn’t ask you to change your life completely. It
+          simply shows you what life could feel like when it’s aligned,
+          intentional, and just a little more peaceful. Once you experience it,
+          one thing becomes clear: Some places you visit. Others… you live.
         </Typography>
 
         <Typography className="text-3xl font-black text-indigo-500 tracking-widest text-center md:text-left">
           HANDLED.
         </Typography>
       </>
-    )
+    ),
   },
   "pensacola-pivot": {
     title: "The Pensacola Pivot: Infrastructure and Innovation in 2026",
@@ -330,12 +391,14 @@ export default function BlogPost() {
               Full-Stack Developer & Real Estate Associate specialized in
               Okaloosa County property logic.
             </Typography>
-            <Button
-              fullWidth
-              className="bg-sky-600 mb-4 flex items-center justify-center gap-2"
-            >
-              <FaEnvelope /> Let's Talk Property
-            </Button>
+            <a href="mailto:lindseykdev@gmail.com" className="block">
+              <Button
+                fullWidth
+                className="bg-sky-600 mb-4 flex items-center justify-center gap-2"
+              >
+                <FaEnvelope /> Let's Talk Property
+              </Button>
+            </a>
             <Typography className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">
               Reimagining Real Estate
             </Typography>

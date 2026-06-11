@@ -1,7 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaXmark } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaBars,
+  FaXmark,
+} from "react-icons/fa6";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,19 +24,26 @@ export default function Navbar() {
     { name: "Innovations", href: "/#projects" },
     { name: "Experience", href: "/#experience" },
     { name: "The Ledger", href: "/blog" },
-    { name: 'About', href: '/about' }
+    { name: "About", href: "/about" },
   ];
 
   return (
-<header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-gray-950 border-b ${scrolled ? "border-white/10 py-2" : "border-white/5 py-4"
-        }`}
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-gray-950 border-b ${
+        scrolled ? "border-white/10 py-2" : "border-white/5 py-4"
+      }`}
     >
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
         {/* Brand/Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 text-2xl font-bold tracking-tighter text-white">
-            LINDSEY H {" "}<span className="text-sky-500"> REAL ESTATE</span>
+          <Link
+            href="/"
+            className="-m-1.5 p-1.5 text-2xl font-bold tracking-tighter text-white"
+          >
+            LINDSEY H <span className="text-sky-500"> REAL ESTATE</span>
           </Link>
         </div>
 
@@ -57,10 +70,20 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="h-4 w-px bg-white/20 ml-2" /> {/* Divider */}
-          <a href="https://github.com/codelikeagirl29" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+          <a
+            href="https://github.com/codelikeagirl29"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition"
+          >
             <FaGithub size={18} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white transition">
+          <a
+            href="https://linkedin.com/in/lindsey-howard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition"
+          >
             <FaLinkedin size={18} />
           </a>
         </div>
@@ -79,11 +102,19 @@ export default function Navbar() {
       {/* Mobile Menu Modal */}
       {mobileMenuOpen && (
         <div className="lg:hidden">
-          <div className="fixed inset-0 z-50 bg-gray-900/90 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
+          <div
+            className="fixed inset-0 z-50 bg-gray-900/90 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-950 p-6 sm:max-w-sm border-l border-white/10">
             <div className="flex items-center justify-between">
-              <span className="text-xl font-bold text-white tracking-tighter">LINDSEY.DEV</span>
-              <button onClick={() => setMobileMenuOpen(false)} className="rounded-md p-2.5 text-gray-400 hover:text-white">
+              <span className="text-xl font-bold text-white tracking-tighter">
+                LINDSEY.DEV
+              </span>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="rounded-md p-2.5 text-gray-400 hover:text-white"
+              >
                 <FaXmark className="size-7" />
               </button>
             </div>
