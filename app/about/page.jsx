@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto text-center">
           <Typography
             variant="h1"
-            className="text-5xl md:text-7xl font-serif text-white mb-6"
+            className="text-5xl md:text-7xl font-display text-white mb-6"
           >
             The Agent <span className="text-sky-500">+</span> The Architect
           </Typography>
@@ -34,7 +34,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold text-white mb-8 border-l-4 border-sky-500 pl-6">
-              My Mission: Strategy Meets Home.
+              My Mission:{" "}
+              <span className="text-sky-400">Strategy Meets Home.</span>
             </h2>
             <Typography className="text-gray-400 text-lg mb-6 leading-relaxed">
               With a background in{" "}
