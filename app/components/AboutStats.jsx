@@ -163,7 +163,7 @@ function SkillBar({ label, percentage, description }) {
       </div>
       <div className="w-full bg-gray-800 rounded-full h-2.5 mt-1 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-sky-600 to-sky-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(79,70,229,0.4)]"
+          className="h-full bg-gradient-to-r from-sky-600 to-sky-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(14,165,233,0.4)]"
           style={{ width: percentage }}
         ></div>
       </div>

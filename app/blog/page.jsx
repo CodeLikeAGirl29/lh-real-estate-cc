@@ -1,43 +1,47 @@
 "use client";
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Link from 'next/link';
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Link from "next/link";
 import { FaArrowRight, FaCalendarDays } from "react-icons/fa6";
 
 const posts = [
   {
     id: "okaloosa-insider",
     title: "The Okaloosa Guide: Structural Standards",
-    excerpt: "A developer's deep dive into the Emerald Coast. From Spanish Villas to Shalimar, we explore the local infrastructure and structural standards that define our community.",
+    excerpt:
+      "A developer's deep dive into the Emerald Coast. From Spanish Villas to Shalimar, we explore the local infrastructure and structural standards that define our community.",
     date: "April 6, 2026",
     category: "Local Guide",
-    image: "/images/local-coastline.jpg"
+    image: "/images/local-coastline.jpg",
   },
   {
     id: "beyond-the-beach",
     title: "Beyond the Beach: The Blueprint",
-    excerpt: "Moving past the aesthetics to analyze the data. An investment-focused breakdown of Okaloosa County's growth zones and Prop-Tech trends.",
+    excerpt:
+      "Moving past the aesthetics to analyze the data. An investment-focused breakdown of Okaloosa County's growth zones and Prop-Tech trends.",
     date: "March 28, 2026",
     category: "Investment",
-    image: "/images/img-1.jpg"
+    image: "/images/img-1.jpg",
   },
   {
     id: "emerald-coast-insider",
     title: "Emerald Coast Insider: Living Handled",
-    excerpt: "Living 'Handled' in the Panhandle. A lifestyle guide featuring local hidden gems, the best bay-side launches, and navigating FWB with a developer's edge.",
+    excerpt:
+      "Living 'Handled' in the Panhandle. A lifestyle guide featuring local hidden gems, the best bay-side launches, and navigating FWB with a developer's edge.",
     date: "March 15, 2026",
     category: "Lifestyle",
-    image: "/images/img-3.jpg"
+    image: "/images/img-3.jpg",
   },
   {
     id: "pensacola-pivot",
     title: "The Pensacola Pivot: Infrastructure and Innovation in 2026",
     category: "Market Analysis",
     date: "April 6, 2026",
-    description: "Analyzing the $6.5M Gateway Project and the defense-driven growth of Florida's 'Cradle of Aviation'.",
-    image: "/images/pensacola-header.jpg" // Ensure you add this image to your public/images folder
-  }
+    description:
+      "Analyzing the $6.5M Gateway Project and the defense-driven growth of Florida's 'Cradle of Aviation'.",
+    image: "/images/pensacola-header.jpg", // Ensure you add this image to your public/images folder
+  },
 ];
 
 export default function BlogPage() {
@@ -59,7 +63,8 @@ export default function BlogPage() {
             The <span className="text-sky-500 italic">Digital</span> Ledger
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-            Where Florida Real Estate logic meets Full-Stack precision. Engineering the Emerald Coast lifestyle, one entry at a time.
+            Where Florida Real Estate logic meets Full-Stack precision.
+            Engineering the Emerald Coast lifestyle, one entry at a time.
           </p>
         </div>
 

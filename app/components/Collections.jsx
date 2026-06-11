@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const projects = [
   {
@@ -9,7 +9,7 @@ const projects = [
     date: "May 2026",
     desc: "A full-stack study environment engineered from scratch using Next.js. Replaces passive flashcards with programmatic state tracking and logic-driven retention systems for the Florida real estate exam.",
     image: "/images/master-drill-ui.jpg",
-    tags: "PropTech / Web Development"
+    tags: "PropTech / Web Development",
   },
   {
     id: "shadow-slate",
@@ -17,7 +17,7 @@ const projects = [
     date: "May 2026",
     desc: "A highly responsive, interactive mood board canvas for real estate professionals and interior designers. Built with TypeScript and React Konva to enable fluid drag-and-drop mechanics and real-time spatial transformations.",
     image: "/images/shadow-slate-ui.jpg",
-    tags: "PropTech / Interior Design"
+    tags: "PropTech / Interior Design",
   },
   {
     id: "okaloosa-guide",
@@ -25,7 +25,7 @@ const projects = [
     date: "April 2026",
     desc: "A developer's deep dive into the Emerald Coast. From Spanish Villas to Shalimar, I explore the local infrastructure and structural standards that define our community.",
     image: "/images/local-coastline.jpg",
-    tags: "Local Guide / Real Estate"
+    tags: "Local Guide / Real Estate",
   },
   {
     id: "beyond-the-beach",
@@ -33,7 +33,7 @@ const projects = [
     date: "March 2026",
     desc: "Moving past the aesthetics to analyze the data. An investment-focused breakdown of Okaloosa County's growth zones, rental yields, and Prop-Tech trends.",
     image: "/images/img-1.jpg",
-    tags: "Investment / Data Analysis"
+    tags: "Investment / Data Analysis",
   },
   {
     id: "emerald-coast-insider",
@@ -41,17 +41,18 @@ const projects = [
     date: "March 2026",
     desc: "Living 'Handled' in the Panhandle. A lifestyle guide featuring local hidden gems, the best bay-side launches, and navigating the FWB market with a developer's edge.",
     image: "/images/img-2.jpg",
-    tags: "Lifestyle / Personal"
-  }
+    tags: "Lifestyle / Personal",
+  },
 ];
 
 export default function Collections() {
   return (
     <section className="bg-white py-24 dark:bg-gray-900" id="projects">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Featured Collections</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+            Featured Collections
+          </h2>
           <span className="mt-2 block h-1 w-12 bg-sky-600 rounded"></span>
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
-import React from 'react';
-import Link from 'next/link';
-import Navbar from './Navbar';
+import React from "react";
+import Link from "next/link";
+import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
@@ -21,12 +21,16 @@ export default function Hero() {
             </span>
 
             <h1 className="text-2xl font-extrabold text-gray-900 sm:text-6xl dark:text-white leading-[0.9] tracking-tighter">
-              Closing,<br />
+              Closing,
+              <br />
               <span className="text-sky-600 italic">No Compromise.</span>
             </h1>
 
             <p className="mt-8 text-base text-pretty text-gray-700 sm:text-xl/relaxed dark:text-gray-400 max-w-lg mx-auto">
-              Your goals are my mission. I approach every deal with <span className="text-sky-400 font-mono">relentless focus</span> and determination, ensuring every step moves you closer to success.
+              Your goals are my mission. I approach every deal with{" "}
+              <span className="text-sky-400 font-mono">relentless focus</span>{" "}
+              and determination, ensuring every step moves you closer to
+              success.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
