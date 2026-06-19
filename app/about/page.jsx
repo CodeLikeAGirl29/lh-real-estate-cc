@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutStats from "../components/AboutStats";
@@ -66,12 +67,14 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 bg-gray-800">
+            <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 bg-gray-800">
               {/* Replace with your professional headshot */}
-              <img
+              <Image
                 src="/images/lindsey-profile.jpg"
                 alt="Lindsey Howard"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
             {/* Decorative Element */}

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
@@ -38,7 +39,7 @@ const posts = [
     title: "The Pensacola Pivot: Infrastructure and Innovation in 2026",
     category: "Market Analysis",
     date: "April 6, 2026",
-    description:
+    excerpt:
       "Analyzing the $6.5M Gateway Project and the defense-driven growth of Florida's 'Cradle of Aviation'.",
     image: "/images/pensacola-header.jpg", // Ensure you add this image to your public/images folder
   },
@@ -77,10 +78,12 @@ export default function BlogPage() {
             >
               {/* Image Container */}
               <div className="aspect-[16/10] overflow-hidden relative">
-                <img
+                <Image
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-60" />
               </div>

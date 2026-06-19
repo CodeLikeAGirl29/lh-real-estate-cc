@@ -1,13 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaBars,
-  FaXmark,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaBars, FaXmark } from "react-icons/fa6";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

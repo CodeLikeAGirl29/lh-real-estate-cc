@@ -1,6 +1,9 @@
 // tailwind.config.js
+import flowbitePlugin from "flowbite/plugin";
+import twElementsPlugin from "tw-elements/plugin.cjs";
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./node_modules/flowbite-react/dist/esm/**/*.mjs",
@@ -31,6 +34,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("flowbite/plugin"), require("tw-elements/plugin.cjs")],
+  plugins: [flowbitePlugin, twElementsPlugin],
   darkMode: "class",
 };
+
+export default config;

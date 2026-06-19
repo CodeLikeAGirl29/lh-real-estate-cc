@@ -2,6 +2,7 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import { Typography, Button } from "@material-tailwind/react";
+import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Link from "next/link";
@@ -18,6 +19,15 @@ const projectContent = {
     image: "/images/master-drill-ui.jpg",
     content: (
       <>
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 768px"
+          className="rounded-xl object-cover shadow-2xl brightness-90 hover:brightness-100 transition-all"
+        />
+
         <Typography className="mb-6 font-normal !text-gray-400 text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-sky-500 first-letter:mr-3 first-letter:float-left">
           Success in the Florida real estate market begins with a license, but
           true market mastery requires an underlying technical infrastructure.

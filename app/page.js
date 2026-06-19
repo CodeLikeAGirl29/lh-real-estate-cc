@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero"; // Ensure this is the one with the interactive state!
 import AboutBlueprint from "./components/AboutBlueprint";
 import AboutStats from "./components/AboutStats";

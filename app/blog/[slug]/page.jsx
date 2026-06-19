@@ -2,6 +2,7 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import { Typography, Button } from "@material-tailwind/react";
+import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Link from "next/link";
@@ -218,10 +219,12 @@ const blogPosts = {
 
         {/* SECONDARY IMAGE */}
         <div className="my-12 rounded-2xl overflow-hidden border border-white/10">
-          <img
+          <Image
             src="/images/local-coastline.jpg"
             alt="Emerald Coast Lifestyle"
-            className="w-full h-[450px] object-cover"
+            fill
+            sizes="(max-width: 1024px) 100vw, 66vw"
+            className="object-cover"
           />
           <div className="bg-white/5 p-4">
             <p className="text-sm text-gray-500 italic text-center">
@@ -342,10 +345,13 @@ export default function BlogPost() {
 
       {/* Hero Header */}
       <div className="relative h-[60vh] w-full pt-20">
-        <img
+        <Image
           src={post.image}
           alt={post.title}
-          className="absolute inset-0 h-full w-full object-cover brightness-50"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover brightness-50"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent" />
         <div className="relative z-10 flex h-full items-end pb-12 px-6 lg:px-24">

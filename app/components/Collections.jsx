@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
@@ -63,11 +64,13 @@ export default function Collections() {
               key={project.id}
               className="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition hover:shadow-lg dark:border-gray-800 dark:bg-gray-900 dark:shadow-gray-700/25 group"
             >
-              <div className="overflow-hidden">
-                <img
+              <div className="relative h-56 w-full overflow-hidden">
+                <Image
                   alt={project.title}
                   src={project.image}
-                  className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
 

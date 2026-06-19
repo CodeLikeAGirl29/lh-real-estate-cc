@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaGithub, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaFacebook, FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -71,10 +71,12 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
+                href="https://facebook.com/lindsey.howard"
+                target="_blank"
+                rel="noreferrer"
                 className="block transform hover:scale-110 transition-transform"
               >
-                <FaInstagram className="w-8 h-8 text-pink-500 hover:brightness-110" />
+                <FaFacebook className="w-8 h-8 text-[#1877F2] hover:brightness-110" />
               </a>
             </li>
             <li>
@@ -92,8 +94,8 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 mt-16">
           <p className="text-[14px] text-slate-500 font-mono">
             © {new Date().getFullYear()}{" "}
-            <span className="text-sky-500 font-bold">LINDSEY.DEV</span> // Built
-            with Next.js & Tailwind CSS
+            <span className="text-sky-500 font-bold">LINDSEY.DEV</span>
+            {" — Built with Next.js & Tailwind CSS"}
           </p>
           <p className="text-[11px] text-slate-600 mt-2 italic">
             Fort Walton Beach, Florida | Prop-Tech Innovation

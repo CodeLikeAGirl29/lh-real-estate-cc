@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaAward, FaCode, FaGears, FaLocationDot } from "react-icons/fa6";
+import { FaCode, FaLocationDot } from "react-icons/fa6";
 
 export default function AboutStats() {
   return (
