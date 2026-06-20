@@ -147,7 +147,8 @@ export default function Contact() {
             <ul className="mt-8 flex flex-wrap justify-center gap-4 lg:space-x-6 max-lg:flex-col max-lg:items-center max-lg:space-y-2 border-t border-gray-200 pt-6">
               <li className="flex items-center text-blue-700 font-medium">
                 <FaEnvelope className="size-4 text-blue-700" />
-                
+
+                <a
                   href="mailto:lindseykdev@gmail.com"
                   className="text-slate-700 text-sm ml-3 hover:text-blue-700 transition-colors"
                 >
@@ -156,7 +157,8 @@ export default function Contact() {
               </li>
               <li className="flex items-center text-blue-700 font-medium">
                 <FaPhone className="size-4 text-blue-700" />
-                
+
+                <a
                   href="tel:+18505335877"
                   className="text-slate-700 text-sm ml-3 hover:text-blue-700 transition-colors"
                 >
