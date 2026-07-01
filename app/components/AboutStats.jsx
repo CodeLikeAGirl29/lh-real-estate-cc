@@ -26,7 +26,7 @@ export default function AboutStats() {
 
           <div className="flex flex-wrap gap-3">
             <span className="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-widest text-sky-400">
-              Real Estate Sales Associate (Candidate)
+              Real Estate Sales Associate (Exam Passed)
             </span>
             <span className="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-widest text-sky-400">
               Full-Stack Developer
@@ -110,7 +110,7 @@ export default function AboutStats() {
                   2026
                 </span>
                 <span className="text-xs text-gray-500 uppercase font-black">
-                  Licensed Year
+                  Exam Passed
                 </span>
               </div>
               <div className="p-4 bg-white/5 rounded-xl border border-white/10">

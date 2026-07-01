@@ -1,5 +1,7 @@
 # 🏠 Home, Handled.
 
+![Exam Passed](https://img.shields.io/badge/FL%20Real%20Estate-Exam%20Passed%20✅-2E7D32?style=flat-square) ![Status](https://img.shields.io/badge/Status-Awaiting%20Sponsoring%20Broker-FBC02D?style=flat-square)
+
 ### The Portfolio
 
 Home, Handled. is a high-performance web application designed at the intersection of Full-Stack Development and Florida Real Estate. This isn't just a portfolio; it's a structural blueprint for the Emerald Coast market.
@@ -7,7 +9,9 @@ Home, Handled. is a high-performance web application designed at the intersectio
 ![screenshot](https://res.cloudinary.com/dhw9dl4gm/image/upload/v1775460545/Lindsey-Howard-Real-Estate-Tech-04-05-2026_12_58_PM_x9nqs8.png)
 
 ### 🚀 The Mission
+
 In the 2026 real estate landscape, "feeling" isn't enough. Success requires Infrastructure.
+
 - For Buyers/Sellers: A data-driven guide to Okaloosa County (FWB,Destin, Shalimar).
 - For Developers: A clean, scalable implementation of Next.js 15 and Material Tailwind.
 - For the Industry: Proof that the person selling your home understands the logic behind the listing.
@@ -15,6 +19,7 @@ In the 2026 real estate landscape, "feeling" isn't enough. Success requires Infr
 ---
 
 ### 🛠️ Tech Stack
+
 - Framework: Next.js 15 (App Router)
 - Styling: Tailwind CSS + Material Tailwind
 - Icons: Lucide React / Font Awesome 6
@@ -24,20 +29,24 @@ In the 2026 real estate landscape, "feeling" isn't enough. Success requires Infr
 ---
 
 ### 💎 Key Innovations
+
 📈 The Digital Ledger
 
 A dynamic blog engine providing deep-dives into the Okaloosa County Blueprint. It moves past the "vacation vibes" to analyze CAP rates, structural compliance (Unit 6 standards), and local growth zones.
 
 ### ⚡ The Master Drill
+
 A full-stack study environment engineered to master the 63-hour Florida Real Estate pre-licensing curriculum.
 
 - Logic-Driven Learning: State management that tracks progress across 19 units.
 - High-Stakes Retention: Designed for 100% compliance and zero-fail accuracy.
 
 ### 🌊 Emerald Coast Insider
+
 A lifestyle-integrated "PropTech" guide. Leveraging local knowledge of the Panhandle to provide a high-conversion user experience for out-of-state investors.
 
 ### 📂 Project Structure
+
 ```Plaintext
 ├── app/
 │   ├── blog/            # The Digital Ledger (List & Post views)
@@ -51,29 +60,37 @@ A lifestyle-integrated "PropTech" guide. Leveraging local knowledge of the Panha
 ```
 
 ### 🛠️ Getting Started
+
 1. Clone the Repo
 
 ```Bash
 git clone https://github.com/codelikeagirl29/lh-real-estate-cc.git
 ```
+
 2. Install Dependencies
 
 ```Bash
 npm install
 ```
+
 3. Run the Development Server
 
 ```Bash
 npm run dev
 ```
+
 4. Visit Localhost
 
-  Open http://localhost:3000 to see the Panhandle, handled.
+Open http://localhost:3000 to see the Panhandle, handled.
 
 ---
 
 ## 👩‍💻 About the Architect
-Lindsey Howard Florida Real Estate Sales Associate | Full-Stack Developer Based in Fort Walton Beach, FL, I build the digital tools that move the market. Whether it's a Next.js listing engine or a residential contract, I apply the same level of mechanical grit and technical precision.
+
+Lindsey Howard
+Florida Real Estate Sales Associate (Exam Passed — Awaiting Sponsoring Broker) | Full-Stack Developer
+
+Based in Fort Walton Beach, FL, I build the digital tools that move the market. Whether it's a Next.js listing engine or a residential contract, I apply the same level of mechanical grit and technical precision.
 
 Connect with me:
 

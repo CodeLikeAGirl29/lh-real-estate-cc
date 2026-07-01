@@ -20,6 +20,18 @@ export default function Hero() {
               Lindsey Howard
             </span>
 
+            {/* Exam Passed Callout */}
+            <div className="flex justify-center gap-2 mb-6">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-bold uppercase tracking-widest">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                FL Exam Passed
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[11px] font-bold uppercase tracking-widest">
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
+                Awaiting Sponsoring Broker
+              </span>
+            </div>
+
             <h1 className="text-2xl font-extrabold text-gray-900 sm:text-6xl dark:text-white leading-[0.9] tracking-tighter">
               Closing,
               <br />

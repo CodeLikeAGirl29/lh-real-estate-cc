@@ -6,14 +6,15 @@ const events = [
   {
     id: 1,
     type: "Milestone",
-    title: "Florida Real Estate Associate (Pending)",
+    title: "Florida Real Estate Associate (Exam Passed)",
     date: "04/14/2026",
     icon: <FaHouseUser className="text-white h-4 w-4" />,
     iconBg: "bg-sky-600",
     dotColor: "bg-green-500",
     content: [
+      "Passed the Florida Real Estate Sales Associate state licensing exam.",
+      "Actively pursuing a sponsoring broker to activate license status.",
       "Focused on market research and property analysis for the Florida Panhandle.",
-      "Implementing professional follow-up systems to organize and grow a client pipeline.",
       "Prioritizing contract and document accuracy for future residential transactions.",
     ],
   },
