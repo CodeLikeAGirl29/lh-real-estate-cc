@@ -35,7 +35,10 @@ export default function Navbar() {
             href="/"
             className="-m-1.5 p-1.5 font-display text-2xl font-bold tracking-tighter text-foreground"
           >
-            L. HOWARD <span className="text-gulf font-mono text-sm align-middle">// RE + DEV</span>
+            L. HOWARD{" "}
+            <span className="text-gulf font-mono text-sm align-middle">
+              // RE + DEV
+            </span>
           </Link>
         </div>
 
@@ -60,18 +63,26 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="h-4 w-px bg-foreground/20 ml-2" />
-          <a href="https://github.com/codelikeagirl29" target="_blank" rel="noopener noreferrer"
-            className="text-foreground/60 hover:text-gulf transition">
+          <a
+            href="https://github.com/codelikeagirl29"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/60 hover:text-gulf transition"
+          >
             <FaGithub size={18} />
           </a>
-          <a href="https://linkedin.com/in/lindsey-howard" target="_blank" rel="noopener noreferrer"
-            className="text-foreground/60 hover:text-gulf transition">
+          <a
+            href="https://linkedin.com/in/lindsey-howard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/60 hover:text-gulf transition"
+          >
             <FaLinkedin size={18} />
           </a>
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          
+          <a
             href="mailto:lindsey.howard.re@outlook.com"
             className="corner-marks px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-signal hover:text-foreground transition-all"
           >
@@ -110,7 +121,8 @@ export default function Navbar() {
                     {link.name}
                   </Link>
                 ))}
-                
+
+                <a
                   href="mailto:lindsey.howard.re@outlook.com"
                   className="corner-marks mt-10 block text-center py-4 text-lg font-bold text-signal"
                 >

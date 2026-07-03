@@ -12,12 +12,10 @@ export default function Hero() {
 
         <div className="mx-auto w-screen max-w-7xl px-4 py-32 sm:px-6 lg:px-8 relative z-10">
           <div className="mx-auto max-w-prose text-center">
-            {/* Coordinates eyebrow — grounds the hero in the actual place */}
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-gulf mb-6">
               30.4013° N, 86.6188° W — Fort Walton Beach, FL
             </p>
 
-            {/* Status tags — corner-marks instead of pills */}
             <div className="flex justify-center gap-3 mb-8">
               <span className="corner-marks flex items-center gap-1.5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-foreground">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -37,13 +35,12 @@ export default function Hero() {
 
             <p className="mt-8 font-sans text-base text-pretty text-foreground/70 sm:text-xl/relaxed max-w-lg mx-auto">
               Your goals are my mission. I approach every deal with{" "}
-              <span className="text-gulf font-mono">relentless focus</span>{" "}
-              and determination, ensuring every step moves you closer to
-              success.
+              <span className="text-gulf font-mono">relentless focus</span> and
+              determination, ensuring every step moves you closer to success.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              
+              <a
                 className="inline-block rounded-md bg-signal px-10 py-4 text-sm font-bold text-background transition-all hover:opacity-90 active:scale-95"
                 href="#projects"
               >
