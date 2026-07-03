@@ -400,7 +400,7 @@ export default function ProjectPost() {
               Get the technical breakdown on the best neighborhoods, school
               districts, and investment zones in Okaloosa County.
             </p>
-            <a href="mailto:lindseykdev@gmail.com">
+            <a href="mailto:lindsey.howard.re@outlook.com">
               <Button
                 size="lg"
                 className="bg-sky-600 hover:bg-sky-500 flex items-center gap-2"

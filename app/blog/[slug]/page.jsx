@@ -399,7 +399,7 @@ export default function BlogPost() {
               Full-Stack Developer & Real Estate Associate specialized in
               Okaloosa County property logic.
             </Typography>
-            <a href="mailto:lindseykdev@gmail.com" className="block">
+            <a href="mailto:lindsey.howard.re@outlook.com" className="block">
               <Button
                 fullWidth
                 className="bg-sky-600 mb-4 flex items-center justify-center gap-2"

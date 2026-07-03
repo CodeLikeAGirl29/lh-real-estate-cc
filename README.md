@@ -98,6 +98,6 @@ Connect with me:
 
 [LinkedIn](http://linkedin.com/in/lindsey-howard)
 
-[Email](mailto:lindseykdev@gmail.com)
+[Email](mailto:lindsey.howard.re@outlook.com)
 
 > "Where local expertise meets a developer’s edge."

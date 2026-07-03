@@ -1,32 +1,21 @@
-import { Syne } from "next/font/google";
-import localFont from "next/font/local";
+import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const syne = Syne({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-display",
+  weight: ["500", "700", "800"],
 });
 
-// Base Font: Clash Grotesk (Local font)
-const clashGrotesk = localFont({
-  src: [
-    {
-      path: "../public/fonts/ClashGrotesk.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/ClashGrotesk-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/ClashGrotesk-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-clash",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500"],
 });
 
 export const metadata = {
@@ -38,14 +27,11 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${clashGrotesk.variable}`}
+      className={`${manrope.variable} ${inter.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-sans bg-slate-50 text-slate-900 antialiased">
+      <body className="font-sans bg-background text-foreground antialiased">
         {children}
-        <footer className="py-10 text-center text-sm text-slate-400">
-          © 2026 Lindsey Howard. Built with ❤︎ & 📖.
-        </footer>
       </body>
     </html>
   );
