@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { event as gaEvent } from "@/lib/gtag";
 import { FaCode, FaLocationDot } from "react-icons/fa6";
 
 export default function AboutStats() {
@@ -134,7 +135,20 @@ export default function AboutStats() {
           </div>
           <div className="flex gap-4">
             <button className="corner-marks px-8 py-3 bg-signal text-paper font-bold hover:opacity-90 transition">
-              Download CV
+              <a
+                href="/files/lindsey-howard-cv.pdf"
+                download="Lindsey-Howard-CV.pdf"
+                onClick={() =>
+                  gaEvent({
+                    action: "download",
+                    category: "engagement",
+                    label: "cv_download",
+                  })
+                }
+                className="corner-marks px-8 py-3 bg-signal text-paper font-bold hover:opacity-90 transition"
+              >
+                Download CV
+              </a>
             </button>
             <button className="corner-marks px-8 py-3 text-gulf font-bold hover:text-signal transition">
               Contact Lindsey
