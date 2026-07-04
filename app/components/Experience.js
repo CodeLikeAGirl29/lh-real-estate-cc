@@ -9,7 +9,7 @@ const events = [
     title: "Florida Real Estate Associate (Exam Passed)",
     date: "04/14/2026",
     icon: <FaHouseUser className="text-background h-4 w-4" />,
-    iconBg: "bg-signal",
+    iconBg: "bg-brass",
     dotColor: "bg-emerald-400",
     content: [
       "Passed the Florida Real Estate Sales Associate state licensing exam.",
@@ -24,7 +24,7 @@ const events = [
     title: "Digital Solutions & Development",
     date: "2021 - 2025",
     icon: <FaCode className="text-background h-4 w-4" />,
-    iconBg: "bg-gulf",
+    iconBg: "bg-steel",
     dotColor: "bg-amber-400",
     content: [
       "Strengthened branding knowledge directly applicable to real estate digital listings.",
@@ -37,8 +37,8 @@ const events = [
     type: "Grit",
     title: "Sales & Client Operations",
     date: "2016 - 2021",
-    icon: <FaCheck className="text-background h-4 w-4" />,
-    iconBg: "bg-primary-700",
+    icon: <FaCheck className="text-foreground h-4 w-4" />,
+    iconBg: "bg-surface border border-foreground/20",
     dotColor: "bg-foreground/30",
     content: [
       "Built and maintained long-term client relationships through consistent, reliable follow-up.",
@@ -50,15 +50,18 @@ const events = [
 
 export default function Experience() {
   return (
-    <div className="bg-background blueprint-grid py-24" id="experience">
+    <div
+      className="charcoal-section py-24 border-t border-foreground/5"
+      id="experience"
+    >
       <div className="max-w-2xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col items-center gap-2 mb-16">
           <h2 className="font-display text-4xl font-bold text-foreground tracking-tight">
             Experience
           </h2>
           <div className="flex gap-2">
-            <span className="w-12 h-[3px] bg-gulf" />
-            <span className="w-6 h-[3px] bg-gulf" />
+            <span className="w-12 h-[3px] bg-steel" />
+            <span className="w-6 h-[3px] bg-steel" />
           </div>
         </div>
 
@@ -91,7 +94,7 @@ export default function Experience() {
                           <span className="font-display font-bold text-lg text-foreground tracking-tight">
                             {event.title}
                           </span>
-                          <span className="corner-marks inline-flex items-center px-2.5 py-0.5 font-mono text-[10px] font-bold text-gulf uppercase tracking-widest">
+                          <span className="frame inline-flex items-center px-2.5 py-0.5 font-mono text-[10px] font-bold text-steel uppercase tracking-widest">
                             <span
                               className={`h-1.5 w-1.5 rounded-full ${event.dotColor} mr-2`}
                               aria-hidden="true"
@@ -99,16 +102,16 @@ export default function Experience() {
                             {event.type}
                           </span>
                         </div>
-                        <span className="whitespace-nowrap font-mono text-xs font-bold text-gulf border border-gulf/20 px-2 py-1">
+                        <span className="whitespace-nowrap font-mono text-xs font-bold text-steel border border-steel/20 px-2 py-1">
                           {event.date}
                         </span>
                       </div>
 
-                      <div className="mt-3 text-foreground/60 text-sm leading-relaxed border border-foreground/10 p-4">
+                      <div className="mt-3 text-foreground/60 text-sm leading-relaxed border border-foreground/10 bg-surface/50 p-4">
                         <ul className="space-y-2">
                           {event.content.map((item, index) => (
                             <li key={index} className="flex gap-2">
-                              <span className="text-gulf font-bold">›</span>
+                              <span className="text-brass font-bold">›</span>
                               {item}
                             </li>
                           ))}

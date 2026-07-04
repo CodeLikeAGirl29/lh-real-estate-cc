@@ -48,20 +48,23 @@ const projects = [
 
 export default function Collections() {
   return (
-    <section className="paper-section py-24" id="projects">
+    <section
+      className="charcoal-section py-24 border-t border-foreground/5"
+      id="projects"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="font-display text-3xl font-bold text-ink sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             Featured Collections
           </h2>
-          <span className="mt-2 block h-[3px] w-12 bg-gulf" />
+          <span className="mt-2 block h-[3px] w-12 bg-steel" />
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.id}
-              className="corner-marks overflow-hidden border border-ink/10 bg-paper transition hover:border-gulf/40 group"
+              className="frame overflow-hidden border border-foreground/10 bg-surface transition hover:border-brass/40 group"
             >
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
@@ -75,27 +78,27 @@ export default function Collections() {
 
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <time className="block font-mono text-xs text-gulf font-bold uppercase tracking-widest">
+                  <time className="block font-mono text-xs text-steel font-bold uppercase tracking-widest">
                     {project.date}
                   </time>
-                  <span className="font-mono text-[10px] border border-ink/10 px-2 py-1 text-ink/50 font-bold">
+                  <span className="font-mono text-[10px] border border-foreground/10 px-2 py-1 text-foreground/40 font-bold">
                     {project.tags}
                   </span>
                 </div>
 
                 <Link href={`/projects/${project.id}`}>
-                  <h3 className="font-display text-xl font-bold text-ink hover:text-signal transition-colors">
+                  <h3 className="font-display text-xl font-bold text-foreground hover:text-brass transition-colors">
                     {project.title}
                   </h3>
                 </Link>
 
-                <p className="mt-3 line-clamp-3 text-sm/relaxed text-ink/60">
+                <p className="mt-3 line-clamp-3 text-sm/relaxed text-foreground/60">
                   {project.desc}
                 </p>
 
                 <Link
                   href={`/projects/${project.id}`}
-                  className="mt-6 flex items-center gap-1 text-sm font-bold text-gulf hover:text-signal transition-colors"
+                  className="mt-6 flex items-center gap-1 text-sm font-bold text-steel hover:text-brass transition-colors"
                 >
                   View Project <span>&rarr;</span>
                 </Link>

@@ -1,3 +1,4 @@
+// blog/page.jsx
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -41,77 +42,75 @@ const posts = [
     date: "April 6, 2026",
     excerpt:
       "Analyzing the $6.5M Gateway Project and the defense-driven growth of Florida's 'Cradle of Aviation'.",
-    image: "/images/pensacola-header.jpg", // Ensure you add this image to your public/images folder
+    image: "/images/pensacola-header.jpg",
   },
 ];
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-white selection:bg-sky-500/30">
+    <main className="charcoal-section min-h-screen selection:bg-steel/30">
       <Navbar />
 
-      {/* Hero Section for Blog */}
-      <div className="relative isolate pt-24 pb-12 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-64 opacity-20 pointer-events-none">
-          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[100%] bg-sky-600 blur-[120px] rounded-full"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto text-center mt-20 mb-16 relative z-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+      {/* Hero Section */}
+      <div className="relative pt-32 pb-16 px-6 lg:px-8 border-b border-surface">
+        <div className="max-w-6xl mx-auto text-center mt-12 mb-8">
+          <span className="inline-block px-4 py-1.5 bg-steel/10 text-steel font-mono text-[10px] font-bold uppercase tracking-widest mb-6">
             Insights & Intelligence
           </span>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
-            The <span className="text-sky-500 italic">Digital</span> Ledger
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
+            The <span className="text-brass italic">Digital</span> Ledger
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
             Where Florida Real Estate logic meets Full-Stack precision.
             Engineering the Emerald Coast lifestyle, one entry at a time.
           </p>
         </div>
+      </div>
 
-        {/* Blog Grid */}
-        <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 pb-32">
+      {/* Blog Grid */}
+      <div className="charcoal-section py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <article
               key={post.id}
-              className="group relative flex flex-col bg-white/[0.02] border border-white/5 rounded-3xl overflow-hidden hover:bg-white/[0.04] hover:border-sky-500/50 transition-all duration-500"
+              className="group frame surface-section flex flex-col border border-muted/10 hover:border-brass/50 transition-all duration-500"
             >
               {/* Image Container */}
-              <div className="aspect-[16/10] overflow-hidden relative">
+              <div className="aspect-[16/10] overflow-hidden relative border-b border-muted/10">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
+                  className="object-cover transition duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-60" />
               </div>
 
               {/* Content Container */}
               <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="px-3 py-1 rounded-lg bg-sky-500 text-white text-[10px] font-black uppercase tracking-widest">
+                <div className="flex items-center justify-between gap-4 mb-5 pb-5 border-b border-muted/10">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brass">
                     {post.category}
                   </span>
-                  <span className="flex items-center gap-1.5 text-gray-500 text-xs font-mono">
-                    <FaCalendarDays className="text-sky-500" /> {post.date}
+                  <span className="flex items-center gap-2 text-muted text-[11px] font-mono uppercase tracking-widest">
+                    <FaCalendarDays className="text-muted/50" /> {post.date}
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-sky-400 transition-colors leading-tight">
+                <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-brass transition-colors leading-snug">
                   {post.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm leading-relaxed mb-8 flex-1 line-clamp-3">
+                <p className="text-muted text-sm leading-relaxed mb-8 flex-1 line-clamp-3">
                   {post.excerpt}
                 </p>
 
                 <Link
                   href={`/blog/${post.id}`}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:translate-x-2 transition-transform duration-300"
+                  className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-foreground group-hover:text-steel transition-colors"
                 >
-                  Read Article <FaArrowRight className="text-sky-500" />
+                  Read Article{" "}
+                  <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
             </article>

@@ -2,73 +2,107 @@
 @config "../tailwind.config.js";
 
 :root {
-  --background: #14283D;
-  /* blueprint-ink */
-  --foreground: #DCEEF2;
-  /* blueprint-line */
-  --paper: #F6F4EE;
-  --ink: #1E2A32;
-  --signal: #FF6B4A;
-  --gulf: #2E8B8B;
+  --background: #101113;
+  /* Charcoal Ink — primary dark canvas */
+  --foreground: #ECE9E4;
+  /* Warm Ivory — primary text on dark */
+  --surface: #1A1C1F;
+  /* Elevated Graphite — cards, secondary panels */
+  --muted: #8A8D93;
+  /* Cool Gray — labels, secondary text, borders */
+  --paper: #F5F3EE;
+  /* Warm Paper — form fields, light contrast blocks */
+  --ink: #17181A;
+  /* text color used on --paper */
+  --brass: #B08D57;
+  /* primary accent — CTAs, emphasis */
+  --steel: #5C7A99;
+  /* secondary accent — links, hover states */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
   --color-paper: var(--paper);
   --color-ink: var(--ink);
-  --color-signal: var(--signal);
-  --color-gulf: var(--gulf);
+  --color-brass: var(--brass);
+  --color-steel: var(--steel);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Blueprint grid — replaces the pale mesh-gradient.
-   Thin cyan linework on ink-navy, like drafting paper. */
-.blueprint-grid {
-  background-color: var(--background);
-  background-image:
-    linear-gradient(rgba(220, 238, 242, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(220, 238, 242, 0.08) 1px, transparent 1px),
-    radial-gradient(at 20% 0%, rgba(46, 139, 139, 0.25) 0, transparent 55%);
-  background-size: 40px 40px, 40px 40px, auto;
+/* Primary dark sections (Hero, Experience, Footer, etc.) */
+.charcoal-section {
+  background: var(--background);
+  color: var(--foreground);
 }
 
-/* Use on light sections (About/Stats/Contact) to break the dark rhythm */
+/* Slightly elevated dark sections — for alternating rhythm without
+   dropping all the way to a light background */
+.surface-section {
+  background: var(--surface);
+  color: var(--foreground);
+}
+
+/* Light sections — used sparingly, e.g. Contact form, image-heavy
+   Collections grid, anywhere legibility matters more than mood */
 .paper-section {
   background: var(--paper);
   color: var(--ink);
 }
 
-/* Signature device: corner brackets, like drafting crop-marks.
-   Used on badges, buttons, and cards instead of rounded pills. */
-.corner-marks {
+/* Signature device: corner brackets in brass, tightening on hover */
+.frame {
   position: relative;
 }
 
-.corner-marks::before,
-.corner-marks::after {
+.frame::before,
+.frame::after {
   content: "";
   position: absolute;
   width: 12px;
   height: 12px;
-  border-color: var(--gulf);
+  border-color: var(--brass);
   border-style: solid;
   pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.corner-marks::before {
+.frame::before {
   top: -1px;
   left: -1px;
   border-width: 1.5px 0 0 1.5px;
 }
 
-.corner-marks::after {
+.frame::after {
   bottom: -1px;
   right: -1px;
   border-width: 0 1.5px 1.5px 0;
+}
+
+.frame:hover::before {
+  top: -3px;
+  left: -3px;
+  width: 16px;
+  height: 16px;
+}
+
+.frame:hover::after {
+  bottom: -3px;
+  right: -3px;
+  width: 16px;
+  height: 16px;
+}
+
+/* On paper sections, frame lines should stay legible against light bg */
+.paper-section .frame::before,
+.paper-section .frame::after {
+  border-color: var(--steel);
 }

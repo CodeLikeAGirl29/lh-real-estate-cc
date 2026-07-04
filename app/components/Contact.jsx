@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaCircleCheck, FaEnvelope, FaPhone } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");
@@ -39,17 +40,17 @@ export default function Contact() {
     <section className="paper-section py-12" id="contact">
       <div className="overflow-hidden max-w-6xl max-lg:max-w-2xl mx-auto p-4">
         <div className="grid lg:grid-cols-2 items-center gap-8">
-          <div className="corner-marks py-8 px-8 sm:px-10 border border-ink/10">
+          <div className="frame py-8 px-8 sm:px-10 border border-ink/10">
             <h2 className="font-display text-3xl text-ink font-bold">
-              Get In <span className="text-signal">Touch</span>
+              Get In <span className="text-brass">Touch</span>
             </h2>
             <p className="text-[15px] text-ink/60 mt-4 leading-relaxed">
               Have a specific inquiry? Ready to engage to find the perfect home.
             </p>
 
             {status === "success" ? (
-              <div className="mt-8 flex flex-col items-center justify-center p-8 border border-emerald-500/20 animate-in fade-in zoom-in duration-300">
-                <FaCircleCheck className="text-emerald-500 size-12 mb-4" />
+              <div className="mt-8 flex flex-col items-center justify-center p-8 border border-emerald-600/20 animate-in fade-in zoom-in duration-300">
+                <FaCircleCheck className="text-emerald-600 size-12 mb-4" />
                 <h3 className="font-display text-xl font-bold text-ink">
                   Message Sent!
                 </h3>
@@ -58,7 +59,7 @@ export default function Contact() {
                 </p>
                 <button
                   onClick={() => setStatus("idle")}
-                  className="mt-6 text-sm font-bold text-gulf hover:underline"
+                  className="mt-6 text-sm font-bold text-steel hover:underline"
                 >
                   Send another message
                 </button>
@@ -71,44 +72,47 @@ export default function Contact() {
                     name="name"
                     type="text"
                     placeholder="Full Name"
-                    className="px-4 py-3 bg-paper text-ink w-full text-sm border border-ink/20 focus:border-gulf outline-0 transition-all"
+                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
                   />
                   <input
                     required
                     name="phone"
                     type="text"
                     placeholder="Phone No."
-                    className="px-4 py-3 bg-paper text-ink w-full text-sm border border-ink/20 focus:border-gulf outline-0 transition-all"
+                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
                   />
                   <input
                     required
                     name="email"
                     type="email"
                     placeholder="Email"
-                    className="px-4 py-3 bg-paper text-ink w-full text-sm border border-ink/20 focus:border-gulf outline-0 transition-all"
+                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
                   />
                   <input
                     name="subject"
                     type="text"
                     placeholder="Subject"
-                    className="px-4 py-3 bg-paper text-ink w-full text-sm border border-ink/20 focus:border-gulf outline-0 transition-all"
+                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
                   />
                   <textarea
                     required
                     name="message"
                     placeholder="Write Message"
                     rows="5"
-                    className="px-4 pt-3 bg-paper text-ink w-full text-sm border border-ink/20 focus:border-gulf outline-0 transition-all"
+                    className="px-4 pt-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
                   />
                 </div>
 
-                <button
+                <motion.button
                   type="submit"
                   disabled={status === "sending"}
-                  className={`mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-3 tracking-wide text-paper transition-all border-0 ${
+                  whileHover={status !== "sending" ? { y: -3 } : {}}
+                  whileTap={status !== "sending" ? { y: 0 } : {}}
+                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                  className={`mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-3 tracking-wide transition-all border-0 ${
                     status === "sending"
-                      ? "bg-ink/30 cursor-not-allowed"
-                      : "bg-signal hover:opacity-90 cursor-pointer"
+                      ? "bg-ink/20 text-ink/50 cursor-not-allowed"
+                      : "bg-brass text-ink hover:opacity-90 cursor-pointer"
                   }`}
                 >
                   <svg
@@ -126,10 +130,10 @@ export default function Contact() {
                     />
                   </svg>
                   {status === "sending" ? "Sending..." : "Send message"}
-                </button>
+                </motion.button>
 
                 {status === "error" && (
-                  <p className="mt-4 text-red-500 text-xs text-center">
+                  <p className="mt-4 text-red-600 text-xs text-center">
                     Something went wrong. Please try again.
                   </p>
                 )}
@@ -138,19 +142,19 @@ export default function Contact() {
 
             <ul className="mt-8 flex flex-wrap justify-center gap-4 lg:space-x-6 max-lg:flex-col max-lg:items-center max-lg:space-y-2 border-t border-ink/10 pt-6">
               <li className="flex items-center font-medium">
-                <FaEnvelope className="size-4 text-gulf" />
+                <FaEnvelope className="size-4 text-steel" />
                 <a
                   href="mailto:lindseykdev@gmail.com"
-                  className="text-ink/70 text-sm ml-3 hover:text-signal transition-colors"
+                  className="text-ink/70 text-sm ml-3 hover:text-brass transition-colors"
                 >
                   lindseykdev@gmail.com
                 </a>
               </li>
               <li className="flex items-center font-medium">
-                <FaPhone className="size-4 text-gulf" />
+                <FaPhone className="size-4 text-steel" />
                 <a
                   href="tel:+18505335877"
-                  className="text-ink/70 text-sm ml-3 hover:text-signal transition-colors"
+                  className="text-ink/70 text-sm ml-3 hover:text-brass transition-colors"
                 >
                   +1 (850) 533-5877
                 </a>
@@ -158,10 +162,10 @@ export default function Contact() {
             </ul>
           </div>
 
-          <div className="corner-marks z-10 relative h-full max-lg:min-h-[400px] overflow-hidden border border-ink/10">
+          <div className="frame z-10 relative h-full max-lg:min-h-[400px] overflow-hidden border border-ink/10">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110117.84277717445!2d-86.71129595!3d30.41673895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88913f01b0ebf49d%3A0x673e271ee914a849!2sFort%20Walton%20Beach%2C%20FL!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
-              className="absolute left-0 top-0 h-full w-full grayscale-[30%] contrast-[1.1]"
+              className="absolute left-0 top-0 h-full w-full grayscale-[40%] contrast-[1.05]"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

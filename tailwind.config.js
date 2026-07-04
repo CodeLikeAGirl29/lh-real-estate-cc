@@ -1,11 +1,9 @@
-import flowbitePlugin from "flowbite/plugin";
-import twElementsPlugin from "tw-elements/plugin.cjs";
-
 /** @type {import('tailwindcss').Config} */
-const config = {
+const twElementsPlugin = require("tw-elements/plugin.cjs");
+
+module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite-react/dist/esm/**/*.mjs",
     "./node_modules/tw-elements/js/**/*.js",
   ],
   theme: {
@@ -16,33 +14,17 @@ const config = {
         mono: ["var(--font-mono)", "monospace"],
       },
       colors: {
-        // Re-anchored from generic sky-blue to the blueprint/ink family
-        // so existing bg-primary-500 etc. usages (Hero glow, Navbar) pick
-        // this up automatically.
-        primary: {
-          50: "#EDF2F6",
-          100: "#D7E3EC",
-          200: "#B0C7D9",
-          300: "#85A9C3",
-          400: "#5D8AAA",
-          500: "#3A6B8C",
-          600: "#295073",
-          700: "#1F3D59",
-          800: "#182F44",
-          900: "#14283D",
-          950: "#0C1826",
-        },
         background: "var(--background)",
         foreground: "var(--foreground)",
+        surface: "var(--surface)",
+        muted: "var(--muted)",
         paper: "var(--paper)",
         ink: "var(--ink)",
-        signal: "var(--signal)", // one hot accent, CTAs only
-        gulf: "var(--gulf)", // links, hover, mono labels
+        brass: "var(--brass)",
+        steel: "var(--steel)",
       },
     },
   },
-  plugins: [flowbitePlugin, twElementsPlugin],
+  plugins: [twElementsPlugin],
   darkMode: "class",
 };
-
-export default config;
