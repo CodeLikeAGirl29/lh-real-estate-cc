@@ -87,7 +87,7 @@ export default function Footer() {
             </li>
             <li>
               <motion.a
-                href="https://facebook.com/lindsey.howard"
+                href="https://www.facebook.com/lindseyhowardrealestate"
                 target="_blank"
                 rel="noreferrer"
                 className="block text-muted hover:text-brass"

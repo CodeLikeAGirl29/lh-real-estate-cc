@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: "Experience", href: "/#experience" },
     { name: "The Ledger", href: "/blog" },
     { name: "About", href: "/about" },
+    { name: "For Brokers", href: "/about#sponsor" },
   ];
 
   return (

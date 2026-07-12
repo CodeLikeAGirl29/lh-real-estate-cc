@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    setErrorMessage("");
 
     const formData = {
       name: e.target.name.value,
@@ -16,6 +18,8 @@ export default function Contact() {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
+      // Honeypot: real visitors never see or fill this field.
+      company: e.target.company.value,
     };
 
     try {
@@ -29,9 +33,14 @@ export default function Contact() {
         setStatus("success");
         e.target.reset();
       } else {
+        const result = await response.json().catch(() => null);
+        setErrorMessage(
+          result?.error || "Something went wrong. Please try again.",
+        );
         setStatus("error");
       }
     } catch {
+      setErrorMessage("Something went wrong. Please try again.");
       setStatus("error");
     }
   };
@@ -66,6 +75,16 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
+                {/* Honeypot field: hidden from real visitors via CSS,
+                    but bots that auto-fill every field will trip it. */}
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden"
+                />
                 <div className="space-y-4 mt-8">
                   <input
                     required
@@ -134,7 +153,7 @@ export default function Contact() {
 
                 {status === "error" && (
                   <p className="mt-4 text-red-600 text-xs text-center">
-                    Something went wrong. Please try again.
+                    {errorMessage || "Something went wrong. Please try again."}
                   </p>
                 )}
               </form>

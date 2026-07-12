@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutStats from "../components/AboutStats";
 import AboutBlueprint from "../components/AboutBlueprint";
+import SponsorPitch from "../components/SponsorPitch";
 
 export default function AboutPage() {
   return (
@@ -87,6 +88,7 @@ export default function AboutPage() {
       </section>
 
       <AboutBlueprint />
+      <SponsorPitch />
       <Footer />
     </main>
   );
