@@ -58,8 +58,24 @@ export default function Contact() {
             </p>
 
             {status === "success" ? (
-              <div className="mt-8 flex flex-col items-center justify-center p-8 border border-emerald-600/20 animate-in fade-in zoom-in duration-300">
-                <FaCircleCheck className="text-emerald-600 size-12 mb-4" />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-8 flex flex-col items-center justify-center p-8 border border-emerald-600/20"
+              >
+                <motion.div
+                  initial={{ scale: 0, rotate: -45 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{
+                    delay: 0.1,
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 15,
+                  }}
+                >
+                  <FaCircleCheck className="text-emerald-600 size-12 mb-4" />
+                </motion.div>
                 <h3 className="font-display text-xl font-bold text-ink">
                   Message Sent!
                 </h3>
@@ -72,7 +88,7 @@ export default function Contact() {
                 >
                   Send another message
                 </button>
-              </div>
+              </motion.div>
             ) : (
               <form onSubmit={handleSubmit}>
                 {/* Honeypot field: hidden from real visitors via CSS,
@@ -134,20 +150,54 @@ export default function Contact() {
                       : "bg-brass text-ink hover:opacity-90 cursor-pointer"
                   }`}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16px"
-                    height="16px"
-                    fill="currentColor"
-                    className="mr-2"
-                    viewBox="0 0 548.244 548.244"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  {status === "sending" ? (
+                    <motion.svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16px"
+                      height="16px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="mr-2"
+                      animate={{ rotate: 360 }}
+                      transition={{
+                        duration: 0.8,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="9"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeOpacity="0.25"
+                        fill="none"
+                      />
+                      <path
+                        d="M21 12a9 9 0 0 0-9-9"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        fill="none"
+                      />
+                    </motion.svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16px"
+                      height="16px"
+                      fill="currentColor"
+                      className="mr-2"
+                      viewBox="0 0 548.244 548.244"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
                   {status === "sending" ? "Sending..." : "Send message"}
                 </motion.button>
 

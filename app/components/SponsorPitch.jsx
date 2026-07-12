@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import {
   FaRocket,
   FaCode,
@@ -54,20 +54,7 @@ export default function SponsorPitch() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {pillars.map((pillar, i) => (
-            <div
-              key={i}
-              className="frame p-8 border border-foreground/10 hover:border-brass/30 transition-colors duration-300"
-            >
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground/10 text-brass text-xl">
-                {pillar.icon}
-              </div>
-              <h4 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
-                {pillar.title}
-              </h4>
-              <p className="text-foreground/60 font-sans leading-relaxed text-sm">
-                {pillar.content}
-              </p>
-            </div>
+            <PillarCard key={i} pillar={pillar} index={i} />
           ))}
         </div>
 
@@ -144,5 +131,40 @@ export default function SponsorPitch() {
         </div>
       </div>
     </section>
+  );
+}
+
+function PillarCard({ pillar, index }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.12,
+        ease: [0.16, 1, 0.3, 1],
+      }}
+      whileHover={{ y: -4 }}
+      className="frame p-8 border border-foreground/10 hover:border-brass/30 transition-colors duration-300"
+    >
+      <motion.div
+        initial={{ scale: 0.6, opacity: 0 }}
+        animate={inView ? { scale: 1, opacity: 1 } : {}}
+        transition={{ delay: index * 0.12 + 0.15, duration: 0.35 }}
+        className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground/10 text-brass text-xl"
+      >
+        {pillar.icon}
+      </motion.div>
+      <h4 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
+        {pillar.title}
+      </h4>
+      <p className="text-foreground/60 font-sans leading-relaxed text-sm">
+        {pillar.content}
+      </p>
+    </motion.div>
   );
 }

@@ -4,20 +4,55 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
 export default function Hero() {
   return (
     <>
       <Navbar />
       <section className="charcoal-section relative lg:grid lg:h-screen lg:place-content-center overflow-hidden pt-24">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brass blur-[130px] rounded-full opacity-[0.08] pointer-events-none" />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 0.08, scale: 1 }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
+          className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brass blur-[130px] rounded-full pointer-events-none"
+        />
 
-        <div className="mx-auto w-screen max-w-7xl px-4 py-32 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="mx-auto w-screen max-w-7xl px-4 py-32 sm:px-6 lg:px-8 relative z-10"
+        >
           <div className="mx-auto max-w-prose text-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-steel mb-6">
+            <motion.p
+              variants={item}
+              className="font-mono text-[11px] uppercase tracking-[0.3em] text-steel mb-6"
+            >
               Okaloosa County, FL
-            </p>
+            </motion.p>
 
-            <div className="flex justify-center gap-8 mb-8">
+            <motion.div
+              variants={item}
+              className="flex justify-center gap-8 mb-8"
+            >
               <span className="frame flex items-center gap-1.5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-foreground">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 FL Exam Passed
@@ -26,21 +61,30 @@ export default function Hero() {
                 <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
                 Awaiting Sponsoring Broker
               </span>
-            </div>
+            </motion.div>
 
-            <h1 className="font-display text-4xl font-bold text-foreground sm:text-6xl leading-[0.9] tracking-tight">
+            <motion.h1
+              variants={item}
+              className="font-display text-4xl font-bold text-foreground sm:text-6xl leading-[0.9] tracking-tight"
+            >
               Closing,
               <br />
               <span className="italic text-brass">No Compromise.</span>
-            </h1>
+            </motion.h1>
 
-            <p className="mt-8 font-sans text-base text-pretty text-foreground/60 sm:text-xl/relaxed max-w-lg mx-auto">
+            <motion.p
+              variants={item}
+              className="mt-8 font-sans text-base text-pretty text-foreground/60 sm:text-xl/relaxed max-w-lg mx-auto"
+            >
               Your goals are my mission. I approach every deal with{" "}
               <span className="text-steel font-mono">relentless focus</span> and
               determination, ensuring every step moves you closer to success.
-            </p>
+            </motion.p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <motion.div
+              variants={item}
+              className="mt-10 flex flex-wrap justify-center gap-4"
+            >
               <motion.a
                 whileHover={{
                   y: -3,
@@ -59,9 +103,9 @@ export default function Hero() {
               >
                 Read the Ledger
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
