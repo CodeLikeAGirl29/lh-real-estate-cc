@@ -1,6 +1,6 @@
 import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
-import Script from "next/script";
-import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import "./globals.css"; // You can remove the 'next/script' import
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -37,22 +37,8 @@ export default function RootLayout({ children }) {
         {children}
       </body>
 
-      {gaId && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga-init" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${gaId}');
-            `}
-          </Script>
-        </>
-      )}
+      {/* Simply pass the ID to the component you imported */}
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }

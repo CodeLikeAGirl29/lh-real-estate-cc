@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.11",
     "flowbite": "^4.0.2",
     "flowbite-react": "^0.12.17",
     "framer-motion": "^12.42.2",
