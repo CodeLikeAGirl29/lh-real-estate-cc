@@ -17,7 +17,7 @@ const blogPosts = {
     image: "/images/local-coastline.jpg",
     content: (
       <>
-        <p className="mb-6 font-normal text-gray-400 text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-sky-400 first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
           Why is Fort Walton Beach the Panhandle&apos;s Best Kept Secret? When
           people think of the Florida Panhandle, they usually think of the neon
           lights of Destin. But for those of us who live and work here,{" "}
@@ -25,10 +25,10 @@ const blogPosts = {
           Coast.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Investment Logic vs. Vacation Vibes
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           As a developer, I look at property through the lens of infrastructure.
           Fort Walton Beach offers something Destin often lacks:{" "}
           <strong>Stability</strong>. With proximity to Eglin AFB and Hurlburt
@@ -36,18 +36,18 @@ const blogPosts = {
           year-round.
         </p>
 
-        <div className="my-10 p-8 bg-sky-500/5 border-l-4 border-sky-500 rounded-r-xl">
-          <p className="text-white italic font-serif text-xl leading-relaxed">
+        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
             &quot;Don&apos;t just buy a view; buy a system. FWB properties,
             especially around the secondary residential tiers, offer the best
             CAP rates in Okaloosa County.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-white mt-10 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">
           The &apos;Unit 6&apos; Standard
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Whether you&apos;re looking at <strong>Spanish Villas</strong> or new
           construction near Shalimar, you have to understand local compliance.
           My &apos;Master Drill&apos; approach ensures that every property I
@@ -55,10 +55,10 @@ const blogPosts = {
           long-term Florida ownership.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Infrastructure Spotlight: The Brooks Bridge Effect
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Current data-points to watch: the $171 million Brooks Bridge
           replacement project. For a developer, this isn&apos;t just about
           traffic flow; it&apos;s about the literal expansion of the
@@ -68,10 +68,10 @@ const blogPosts = {
           undervalued when you factor in the projected 2027 transit efficiency.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           School Districts and the Family Buyer
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Infrastructure gets the headlines, but for the family relocating from
           out of state, the first question is almost always about schools.
           Okaloosa County&apos;s district consistently ranks among the stronger
@@ -83,10 +83,10 @@ const blogPosts = {
           two streets over can sit in a completely different zone.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Reading Rental Yield by Micro-Neighborhood
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           &quot;Fort Walton Beach&quot; isn&apos;t one market—it&apos;s a
           handful of smaller ones stitched together. The corridor closest to
           Eglin AFB tends to command dependable long-term rental demand from
@@ -98,10 +98,10 @@ const blogPosts = {
           the right one to an investor&apos;s goals is most of the job.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Questions I Get From Every Relocating Buyer
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           The same handful of questions come up on nearly every first call: How
           far is the commute to Eglin or Hurlburt, really, at 7:30 a.m.? Is
           flood insurance going to be a surprise at closing? Is this
@@ -110,7 +110,7 @@ const blogPosts = {
           a buyer discover the answer during the inspection period.
         </p>
 
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           If you&apos;re weighing Fort Walton Beach against Destin or Miramar
           Beach, I&apos;m happy to walk through the actual trade-offs for your
           situation—reach out and I&apos;ll send over a breakdown specific to
@@ -127,7 +127,7 @@ const blogPosts = {
     image: "/images/img-1.jpg",
     content: (
       <>
-        <p className="mb-6 font-normal text-gray-400 text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-sky-400 first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
           Moving past the aesthetics to analyze the raw data. When we talk about
           growth zones in Okaloosa County, we aren&apos;t just looking at where
           the water is prettiest—we&apos;re looking at where the fiber optics
@@ -135,10 +135,10 @@ const blogPosts = {
           a home; infrastructure decides whether that home appreciates.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           The Prop-Tech Pivot
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           We are seeing a massive influx of tech-enabled property management.
           For an investor, this means lower overhead and higher transparency. If
           your property isn&apos;t integrated into a modern digital stack—smart
@@ -147,10 +147,10 @@ const blogPosts = {
           competing unit two doors down that is.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Three Signals That Move Before the Comps Do
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Comparable sales data tells you what a neighborhood was worth a few
           months ago. By the time a growth zone shows up clearly in the comps,
           the best entry point has usually already passed. I track three earlier
@@ -162,17 +162,17 @@ const blogPosts = {
           price movement by several months to a year.
         </p>
 
-        <div className="my-10 p-8 bg-sky-500/5 border-l-4 border-sky-500 rounded-r-xl">
-          <p className="text-white italic font-serif text-xl leading-relaxed">
+        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
             &quot;By the time a growth zone shows up in the comps, the best
             entry point has usually already passed.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Cap Rate Isn&apos;t the Whole Story
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Investors chasing the highest headline cap rate often overlook the
           management burden attached to it. A short-term rental near the beach
           can post an eye-catching gross yield, but factor in turnover cleaning,
@@ -184,10 +184,10 @@ const blogPosts = {
           you&apos;re not planning to manage the property yourself.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Risk Factors Worth Naming
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           No market analysis is complete without the downside case. Flood
           insurance premiums have been trending upward across the Gulf Coast and
           can materially change a property&apos;s real yield after the fact.
@@ -198,10 +198,10 @@ const blogPosts = {
           have them discover the exposure after closing.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Where I&apos;m Watching Next
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Right now, the corridor between Fort Walton Beach and Shalimar is
           showing the clearest combination of the three leading signals—
           permitting activity is up, infrastructure investment is committed, and
@@ -210,7 +210,7 @@ const blogPosts = {
           gets crowded.
         </p>
 
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           If you&apos;re evaluating Okaloosa County as an out-of-state investor,
           I put together a one-page breakdown of current growth zones on
           request—reach out and I&apos;ll send it over.
@@ -227,37 +227,37 @@ const blogPosts = {
     image: "/images/img-2.jpg",
     content: (
       <>
-        <p className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed">
           There&apos;s a certain kind of peace you only understand once
           you&apos;ve stood barefoot in the soft, sugar-white sand of
           Florida&apos;s Emerald Coast. The kind where the breeze carries salt
           and sunshine in equal measure, and time slows just enough for you to
           realize—you&apos;re exactly where you&apos;re meant to be.
         </p>
-        <p className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed">
           Welcome to the Emerald Coast. Not just a destination, but a way of
           living… <strong>handled.</strong>
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Where the Water Changes Everything
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           The first thing people notice is the water. It&apos;s not just
           blue—it&apos;s that unreal, glassy emerald that looks like it belongs
           in a postcard. Mornings here begin quietly. Coffee on the balcony. The
           distant rhythm of waves. Maybe a dolphin sighting if you&apos;re
           lucky.
         </p>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           But what keeps people here isn&apos;t just the view—it&apos;s how life
           starts to feel simpler. Handled.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           The Rhythm of Coastal Living
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Life along the coast doesn&apos;t rush you. It invites you. Afternoons
           might mean a walk along the shoreline, stopping at a beachside café
           for something fresh and local. Evenings are for sunsets that paint the
@@ -265,18 +265,18 @@ const blogPosts = {
           apology.
         </p>
 
-        <div className="my-10 p-8 bg-indigo-500/5 border-l-4 border-indigo-500 rounded-r-xl">
-          <p className="text-white italic font-serif text-xl leading-relaxed">
+        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
             &quot;Owning a piece of this coastline isn&apos;t just about
             property—it&apos;s about possibility. A place where home feels like
             a permanent getaway.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           More Than a Vacation
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Visitors come for a week and leave with a question they didn&apos;t
           expect: <em>What would it look like to stay?</em> Because the Emerald
           Coast has a way of shifting your priorities. Suddenly, you&apos;re
@@ -285,28 +285,30 @@ const blogPosts = {
         </p>
 
         {/* INSIDER PICKS SECTION */}
-        <div className="mt-16 mb-12 p-10 bg-white/5 border border-white/10 rounded-3xl">
-          <h3 className="text-3xl font-bold text-white mb-2">Insider Picks</h3>
-          <p className="text-indigo-400 font-medium mb-8">
+        <div className="corner-marks mt-16 mb-12 p-10 bg-surface border border-foreground/10">
+          <h3 className="font-display text-3xl font-bold text-foreground mb-2">
+            Insider Picks
+          </h3>
+          <p className="text-brass font-medium mb-8">
             What to Do on the Emerald Coast
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">
+              <h4 className="font-display text-xl font-bold text-foreground">
                 🌊 Start Your Day on the Water
               </h4>
-              <p className="text-gray-400">
+              <p className="text-foreground/60">
                 Rent a paddleboard or kayak and glide across the calm Gulf
                 waters while the world is still quiet.
               </p>
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">
+              <h4 className="font-display text-xl font-bold text-foreground">
                 ☕ Your Go-To Coffee Spot
               </h4>
-              <p className="text-gray-400">
+              <p className="text-foreground/60">
                 Try <strong>Capriccio Café</strong> or{" "}
                 <strong>Black Bear Bread Co.</strong>—perfect for that “coffee +
                 coastal breeze” ritual.
@@ -314,20 +316,20 @@ const blogPosts = {
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">
+              <h4 className="font-display text-xl font-bold text-foreground">
                 🐚 Beach Hop Like a Local
               </h4>
-              <p className="text-gray-400">
+              <p className="text-foreground/60">
                 Explore 30A. Each stretch of shoreline has its own
                 personality—from lively to tucked-away quiet.
               </p>
             </div>
 
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-white">
+              <h4 className="font-display text-xl font-bold text-foreground">
                 🍤 Eat Like You Live Here
               </h4>
-              <p className="text-gray-400">
+              <p className="text-foreground/60">
                 Fresh seafood is non-negotiable. <strong>The Back Porch</strong>{" "}
                 or <strong>Shunk Gulley</strong> offer the perfect mix of flavor
                 and view.
@@ -337,26 +339,28 @@ const blogPosts = {
         </div>
 
         {/* SECONDARY IMAGE */}
-        <div className="my-12 rounded-2xl overflow-hidden border border-white/10">
-          <Image
-            src="/images/local-coastline.jpg"
-            alt="Emerald Coast Lifestyle"
-            fill
-            sizes="(max-width: 1024px) 100vw, 66vw"
-            className="object-cover"
-          />
-          <div className="bg-white/5 p-4">
-            <p className="text-sm text-gray-500 italic text-center">
+        <div className="corner-marks my-12 overflow-hidden border border-foreground/10">
+          <div className="relative h-72 w-full">
+            <Image
+              src="/images/local-coastline.jpg"
+              alt="Emerald Coast Lifestyle"
+              fill
+              sizes="(max-width: 1024px) 100vw, 66vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="bg-surface p-4">
+            <p className="text-sm text-muted italic text-center">
               The secret to the Emerald Coast? Doing the right things, at the
               right pace.
             </p>
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           What First-Time Relocators Actually Ask Me
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Every relocation call starts to sound the same after a while, and
           that&apos;s a good thing—it means the questions are predictable.{" "}
           <strong>Is it humid enough to be uncomfortable?</strong> Yes, June
@@ -374,10 +378,10 @@ const blogPosts = {
           assume.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           A Realistic Day, Not Just a Vacation Day
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           It&apos;s easy to sell someone on a sunset. It&apos;s harder, and more
           honest, to describe a Tuesday. Groceries at the Publix off Racetrack
           Road. A weekday lunch rush that&apos;s nothing like the summer crowds.
@@ -387,21 +391,21 @@ const blogPosts = {
           moving from.
         </p>
 
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Living here isn&apos;t about escaping reality—it&apos;s about
           redefining it. It&apos;s knowing where to catch the best sunrise.
           Which hidden spots locals love. It&apos;s understanding that luxury
           isn&apos;t always about extravagance—it&apos;s about ease.
         </p>
 
-        <p className="mb-12 text-gray-400 text-lg">
+        <p className="mb-12 text-muted text-lg">
           The Emerald Coast doesn&apos;t ask you to change your life completely.
           It simply shows you what life could feel like when it&apos;s aligned,
           intentional, and just a little more peaceful. Once you experience it,
           one thing becomes clear: Some places you visit. Others… you live.
         </p>
 
-        <p className="text-3xl font-black text-indigo-500 tracking-widest text-center md:text-left">
+        <p className="font-display text-3xl font-black text-brass tracking-widest text-center md:text-left">
           HANDLED.
         </p>
       </>
@@ -415,7 +419,7 @@ const blogPosts = {
     image: "/images/pensacola-header.jpg",
     content: (
       <>
-        <p className="mb-6 font-normal text-gray-400 text-lg leading-relaxed">
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed">
           While Destin captures the tourism headlines, Pensacola is currently
           undergoing a structural transformation that demands the attention of
           any serious developer or investor. In 2026, the "Cradle of Aviation"
@@ -423,10 +427,10 @@ const blogPosts = {
           infrastructure hub.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           The $6.5 Million Gateway Upgrade
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Infrastructure is the ultimate leading indicator for real estate
           value. The{" "}
           <strong>Pensacola Beach Gateway Improvements Project</strong>,
@@ -438,17 +442,17 @@ const blogPosts = {
           assets on Santa Rosa Island.
         </p>
 
-        <div className="my-10 p-8 bg-sky-500/5 border-l-4 border-sky-500 rounded-r-xl">
-          <p className="text-white italic font-serif text-xl leading-relaxed">
+        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
             "The most valuable real estate isn't just near the water; it's
             behind the most efficient infrastructure."
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           The Defense Moat
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Pensacola&apos;s economy is anchored by a{" "}
           <strong>$7.8 billion military impact</strong>. With over 41,000
           defense-related jobs and a massive veteran population, the rental
@@ -460,10 +464,10 @@ const blogPosts = {
           defense contractor workforce.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Structural Standards: The V-Zone Reality
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           Building in Pensacola in 2026 requires a deep understanding of the{" "}
           <strong>Coastal Construction Control Line (CCCL)</strong>. We are no
           longer just building for aesthetics; we are building for survival.
@@ -474,10 +478,10 @@ const blogPosts = {
           equity growth.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           What This Means for Investors
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           The practical takeaway for anyone evaluating Pensacola right now: the
           properties worth chasing are the ones that have already cleared the
           CCCL and V-Zone compliance hurdle, not the ones priced as if they
@@ -487,10 +491,10 @@ const blogPosts = {
           compliance than discover the gap during financing.
         </p>
 
-        <h3 className="text-2xl font-bold text-white mt-12 mb-4">
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Neighborhoods Worth Watching
         </h3>
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           East Hill and North Hill continue to attract renovation activity from
           buyers who want walkable, historic character with modern compliance
           built in. Closer to the Gateway corridor itself, new construction is
@@ -499,7 +503,7 @@ const blogPosts = {
           in from the start, rather than retrofitted later.
         </p>
 
-        <p className="mb-6 text-gray-400 text-lg">
+        <p className="mb-6 text-muted text-lg">
           If Pensacola&apos;s defense-driven growth story fits your investment
           thesis, I&apos;m happy to talk through specific neighborhoods and
           current compliant inventory—reach out anytime.
@@ -515,13 +519,13 @@ export default function BlogPost() {
 
   if (!post)
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center text-white text-2xl font-bold">
+      <div className="min-h-screen bg-background flex items-center justify-center text-foreground text-2xl font-bold">
         Post Not Found
       </div>
     );
 
   return (
-    <main className="bg-gray-900 min-h-screen">
+    <main className="bg-background min-h-screen selection:bg-steel/30">
       <Navbar />
 
       {/* Hero Header */}
@@ -534,26 +538,26 @@ export default function BlogPost() {
           sizes="100vw"
           className="object-cover brightness-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent" />
         <div className="relative z-10 flex h-full items-end pb-12 px-6 lg:px-24">
           <div className="max-w-4xl">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sky-400 mb-6 hover:text-white transition-colors font-bold text-xs uppercase tracking-widest"
+              className="inline-flex items-center gap-2 text-brass mb-6 hover:text-foreground transition-colors font-bold text-xs uppercase tracking-widest"
             >
               <FaArrowLeft /> Back to the Ledger
             </Link>
-            <h1 className="text-4xl lg:text-6xl font-black text-white leading-tight mb-4">
+            <h1 className="font-display text-4xl lg:text-6xl font-black text-foreground leading-tight mb-4">
               {post.title}
             </h1>
-            <div className="flex flex-wrap gap-6 text-gray-300 text-sm font-mono">
+            <div className="flex flex-wrap gap-6 text-muted text-sm font-mono">
               <span className="flex items-center gap-2">
-                <FaTag className="text-sky-500" /> {post.category}
+                <FaTag className="text-brass" /> {post.category}
               </span>
               <span className="flex items-center gap-2">
-                <FaClock className="text-sky-500" /> {post.readTime}
+                <FaClock className="text-brass" /> {post.readTime}
               </span>
-              <span className="text-sky-400 font-bold">{post.date}</span>
+              <span className="text-brass font-bold">{post.date}</span>
             </div>
           </div>
         </div>
@@ -566,23 +570,23 @@ export default function BlogPost() {
 
         {/* Sticky Sidebar CTA */}
         <aside className="lg:w-1/3">
-          <div className="sticky top-32 p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
-            <div className="w-20 h-20 bg-sky-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+          <div className="corner-marks sticky top-32 p-8 bg-surface border border-foreground/10 text-center">
+            <div className="w-20 h-20 bg-brass text-background rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
               LH
             </div>
-            <h2 className="text-white mb-2 text-xl font-semibold">
+            <h2 className="font-display text-foreground mb-2 text-xl font-bold">
               Lindsey Howard
             </h2>
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-foreground/60 text-sm mb-6">
               Full-Stack Developer & Real Estate Associate specialized in
               Okaloosa County property logic.
             </p>
             <a href="mailto:lindsey.howard.re@outlook.com" className="block">
-              <span className="w-full rounded-lg py-3 px-6 text-sm font-bold uppercase tracking-wide text-white bg-sky-600 mb-4 flex items-center justify-center gap-2 hover:bg-sky-500 transition-colors">
+              <span className="w-full py-3 px-6 text-sm font-bold uppercase tracking-wide text-background bg-brass mb-4 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
                 <FaEnvelope /> Let&apos;s Talk Property
               </span>
             </a>
-            <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">
+            <p className="text-[10px] text-muted uppercase tracking-widest font-bold">
               Reimagining Real Estate
             </p>
           </div>

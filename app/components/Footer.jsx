@@ -16,7 +16,7 @@ export default function Footer() {
         <ul className="flex gap-x-10 gap-y-6 justify-center flex-wrap mb-12 font-mono text-xs uppercase tracking-widest">
           <li>
             <a
-              href="https://lhrealestate.cc/#about"
+              href="/about"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
               About
@@ -24,7 +24,7 @@ export default function Footer() {
           </li>
           <li>
             <a
-              href="https://lhrealestate.cc/#projects"
+              href="/#projects"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
               Projects
@@ -32,7 +32,7 @@ export default function Footer() {
           </li>
           <li>
             <a
-              href="https://lhrealestate.cc/#experience"
+              href="/#experience"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
               Experience

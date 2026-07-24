@@ -213,10 +213,10 @@ export default function Contact() {
               <li className="flex items-center font-medium">
                 <FaEnvelope className="size-4 text-steel" />
                 <a
-                  href="mailto:lindseykdev@gmail.com"
+                  href="mailto:lindsey.howard.re@outlook.com"
                   className="text-ink/70 text-sm ml-3 hover:text-brass transition-colors"
                 >
-                  lindseykdev@gmail.com
+                  lindsey.howard.re@outlook.com
                 </a>
               </li>
               <li className="flex items-center font-medium">

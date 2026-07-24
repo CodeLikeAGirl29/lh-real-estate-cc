@@ -17,6 +17,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Innovations", href: "/#projects" },
     { name: "Calculator", href: "/#calculator" },
+    { name: "Home Value", href: "/#cma" },
     { name: "Market Map", href: "/#market-map" },
     { name: "Experience", href: "/#experience" },
     { name: "The Ledger", href: "/blog" },

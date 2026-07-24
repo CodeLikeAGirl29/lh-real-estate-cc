@@ -22,6 +22,8 @@ module.exports = {
         ink: "var(--ink)",
         brass: "var(--brass)",
         steel: "var(--steel)",
+        signal: "var(--signal)",
+        gulf: "var(--gulf)",
       },
     },
   },

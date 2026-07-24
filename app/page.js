@@ -1,8 +1,8 @@
 import Hero from "./components/Hero";
 import AboutBlueprint from "./components/AboutBlueprint";
-import AboutStats from "./components/AboutStats";
 import Collections from "./components/Collections";
 import InvestmentCalculator from "./components/InvestmentCalculator";
+import CMAEstimator from "./components/CMAEstimator";
 import MarketMapSection from "./components/MarketMapSection";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
@@ -13,9 +13,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <AboutBlueprint />
-      <AboutStats />
       <Collections />
       <InvestmentCalculator />
+      <CMAEstimator />
       <MarketMapSection />
       <Experience />
       <Contact />

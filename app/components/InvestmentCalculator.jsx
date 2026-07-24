@@ -140,7 +140,7 @@ export default function InvestmentCalculator() {
               onClick={() => setMode("mortgage")}
               className={`flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-widest font-bold transition-colors ${
                 mode === "mortgage"
-                  ? "bg-signal text-paper"
+                  ? "bg-signal text-ink"
                   : "text-ink/60 hover:text-ink"
               }`}
             >
@@ -150,7 +150,7 @@ export default function InvestmentCalculator() {
               onClick={() => setMode("cap")}
               className={`flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-widest font-bold transition-colors ${
                 mode === "cap"
-                  ? "bg-signal text-paper"
+                  ? "bg-signal text-ink"
                   : "text-ink/60 hover:text-ink"
               }`}
             >
@@ -283,16 +283,16 @@ export default function InvestmentCalculator() {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-ink/10">
           <div>
             <h4 className="font-display text-xl font-bold text-ink">
-              Want the real numbers for a specific address?
+              Want a ballpark for a specific address?
             </h4>
             <p className="text-ink/60 text-sm">
-              I&apos;ll run a full comparative market analysis — free, no
-              obligation.
+              Try the interactive home value estimator below — plug in your
+              own comps and see a range in seconds.
             </p>
           </div>
           <a
-            href="#contact"
-            className="corner-marks px-8 py-3 bg-signal text-paper font-bold hover:opacity-90 transition whitespace-nowrap"
+            href="#cma"
+            className="corner-marks px-8 py-3 bg-signal text-ink font-bold hover:opacity-90 transition whitespace-nowrap"
           >
             Get My Free CMA
           </a>

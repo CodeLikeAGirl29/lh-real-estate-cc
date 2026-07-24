@@ -40,26 +40,22 @@ export default function AboutStats() {
             <h3 className="font-display text-2xl font-bold flex items-center gap-3 text-foreground">
               <FaLocationDot className="text-brass" /> Market Expertise
             </h3>
-            <div className="space-y-6">
-              <SkillBar
-                label="Florida Real Estate Law"
-                percentage="95%"
-                description="Unit 6 Specialist & Regulatory Compliance"
+            <div className="space-y-5">
+              <CredentialItem
+                label="Florida Real Estate License"
+                detail="Sales Associate — state exam passed, awaiting sponsoring broker"
               />
-              <SkillBar
-                label="Property Valuation"
-                percentage="88%"
-                description="Comparative Market Analysis & Data Logic"
+              <CredentialItem
+                label="Pre-Licensing Coursework"
+                detail="State license law, federal regulations, property rights, titles, real estate finance"
               />
-              <SkillBar
-                label="Local Market Knowledge"
-                percentage="92%"
-                description="Fort Walton Beach & Panhandle Specialist"
+              <CredentialItem
+                label="Local Market Focus"
+                detail="Fort Walton Beach, Destin & Santa Rosa Beach — Okaloosa County"
               />
-              <SkillBar
-                label="Contract Negotiation"
-                percentage="85%"
-                description="Strategic Advocacy & Mechanical Detail"
+              <CredentialItem
+                label="Property Analysis"
+                detail="Comparative market data, zoning research, listing evaluation"
               />
             </div>
 
@@ -68,10 +64,11 @@ export default function AboutStats() {
                 Structural Insight
               </h4>
               <p className="text-sm text-foreground/60 leading-relaxed">
-                My background in automotive technology and residential painting
-                gives me a distinct advantage. I don&apos;t just see a house; I
-                see its systems. I bring a hands-on understanding of property
-                maintenance to every client consultation.
+                My background in residential painting and hands-on client
+                service gives me a distinct advantage. I don&apos;t just see a
+                house; I see its surfaces, finishes, and upkeep. I bring a
+                tradesperson&apos;s eye for property condition to every client
+                consultation.
               </p>
             </div>
           </div>
@@ -155,16 +152,32 @@ export default function AboutStats() {
             >
               Download CV
             </motion.a>
-            <motion.button
+            <motion.a
+              href="mailto:lindsey.howard.re@outlook.com?subject=Let's%20Talk%20Real%20Estate"
               whileHover={{ y: -3 }}
               whileTap={{ y: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="frame px-8 py-3 text-steel font-bold hover:text-brass transition-colors"
+              className="frame px-8 py-3 text-steel font-bold hover:text-brass transition-colors text-center"
             >
               Contact Lindsey
-            </motion.button>
+            </motion.a>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function CredentialItem({ label, detail }) {
+  return (
+    <div className="flex items-start gap-3 border-l-2 border-brass/40 pl-4">
+      <div>
+        <span className="text-foreground font-display font-bold block">
+          {label}
+        </span>
+        <span className="text-xs text-foreground/50 leading-relaxed">
+          {detail}
+        </span>
       </div>
     </div>
   );

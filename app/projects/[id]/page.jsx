@@ -5,6 +5,7 @@ import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Link from "next/link";
+import { event as gaEvent } from "@/lib/gtag";
 import {
   FaArrowLeft,
   FaMapLocationDot,
@@ -359,7 +360,17 @@ export default function ProjectPost() {
               Get the technical breakdown on the best neighborhoods, school
               districts, and investment zones in Okaloosa County.
             </p>
-            <a href="mailto:lindsey.howard.re@outlook.com">
+            <a
+              href="/files/local-insider-guide.pdf"
+              download="Fort-Walton-Beach-Local-Insider-Guide.pdf"
+              onClick={() =>
+                gaEvent({
+                  action: "download",
+                  category: "engagement",
+                  label: "insider_guide_download",
+                })
+              }
+            >
               <button className="px-8 py-3 bg-brass text-background font-mono text-xs font-bold uppercase tracking-widest hover:bg-steel transition-colors flex items-center gap-2">
                 Get My Local Insider Guide <FaMapLocationDot />
               </button>
