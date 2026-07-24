@@ -64,7 +64,7 @@ export default function Footer() {
                 href="https://github.com/codelikeagirl29"
                 target="_blank"
                 rel="noreferrer"
-                className="block text-muted hover:text-brass"
+                className="block text-muted hover:text-reef"
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -90,7 +90,7 @@ export default function Footer() {
                 href="https://www.facebook.com/lindseyhowardrealestate"
                 target="_blank"
                 rel="noreferrer"
-                className="block text-muted hover:text-brass"
+                className="block text-muted hover:text-reef"
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -105,7 +105,7 @@ export default function Footer() {
         <div className="border-t border-muted/10 pt-8 mt-16 flex flex-col items-center gap-2">
           <p className="font-mono text-xs text-muted">
             © {currentYear}{" "}
-            <span className="text-brass font-bold">by L. HOWARD</span>
+            <span className="text-reef font-bold">by L. HOWARD</span>
             {" — Built with Next.js & Tailwind CSS"}
           </p>
           <p className="font-mono text-[10px] text-muted/50 uppercase tracking-widest">

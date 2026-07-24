@@ -6,6 +6,23 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { FaArrowRight, FaCalendarDays } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+};
 
 const posts = [
   {
@@ -53,27 +70,42 @@ export default function BlogPage() {
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-16 px-6 lg:px-8 border-b border-surface">
-        <div className="max-w-6xl mx-auto text-center mt-12 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-6xl mx-auto text-center mt-12 mb-8"
+        >
           <span className="inline-block px-4 py-1.5 bg-steel/10 text-steel font-mono text-[10px] font-bold uppercase tracking-widest mb-6">
             Insights & Intelligence
           </span>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
-            The <span className="text-brass italic">Digital</span> Ledger
+            The <span className="text-reef italic">Digital</span> Ledger
           </h1>
           <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
             Where Florida Real Estate logic meets Full-Stack precision.
             Engineering the Emerald Coast lifestyle, one entry at a time.
           </p>
-        </div>
+        </motion.div>
       </div>
 
       {/* Blog Grid */}
       <div className="charcoal-section py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2 lg:grid-cols-3"
+        >
           {posts.map((post) => (
-            <article
+            <motion.article
               key={post.id}
-              className="group frame surface-section flex flex-col border border-muted/10 hover:border-brass/50 transition-all duration-500"
+              variants={item}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              className="group frame surface-section flex flex-col border border-muted/10 hover:border-reef/50 transition-colors duration-500"
             >
               {/* Image Container */}
               <div className="aspect-[16/10] overflow-hidden relative border-b border-muted/10">
@@ -89,7 +121,7 @@ export default function BlogPage() {
               {/* Content Container */}
               <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-center justify-between gap-4 mb-5 pb-5 border-b border-muted/10">
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-brass">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-reef">
                     {post.category}
                   </span>
                   <span className="flex items-center gap-2 text-muted text-[11px] font-mono uppercase tracking-widest">
@@ -97,7 +129,7 @@ export default function BlogPage() {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-brass transition-colors leading-snug">
+                <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-reef transition-colors leading-snug">
                   {post.title}
                 </h3>
 
@@ -113,9 +145,9 @@ export default function BlogPage() {
                   <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <Footer />

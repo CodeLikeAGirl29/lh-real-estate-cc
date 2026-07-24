@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import { FaHouse, FaScaleBalanced } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const defaultComp = () => ({ label: "", price: "", sqft: "" });
 
@@ -67,7 +68,12 @@ export default function CMAEstimator() {
     <section className="paper-section py-24" id="cma">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
             <h2 className="font-display text-3xl font-bold text-ink sm:text-4xl">
               Ballpark Your <span className="text-signal">Home Value</span>
             </h2>
@@ -77,7 +83,7 @@ export default function CMAEstimator() {
               It's a starting point, not a verified number — for that, I'll
               run the real thing against actual MLS data.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10">

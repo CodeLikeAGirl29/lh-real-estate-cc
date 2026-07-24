@@ -19,7 +19,7 @@ const projectContent = {
     image: "/images/master-drill-ui.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Success in the Florida real estate market begins with a license, but
           true market mastery requires an underlying technical infrastructure.
           The <strong>Florida Real Estate Master Drill</strong> full-stack study
@@ -51,7 +51,7 @@ const projectContent = {
           and closing cost prorations become second nature.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">
             "High-stakes retention demands precision engineering. Standard
             applications track completion; this architecture enforces zero-fail
@@ -79,7 +79,7 @@ const projectContent = {
     image: "/images/shadow-slate-ui.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Every listing photo tells a buyer what a room looks like. It rarely
           tells them what it could look like. <strong>Shadow + Slate</strong>{" "}
           was built to close that gap — an interactive mood board canvas where
@@ -108,7 +108,7 @@ const projectContent = {
           swap a finish, and reopen the exact same layout with nothing lost.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">
             &quot;A listing photo is a fact. A mood board is a conversation —
             the interface just needed to keep up with how fast that conversation
@@ -134,7 +134,7 @@ const projectContent = {
     image: "/images/local-coastline.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Most local guides for buyers are lists of restaurants and beach access
           points. The <strong>Okaloosa Guide</strong> project takes a different
           angle: it's a working reference for the structural and infrastructure
@@ -162,7 +162,7 @@ const projectContent = {
           profiles.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">
             &quot;Two houses with the same view can carry very different risk
             profiles. The difference is almost always in the infrastructure, not
@@ -187,7 +187,7 @@ const projectContent = {
     image: "/images/img-1.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           <strong>Beyond the Beach</strong> started as a question I kept getting
           from out-of-state investors: where in Okaloosa County is growth
           actually happening, versus where it just looks like it is from the
@@ -213,7 +213,7 @@ const projectContent = {
           real, measurable edge for investors willing to look past the view.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">
             &quot;By the time a growth zone shows up in the comps, the best
             entry point has usually already passed.&quot;
@@ -228,7 +228,7 @@ const projectContent = {
           on{" "}
           <Link
             href="/blog/beyond-the-beach"
-            className="text-brass hover:underline"
+            className="text-reef hover:underline"
           >
             the Digital Ledger
           </Link>
@@ -244,7 +244,7 @@ const projectContent = {
     image: "/images/img-2.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Not every part of representing a place is technical. The{" "}
           <strong>Emerald Coast Inside</strong> project is the lifestyle layer —
           a curated set of local knowledge (paddleboard launches, coffee spots,
@@ -264,7 +264,7 @@ const projectContent = {
           and mundane parts included.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">
             &quot;Some places you visit. Others, you live. Helping a client tell
             the difference is part of the job.&quot;
@@ -279,7 +279,7 @@ const projectContent = {
           lives on{" "}
           <Link
             href="/blog/emerald-coast-insider"
-            className="text-brass hover:underline"
+            className="text-reef hover:underline"
           >
             the Digital Ledger
           </Link>
@@ -310,7 +310,7 @@ export default function ProjectPost() {
           {/* Breadcrumb */}
           <Link
             href="/#projects"
-            className="flex items-center gap-2 text-brass mb-8 font-mono text-[10px] font-bold uppercase tracking-widest hover:text-foreground transition-colors"
+            className="flex items-center gap-2 text-reef mb-8 font-mono text-[10px] font-bold uppercase tracking-widest hover:text-foreground transition-colors"
           >
             <FaArrowLeft /> Back to Collections
           </Link>
@@ -327,7 +327,7 @@ export default function ProjectPost() {
           </div>
 
           {/* Tags */}
-          <div className="mb-6 font-mono text-[10px] font-bold uppercase tracking-widest text-brass">
+          <div className="mb-6 font-mono text-[10px] font-bold uppercase tracking-widest text-reef">
             {project.tags}
           </div>
 
@@ -339,10 +339,10 @@ export default function ProjectPost() {
           {/* Metadata Badges */}
           <div className="flex gap-4 mb-12">
             <span className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface">
-              <FaMapLocationDot className="text-brass" /> Okaloosa County, FL
+              <FaMapLocationDot className="text-reef" /> Okaloosa County, FL
             </span>
             <span className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface">
-              <FaUmbrellaBeach className="text-brass" /> Emerald Coast
+              <FaUmbrellaBeach className="text-reef" /> Emerald Coast
             </span>
           </div>
 
@@ -352,7 +352,7 @@ export default function ProjectPost() {
           </div>
 
           {/* Travel Guide Call to Action */}
-          <div className="mt-20 p-8 border border-brass/20 bg-surface/50 flex flex-col items-center text-center">
+          <div className="mt-20 p-8 border border-reef/20 bg-surface/50 flex flex-col items-center text-center">
             <h4 className="text-xl font-bold text-foreground mb-3">
               Planning a move to the Panhandle?
             </h4>
@@ -371,7 +371,7 @@ export default function ProjectPost() {
                 })
               }
             >
-              <button className="px-8 py-3 bg-brass text-background font-mono text-xs font-bold uppercase tracking-widest hover:bg-steel transition-colors flex items-center gap-2">
+              <button className="px-8 py-3 bg-reef text-background font-mono text-xs font-bold uppercase tracking-widest hover:bg-steel transition-colors flex items-center gap-2">
                 Get My Local Insider Guide <FaMapLocationDot />
               </button>
             </a>

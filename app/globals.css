@@ -14,13 +14,13 @@
   /* Warm Paper — form fields, light contrast blocks */
   --ink: #17181A;
   /* text color used on --paper */
-  --brass: #B08D57;
-  /* primary accent — CTAs, emphasis */
+  --reef: #3E8E71;
+  /* primary accent — CTAs, emphasis (deep emerald green, ties to "Emerald Coast" branding) */
   --steel: #5C7A99;
   /* secondary accent — links, hover states */
-  --signal: var(--brass);
+  --signal: var(--reef);
   /* primary accent on paper sections (Calculator, Market Map) — same
-     hue as brass, named separately so paper-section components read
+     hue as reef, named separately so paper-section components read
      clearly as "the accent for this section" rather than reaching
      across to a dark-section token */
   --gulf: var(--steel);
@@ -34,7 +34,7 @@
   --color-muted: var(--muted);
   --color-paper: var(--paper);
   --color-ink: var(--ink);
-  --color-brass: var(--brass);
+  --color-reef: var(--reef);
   --color-steel: var(--steel);
   --color-signal: var(--signal);
   --color-gulf: var(--gulf);
@@ -67,7 +67,7 @@ body {
   color: var(--ink);
 }
 
-/* Signature device: corner brackets in brass, tightening on hover */
+/* Signature device: corner brackets in reef, tightening on hover */
 .frame {
   position: relative;
 }
@@ -78,7 +78,7 @@ body {
   position: absolute;
   width: 12px;
   height: 12px;
-  border-color: var(--brass);
+  border-color: var(--reef);
   border-style: solid;
   pointer-events: none;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -161,4 +161,13 @@ body {
   right: -3px;
   width: 16px;
   height: 16px;
+}
+
+/* Leaflet's own stylesheet already guards against this, but Tailwind's
+   Preflight resets `img { max-width: 100% }` site-wide, which breaks
+   Leaflet's tile mosaic if the two ever load in the wrong order. Belt
+   and suspenders. */
+.leaflet-container img {
+  max-width: none !important;
+  max-height: none !important;
 }

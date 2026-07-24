@@ -42,7 +42,7 @@ export default function SponsorPitch() {
             [ For Sponsoring Brokers ]
           </h2>
           <h3 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
-            Why Sponsor <span className="text-brass">Me</span>
+            Why Sponsor <span className="text-reef">Me</span>
           </h3>
           <p className="mt-6 text-base font-sans text-foreground/60 leading-relaxed">
             I&apos;m not asking a broker to take a chance on an unproven
@@ -70,25 +70,25 @@ export default function SponsorPitch() {
           </h4>
           <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-foreground/70 text-sm">
             <li className="flex items-start gap-2">
-              <span className="text-brass mt-1">—</span>A brokerage active in
+              <span className="text-reef mt-1">—</span>A brokerage active in
               Okaloosa County / the Emerald Coast
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-brass mt-1">—</span>
+              <span className="text-reef mt-1">—</span>
               Mentorship for a newly licensed agent&apos;s first transactions
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-brass mt-1">—</span>A culture that values
+              <span className="text-reef mt-1">—</span>A culture that values
               agents bringing their own marketing edge
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-brass mt-1">—</span>
+              <span className="text-reef mt-1">—</span>
               Room to grow into buyer and investor-focused business
             </li>
           </ul>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-brass/20 bg-surface/50">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-reef/20 bg-surface/50">
           <div>
             <h4 className="font-display text-xl font-bold text-foreground">
               Let&apos;s talk sponsorship.
@@ -106,7 +106,7 @@ export default function SponsorPitch() {
               }}
               whileTap={{ y: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="frame px-8 py-3 bg-brass text-background font-bold text-center flex items-center gap-2"
+              className="frame px-8 py-3 bg-reef text-background font-bold text-center flex items-center gap-2"
             >
               Start the Conversation <FaArrowRight />
             </motion.a>
@@ -123,7 +123,7 @@ export default function SponsorPitch() {
               whileHover={{ y: -3 }}
               whileTap={{ y: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="frame px-8 py-3 text-steel font-bold hover:text-brass transition-colors"
+              className="frame px-8 py-3 text-steel font-bold hover:text-reef transition-colors"
             >
               Download Resume
             </motion.a>
@@ -149,13 +149,13 @@ function PillarCard({ pillar, index }) {
         ease: [0.16, 1, 0.3, 1],
       }}
       whileHover={{ y: -4 }}
-      className="frame p-8 border border-foreground/10 hover:border-brass/30 transition-colors duration-300"
+      className="frame p-8 border border-foreground/10 hover:border-reef/30 transition-colors duration-300"
     >
       <motion.div
         initial={{ scale: 0.6, opacity: 0 }}
         animate={inView ? { scale: 1, opacity: 1 } : {}}
         transition={{ delay: index * 0.12 + 0.15, duration: 0.35 }}
-        className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground/10 text-brass text-xl"
+        className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground/10 text-reef text-xl"
       >
         {pillar.icon}
       </motion.div>

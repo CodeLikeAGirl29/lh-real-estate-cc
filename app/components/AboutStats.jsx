@@ -14,7 +14,7 @@ export default function AboutStats() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-foreground/10 pb-10">
           <div className="flex flex-col gap-2">
             <h2 className="font-display text-5xl font-bold tracking-tight text-foreground">
-              The <span className="text-brass">Professional</span> Spec
+              The <span className="text-reef">Professional</span> Spec
             </h2>
             <div className="flex gap-2 mt-2">
               <span className="w-16 h-[3px] bg-steel" />
@@ -38,7 +38,7 @@ export default function AboutStats() {
         <div className="grid lg:grid-cols-2 gap-16 mt-4">
           <div className="flex flex-col gap-8">
             <h3 className="font-display text-2xl font-bold flex items-center gap-3 text-foreground">
-              <FaLocationDot className="text-brass" /> Market Expertise
+              <FaLocationDot className="text-reef" /> Market Expertise
             </h3>
             <div className="space-y-5">
               <CredentialItem
@@ -75,7 +75,7 @@ export default function AboutStats() {
 
           <div className="flex flex-col gap-8">
             <h3 className="font-display text-2xl font-bold flex items-center gap-3 text-foreground">
-              <FaCode className="text-brass" /> Technical Infrastructure
+              <FaCode className="text-reef" /> Technical Infrastructure
             </h3>
             <div className="space-y-6">
               <SkillBar
@@ -148,7 +148,7 @@ export default function AboutStats() {
               }}
               whileTap={{ y: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="frame px-8 py-3 bg-brass text-background font-bold text-center"
+              className="frame px-8 py-3 bg-reef text-background font-bold text-center"
             >
               Download CV
             </motion.a>
@@ -157,7 +157,7 @@ export default function AboutStats() {
               whileHover={{ y: -3 }}
               whileTap={{ y: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="frame px-8 py-3 text-steel font-bold hover:text-brass transition-colors text-center"
+              className="frame px-8 py-3 text-steel font-bold hover:text-reef transition-colors text-center"
             >
               Contact Lindsey
             </motion.a>
@@ -170,7 +170,7 @@ export default function AboutStats() {
 
 function CredentialItem({ label, detail }) {
   return (
-    <div className="flex items-start gap-3 border-l-2 border-brass/40 pl-4">
+    <div className="flex items-start gap-3 border-l-2 border-reef/40 pl-4">
       <div>
         <span className="text-foreground font-display font-bold block">
           {label}

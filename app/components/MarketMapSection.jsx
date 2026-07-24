@@ -1,5 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 // Leaflet touches `window` on import, so the map itself must never
 // render on the server.
@@ -16,7 +17,13 @@ export default function MarketMapSection() {
   return (
     <section className="paper-section py-24" id="market-map">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-12"
+        >
           <h2 className="font-display text-3xl font-bold text-ink sm:text-4xl">
             Explore The <span className="text-signal">Emerald Coast</span>
           </h2>
@@ -25,7 +32,7 @@ export default function MarketMapSection() {
             Every submarket in Okaloosa County behaves differently. Click a
             neighborhood to see how it fits your goals.
           </p>
-        </div>
+        </motion.div>
         <MarketMap />
       </div>
     </section>

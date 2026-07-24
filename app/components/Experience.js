@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { FaCheck, FaCode, FaHouseUser } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const events = [
   {
@@ -9,7 +10,7 @@ const events = [
     title: "Florida Real Estate Associate (Exam Passed)",
     date: "04/14/2026",
     icon: <FaHouseUser className="text-background h-4 w-4" />,
-    iconBg: "bg-brass",
+    iconBg: "bg-reef",
     dotColor: "bg-emerald-400",
     content: [
       "Passed the Florida Real Estate Sales Associate state licensing exam.",
@@ -55,7 +56,13 @@ export default function Experience() {
       id="experience"
     >
       <div className="max-w-2xl mx-auto px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-2 mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center gap-2 mb-16"
+        >
           <h2 className="font-display text-4xl font-bold text-foreground tracking-tight">
             Experience
           </h2>
@@ -63,12 +70,18 @@ export default function Experience() {
             <span className="w-12 h-[3px] bg-steel" />
             <span className="w-6 h-[3px] bg-steel" />
           </div>
-        </div>
+        </motion.div>
 
         <div className="flow-root">
           <ul className="-mb-8">
             {events.map((event, eventIdx) => (
-              <li key={event.id}>
+              <motion.li
+                key={event.id}
+                initial={{ opacity: 0, x: -24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              >
                 <div className="relative pb-12">
                   {eventIdx !== events.length - 1 ? (
                     <span
@@ -111,7 +124,7 @@ export default function Experience() {
                         <ul className="space-y-2">
                           {event.content.map((item, index) => (
                             <li key={index} className="flex gap-2">
-                              <span className="text-brass font-bold">›</span>
+                              <span className="text-reef font-bold">›</span>
                               {item}
                             </li>
                           ))}
@@ -120,7 +133,7 @@ export default function Experience() {
                     </div>
                   </div>
                 </div>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>

@@ -1,6 +1,7 @@
 import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css"; // You can remove the 'next/script' import
+import "leaflet/dist/leaflet.css";
 
 const manrope = Manrope({
   subsets: ["latin"],

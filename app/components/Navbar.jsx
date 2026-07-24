@@ -26,28 +26,29 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.header
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-background/80 backdrop-blur-md border-b ${
-        scrolled
-          ? "border-muted/20 py-2 bg-background/95"
-          : "border-muted/10 py-4"
-      }`}
-    >
-      <nav
-        aria-label="Global"
-        className="mx-auto flex max-w-full items-center justify-between p-6 pl-4 lg:px-8"
+    <>
+      <motion.header
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-background/80 backdrop-blur-md border-b ${
+          scrolled
+            ? "border-muted/20 py-2 bg-background/95"
+            : "border-muted/10 py-4"
+        }`}
       >
-        {/* Brand/Logo */}
-        <div className="flex lg:flex-1">
-          <Link
+        <nav
+          aria-label="Global"
+          className="mx-auto flex max-w-full items-center justify-between p-6 pl-4 lg:px-8"
+        >
+          {/* Brand/Logo */}
+          <div className="flex lg:flex-1">
+            <Link
             href="/"
             className="-m-1.5 p-1.5 font-display text-2xl font-bold tracking-tighter text-foreground group"
           >
             L. HOWARD{" "}
-            <span className="font-mono text-xs align-middle text-brass transition-colors duration-300 group-hover:text-steel ml-1">
+            <span className="font-mono text-xs align-middle text-reef transition-colors duration-300 group-hover:text-steel ml-1">
               // RE + DEV
             </span>
           </Link>
@@ -60,7 +61,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.9 }}
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center p-2.5 text-foreground hover:text-brass"
+            className="-m-2.5 inline-flex items-center justify-center p-2.5 text-foreground hover:text-reef"
           >
             <FaBars className="size-6" />
           </motion.button>
@@ -85,7 +86,7 @@ export default function Navbar() {
             href="https://github.com/codelikeagirl29"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-1.5 text-muted hover:text-brass"
+            className="p-1.5 text-muted hover:text-reef"
             whileHover={{ y: -4, scale: 1.15 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -96,7 +97,7 @@ export default function Navbar() {
             href="https://linkedin.com/in/lindsey-howard"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-1.5 text-muted hover:text-brass"
+            className="p-1.5 text-muted hover:text-reef"
             whileHover={{ y: -4, scale: 1.15 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -111,15 +112,16 @@ export default function Navbar() {
             href="mailto:lindsey.howard.re@outlook.com"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-brass bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300"
+            className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-reef bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300"
           >
             Contact Me{" "}
-            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-steel group-hover:text-brass">
+            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-steel group-hover:text-reef">
               &rarr;
             </span>
           </motion.a>
         </div>
       </nav>
+      </motion.header>
 
       {/* Framer Motion Mobile Drawer Slideout */}
       <AnimatePresence>
@@ -151,7 +153,7 @@ export default function Navbar() {
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-muted hover:text-brass"
+                  className="p-2 text-muted hover:text-reef"
                 >
                   <FaXmark className="size-6" />
                 </motion.button>
@@ -203,7 +205,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                     href="mailto:lindsey.howard.re@outlook.com"
-                    className="frame group mt-8 block text-center py-4 font-mono text-sm font-bold uppercase tracking-widest text-brass bg-background border border-muted/10 transition-colors"
+                    className="frame group mt-8 block text-center py-4 font-mono text-sm font-bold uppercase tracking-widest text-reef bg-background border border-muted/10 transition-colors"
                   >
                     Get in Touch{" "}
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -216,6 +218,6 @@ export default function Navbar() {
           </div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   );
 }

@@ -20,7 +20,7 @@ module.exports = {
         muted: "var(--muted)",
         paper: "var(--paper)",
         ink: "var(--ink)",
-        brass: "var(--brass)",
+        reef: "var(--reef)",
         steel: "var(--steel)",
         signal: "var(--signal)",
         gulf: "var(--gulf)",

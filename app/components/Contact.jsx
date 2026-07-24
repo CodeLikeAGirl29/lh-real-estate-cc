@@ -51,7 +51,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 items-center gap-8">
           <div className="frame py-8 px-8 sm:px-10 border border-ink/10">
             <h2 className="font-display text-3xl text-ink font-bold">
-              Get In <span className="text-brass">Touch</span>
+              Get In <span className="text-reef">Touch</span>
             </h2>
             <p className="text-[15px] text-ink/60 mt-4 leading-relaxed">
               Have a specific inquiry? Ready to engage to find the perfect home.
@@ -147,7 +147,7 @@ export default function Contact() {
                   className={`mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-3 tracking-wide transition-all border-0 ${
                     status === "sending"
                       ? "bg-ink/20 text-ink/50 cursor-not-allowed"
-                      : "bg-brass text-ink hover:opacity-90 cursor-pointer"
+                      : "bg-reef text-ink hover:opacity-90 cursor-pointer"
                   }`}
                 >
                   {status === "sending" ? (
@@ -214,7 +214,7 @@ export default function Contact() {
                 <FaEnvelope className="size-4 text-steel" />
                 <a
                   href="mailto:lindsey.howard.re@outlook.com"
-                  className="text-ink/70 text-sm ml-3 hover:text-brass transition-colors"
+                  className="text-ink/70 text-sm ml-3 hover:text-reef transition-colors"
                 >
                   lindsey.howard.re@outlook.com
                 </a>
@@ -223,7 +223,7 @@ export default function Contact() {
                 <FaPhone className="size-4 text-steel" />
                 <a
                   href="tel:+18505335877"
-                  className="text-ink/70 text-sm ml-3 hover:text-brass transition-colors"
+                  className="text-ink/70 text-sm ml-3 hover:text-reef transition-colors"
                 >
                   +1 (850) 533-5877
                 </a>

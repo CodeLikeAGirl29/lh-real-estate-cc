@@ -17,7 +17,7 @@ const blogPosts = {
     image: "/images/local-coastline.jpg",
     content: (
       <>
-        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Why is Fort Walton Beach the Panhandle&apos;s Best Kept Secret? When
           people think of the Florida Panhandle, they usually think of the neon
           lights of Destin. But for those of us who live and work here,{" "}
@@ -36,7 +36,7 @@ const blogPosts = {
           year-round.
         </p>
 
-        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl leading-relaxed">
             &quot;Don&apos;t just buy a view; buy a system. FWB properties,
             especially around the secondary residential tiers, offer the best
@@ -127,7 +127,7 @@ const blogPosts = {
     image: "/images/img-1.jpg",
     content: (
       <>
-        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-brass first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Moving past the aesthetics to analyze the raw data. When we talk about
           growth zones in Okaloosa County, we aren&apos;t just looking at where
           the water is prettiest—we&apos;re looking at where the fiber optics
@@ -162,7 +162,7 @@ const blogPosts = {
           price movement by several months to a year.
         </p>
 
-        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl leading-relaxed">
             &quot;By the time a growth zone shows up in the comps, the best
             entry point has usually already passed.&quot;
@@ -265,7 +265,7 @@ const blogPosts = {
           apology.
         </p>
 
-        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl leading-relaxed">
             &quot;Owning a piece of this coastline isn&apos;t just about
             property—it&apos;s about possibility. A place where home feels like
@@ -289,7 +289,7 @@ const blogPosts = {
           <h3 className="font-display text-3xl font-bold text-foreground mb-2">
             Insider Picks
           </h3>
-          <p className="text-brass font-medium mb-8">
+          <p className="text-reef font-medium mb-8">
             What to Do on the Emerald Coast
           </p>
 
@@ -405,7 +405,7 @@ const blogPosts = {
           one thing becomes clear: Some places you visit. Others… you live.
         </p>
 
-        <p className="font-display text-3xl font-black text-brass tracking-widest text-center md:text-left">
+        <p className="font-display text-3xl font-black text-reef tracking-widest text-center md:text-left">
           HANDLED.
         </p>
       </>
@@ -442,7 +442,7 @@ const blogPosts = {
           assets on Santa Rosa Island.
         </p>
 
-        <div className="my-10 p-8 bg-surface border-l-4 border-brass rounded-r-xl">
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl leading-relaxed">
             "The most valuable real estate isn't just near the water; it's
             behind the most efficient infrastructure."
@@ -543,7 +543,7 @@ export default function BlogPost() {
           <div className="max-w-4xl">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-brass mb-6 hover:text-foreground transition-colors font-bold text-xs uppercase tracking-widest"
+              className="inline-flex items-center gap-2 text-reef mb-6 hover:text-foreground transition-colors font-bold text-xs uppercase tracking-widest"
             >
               <FaArrowLeft /> Back to the Ledger
             </Link>
@@ -552,12 +552,12 @@ export default function BlogPost() {
             </h1>
             <div className="flex flex-wrap gap-6 text-muted text-sm font-mono">
               <span className="flex items-center gap-2">
-                <FaTag className="text-brass" /> {post.category}
+                <FaTag className="text-reef" /> {post.category}
               </span>
               <span className="flex items-center gap-2">
-                <FaClock className="text-brass" /> {post.readTime}
+                <FaClock className="text-reef" /> {post.readTime}
               </span>
-              <span className="text-brass font-bold">{post.date}</span>
+              <span className="text-reef font-bold">{post.date}</span>
             </div>
           </div>
         </div>
@@ -571,7 +571,7 @@ export default function BlogPost() {
         {/* Sticky Sidebar CTA */}
         <aside className="lg:w-1/3">
           <div className="corner-marks sticky top-32 p-8 bg-surface border border-foreground/10 text-center">
-            <div className="w-20 h-20 bg-brass text-background rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+            <div className="w-20 h-20 bg-reef text-background rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
               LH
             </div>
             <h2 className="font-display text-foreground mb-2 text-xl font-bold">
@@ -582,7 +582,7 @@ export default function BlogPost() {
               Okaloosa County property logic.
             </p>
             <a href="mailto:lindsey.howard.re@outlook.com" className="block">
-              <span className="w-full py-3 px-6 text-sm font-bold uppercase tracking-wide text-background bg-brass mb-4 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+              <span className="w-full py-3 px-6 text-sm font-bold uppercase tracking-wide text-background bg-reef mb-4 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
                 <FaEnvelope /> Let&apos;s Talk Property
               </span>
             </a>

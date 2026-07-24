@@ -2,6 +2,23 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+};
 
 const projects = [
   {
@@ -53,18 +70,33 @@ export default function Collections() {
       id="projects"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-12"
+        >
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             Featured Collections
           </h2>
           <span className="mt-2 block h-[3px] w-12 bg-steel" />
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
           {projects.map((project) => (
-            <article
+            <motion.article
               key={project.id}
-              className="frame overflow-hidden border border-foreground/10 bg-surface transition hover:border-brass/40 group"
+              variants={item}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              className="frame overflow-hidden border border-foreground/10 bg-surface transition-colors duration-300 hover:border-reef/40 group"
             >
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
@@ -87,7 +119,7 @@ export default function Collections() {
                 </div>
 
                 <Link href={`/projects/${project.id}`}>
-                  <h3 className="font-display text-xl font-bold text-foreground hover:text-brass transition-colors">
+                  <h3 className="font-display text-xl font-bold text-foreground hover:text-reef transition-colors">
                     {project.title}
                   </h3>
                 </Link>
@@ -98,14 +130,14 @@ export default function Collections() {
 
                 <Link
                   href={`/projects/${project.id}`}
-                  className="mt-6 flex items-center gap-1 text-sm font-bold text-steel hover:text-brass transition-colors"
+                  className="mt-6 flex items-center gap-1 text-sm font-bold text-steel hover:text-reef transition-colors"
                 >
                   View Project <span>&rarr;</span>
                 </Link>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

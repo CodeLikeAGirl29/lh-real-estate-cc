@@ -1,21 +1,10 @@
 "use client";
-import { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useEffect, useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 
-// Leaflet's default marker icons reference image paths that don't survive
-// a webpack bundle. Rebuild the default icon from the CDN so pins render.
-const defaultIcon = L.icon({
-  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-});
-
+// Leaflet's default marker icon references image paths that don't survive
+// a webpack bundle. Rebuild it from the CDN so the pin renders.
 const signalIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   iconRetinaUrl:
@@ -93,6 +82,7 @@ const neighborhoods = [
 
 export default function MarketMap() {
   const [active, setActive] = useState(neighborhoods[0].id);
+  const activeNeighborhood = neighborhoods.find((n) => n.id === active);
 
   return (
     <div className="grid lg:grid-cols-[320px_1fr] gap-6">
@@ -135,22 +125,40 @@ export default function MarketMap() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {neighborhoods.map((n) => (
+          <MapFlyTo neighborhood={activeNeighborhood} />
+          {activeNeighborhood && (
             <Marker
-              key={n.id}
-              position={[n.lat, n.lng]}
-              icon={active === n.id ? signalIcon : defaultIcon}
-              eventHandlers={{ click: () => setActive(n.id) }}
+              position={[activeNeighborhood.lat, activeNeighborhood.lng]}
+              icon={signalIcon}
+              eventHandlers={{
+                click: () => setActive(activeNeighborhood.id),
+              }}
             >
               <Popup>
-                <strong>{n.name}</strong>
+                <strong>{activeNeighborhood.name}</strong>
                 <br />
-                {n.vibe} · {n.medianPrice} median
+                {activeNeighborhood.vibe} · {activeNeighborhood.medianPrice}{" "}
+                median
               </Popup>
             </Marker>
-          ))}
+          )}
         </MapContainer>
       </div>
     </div>
   );
+}
+
+// Pans/zooms the map to the selected neighborhood whenever the list
+// selection changes, since only one pin is ever shown at a time.
+function MapFlyTo({ neighborhood }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!neighborhood) return;
+    map.flyTo([neighborhood.lat, neighborhood.lng], 13, {
+      duration: 0.8,
+    });
+  }, [neighborhood, map]);
+
+  return null;
 }
