@@ -55,7 +55,7 @@ const projects = [
   },
   {
     id: "emerald-coast-insider",
-    title: "The Emerald Coast Inside",
+    title: "The Emerald Coast Insider",
     date: "March 2026",
     desc: "Living 'Handled' in the Panhandle. A lifestyle guide featuring local hidden gems, the best bay-side launches, and navigating the FWB market with a developer's edge.",
     image: "/images/img-2.jpg",

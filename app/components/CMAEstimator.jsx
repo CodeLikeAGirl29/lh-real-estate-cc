@@ -1,6 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
-import { FaHouse, FaScaleBalanced } from "react-icons/fa6";
+import { FaHouse, FaScaleBalanced, FaXmark } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 const defaultComp = () => ({ label: "", price: "", sqft: "" });
@@ -25,6 +25,14 @@ export default function CMAEstimator() {
     setComps((prev) =>
       prev.map((c, i) => (i === index ? { ...c, [field]: value } : c)),
     );
+  };
+
+  const addComp = () => {
+    setComps((prev) => [...prev, defaultComp()]);
+  };
+
+  const removeComp = (index) => {
+    setComps((prev) => prev.filter((_, i) => i !== index));
   };
 
   const currency = (value) =>
@@ -79,9 +87,9 @@ export default function CMAEstimator() {
             </h2>
             <span className="mt-2 block h-[3px] w-12 bg-gulf" />
             <p className="mt-4 max-w-xl text-ink/60 text-[15px] leading-relaxed">
-              A do-it-yourself estimate using comps you already know about.
-              It's a starting point, not a verified number — for that, I'll
-              run the real thing against actual MLS data.
+              A do-it-yourself estimate using comps you already know about. It's
+              a starting point, not a verified number — for that, I'll run the
+              real thing against actual MLS data.
             </p>
           </motion.div>
         </div>
@@ -251,7 +259,7 @@ export default function CMAEstimator() {
                 return (
                   <div
                     key={i}
-                    className="border border-ink/10 p-4 grid grid-cols-1 sm:grid-cols-[1fr_1fr_1fr_auto] gap-3 items-end"
+                    className="border border-ink/10 p-4 grid grid-cols-1 sm:grid-cols-[1fr_1fr_1fr_auto_auto] gap-3 items-end"
                   >
                     <label className="flex flex-col gap-1">
                       <span className="font-mono text-[10px] uppercase tracking-widest text-ink/40">
@@ -261,9 +269,7 @@ export default function CMAEstimator() {
                         type="text"
                         value={comp.label}
                         placeholder={`Comp ${i + 1}`}
-                        onChange={(e) =>
-                          updateComp(i, "label", e.target.value)
-                        }
+                        onChange={(e) => updateComp(i, "label", e.target.value)}
                         className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
                       />
                     </label>
@@ -275,9 +281,7 @@ export default function CMAEstimator() {
                         type="number"
                         value={comp.price}
                         placeholder="365000"
-                        onChange={(e) =>
-                          updateComp(i, "price", e.target.value)
-                        }
+                        onChange={(e) => updateComp(i, "price", e.target.value)}
                         className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
                       />
                     </label>
@@ -296,10 +300,28 @@ export default function CMAEstimator() {
                     <div className="font-mono text-xs text-gulf font-bold whitespace-nowrap pb-1.5">
                       {psf ? `$${psf}/sqft` : "—"}
                     </div>
+                    <button
+                      type="button"
+                      onClick={() => removeComp(i)}
+                      disabled={comps.length <= 1}
+                      aria-label="Remove comp"
+                      className="pb-1.5 text-ink/30 hover:text-signal disabled:opacity-0 disabled:pointer-events-none transition-colors"
+                    >
+                      <FaXmark className="size-3.5" />
+                    </button>
                   </div>
                 );
               })}
             </div>
+
+            <button
+              type="button"
+              onClick={addComp}
+              className="mt-5 text-xs font-mono uppercase tracking-widest text-gulf hover:opacity-70 transition"
+            >
+              + Add Comp
+            </button>
+
             <p className="text-xs text-ink/40 leading-relaxed pt-6 mt-2 border-t border-ink/10">
               Pull these from recent sold listings in your neighborhood — a
               public listing site, or a house down the street you know sold
@@ -314,8 +336,8 @@ export default function CMAEstimator() {
               Want the number backed by real data?
             </h4>
             <p className="text-ink/60 text-sm">
-              This is a ballpark. I&apos;ll run a full CMA against verified
-              MLS comps — free, no obligation.
+              This is a ballpark. I&apos;ll run a full CMA against verified MLS
+              comps — free, no obligation.
             </p>
           </div>
           <a

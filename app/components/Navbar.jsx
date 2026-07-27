@@ -44,83 +44,85 @@ export default function Navbar() {
           {/* Brand/Logo */}
           <div className="flex lg:flex-1">
             <Link
-            href="/"
-            className="-m-1.5 p-1.5 font-display text-2xl font-bold tracking-tighter text-foreground group"
-          >
-            L. HOWARD{" "}
-            <span className="font-mono text-xs align-middle text-reef transition-colors duration-300 group-hover:text-steel ml-1">
-              // RE + DEV
-            </span>
-          </Link>
-        </div>
-
-        {/* Mobile Menu Trigger */}
-        <div className="flex lg:hidden">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center p-2.5 text-foreground hover:text-reef"
-          >
-            <FaBars className="size-6" />
-          </motion.button>
-        </div>
-
-        {/* Desktop Navigation Links & Socials */}
-        <div className="hidden lg:flex lg:gap-x-8 items-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="font-mono text-xs uppercase tracking-widest text-muted hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
+              href="/"
+              className="-m-1.5 p-1.5 font-display text-xl font-bold tracking-tighter text-foreground group"
             >
-              {link.name}
+              L. HOWARD{" "}
+              <span className="font-mono text-xs align-middle text-reef transition-colors duration-300 group-hover:text-steel ml-1">
+                // RE + DEV
+              </span>
             </Link>
-          ))}
+          </div>
 
-          <div className="h-4 w-px bg-muted/20 mx-2" />
+          {/* Mobile Menu Trigger */}
+          <div className="flex lg:hidden">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="-m-2.5 inline-flex items-center justify-center p-2.5 text-foreground hover:text-reef"
+            >
+              <FaBars className="size-6" />
+            </motion.button>
+          </div>
 
-          {/* Framer Motion Social Icons */}
-          <motion.a
-            href="https://github.com/codelikeagirl29"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-1.5 text-muted hover:text-reef"
-            whileHover={{ y: -4, scale: 1.15 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            <FaGithub size={18} />
-          </motion.a>
-          <motion.a
-            href="https://linkedin.com/in/lindsey-howard"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-1.5 text-muted hover:text-reef"
-            whileHover={{ y: -4, scale: 1.15 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            <FaLinkedin size={18} />
-          </motion.a>
-        </div>
+          {/* Desktop Navigation Links & Socials */}
+          <div className="hidden lg:flex lg:gap-x-8 items-center">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="font-mono text-xs uppercase tracking-widest text-muted hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
+              >
+                {link.name}
+              </Link>
+            ))}
 
-        {/* Primary CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <motion.a
-            href="mailto:lindsey.howard.re@outlook.com"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-reef bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300"
-          >
-            Contact Me{" "}
-            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-steel group-hover:text-reef">
-              &rarr;
-            </span>
-          </motion.a>
-        </div>
-      </nav>
+            <div className="h-4 w-px bg-muted/20 mx-2" />
+
+            {/* Framer Motion Social Icons — brand-colored hovers */}
+            <motion.a
+              href="https://github.com/codelikeagirl29"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="p-1.5 text-muted transition-colors duration-200 hover:text-white"
+              whileHover={{ y: -4, scale: 1.15 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <FaGithub size={18} />
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/lindsey-howard"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="p-1.5 text-muted transition-colors duration-200 hover:text-[#0A66C2]"
+              whileHover={{ y: -4, scale: 1.15 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <FaLinkedin size={18} />
+            </motion.a>
+          </div>
+
+          {/* Primary CTA */}
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <motion.a
+              href="mailto:lindsey.howard.re@outlook.com"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-reef bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300"
+            >
+              Contact Me{" "}
+              <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-steel group-hover:text-reef">
+                &rarr;
+              </span>
+            </motion.a>
+          </div>
+        </nav>
       </motion.header>
 
       {/* Framer Motion Mobile Drawer Slideout */}

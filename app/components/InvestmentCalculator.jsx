@@ -1,5 +1,6 @@
 "use client";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
+import Link from "next/link";
 import { FaCalculator, FaChartLine } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
@@ -18,23 +19,9 @@ export default function InvestmentCalculator() {
   const [expenses, setExpenses] = useState(900);
   const [purchasePrice, setPurchasePrice] = useState(375000);
 
-  // Generated Real Estate Results
-  const [mortgageResults, setMortgageResults] = useState({
-    principal: 0,
-    pAndI: 0,
-    total: 0,
-    downPayment: 0,
-  });
-
-  const [capResults, setCapResults] = useState({
-    noi: 0,
-    capRate: "0.00",
-    monthlyCashFlow: 0,
-  });
-
-  // Combined Calculation Engine Loop
-  useEffect(() => {
-    // 1. Process Mortgage Math
+  // Mortgage Math — pure derivation of the inputs above, so useMemo
+  // instead of useState+useEffect (no external system to sync with).
+  const mortgageResults = useMemo(() => {
     const P = Number(price);
     const D = Number(downPct);
     const R = Number(rate);
@@ -55,14 +42,17 @@ export default function InvestmentCalculator() {
     }
     const totalPayment = pAndI + TI;
 
-    setMortgageResults({
+    return {
       principal: Math.round(principal),
       pAndI: Math.round(pAndI) || 0,
       total: Math.round(totalPayment) || 0,
       downPayment: Math.round(P * (D / 100)) || 0,
-    });
+    };
+  }, [price, downPct, rate, term, taxInsurance]);
 
-    // 2. Process CAP Rate Math
+  // CAP Rate Math — depends on mortgageResults.pAndI for cash flow,
+  // so it's memoized separately and reads from the memo above.
+  const capResults = useMemo(() => {
     const rPrice = Number(purchasePrice);
     const mRent = Number(rent);
     const mExp = Number(expenses);
@@ -71,14 +61,14 @@ export default function InvestmentCalculator() {
     const annualExpenses = mExp * 12;
     const noi = annualRent - annualExpenses;
     const calculatedCap = rPrice > 0 ? (noi / rPrice) * 100 : 0;
-    const monthlyCashFlow = mRent - mExp - pAndI;
+    const monthlyCashFlow = mRent - mExp - mortgageResults.pAndI;
 
-    setCapResults({
+    return {
       noi: Math.round(noi) || 0,
       capRate: isNaN(calculatedCap) ? "0.00" : calculatedCap.toFixed(2),
       monthlyCashFlow: Math.round(monthlyCashFlow) || 0,
-    });
-  }, [price, downPct, rate, term, taxInsurance, purchasePrice, rent, expenses]);
+    };
+  }, [purchasePrice, rent, expenses, mortgageResults.pAndI]);
 
   const currency = (value) => {
     return new Intl.NumberFormat("en-US", {
@@ -292,16 +282,16 @@ export default function InvestmentCalculator() {
               Want a ballpark for a specific address?
             </h4>
             <p className="text-ink/60 text-sm">
-              Try the interactive home value estimator below — plug in your
-              own comps and see a range in seconds.
+              Try the interactive home value estimator below — plug in your own
+              comps and see a range in seconds.
             </p>
           </div>
-          <a
+          <Link
             href="#cma"
             className="corner-marks px-8 py-3 bg-signal text-ink font-bold hover:opacity-90 transition whitespace-nowrap"
           >
             Get My Free CMA
-          </a>
+          </Link>
         </div>
       </div>
     </section>

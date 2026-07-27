@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
@@ -15,36 +16,36 @@ export default function Footer() {
         {/* Navigation Links */}
         <ul className="flex gap-x-10 gap-y-6 justify-center flex-wrap mb-12 font-mono text-xs uppercase tracking-widest">
           <li>
-            <a
+            <Link
               href="/about"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/#projects"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/#experience"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
               Experience
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="mailto:lindsey.howard.re@outlook.com"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -105,7 +106,7 @@ export default function Footer() {
         <div className="border-t border-muted/10 pt-8 mt-16 flex flex-col items-center gap-2">
           <p className="font-mono text-xs text-muted">
             © {currentYear}{" "}
-            <span className="text-reef font-bold">by L. HOWARD</span>
+            <span className="text-reef font-bold">by LINDSEY HOWARD</span>
             {" — Built with Next.js & Tailwind CSS"}
           </p>
           <p className="font-mono text-[10px] text-muted/50 uppercase tracking-widest">

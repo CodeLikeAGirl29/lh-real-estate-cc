@@ -239,18 +239,18 @@ const projectContent = {
     ),
   },
   "emerald-coast-insider": {
-    title: "The Emerald Coast Inside",
+    title: "The Emerald Coast Insider",
     tags: "#Lifestyle #PropTech #ClientExperience #EmeraldCoast",
     image: "/images/img-2.jpg",
     content: (
       <>
         <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Not every part of representing a place is technical. The{" "}
-          <strong>Emerald Coast Inside</strong> project is the lifestyle layer —
-          a curated set of local knowledge (paddleboard launches, coffee spots,
-          beach access points with the least crowd) built to give relocating
-          clients a feel for daily life here, not just a feel for square
-          footage.
+          <strong>Emerald Coast Insider</strong> project is the lifestyle layer
+          — a curated set of local knowledge (paddleboard launches, coffee
+          spots, beach access points with the least crowd) built to give
+          relocating clients a feel for daily life here, not just a feel for
+          square footage.
         </p>
 
         <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
