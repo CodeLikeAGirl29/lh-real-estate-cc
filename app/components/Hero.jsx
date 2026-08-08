@@ -55,11 +55,11 @@ export default function Hero() {
             >
               <span className="frame flex items-center gap-1.5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-foreground">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                FL Exam Passed
+                FL Licensed
               </span>
               <span className="frame flex items-center gap-1.5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-foreground">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
-                Awaiting Sponsoring Broker
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                eXp Realty — Active
               </span>
             </motion.div>
 

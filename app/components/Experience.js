@@ -7,16 +7,16 @@ const events = [
   {
     id: 1,
     type: "Milestone",
-    title: "Florida Real Estate Associate (Exam Passed)",
-    date: "04/14/2026",
+    title: "Real Estate Sales Associate — eXp Realty",
+    date: "2026",
     icon: <FaHouseUser className="text-background h-4 w-4" />,
     iconBg: "bg-reef",
     dotColor: "bg-emerald-400",
     content: [
-      "Passed the Florida Real Estate Sales Associate state licensing exam.",
-      "Actively pursuing a sponsoring broker to activate license status.",
+      "Activated Florida Real Estate Sales Associate license under eXp Realty.",
+      "Serving buyers and sellers across the Emerald Coast — Fort Walton Beach, Destin & Niceville.",
       "Focused on market research and property analysis for the Florida Panhandle.",
-      "Prioritizing contract and document accuracy for future residential transactions.",
+      "Prioritizing contract and document accuracy for residential transactions.",
     ],
   },
   {

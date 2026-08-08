@@ -12,21 +12,21 @@ import { event as gaEvent } from "@/lib/gtag";
 const pillars = [
   {
     icon: <FaRocket />,
-    title: "Production-Ready, Not Green",
+    title: "Coachable, Not Green",
     content:
-      "Exam passed and ready to start producing immediately. A background in high-volume sales already means comfort with cold outreach, objection handling, and closing under pressure — the transferable skills a new agent usually spends their first year building from scratch.",
+      "Licensed and active with eXp, ready to put in the reps. A background in high-volume sales already means comfort with cold outreach, objection handling, and closing under pressure — the transferable skills a new agent usually spends their first year building from scratch.",
   },
   {
     icon: <FaCode />,
     title: "A Built-In Tech Advantage",
     content:
-      "This entire platform — the site, the blog, the lead capture, the market tools — was built from scratch, not templated. That same skill set can extend to the brokerage: custom landing pages, lead-routing tools, or internal dashboards for the wider team, not just personal listings.",
+      "This entire platform — the site, the blog, the lead capture, the market tools — was built from scratch, not templated. That same skill set is an asset to a mentor's business too: custom landing pages, listing marketing, or lead-routing tools, not just personal projects.",
   },
   {
     icon: <FaShieldHalved />,
-    title: "Low-Risk, High-Upside",
+    title: "Low-Effort, High-Upside",
     content:
-      "No ramp-up cost on the marketing side — the tech stack, content engine, and lead funnel are already live and self-funded. A sponsoring broker isn't starting from zero; they're plugging into infrastructure that's already running.",
+      "No ramp-up needed on the marketing side — the tech stack, content engine, and lead funnel are already live and self-funded. Mentoring me isn't starting from zero; it's plugging guidance into infrastructure that's already running.",
   },
 ];
 
@@ -34,21 +34,23 @@ export default function SponsorPitch() {
   return (
     <section
       className="charcoal-section py-24 border-t border-foreground/5"
-      id="sponsor"
+      id="mentor"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl mb-16">
           <h2 className="text-xs font-mono font-bold text-steel uppercase tracking-[0.3em] mb-4">
-            [ For Sponsoring Brokers ]
+            [ For Prospective Mentors ]
           </h2>
           <h3 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
-            Why Sponsor <span className="text-reef">Me</span>
+            Why Mentor <span className="text-reef">Me</span>
           </h3>
           <p className="mt-6 text-base font-sans text-foreground/60 leading-relaxed">
-            I&apos;m not asking a broker to take a chance on an unproven
-            unknown. I&apos;m asking for a place to plug in production-ready
-            sales experience, a live tech-forward marketing platform, and a
-            genuine commitment to the Okaloosa County market.
+            I&apos;m not asking for a hand-holder through every basic step.
+            I&apos;m looking for a producing eXp agent willing to sharpen my
+            first few transactions — in exchange, you get an agent who
+            already brings production-ready sales experience, a live
+            tech-forward marketing platform, and a genuine commitment to the
+            Okaloosa County market.
           </p>
         </div>
 
@@ -60,8 +62,8 @@ export default function SponsorPitch() {
 
         {/*
           EDIT ME: Replace the bullet points below with your actual
-          preferences — split range, in-office vs. remote, mentorship
-          style, brokerage size/culture, etc. Keep it specific; brokers
+          mentor preferences — communication style, hands-on vs.
+          advisory, luxury exposure, etc. Keep it specific; agents
           respond better to a clear ask than a vague one.
         */}
         <div className="frame p-8 border border-foreground/10 mb-16">
@@ -70,20 +72,21 @@ export default function SponsorPitch() {
           </h4>
           <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-foreground/70 text-sm">
             <li className="flex items-start gap-2">
-              <span className="text-reef mt-1">—</span>A brokerage active in
+              <span className="text-reef mt-1">—</span>An eXp agent active in
               Okaloosa County / the Emerald Coast
             </li>
             <li className="flex items-start gap-2">
               <span className="text-reef mt-1">—</span>
-              Mentorship for a newly licensed agent&apos;s first transactions
+              Hands-on guidance through my first few transactions —
+              contracts, disclosures, negotiation
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-reef mt-1">—</span>A culture that values
+              <span className="text-reef mt-1">—</span>A mentor who values
               agents bringing their own marketing edge
             </li>
             <li className="flex items-start gap-2">
               <span className="text-reef mt-1">—</span>
-              Room to grow into buyer and investor-focused business
+              Exposure to the luxury/higher-end side of the market as I grow
             </li>
           </ul>
         </div>
@@ -91,7 +94,7 @@ export default function SponsorPitch() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-reef/20 bg-surface/50">
           <div>
             <h4 className="font-display text-xl font-bold text-foreground">
-              Let&apos;s talk sponsorship.
+              Let&apos;s talk mentorship.
             </h4>
             <p className="text-foreground/60 text-sm mt-1">
               15 minutes is enough to know if it's a fit.
@@ -99,7 +102,7 @@ export default function SponsorPitch() {
           </div>
           <div className="flex gap-4">
             <motion.a
-              href="mailto:lindsey.howard.re@outlook.com?subject=Sponsoring%20Broker%20Inquiry"
+              href="mailto:lindsey.howard.re@outlook.com?subject=eXp%20Mentorship%20Inquiry"
               whileHover={{
                 y: -3,
                 boxShadow: "0 10px 24px -8px rgba(176,141,87,0.4)",
@@ -117,7 +120,7 @@ export default function SponsorPitch() {
                 gaEvent({
                   action: "download",
                   category: "engagement",
-                  label: "broker_resume_download",
+                  label: "mentor_resume_download",
                 })
               }
               whileHover={{ y: -3 }}

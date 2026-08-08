@@ -27,7 +27,7 @@ export default function AboutStats() {
 
           <div className="flex flex-wrap gap-3">
             <span className="frame px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-steel">
-              Real Estate Sales Associate (Exam Passed)
+              Real Estate Sales Associate — eXp Realty
             </span>
             <span className="frame px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-steel">
               Full-Stack Developer
@@ -43,7 +43,7 @@ export default function AboutStats() {
             <div className="space-y-5">
               <CredentialItem
                 label="Florida Real Estate License"
-                detail="Sales Associate — state exam passed, awaiting sponsoring broker"
+                detail="Sales Associate — active with eXp Realty"
               />
               <CredentialItem
                 label="Pre-Licensing Coursework"
@@ -106,7 +106,7 @@ export default function AboutStats() {
                   2026
                 </span>
                 <span className="font-mono text-[10px] text-foreground/40 uppercase tracking-widest">
-                  Exam Passed
+                  Licensed &amp; Active
                 </span>
               </div>
               <div className="p-4 border border-foreground/10">

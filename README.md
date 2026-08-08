@@ -1,6 +1,6 @@
 # 🏠 Home, Handled.
 
-![Exam Passed](https://img.shields.io/badge/FL%20Real%20Estate-Exam%20Passed%20✅-2E7D32?style=flat-square) ![Status](https://img.shields.io/badge/Status-Awaiting%20Sponsoring%20Broker-FBC02D?style=flat-square)
+![FL Licensed](https://img.shields.io/badge/FL%20Real%20Estate-Licensed%20✅-2E7D32?style=flat-square) ![Status](https://img.shields.io/badge/eXp%20Realty-Active-2E7D32?style=flat-square)
 
 ### The Portfolio
 
@@ -88,7 +88,7 @@ Open http://localhost:3000 to see the Panhandle, handled.
 ## 👩‍💻 About the Architect
 
 Lindsey Howard
-Florida Real Estate Sales Associate (Exam Passed — Awaiting Sponsoring Broker) | Full-Stack Developer
+Florida Real Estate Sales Associate at eXp Realty | Full-Stack Developer
 
 Based in Fort Walton Beach, FL, I build the digital tools that move the market. Whether it's a Next.js listing engine or a residential contract, I apply the same level of mechanical grit and technical precision.
 

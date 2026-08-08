@@ -49,10 +49,12 @@ export default function AboutPage() {
             </p>
 
             <p className="text-foreground/80 text-[15px] mb-10 leading-relaxed">
-              Currently based in{" "}
-              <span className="font-bold text-steel">Fort Walton Beach</span>, I
-              am preparing to bridge the gap between traditional service and
-              modern digital intelligence.
+              Based in{" "}
+              <span className="font-bold text-steel">Fort Walton Beach</span>{" "}
+              and licensed with{" "}
+              <span className="font-bold text-steel">eXp Realty</span>, I
+              bridge the gap between traditional service and modern digital
+              intelligence.
             </p>
 
             <div className="flex flex-wrap gap-3">
