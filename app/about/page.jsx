@@ -1,12 +1,24 @@
 // about/page.jsx
-"use client";
-import React from "react";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutStats from "../components/AboutStats";
 import AboutBlueprint from "../components/AboutBlueprint";
 import SponsorPitch from "../components/SponsorPitch";
+
+export const metadata = {
+  title: "About Lindsey Howard | eXp Realty, Fort Walton Beach",
+  description:
+    "Florida Real Estate Sales Associate at eXp Realty and full-stack developer based in Fort Walton Beach, FL, serving buyers, sellers, and investors across Okaloosa County.",
+  alternates: { canonical: "https://www.lindseyhoward.dev/about" },
+  openGraph: {
+    title: "About Lindsey Howard | eXp Realty, Fort Walton Beach",
+    description:
+      "Florida Real Estate Sales Associate at eXp Realty and full-stack developer serving Okaloosa County.",
+    url: "https://www.lindseyhoward.dev/about",
+    type: "profile",
+  },
+};
 
 export default function AboutPage() {
   return (

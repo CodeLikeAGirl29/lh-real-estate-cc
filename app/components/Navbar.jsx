@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaBars, FaXmark } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaFacebook, FaBars, FaXmark } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -105,6 +105,18 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FaLinkedin size={18} />
+            </motion.a>
+            <motion.a
+              href="https://www.facebook.com/lindseyhowardrealestate"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="p-1.5 text-muted transition-colors duration-200 hover:text-[#1877F2]"
+              whileHover={{ y: -4, scale: 1.15 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <FaFacebook size={18} />
             </motion.a>
           </div>
 
@@ -214,6 +226,41 @@ export default function Navbar() {
                       &rarr;
                     </span>
                   </motion.a>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45 }}
+                    className="mt-6 flex items-center justify-center gap-6"
+                  >
+                    <a
+                      href="https://github.com/codelikeagirl29"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      className="p-1.5 text-muted hover:text-white transition-colors"
+                    >
+                      <FaGithub size={20} />
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/lindsey-howard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="p-1.5 text-muted hover:text-[#0A66C2] transition-colors"
+                    >
+                      <FaLinkedin size={20} />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/lindseyhowardrealestate"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      className="p-1.5 text-muted hover:text-[#1877F2] transition-colors"
+                    >
+                      <FaFacebook size={20} />
+                    </a>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>
