@@ -9,6 +9,8 @@ import {
   FaArrowLeft,
   FaMapLocationDot,
   FaUmbrellaBeach,
+  FaGithub,
+  FaArrowUpRightFromSquare,
 } from "react-icons/fa6";
 
 export default function ProjectPostClient({ project }) {
@@ -32,6 +34,7 @@ export default function ProjectPostClient({ project }) {
               src={project.image}
               alt={project.title}
               fill
+              sizes="(max-width: 768px) 100vw, 768px"
               className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               priority
             />
@@ -48,13 +51,33 @@ export default function ProjectPostClient({ project }) {
           </h1>
 
           {/* Metadata Badges */}
-          <div className="flex gap-4 mb-12">
+          <div className="flex gap-4 mb-12 flex-wrap">
             <span className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface">
               <FaMapLocationDot className="text-reef" /> Okaloosa County, FL
             </span>
             <span className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface">
               <FaUmbrellaBeach className="text-reef" /> Emerald Coast
             </span>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface hover:text-foreground hover:border-reef/50 transition-colors"
+              >
+                <FaGithub className="text-reef" /> View Code
+              </a>
+            )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface hover:text-foreground hover:border-reef/50 transition-colors"
+              >
+                <FaArrowUpRightFromSquare className="text-reef" /> Live Site
+              </a>
+            )}
           </div>
 
           {/* Content Body */}

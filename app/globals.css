@@ -14,8 +14,8 @@
   /* Warm Paper — form fields, light contrast blocks */
   --ink: #17181A;
   /* text color used on --paper */
-  --reef: #3E8E71;
-  /* primary accent — CTAs, emphasis (deep emerald green, ties to "Emerald Coast" branding) */
+  --reef: #2E86AB;
+  /* primary accent — CTAs, emphasis (coastal ocean blue) */
   --steel: #5C7A99;
   /* secondary accent — links, hover states */
   --signal: var(--reef);

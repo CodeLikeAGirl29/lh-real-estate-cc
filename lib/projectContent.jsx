@@ -2,6 +2,7 @@
 // Shared project case-study data — used by both the server metadata
 // generator (app/projects/[id]/page.jsx) and the client renderer.
 import React from "react";
+import Link from "next/link";
 
 const projectContent = {
   "master-drill": {
@@ -9,6 +10,8 @@ const projectContent = {
     description: "A full-stack study environment built to master the 63-hour Florida real estate pre-licensing curriculum, with logic-driven progress tracking across 19 units.",
     tags: "#PropTech #NextJS15 #RealEstate #WebDevelopment",
     image: "/images/master-drill-ui.jpg",
+    githubUrl: "https://github.com/CodeLikeAGirl29/fl-re-drill",
+    liveUrl: "https://fl-re-drill.netlify.app",
     content: (
       <>
         <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
@@ -42,6 +45,19 @@ const projectContent = {
           sets in, ensuring that complex topics like property taxation formulas
           and closing cost prorations become second nature.
         </p>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground text-2xl font-bold mb-2">
+            Nearly half of candidates fail on their first attempt.
+          </p>
+          <p className="text-muted text-base leading-relaxed">
+            Florida's real estate license exam has one of the toughest
+            first-attempt pass rates in the country—roughly 50% of test-takers
+            don't pass the first time, largely because 55% of the exam is
+            Florida-specific law that generic study tools skim over. The
+            Master Drill was built to close that exact gap.
+          </p>
+        </div>
 
         <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">

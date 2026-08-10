@@ -2,6 +2,7 @@
 // Shared blog post data — used by both the server metadata generator
 // (app/blog/[slug]/page.jsx) and the client renderer (BlogPostClient.jsx).
 import React from "react";
+import Image from "next/image";
 
 const blogPosts = {
   "okaloosa-insider": {
