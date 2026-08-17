@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -61,7 +61,7 @@ export default function Footer() {
 
           <ul className="flex flex-wrap justify-center gap-8">
             <li>
-              <motion.a
+              <m.a
                 href="https://github.com/codelikeagirl29"
                 target="_blank"
                 rel="noreferrer"
@@ -71,10 +71,10 @@ export default function Footer() {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <FaGithub className="w-6 h-6" />
-              </motion.a>
+              </m.a>
             </li>
             <li>
-              <motion.a
+              <m.a
                 href="https://linkedin.com/in/lindsey-howard"
                 target="_blank"
                 rel="noreferrer"
@@ -84,10 +84,10 @@ export default function Footer() {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <FaLinkedin className="w-6 h-6" />
-              </motion.a>
+              </m.a>
             </li>
             <li>
-              <motion.a
+              <m.a
                 href="https://www.facebook.com/lindseyhowardrealestate"
                 target="_blank"
                 rel="noreferrer"
@@ -97,7 +97,7 @@ export default function Footer() {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <FaFacebook className="w-6 h-6" />
-              </motion.a>
+              </m.a>
             </li>
           </ul>
         </div>

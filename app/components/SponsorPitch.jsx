@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import {
   FaRocket,
   FaCode,
@@ -101,7 +101,7 @@ export default function SponsorPitch() {
             </p>
           </div>
           <div className="flex gap-4">
-            <motion.a
+            <m.a
               href="mailto:lindsey.howard.re@outlook.com?subject=eXp%20Mentorship%20Inquiry"
               whileHover={{
                 y: -3,
@@ -112,8 +112,8 @@ export default function SponsorPitch() {
               className="frame px-8 py-3 bg-reef text-background font-bold text-center flex items-center gap-2"
             >
               Start the Conversation <FaArrowRight />
-            </motion.a>
-            <motion.a
+            </m.a>
+            <m.a
               href="/files/lindsey-howard-cv.pdf"
               download="Lindsey-Howard-Resume.pdf"
               onClick={() =>
@@ -129,7 +129,7 @@ export default function SponsorPitch() {
               className="frame px-8 py-3 text-steel font-bold hover:text-reef transition-colors"
             >
               Download Resume
-            </motion.a>
+            </m.a>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@ function PillarCard({ pillar, index }) {
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -154,20 +154,20 @@ function PillarCard({ pillar, index }) {
       whileHover={{ y: -4 }}
       className="frame p-8 border border-foreground/10 hover:border-reef/30 transition-colors duration-300"
     >
-      <motion.div
+      <m.div
         initial={{ scale: 0.6, opacity: 0 }}
         animate={inView ? { scale: 1, opacity: 1 } : {}}
         transition={{ delay: index * 0.12 + 0.15, duration: 0.35 }}
         className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground/10 text-reef text-xl"
       >
         {pillar.icon}
-      </motion.div>
+      </m.div>
       <h4 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
         {pillar.title}
       </h4>
       <p className="text-foreground/60 font-sans leading-relaxed text-sm">
         {pillar.content}
       </p>
-    </motion.div>
+    </m.div>
   );
 }

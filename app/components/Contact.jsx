@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
-import { FaCircleCheck, FaEnvelope, FaPhone } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { FaCircleCheck, FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
+import { m } from "framer-motion";
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -58,13 +59,13 @@ export default function Contact() {
             </p>
 
             {status === "success" ? (
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-8 flex flex-col items-center justify-center p-8 border border-emerald-600/20"
               >
-                <motion.div
+                <m.div
                   initial={{ scale: 0, rotate: -45 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{
@@ -75,7 +76,7 @@ export default function Contact() {
                   }}
                 >
                   <FaCircleCheck className="text-emerald-600 size-12 mb-4" />
-                </motion.div>
+                </m.div>
                 <h3 className="font-display text-xl font-bold text-ink">
                   Message Sent!
                 </h3>
@@ -88,7 +89,7 @@ export default function Contact() {
                 >
                   Send another message
                 </button>
-              </motion.div>
+              </m.div>
             ) : (
               <form onSubmit={handleSubmit}>
                 {/* Honeypot field: hidden from real visitors via CSS,
@@ -138,7 +139,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <motion.button
+                <m.button
                   type="submit"
                   disabled={status === "sending"}
                   whileHover={status !== "sending" ? { y: -3 } : {}}
@@ -151,7 +152,7 @@ export default function Contact() {
                   }`}
                 >
                   {status === "sending" ? (
-                    <motion.svg
+                    <m.svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16px"
                       height="16px"
@@ -181,7 +182,7 @@ export default function Contact() {
                         strokeLinecap="round"
                         fill="none"
                       />
-                    </motion.svg>
+                    </m.svg>
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +200,7 @@ export default function Contact() {
                     </svg>
                   )}
                   {status === "sending" ? "Sending..." : "Send message"}
-                </motion.button>
+                </m.button>
 
                 {status === "error" && (
                   <p className="mt-4 text-red-600 text-xs text-center">
@@ -232,15 +233,34 @@ export default function Contact() {
           </div>
 
           <div className="frame z-10 relative h-full max-lg:min-h-[400px] overflow-hidden border border-ink/10">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110117.84277717445!2d-86.71129595!3d30.41673895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88913f01b0ebf49d%3A0x673e271ee914a849!2sFort%20Walton%20Beach%2C%20FL!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
-              className="absolute left-0 top-0 h-full w-full grayscale-[40%] contrast-[1.05]"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Fort Walton Beach Area Map"
-            />
+            {mapLoaded ? (
+              <m.iframe
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110117.84277717445!2d-86.71129595!3d30.41673895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88913f01b0ebf49d%3A0x673e271ee914a849!2sFort%20Walton%20Beach%2C%20FL!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
+                className="absolute left-0 top-0 h-full w-full grayscale-[40%] contrast-[1.05]"
+                style={{ border: 0 }}
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Fort Walton Beach Area Map"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setMapLoaded(true)}
+                aria-label="Load interactive map of Fort Walton Beach, FL"
+                className="group absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[linear-gradient(to_right,#8A8D9312_1px,transparent_1px),linear-gradient(to_bottom,#8A8D9312_1px,transparent_1px)] bg-[size:2.5rem_2.5rem] bg-background cursor-pointer"
+              >
+                <FaLocationDot className="size-8 text-reef transition-transform duration-300 group-hover:-translate-y-1" />
+                <span className="font-display text-lg font-bold text-ink">
+                  Fort Walton Beach, FL
+                </span>
+                <span className="frame px-5 py-2 font-mono text-[11px] uppercase tracking-widest text-steel border border-ink/10 group-hover:border-transparent group-hover:bg-surface group-hover:text-foreground transition-colors">
+                  Load Interactive Map
+                </span>
+              </button>
+            )}
           </div>
         </div>
       </div>

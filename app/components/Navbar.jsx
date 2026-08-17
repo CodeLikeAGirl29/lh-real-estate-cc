@@ -2,7 +2,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaFacebook, FaBars, FaXmark } from "react-icons/fa6";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
+
+const CONTACT_EMAIL = "lindsey.howard.re@outlook.com";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,6 +15,27 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Lock body scroll while the mobile drawer is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      const previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = previousOverflow;
+      };
+    }
+  }, [mobileMenuOpen]);
+
+  // Close the drawer on Escape
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { name: "Innovations", href: "/#projects" },
@@ -27,7 +50,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.header
+      <m.header
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -56,15 +79,18 @@ export default function Navbar() {
 
           {/* Mobile Menu Trigger */}
           <div className="flex lg:hidden">
-            <motion.button
+            <m.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               type="button"
               onClick={() => setMobileMenuOpen(true)}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu-drawer"
+              aria-label="Open main menu"
               className="-m-2.5 inline-flex items-center justify-center p-2.5 text-foreground hover:text-reef"
             >
               <FaBars className="size-6" />
-            </motion.button>
+            </m.button>
           </div>
 
           {/* Desktop Navigation Links & Socials */}
@@ -82,7 +108,7 @@ export default function Navbar() {
             <div className="h-4 w-px bg-muted/20 mx-2" />
 
             {/* Framer Motion Social Icons — brand-colored hovers */}
-            <motion.a
+            <m.a
               href="https://github.com/codelikeagirl29"
               target="_blank"
               rel="noopener noreferrer"
@@ -93,8 +119,8 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FaGithub size={18} />
-            </motion.a>
-            <motion.a
+            </m.a>
+            <m.a
               href="https://linkedin.com/in/lindsey-howard"
               target="_blank"
               rel="noopener noreferrer"
@@ -105,8 +131,8 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FaLinkedin size={18} />
-            </motion.a>
-            <motion.a
+            </m.a>
+            <m.a
               href="https://www.facebook.com/lindseyhowardrealestate"
               target="_blank"
               rel="noopener noreferrer"
@@ -117,13 +143,13 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FaFacebook size={18} />
-            </motion.a>
+            </m.a>
           </div>
 
           {/* Primary CTA */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <motion.a
-              href="mailto:lindsey.howard.re@outlook.com"
+            <m.a
+              href={`mailto:${CONTACT_EMAIL}`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-reef bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300"
@@ -132,17 +158,17 @@ export default function Navbar() {
               <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-steel group-hover:text-reef">
                 &rarr;
               </span>
-            </motion.a>
+            </m.a>
           </div>
         </nav>
-      </motion.header>
+      </m.header>
 
       {/* Framer Motion Mobile Drawer Slideout */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <div className="lg:hidden relative z-50">
             {/* Backdrop */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -152,7 +178,11 @@ export default function Navbar() {
             />
 
             {/* Drawer */}
-            <motion.div
+            <m.div
+              id="mobile-menu-drawer"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Main menu"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -163,20 +193,20 @@ export default function Navbar() {
                 <span className="font-display text-xl font-bold text-foreground tracking-tighter">
                   L. HOWARD
                 </span>
-                <motion.button
+                <m.button
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setMobileMenuOpen(false)}
                   className="p-2 text-muted hover:text-reef"
                 >
                   <FaXmark className="size-6" />
-                </motion.button>
+                </m.button>
               </div>
 
               <div className="mt-12 flow-root">
                 <div className="space-y-2 py-6">
                   {/* Staggered Nav Links */}
-                  <motion.div
+                  <m.div
                     initial="closed"
                     animate="open"
                     variants={{
@@ -196,7 +226,7 @@ export default function Navbar() {
                     className="flex flex-col gap-2"
                   >
                     {navLinks.map((link) => (
-                      <motion.div
+                      <m.div
                         key={link.name}
                         variants={{
                           open: { opacity: 1, x: 0 },
@@ -210,24 +240,24 @@ export default function Navbar() {
                         >
                           {link.name}
                         </Link>
-                      </motion.div>
+                      </m.div>
                     ))}
-                  </motion.div>
+                  </m.div>
 
-                  <motion.a
+                  <m.a
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
-                    href="mailto:lindsey.howard.re@outlook.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="frame group mt-8 block text-center py-4 font-mono text-sm font-bold uppercase tracking-widest text-reef bg-background border border-muted/10 transition-colors"
                   >
                     Get in Touch{" "}
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                       &rarr;
                     </span>
-                  </motion.a>
+                  </m.a>
 
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.45 }}
@@ -260,10 +290,10 @@ export default function Navbar() {
                     >
                       <FaFacebook size={20} />
                     </a>
-                  </motion.div>
+                  </m.div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         )}
       </AnimatePresence>

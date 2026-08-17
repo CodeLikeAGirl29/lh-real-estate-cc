@@ -1,5 +1,6 @@
 import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { LazyMotion, domAnimation } from "framer-motion";
 import "./globals.css"; // You can remove the 'next/script' import
 import "leaflet/dist/leaflet.css";
 
@@ -99,7 +100,9 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        {children}
+        <LazyMotion features={domAnimation} strict>
+          {children}
+        </LazyMotion>
       </body>
 
       {/* Simply pass the ID to the component you imported */}

@@ -6,7 +6,7 @@ import {
   FaMicrochip,
   FaArrowRight,
 } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const container = {
   hidden: {},
@@ -55,7 +55,7 @@ export default function AboutBlueprint() {
       id="blueprint"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -76,9 +76,9 @@ export default function AboutBlueprint() {
             principles to deliver advanced analysis for the Fort Walton Beach
             market.
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -86,7 +86,7 @@ export default function AboutBlueprint() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {specifications.map((spec) => (
-            <motion.div
+            <m.div
               key={spec.id}
               variants={item}
               whileHover={{ y: -6 }}
@@ -104,9 +104,9 @@ export default function AboutBlueprint() {
               <p className="text-foreground/60 font-sans leading-relaxed text-sm">
                 {spec.content}
               </p>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
 
         <div className="mt-16 flex items-center justify-between border-t border-foreground/5 pt-8">
           <div className="flex items-center gap-3">

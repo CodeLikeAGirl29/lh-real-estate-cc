@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const container = {
   hidden: {},
@@ -70,7 +70,7 @@ export default function Collections() {
       id="projects"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -81,9 +81,9 @@ export default function Collections() {
             Featured Collections
           </h2>
           <span className="mt-2 block h-[3px] w-12 bg-steel" />
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -91,7 +91,7 @@ export default function Collections() {
           className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <motion.article
+            <m.article
               key={project.id}
               variants={item}
               whileHover={{ y: -8 }}
@@ -135,9 +135,9 @@ export default function Collections() {
                   View Project <span>&rarr;</span>
                 </Link>
               </div>
-            </motion.article>
+            </m.article>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

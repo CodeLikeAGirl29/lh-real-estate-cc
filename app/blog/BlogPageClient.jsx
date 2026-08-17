@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { FaArrowRight, FaCalendarDays } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const container = {
   hidden: {},
@@ -70,7 +70,7 @@ export default function BlogPageClient() {
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-16 px-6 lg:px-8 border-b border-surface">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -87,12 +87,12 @@ export default function BlogPageClient() {
             Where Florida Real Estate logic meets Full-Stack precision.
             Engineering the Emerald Coast lifestyle, one entry at a time.
           </p>
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Blog Grid */}
       <div className="charcoal-section py-24">
-        <motion.div
+        <m.div
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -100,7 +100,7 @@ export default function BlogPageClient() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2 lg:grid-cols-3"
         >
           {posts.map((post) => (
-            <motion.article
+            <m.article
               key={post.id}
               variants={item}
               whileHover={{ y: -8 }}
@@ -145,9 +145,9 @@ export default function BlogPageClient() {
                   <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
-            </motion.article>
+            </m.article>
           ))}
-        </motion.div>
+        </m.div>
       </div>
 
       <Footer />

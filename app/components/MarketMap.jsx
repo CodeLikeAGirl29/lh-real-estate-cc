@@ -4,12 +4,12 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 
 // Leaflet's default marker icon references image paths that don't survive
-// a webpack bundle. Rebuild it from the CDN so the pin renders.
+// a webpack bundle. Rebuild it from self-hosted assets (avoids an extra
+// DNS/TLS handshake to unpkg.com and a third-party dependency at runtime).
 const signalIcon = L.icon({
-  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  iconUrl: "/images/leaflet/marker-icon.png",
+  iconRetinaUrl: "/images/leaflet/marker-icon-2x.png",
+  shadowUrl: "/images/leaflet/marker-shadow.png",
   iconSize: [30, 49],
   iconAnchor: [15, 49],
   popupAnchor: [1, -40],

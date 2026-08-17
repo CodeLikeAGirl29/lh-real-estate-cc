@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FaCheck, FaCode, FaHouseUser } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const events = [
   {
@@ -56,7 +56,7 @@ export default function Experience() {
       id="experience"
     >
       <div className="max-w-2xl mx-auto px-6 lg:px-8">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -70,12 +70,12 @@ export default function Experience() {
             <span className="w-12 h-[3px] bg-steel" />
             <span className="w-6 h-[3px] bg-steel" />
           </div>
-        </motion.div>
+        </m.div>
 
         <div className="flow-root">
           <ul className="-mb-8">
             {events.map((event, eventIdx) => (
-              <motion.li
+              <m.li
                 key={event.id}
                 initial={{ opacity: 0, x: -24 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -133,7 +133,7 @@ export default function Experience() {
                     </div>
                   </div>
                 </div>
-              </motion.li>
+              </m.li>
             ))}
           </ul>
         </div>

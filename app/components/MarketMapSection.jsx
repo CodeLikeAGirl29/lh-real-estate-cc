@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 // Leaflet touches `window` on import, so the map itself must never
 // render on the server.
@@ -17,7 +17,7 @@ export default function MarketMapSection() {
   return (
     <section className="paper-section py-24" id="market-map">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -32,7 +32,7 @@ export default function MarketMapSection() {
             Every submarket in Okaloosa County behaves differently. Click a
             neighborhood to see how it fits your goals.
           </p>
-        </motion.div>
+        </m.div>
         <MarketMap />
       </div>
     </section>

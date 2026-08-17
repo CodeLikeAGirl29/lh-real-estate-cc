@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { event as gaEvent } from "@/lib/gtag";
 import { FaCode, FaLocationDot } from "react-icons/fa6";
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 
 export default function AboutStats() {
   return (
@@ -132,7 +132,7 @@ export default function AboutStats() {
             </p>
           </div>
           <div className="flex gap-4">
-            <motion.a
+            <m.a
               href="/files/lindsey-howard-cv.pdf"
               download="Lindsey-Howard-CV.pdf"
               onClick={() =>
@@ -151,8 +151,8 @@ export default function AboutStats() {
               className="frame px-8 py-3 bg-reef text-background font-bold text-center"
             >
               Download CV
-            </motion.a>
-            <motion.a
+            </m.a>
+            <m.a
               href="mailto:lindsey.howard.re@outlook.com?subject=Let's%20Talk%20Real%20Estate"
               whileHover={{ y: -3 }}
               whileTap={{ y: 0 }}
@@ -160,7 +160,7 @@ export default function AboutStats() {
               className="frame px-8 py-3 text-steel font-bold hover:text-reef transition-colors text-center"
             >
               Contact Lindsey
-            </motion.a>
+            </m.a>
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@ function SkillBar({ label, percentage, description }) {
         <span className="text-steel text-xl font-display">{percentage}</span>
       </div>
       <div className="w-full bg-foreground/10 h-1.5 mt-1 overflow-hidden">
-        <motion.div
+        <m.div
           className="h-full bg-steel"
           initial={{ width: "0%" }}
           animate={{ width: inView ? percentage : "0%" }}

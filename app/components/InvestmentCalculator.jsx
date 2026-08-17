@@ -2,7 +2,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { FaCalculator, FaChartLine } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function InvestmentCalculator() {
   const [mode, setMode] = useState("mortgage");
@@ -114,7 +114,7 @@ export default function InvestmentCalculator() {
     <section className="paper-section py-24" id="calculator">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -129,7 +129,7 @@ export default function InvestmentCalculator() {
               could return. Estimates only; always verify with a lender and a
               full CMA.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="flex corner-marks border border-ink/10 p-1">
             <button
