@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { m } from "framer-motion";
+import CornerArrow from "./CornerArrow";
 
 const container = {
   hidden: {},
@@ -94,10 +95,14 @@ export default function Collections() {
             <m.article
               key={project.id}
               variants={item}
-              whileHover={{ y: -8 }}
+              whileHover={{
+                y: -8,
+                boxShadow: "0 12px 28px -10px rgba(20,143,126,0.35)",
+              }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="frame overflow-hidden border border-foreground/10 bg-surface transition-colors duration-300 hover:border-reef/40 group"
+              className="frame relative overflow-hidden border border-foreground/10 bg-surface transition-[colors,filter] duration-300 hover:border-reef/40 hover:brightness-110 group"
             >
+              <CornerArrow />
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
                   alt={project.title}

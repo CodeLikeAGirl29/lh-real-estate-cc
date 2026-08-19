@@ -8,6 +8,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa6";
 import { event as gaEvent } from "@/lib/gtag";
+import CornerArrow from "./CornerArrow";
 
 const pillars = [
   {
@@ -151,9 +152,13 @@ function PillarCard({ pillar, index }) {
         delay: index * 0.12,
         ease: [0.16, 1, 0.3, 1],
       }}
-      whileHover={{ y: -4 }}
-      className="frame p-8 border border-foreground/10 hover:border-reef/30 transition-colors duration-300"
+      whileHover={{
+        y: -4,
+        boxShadow: "0 12px 28px -10px rgba(20,143,126,0.35)",
+      }}
+      className="frame relative p-8 border border-foreground/10 transition-[colors,filter] duration-300 hover:border-reef/30 hover:brightness-110"
     >
+      <CornerArrow />
       <m.div
         initial={{ scale: 0.6, opacity: 0 }}
         animate={inView ? { scale: 1, opacity: 1 } : {}}

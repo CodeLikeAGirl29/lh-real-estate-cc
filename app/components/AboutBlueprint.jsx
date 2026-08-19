@@ -7,6 +7,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa6";
 import { m } from "framer-motion";
+import CornerArrow from "./CornerArrow";
 
 const container = {
   hidden: {},
@@ -89,10 +90,14 @@ export default function AboutBlueprint() {
             <m.div
               key={spec.id}
               variants={item}
-              whileHover={{ y: -6 }}
+              whileHover={{
+                y: -6,
+                boxShadow: "0 12px 28px -10px rgba(20,143,126,0.35)",
+              }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="frame p-8 border border-foreground/10 hover:border-reef/30 transition-colors duration-300 group"
+              className="frame relative p-8 border border-foreground/10 transition-[colors,filter] duration-300 hover:border-reef/30 hover:brightness-110 group"
             >
+              <CornerArrow />
               <div className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground/10 text-reef text-xl group-hover:border-reef/40 transition-colors duration-300">
                 {spec.icon}
               </div>

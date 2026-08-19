@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import { FaArrowRight, FaCalendarDays } from "react-icons/fa6";
 import { m } from "framer-motion";
+import CornerArrow from "../components/CornerArrow";
 
 const container = {
   hidden: {},
@@ -121,10 +122,14 @@ export default function BlogPageClient() {
             <m.article
               key={post.id}
               variants={item}
-              whileHover={{ y: -8 }}
+              whileHover={{
+                y: -8,
+                boxShadow: "0 12px 28px -10px rgba(20,143,126,0.35)",
+              }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="group frame surface-section flex flex-col border border-muted/10 hover:border-reef/50 transition-colors duration-500"
+              className="group frame surface-section relative flex flex-col border border-muted/10 transition-[colors,filter] duration-500 hover:border-reef/50 hover:brightness-110"
             >
+              <CornerArrow />
               {/* Image Container */}
               <div className="aspect-[16/10] overflow-hidden relative border-b border-muted/10">
                 <Image
