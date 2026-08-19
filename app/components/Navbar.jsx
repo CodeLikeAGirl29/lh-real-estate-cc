@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaFacebook, FaBars, FaXmark } from "react-icons/fa6";
 import { m, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 const CONTACT_EMAIL = "lindsey.howard.re@outlook.com";
 
@@ -78,7 +79,8 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Trigger */}
-          <div className="flex xl:hidden">
+          <div className="flex xl:hidden items-center gap-x-1">
+            <ThemeToggle className="p-2.5" />
             <m.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -104,6 +106,9 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+
+            <div className="h-4 w-px bg-muted/20" />
+            <ThemeToggle />
 
             {/* Framer Motion Social Icons — brand-colored hovers; shown at 2xl+ once there's room */}
             <div className="hidden 2xl:flex items-center gap-x-2">
@@ -291,6 +296,7 @@ export default function Navbar() {
                     >
                       <FaFacebook size={20} />
                     </a>
+                    <ThemeToggle className="p-1.5" />
                   </m.div>
                 </div>
               </div>

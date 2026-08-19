@@ -95,6 +95,13 @@ export default function RootLayout({ children }) {
       className={`${manrope.variable} ${inter.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||(!t&&!window.matchMedia("(prefers-color-scheme: dark)").matches&&window.matchMedia("(prefers-color-scheme: light)").matches)){document.documentElement.dataset.theme="light";}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="font-sans bg-background text-foreground antialiased">
         <script
           type="application/ld+json"

@@ -27,6 +27,20 @@
   /* secondary accent on paper sections — same hue as steel */
 }
 
+/* Light mode: the page's own base flips to the warm paper tone, and
+   the "paper section" contrast blocks (Calculator, Market Map, etc.)
+   flip to the dark charcoal — preserving the same alternating-rhythm
+   relationship the dark theme uses, just mirrored. Accent colors
+   (reef/steel) stay identical in both themes for brand consistency. */
+:root[data-theme="light"] {
+  --background: #F5F3EE;
+  --foreground: #17181A;
+  --surface: #EAE7DF;
+  --muted: #6B6E74;
+  --paper: #101113;
+  --ink: #ECE9E4;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
