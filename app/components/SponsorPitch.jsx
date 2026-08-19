@@ -38,12 +38,12 @@ export default function SponsorPitch() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl mb-16">
-          <h2 className="text-xs font-mono font-bold text-steel uppercase tracking-[0.3em] mb-4">
+          <p className="text-xs font-mono font-bold text-steel uppercase tracking-[0.3em] mb-4">
             [ For Prospective Mentors ]
-          </h2>
-          <h3 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
             Why Mentor <span className="text-reef">Me</span>
-          </h3>
+          </h2>
           <p className="mt-6 text-base font-sans text-foreground/60 leading-relaxed">
             I&apos;m not asking for a hand-holder through every basic step.
             I&apos;m looking for a producing eXp agent willing to sharpen my
@@ -67,9 +67,9 @@ export default function SponsorPitch() {
           respond better to a clear ask than a vague one.
         */}
         <div className="frame p-8 border border-foreground/10 mb-16">
-          <h4 className="font-display text-xl font-bold text-foreground mb-4">
+          <h3 className="font-display text-xl font-bold text-foreground mb-4">
             What I&apos;m Looking For
-          </h4>
+          </h3>
           <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-foreground/70 text-sm">
             <li className="flex items-start gap-2">
               <span className="text-reef mt-1">—</span>An eXp agent active in
@@ -93,9 +93,9 @@ export default function SponsorPitch() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-reef/20 bg-surface/50">
           <div>
-            <h4 className="font-display text-xl font-bold text-foreground">
+            <h3 className="font-display text-xl font-bold text-foreground">
               Let&apos;s talk mentorship.
-            </h4>
+            </h3>
             <p className="text-foreground/60 text-sm mt-1">
               15 minutes is enough to know if it&apos;s a fit.
             </p>
@@ -162,9 +162,9 @@ function PillarCard({ pillar, index }) {
       >
         {pillar.icon}
       </m.div>
-      <h4 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
+      <h3 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
         {pillar.title}
-      </h4>
+      </h3>
       <p className="text-foreground/60 font-sans leading-relaxed text-sm">
         {pillar.content}
       </p>

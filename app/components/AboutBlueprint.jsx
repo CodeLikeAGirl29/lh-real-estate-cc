@@ -62,13 +62,13 @@ export default function AboutBlueprint() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl mb-20"
         >
-          <h2 className="text-xs font-mono font-bold text-steel uppercase tracking-[0.3em] mb-4">
+          <p className="text-xs font-mono font-bold text-steel uppercase tracking-[0.3em] mb-4">
             [ Strategic Foundation ]
-          </h2>
-          <h3 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground uppercase leading-tight">
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground uppercase leading-tight">
             The Hybrid <br />
             <span className="text-reef">Advantage</span>
-          </h3>
+          </h2>
           <p className="mt-6 text-base font-sans text-foreground/60 leading-relaxed">
             While technology is widely utilized across the industry, customized
             platforms are built directly from scratch here. This approach
@@ -97,9 +97,9 @@ export default function AboutBlueprint() {
                 {spec.icon}
               </div>
 
-              <h4 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
+              <h3 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
                 {spec.title}
-              </h4>
+              </h3>
 
               <p className="text-foreground/60 font-sans leading-relaxed text-sm">
                 {spec.content}

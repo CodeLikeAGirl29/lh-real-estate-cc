@@ -53,9 +53,9 @@ export default function Footer() {
         <div className="mt-12">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-8 bg-muted/20"></div>
-            <h6 className="font-mono text-xs text-muted/60 tracking-widest uppercase">
+            <p className="font-mono text-xs text-muted/60 tracking-widest uppercase">
               Connect
-            </h6>
+            </p>
             <div className="h-px w-8 bg-muted/20"></div>
           </div>
 
