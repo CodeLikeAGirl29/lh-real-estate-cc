@@ -14,10 +14,10 @@
   /* Warm Paper — form fields, light contrast blocks */
   --ink: #17181A;
   /* text color used on --paper */
-  --reef: #2E86AB;
-  /* primary accent — CTAs, emphasis (coastal ocean blue) */
-  --steel: #5C7A99;
-  /* secondary accent — links, hover states */
+  --reef: #148f7e;
+  /* primary accent — CTAs, emphasis (Emerald Coast turquoise) */
+  --steel: #9a722d;
+  /* secondary accent — links, hover states (warm sand/gold) */
   --signal: var(--reef);
   /* primary accent on paper sections (Calculator, Market Map) — same
      hue as reef, named separately so paper-section components read
