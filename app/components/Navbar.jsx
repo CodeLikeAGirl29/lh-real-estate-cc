@@ -62,13 +62,13 @@ export default function Navbar() {
       >
         <nav
           aria-label="Global"
-          className="mx-auto flex max-w-full items-center justify-between p-6 pl-4 lg:px-8"
+          className="mx-auto flex max-w-full items-center justify-between gap-x-4 p-6 pl-4 xl:gap-x-8 xl:px-8"
         >
           {/* Brand/Logo */}
-          <div className="flex lg:flex-1">
+          <div className="flex shrink-0 xl:flex-1">
             <Link
               href="/"
-              className="-m-1.5 p-1.5 font-display text-xl font-bold tracking-tighter text-foreground group"
+              className="-m-1.5 p-1.5 font-display text-xl font-bold tracking-tighter text-foreground group whitespace-nowrap"
             >
               L. HOWARD{" "}
               <span className="font-mono text-xs align-middle text-reef transition-colors duration-300 group-hover:text-steel ml-1">
@@ -78,7 +78,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Trigger */}
-          <div className="flex lg:hidden">
+          <div className="flex xl:hidden">
             <m.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -94,65 +94,66 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation Links & Socials */}
-          <div className="hidden lg:flex lg:gap-x-8 items-center">
+          <div className="hidden xl:flex xl:gap-x-5 2xl:gap-x-8 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-mono text-xs uppercase tracking-widest text-muted hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
+                className="font-mono text-xs uppercase tracking-wide 2xl:tracking-widest whitespace-nowrap text-muted hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
               >
                 {link.name}
               </Link>
             ))}
 
-            <div className="h-4 w-px bg-muted/20 mx-2" />
-
-            {/* Framer Motion Social Icons — brand-colored hovers */}
-            <m.a
-              href="https://github.com/codelikeagirl29"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="p-1.5 text-muted transition-colors duration-200 hover:text-white"
-              whileHover={{ y: -4, scale: 1.15 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <FaGithub size={18} />
-            </m.a>
-            <m.a
-              href="https://linkedin.com/in/lindsey-howard"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="p-1.5 text-muted transition-colors duration-200 hover:text-[#0A66C2]"
-              whileHover={{ y: -4, scale: 1.15 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <FaLinkedin size={18} />
-            </m.a>
-            <m.a
-              href="https://www.facebook.com/lindseyhowardrealestate"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="p-1.5 text-muted transition-colors duration-200 hover:text-[#1877F2]"
-              whileHover={{ y: -4, scale: 1.15 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <FaFacebook size={18} />
-            </m.a>
+            {/* Framer Motion Social Icons — brand-colored hovers; shown at 2xl+ once there's room */}
+            <div className="hidden 2xl:flex items-center gap-x-2">
+              <div className="h-4 w-px bg-muted/20 mx-2" />
+              <m.a
+                href="https://github.com/codelikeagirl29"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="p-1.5 text-muted transition-colors duration-200 hover:text-white"
+                whileHover={{ y: -4, scale: 1.15 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <FaGithub size={18} />
+              </m.a>
+              <m.a
+                href="https://linkedin.com/in/lindsey-howard"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-1.5 text-muted transition-colors duration-200 hover:text-[#0A66C2]"
+                whileHover={{ y: -4, scale: 1.15 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <FaLinkedin size={18} />
+              </m.a>
+              <m.a
+                href="https://www.facebook.com/lindseyhowardrealestate"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="p-1.5 text-muted transition-colors duration-200 hover:text-[#1877F2]"
+                whileHover={{ y: -4, scale: 1.15 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <FaFacebook size={18} />
+              </m.a>
+            </div>
           </div>
 
           {/* Primary CTA */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden xl:flex xl:flex-1 xl:justify-end">
             <m.a
               href={`mailto:${CONTACT_EMAIL}`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-reef bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300"
+              className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-reef bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300 whitespace-nowrap"
             >
               Contact Me{" "}
               <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-steel group-hover:text-reef">
@@ -166,7 +167,7 @@ export default function Navbar() {
       {/* Framer Motion Mobile Drawer Slideout */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <div className="lg:hidden relative z-50">
+          <div className="xl:hidden relative z-50">
             {/* Backdrop */}
             <m.div
               initial={{ opacity: 0 }}
