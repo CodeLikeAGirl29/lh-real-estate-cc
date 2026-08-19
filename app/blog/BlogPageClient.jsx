@@ -61,6 +61,24 @@ const posts = [
       "Analyzing the $6.5M Gateway Project and the defense-driven growth of Florida's 'Cradle of Aviation'.",
     image: "/images/pensacola-header.jpg",
   },
+  {
+    id: "destin-playbook",
+    title: "The Destin Playbook: Reading the Luxury Corridor",
+    category: "Local Guide",
+    date: "May 12, 2026",
+    excerpt:
+      "Destin runs on different physics than the rest of Okaloosa County. A breakdown of what actually drives price along the Harbor and Scenic 98.",
+    image: "/images/img-2.jpg",
+  },
+  {
+    id: "flood-zones-decoded",
+    title: "Flood Zones, Wind Mitigation, and What They Actually Cost You",
+    category: "Market Analysis",
+    date: "May 26, 2026",
+    excerpt:
+      "The line item that surprises more out-of-state buyers than anything else at closing. A plain-language breakdown before you write an offer.",
+    image: "/images/local-coastline.jpg",
+  },
 ];
 
 export default function BlogPageClient() {

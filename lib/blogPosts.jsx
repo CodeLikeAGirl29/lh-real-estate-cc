@@ -511,6 +511,214 @@ const blogPosts = {
       </>
     ),
   },
+  "destin-playbook": {
+    title: "The Destin Playbook: Reading the Luxury Corridor",
+    excerpt: "Destin runs on different physics than the rest of Okaloosa County. A breakdown of what actually drives price along the Harbor and Scenic 98—and where the ceiling really is.",
+    date: "May 12, 2026",
+    category: "Local Guide",
+    readTime: "8 min read",
+    image: "/images/img-2.jpg",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Fort Walton Beach and Destin sit fifteen minutes apart on the same
+          stretch of coastline, but they don&apos;t run on the same market
+          physics. FWB is a stability play—defense payroll, year-round rental
+          demand, a resale market that moves in inches. Destin is a tourism
+          engine with real estate bolted on, and understanding that
+          difference is the first thing any buyer coming into this corridor
+          needs to get right.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Two Cities, One County, Different Physics
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Price per square foot along Destin&apos;s harbor and gulf-front
+          corridors runs well ahead of FWB&apos;s residential tiers, and the
+          gap isn&apos;t really about the view—it&apos;s about the revenue
+          model underneath the property. A Destin condo within walking
+          distance of the Harbor is priced against its short-term rental
+          income potential first and its livability second. That&apos;s a
+          fundamentally different underwriting question than the one FWB
+          buyers are usually asking.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The HarborWalk Effect
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          HarborWalk Village anchors more than tourism—it anchors comparable
+          sales. Inventory within a few blocks of the Harbor commands a
+          premium that thins out fast as you move north of Highway 98,
+          because the walkable-to-nightlife radius is what short-term renters
+          are actually paying for. When I&apos;m running comps for a buyer
+          in this corridor, distance to the Harbor does more work than
+          square footage.
+        </p>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            &quot;In Destin, you&apos;re not just buying square footage—
+            you&apos;re buying proximity to demand.&quot;
+          </p>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Scenic 98 and the Density Ceiling
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Destin has largely built out its gulf-front footprint, and local
+          height and density restrictions along Scenic Highway 98 keep new
+          gulf-front supply genuinely scarce. That scarcity is a real
+          structural factor, not just marketing language—it&apos;s the
+          reason well-located Destin inventory has historically held value
+          through soft-market stretches better than comparable product
+          further inland.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Short-Term Rental Math, Destin Edition
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Gross rental yield in Destin&apos;s core tourist corridor typically
+          runs higher than anything you&apos;ll see in FWB, but the expense
+          side is heavier too—more aggressive HOA rental restrictions in
+          some buildings, higher turnover-cleaning frequency, and insurance
+          premiums that reflect direct gulf-front exposure. I walk every
+          investor through a net-yield model before we talk about the
+          headline number, because the headline number is rarely the number
+          that actually lands in an owner&apos;s account.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Where I&apos;m Watching Next
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          With gulf-front inventory this constrained, the more interesting
+          entry points right now sit a little further out—the Miramar Beach
+          corridor and the second-tier streets just north of 98, where
+          new-build inventory is still coming online and price per square
+          foot hasn&apos;t fully caught up to the Harbor-adjacent tiers.
+          It&apos;s worth a look if the Destin premium is more than your
+          model can absorb.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          If you&apos;re weighing a Destin purchase against FWB or Miramar
+          Beach, I&apos;m happy to run the actual net-yield numbers for your
+          specific budget and use case—reach out and I&apos;ll put together
+          a comparison.
+        </p>
+      </>
+    ),
+  },
+  "flood-zones-decoded": {
+    title: "Flood Zones, Wind Mitigation, and What They Actually Cost You",
+    excerpt: "The line item that surprises more out-of-state buyers than anything else at closing. A plain-language breakdown of flood zones, wind mitigation, and how to budget for both before you write an offer.",
+    date: "May 26, 2026",
+    category: "Market Analysis",
+    readTime: "9 min read",
+    image: "/images/local-coastline.jpg",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Almost every out-of-state buyer I work with gets the purchase price
+          right and the carrying cost wrong. Flood insurance and wind
+          mitigation aren&apos;t line items you can eyeball from a listing
+          photo, and on the Emerald Coast they can move a property&apos;s
+          real monthly cost by several hundred dollars in either direction.
+          Here&apos;s how I walk clients through it before an offer goes in,
+          not after.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Reading a FEMA Flood Zone Letter Like a Realtor
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Every property in Okaloosa County sits in a FEMA-designated flood
+          zone, and the letter matters more than most buyers realize. Zone
+          X is the lowest-risk designation and generally the cheapest to
+          insure. Zone AE means the property sits in a mapped base flood
+          area and a policy is effectively mandatory if you&apos;re
+          financing. Zone VE—coastal high-hazard, direct wave action—is the
+          most expensive tier to insure by a wide margin. I pull the flood
+          zone designation before I ever send a buyer a showing schedule,
+          because it changes the whole budget conversation.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Wind Mitigation Inspection Nobody Budgets For
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          A wind mitigation inspection documents roof shape, roof-to-wall
+          connections, opening protection, and a handful of other
+          construction details that Florida insurers use to price windstorm
+          coverage. It typically runs a few hundred dollars and pays for
+          itself many times over if the home qualifies for the better
+          discount tiers—a hip roof with properly rated connections can
+          meaningfully undercut the premium on an otherwise identical home
+          with an older gable roof and no documented mitigation features.
+        </p>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            &quot;The wind mitigation report is the cheapest negotiating
+            leverage most buyers never ask for.&quot;
+          </p>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Elevation Certificates and Why They&apos;re Worth the $400
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          For homes in higher-risk flood zones, an elevation certificate
+          documents exactly how far the lowest floor sits above the base
+          flood elevation—and even a foot or two of difference can swing a
+          flood premium significantly. Sellers don&apos;t always have a
+          current one on hand. When they don&apos;t, I build the cost of
+          ordering one into the negotiation, because walking into closing
+          without knowing the real premium is how buyers end up with a
+          monthly payment that doesn&apos;t match what they underwrote.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Citizens vs. the Private Market
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Florida&apos;s private insurance market has tightened considerably
+          over the past several years, and Citizens Property Insurance
+          Corporation—the state&apos;s insurer of last resort—has picked up
+          a meaningful share of coastal coverage as a result. That&apos;s
+          not automatically a red flag, but it&apos;s worth knowing going
+          in: Citizens comes with its own eligibility rules and, in some
+          cases, a smaller pool of future private carriers willing to write
+          the policy when it&apos;s time to shop coverage again.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          A Simple Pre-Offer Checklist
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Before I let a client fall in love with a listing, we run four
+          things: the FEMA flood zone designation, whether a current wind
+          mitigation report exists, whether an elevation certificate exists
+          for anything above Zone X, and a real insurance quote—not a
+          rule-of-thumb estimate—before the inspection period closes. It
+          takes a day or two to gather. It saves buyers from the worst
+          version of sticker shock, which is finding it out at the closing
+          table.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          If you&apos;re shopping the Emerald Coast from out of state and
+          want a real insurance-cost picture before you start touring, send
+          me a shortlist of addresses and I&apos;ll pull the flood zone and
+          mitigation data for each one.
+        </p>
+      </>
+    ),
+  },
 };
 
 export default blogPosts;
