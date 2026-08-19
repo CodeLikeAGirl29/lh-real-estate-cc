@@ -87,8 +87,8 @@ export default function CMAEstimator() {
             </h2>
             <span className="mt-2 block h-[3px] w-12 bg-gulf" />
             <p className="mt-4 max-w-xl text-ink/60 text-[15px] leading-relaxed">
-              A do-it-yourself estimate using comps you already know about. It's
-              a starting point, not a verified number — for that, I'll run the
+              A do-it-yourself estimate using comps you already know about. It&apos;s
+              a starting point, not a verified number — for that, I&apos;ll run the
               real thing against actual MLS data.
             </p>
           </m.div>

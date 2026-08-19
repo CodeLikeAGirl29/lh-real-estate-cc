@@ -97,7 +97,7 @@ export default function SponsorPitch() {
               Let&apos;s talk mentorship.
             </h4>
             <p className="text-foreground/60 text-sm mt-1">
-              15 minutes is enough to know if it's a fit.
+              15 minutes is enough to know if it&apos;s a fit.
             </p>
           </div>
           <div className="flex gap-4">

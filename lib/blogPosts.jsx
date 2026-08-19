@@ -422,10 +422,10 @@ const blogPosts = {
         <p className="mb-6 font-normal text-muted text-lg leading-relaxed">
           While Destin captures the tourism headlines, Pensacola is currently
           undergoing a structural transformation that demands the attention of
-          any serious developer or investor. In 2026, the "Cradle of Aviation"
+          any serious developer or investor. In 2026, the &quot;Cradle of Aviation&quot;
           is pivoting from a historic naval town to a high-tech defense and
           infrastructure hub.
-        </p>
+             </p>
 
         <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           The $6.5 Million Gateway Upgrade
@@ -435,18 +435,18 @@ const blogPosts = {
           value. The{" "}
           <strong>Pensacola Beach Gateway Improvements Project</strong>,
           launched in early 2026, is more than just a toll plaza replacement. By
-          implementing "Toll-by-Plate" technology and advanced fiber optic
+          implementing &quot;Toll-by-Plate&quot; technology and advanced fiber optic
           communications, the county is effectively removing a major bottleneck
-          to the island. For investors, this reduces the "friction of access"—a
+          to the island. For investors, this reduces the &quot;friction of access&quot;—a
           key metric when calculating the desirability of short-term rental
           assets on Santa Rosa Island.
-        </p>
+                       </p>
 
         <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl leading-relaxed">
-            "The most valuable real estate isn't just near the water; it's
-            behind the most efficient infrastructure."
-          </p>
+            &quot;The most valuable real estate isn&apos;t just near the water; it&apos;s
+            behind the most efficient infrastructure.&quot;
+                         </p>
         </div>
 
         <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
@@ -456,13 +456,13 @@ const blogPosts = {
           Pensacola&apos;s economy is anchored by a{" "}
           <strong>$7.8 billion military impact</strong>. With over 41,000
           defense-related jobs and a massive veteran population, the rental
-          market here has a built-in "moat" that protects against standard
+          market here has a built-in &quot;moat&quot; that protects against standard
           market volatility. We are seeing a specific surge in demand for
-          "Hardened Housing"—properties built to the latest Florida Building
+          &quot;Hardened Housing&quot;—properties built to the latest Florida Building
           Code standards that can withstand the coastal V-Zone requirements
           while providing the smart-home amenities required by the modern
           defense contractor workforce.
-        </p>
+                       </p>
 
         <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
           Structural Standards: The V-Zone Reality

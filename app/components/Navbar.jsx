@@ -73,7 +73,7 @@ export default function Navbar() {
             >
               L. HOWARD{" "}
               <span className="font-mono text-xs align-middle text-reef transition-colors duration-300 group-hover:text-steel ml-1">
-                // RE + DEV
+                {"// RE + DEV"}
               </span>
             </Link>
           </div>

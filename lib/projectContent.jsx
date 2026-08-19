@@ -39,32 +39,32 @@ const projectContent = {
         </p>
 
         <p className="mb-6 text-muted text-lg">
-          By integrating a full MERN stack architecture, user progress isn't
-          just stored—it's analyzed. The database actively queries past
-          performance to surface concepts right before the "forgetting curve"
+          By integrating a full MERN stack architecture, user progress isn&apos;t
+          just stored—it&apos;s analyzed. The database actively queries past
+          performance to surface concepts right before the &quot;forgetting curve&quot;
           sets in, ensuring that complex topics like property taxation formulas
           and closing cost prorations become second nature.
-        </p>
+                       </p>
 
         <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground text-2xl font-bold mb-2">
             Nearly half of candidates fail on their first attempt.
           </p>
           <p className="text-muted text-base leading-relaxed">
-            Florida's real estate license exam has one of the toughest
+            Florida&apos;s real estate license exam has one of the toughest
             first-attempt pass rates in the country—roughly 50% of test-takers
-            don't pass the first time, largely because 55% of the exam is
+            don&apos;t pass the first time, largely because 55% of the exam is
             Florida-specific law that generic study tools skim over. The
             Master Drill was built to close that exact gap.
-          </p>
+               </p>
         </div>
 
         <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">
-            "High-stakes retention demands precision engineering. Standard
+            &quot;High-stakes retention demands precision engineering. Standard
             applications track completion; this architecture enforces zero-fail
-            accuracy."
-          </p>
+            accuracy.&quot;
+               </p>
         </div>
 
         <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -130,10 +130,10 @@ const projectContent = {
         </h3>
         <p className="mb-6 text-muted text-lg">
           The interface intentionally stays minimal — dark canvas, light tools —
-          so the focus never leaves the space being designed. It's the kind of
-          tool that shows a client you're not just selling a house; you're
+          so the focus never leaves the space being designed. It&apos;s the kind of
+          tool that shows a client you&apos;re not just selling a house; you&apos;re
           helping them see themselves living in it.
-        </p>
+                  </p>
       </>
     ),
   },
@@ -147,11 +147,11 @@ const projectContent = {
         <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
           Most local guides for buyers are lists of restaurants and beach access
           points. The <strong>Okaloosa Guide</strong> project takes a different
-          angle: it's a working reference for the structural and infrastructure
+          angle: it&apos;s a working reference for the structural and infrastructure
           factors that actually move property value across Fort Walton Beach,
-          Destin, and Shalimar — the kind of detail a buyer's agent should
+          Destin, and Shalimar — the kind of detail a buyer&apos;s agent should
           already know cold.
-        </p>
+             </p>
 
         <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
           Mapping Compliance to Neighborhoods
@@ -166,7 +166,7 @@ const projectContent = {
         </p>
 
         <p className="mb-6 text-muted text-lg">
-          It's organized less like a brochure and more like a working reference
+          It&apos;s organized less like a brochure and more like a working reference
           doc — the same one I use when walking a buyer through why two houses
           three blocks apart can carry very different insurance and resale
           profiles.
@@ -186,7 +186,7 @@ const projectContent = {
         <p className="mb-6 text-muted text-lg">
           Infrastructure projects, zoning updates, and flood maps change — so
           this guide is treated as a living reference rather than a one-time
-          write-up, updated as Okaloosa County's growth zones shift.
+          write-up, updated as Okaloosa County&apos;s growth zones shift.
         </p>
       </>
     ),
@@ -270,11 +270,11 @@ const projectContent = {
         </h3>
         <p className="mb-6 text-muted text-lg">
           Clients moving from out of state are rarely just buying a structure —
-          they're buying a rhythm of life they've usually only experienced on
+          they&apos;re buying a rhythm of life they&apos;ve usually only experienced on
           vacation. This project exists to translate that vacation feeling into
           an honest picture of what living here full time is actually like, good
           and mundane parts included.
-        </p>
+             </p>
 
         <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
           <p className="text-foreground italic font-serif text-xl">
