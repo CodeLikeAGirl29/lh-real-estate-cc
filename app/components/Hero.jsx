@@ -67,9 +67,9 @@ export default function Hero() {
               variants={item}
               className="font-display text-4xl font-bold text-foreground sm:text-6xl leading-[0.9] tracking-tight"
             >
-              Closing,
+              Passion. Persistence.
               <br />
-              <span className="italic text-reef">No Compromise.</span>
+              <span className="italic text-reef">Properties.</span>
             </m.h1>
 
             <m.p
