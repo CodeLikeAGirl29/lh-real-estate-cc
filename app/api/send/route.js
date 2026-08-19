@@ -2,7 +2,13 @@ import { Resend } from "resend";
 import { NextResponse } from "next/server";
 import { parseContactPayload } from "@/lib/validate";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend;
+function getResendClient() {
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 // Very lightweight in-memory rate limiting (per server instance).
 // Not a substitute for a durable store, but stops naive bot floods
@@ -55,7 +61,7 @@ export async function POST(req) {
 
     const { name, email, phone, subject, message } = parsed.data;
 
-    const data = await resend.emails.send({
+    const data = await getResendClient().emails.send({
       from: "LH Real Estate <onboarding@resend.dev>",
       to: ["lindsey.howard.re@outlook.com"],
       replyTo: email,
