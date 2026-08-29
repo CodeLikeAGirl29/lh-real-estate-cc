@@ -1,7 +1,8 @@
 import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
+import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { LazyMotion, domAnimation } from "framer-motion";
-import "./globals.css"; // You can remove the 'next/script' import
+import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
 const manrope = Manrope({
@@ -110,6 +111,11 @@ export default function RootLayout({ children }) {
         <LazyMotion features={domAnimation} strict>
           {children}
         </LazyMotion>
+        <Script id="widget-tracker" strategy="afterInteractive">
+          {`
+            (function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function() {(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"), (t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i; e.parentNode.insertBefore(t,e);}) (window,"https://widgetbe.com/agent",document,"widgetTracker"); window.widgetTracker("create", "WT-LZNWYZBH"); window.widgetTracker("send", "pageview");
+          `}
+        </Script>
       </body>
 
       {/* Simply pass the ID to the component you imported */}
