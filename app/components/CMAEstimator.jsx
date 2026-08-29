@@ -1,9 +1,14 @@
 "use client";
 import { useMemo, useState } from "react";
 import { FaHouse, FaScaleBalanced, FaXmark } from "react-icons/fa6";
-import { m } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
-const defaultComp = () => ({ label: "", price: "", sqft: "" });
+const defaultComp = () => ({
+  id: Math.random().toString(36).slice(2),
+  label: "",
+  price: "",
+  sqft: "",
+});
 
 export default function CMAEstimator() {
   // Subject property
@@ -16,9 +21,9 @@ export default function CMAEstimator() {
   // has no live MLS feed behind it. It's a ballpark estimate, not a
   // substitute for a verified CMA.
   const [comps, setComps] = useState([
-    { label: "Comp 1", price: 365000, sqft: 1750 },
-    { label: "Comp 2", price: 398000, sqft: 1900 },
-    { label: "Comp 3", price: "", sqft: "" },
+    { id: "seed-1", label: "Comp 1", price: 365000, sqft: 1750 },
+    { id: "seed-2", label: "Comp 2", price: 398000, sqft: 1900 },
+    { id: "seed-3", label: "Comp 3", price: "", sqft: "" },
   ]);
 
   const updateComp = (index, field, value) => {
@@ -96,7 +101,13 @@ export default function CMAEstimator() {
 
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10">
           {/* Subject property + result */}
-          <div className="flex flex-col gap-6">
+          <m.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col gap-6"
+          >
             <div className="corner-marks border border-ink/10 p-8 space-y-6">
               <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-gulf">
                 <FaHouse className="size-3" /> Your Property
@@ -208,14 +219,22 @@ export default function CMAEstimator() {
                   Estimated Value Range
                 </span>
                 {results.count > 0 ? (
-                  <div className="font-display text-4xl font-bold text-foreground mt-2">
-                    {currency(results.low)}
-                    <span className="text-foreground/40 font-sans text-xl">
-                      {" "}
-                      &ndash;{" "}
-                    </span>
-                    {currency(results.high)}
-                  </div>
+                  <AnimatePresence mode="wait">
+                    <m.div
+                      key={`${results.low}-${results.high}`}
+                      initial={{ opacity: 0, y: -6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="font-display text-4xl font-bold text-foreground mt-2"
+                    >
+                      {currency(results.low)}
+                      <span className="text-foreground/40 font-sans text-xl">
+                        {" "}
+                        &ndash;{" "}
+                      </span>
+                      {currency(results.high)}
+                    </m.div>
+                  </AnimatePresence>
                 ) : (
                   <div className="font-display text-xl font-bold text-foreground/40 mt-2">
                     Add at least one comp to see an estimate
@@ -243,75 +262,94 @@ export default function CMAEstimator() {
                 </div>
               )}
             </div>
-          </div>
+          </m.div>
 
           {/* Comps */}
-          <div className="corner-marks border border-ink/10 p-8">
+          <m.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="corner-marks border border-ink/10 p-8"
+          >
             <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-gulf mb-6">
               <FaScaleBalanced className="size-3" /> Comparable Sales
             </div>
             <div className="space-y-5">
-              {comps.map((comp, i) => {
-                const psf =
-                  Number(comp.price) > 0 && Number(comp.sqft) > 0
-                    ? (Number(comp.price) / Number(comp.sqft)).toFixed(0)
-                    : null;
-                return (
-                  <div
-                    key={i}
-                    className="border border-ink/10 p-4 grid grid-cols-1 sm:grid-cols-[1fr_1fr_1fr_auto_auto] gap-3 items-end"
-                  >
-                    <label className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-ink/40">
-                        Address / Label
-                      </span>
-                      <input
-                        type="text"
-                        value={comp.label}
-                        placeholder={`Comp ${i + 1}`}
-                        onChange={(e) => updateComp(i, "label", e.target.value)}
-                        className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
-                      />
-                    </label>
-                    <label className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-ink/40">
-                        Sold Price
-                      </span>
-                      <input
-                        type="number"
-                        value={comp.price}
-                        placeholder="365000"
-                        onChange={(e) => updateComp(i, "price", e.target.value)}
-                        className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
-                      />
-                    </label>
-                    <label className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-ink/40">
-                        Sqft
-                      </span>
-                      <input
-                        type="number"
-                        value={comp.sqft}
-                        placeholder="1750"
-                        onChange={(e) => updateComp(i, "sqft", e.target.value)}
-                        className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
-                      />
-                    </label>
-                    <div className="font-mono text-xs text-gulf font-bold whitespace-nowrap pb-1.5">
-                      {psf ? `$${psf}/sqft` : "—"}
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => removeComp(i)}
-                      disabled={comps.length <= 1}
-                      aria-label="Remove comp"
-                      className="pb-1.5 text-ink/30 hover:text-signal disabled:opacity-0 disabled:pointer-events-none transition-colors"
+              <AnimatePresence initial={false}>
+                {comps.map((comp, i) => {
+                  const psf =
+                    Number(comp.price) > 0 && Number(comp.sqft) > 0
+                      ? (Number(comp.price) / Number(comp.sqft)).toFixed(0)
+                      : null;
+                  return (
+                    <m.div
+                      key={comp.id}
+                      layout
+                      initial={{ opacity: 0, y: -12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      className="border border-ink/10 p-4 grid grid-cols-1 sm:grid-cols-[1fr_1fr_1fr_auto_auto] gap-3 items-end overflow-hidden"
                     >
-                      <FaXmark className="size-3.5" />
-                    </button>
-                  </div>
-                );
-              })}
+                      <label className="flex flex-col gap-1">
+                        <span className="font-mono text-[10px] uppercase tracking-widest text-ink/40">
+                          Address / Label
+                        </span>
+                        <input
+                          type="text"
+                          value={comp.label}
+                          placeholder={`Comp ${i + 1}`}
+                          onChange={(e) =>
+                            updateComp(i, "label", e.target.value)
+                          }
+                          className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
+                        />
+                      </label>
+                      <label className="flex flex-col gap-1">
+                        <span className="font-mono text-[10px] uppercase tracking-widest text-ink/40">
+                          Sold Price
+                        </span>
+                        <input
+                          type="number"
+                          value={comp.price}
+                          placeholder="365000"
+                          onChange={(e) =>
+                            updateComp(i, "price", e.target.value)
+                          }
+                          className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
+                        />
+                      </label>
+                      <label className="flex flex-col gap-1">
+                        <span className="font-mono text-[10px] uppercase tracking-widest text-ink/40">
+                          Sqft
+                        </span>
+                        <input
+                          type="number"
+                          value={comp.sqft}
+                          placeholder="1750"
+                          onChange={(e) =>
+                            updateComp(i, "sqft", e.target.value)
+                          }
+                          className="px-2 py-1.5 bg-transparent text-ink text-sm border border-ink/20 focus:border-gulf outline-0"
+                        />
+                      </label>
+                      <div className="font-mono text-xs text-gulf font-bold whitespace-nowrap pb-1.5">
+                        {psf ? `$${psf}/sqft` : "—"}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => removeComp(i)}
+                        disabled={comps.length <= 1}
+                        aria-label="Remove comp"
+                        className="pb-1.5 text-ink/30 hover:text-signal disabled:opacity-0 disabled:pointer-events-none transition-colors"
+                      >
+                        <FaXmark className="size-3.5" />
+                      </button>
+                    </m.div>
+                  );
+                })}
+              </AnimatePresence>
             </div>
 
             <button
@@ -327,7 +365,7 @@ export default function CMAEstimator() {
               public listing site, or a house down the street you know sold
               recently. The more similar the comp, the better this estimate.
             </p>
-          </div>
+          </m.div>
         </div>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-ink/10">

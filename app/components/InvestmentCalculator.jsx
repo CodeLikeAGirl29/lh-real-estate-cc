@@ -2,7 +2,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { FaCalculator, FaChartLine } from "react-icons/fa6";
-import { m } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
 export default function InvestmentCalculator() {
   const [mode, setMode] = useState("mortgage");
@@ -131,150 +131,200 @@ export default function InvestmentCalculator() {
             </p>
           </m.div>
 
-          <div className="flex corner-marks border border-ink/10 p-1">
+          <div className="flex corner-marks border border-ink/10 p-1 relative">
             <button
               onClick={() => setMode("mortgage")}
-              className={`flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-widest font-bold transition-colors ${
-                mode === "mortgage"
-                  ? "bg-signal text-ink"
-                  : "text-ink/60 hover:text-ink"
+              className={`relative z-10 flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-widest font-bold transition-colors ${
+                mode === "mortgage" ? "text-ink" : "text-ink/60 hover:text-ink"
               }`}
             >
+              {mode === "mortgage" && (
+                <m.span
+                  layoutId="calcModeHighlight"
+                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                  className="absolute inset-0 -z-10 bg-signal"
+                />
+              )}
               <FaCalculator className="size-3" /> Mortgage
             </button>
             <button
               onClick={() => setMode("cap")}
-              className={`flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-widest font-bold transition-colors ${
-                mode === "cap"
-                  ? "bg-signal text-ink"
-                  : "text-ink/60 hover:text-ink"
+              className={`relative z-10 flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-widest font-bold transition-colors ${
+                mode === "cap" ? "text-ink" : "text-ink/60 hover:text-ink"
               }`}
             >
+              {mode === "cap" && (
+                <m.span
+                  layoutId="calcModeHighlight"
+                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                  className="absolute inset-0 -z-10 bg-signal"
+                />
+              )}
               <FaChartLine className="size-3" /> CAP Rate
             </button>
           </div>
         </div>
 
-        {mode === "mortgage" ? (
-          <div className="grid lg:grid-cols-2 gap-10">
-            <div className="corner-marks border border-ink/10 p-8 space-y-6">
-              {renderField(
-                "Home Price",
-                "$",
-                price,
-                setPrice,
-                100000,
-                1500000,
-                5000,
-              )}
-              {renderField("Down Payment", "%", downPct, setDownPct, 0, 50, 1)}
-              {renderField("Interest Rate", "%", rate, setRate, 2, 10, 0.125)}
-              {renderField("Loan Term", " yrs", term, setTerm, 10, 30, 5)}
-              {renderField(
-                "Tax + Insurance / mo",
-                "$",
-                taxInsurance,
-                setTaxInsurance,
-                0,
-                2000,
-                25,
-              )}
-            </div>
+        <AnimatePresence mode="wait">
+          {mode === "mortgage" ? (
+            <m.div
+              key="mortgage"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="grid lg:grid-cols-2 gap-10"
+            >
+              <div className="corner-marks border border-ink/10 p-8 space-y-6">
+                {renderField(
+                  "Home Price",
+                  "$",
+                  price,
+                  setPrice,
+                  100000,
+                  1500000,
+                  5000,
+                )}
+                {renderField(
+                  "Down Payment",
+                  "%",
+                  downPct,
+                  setDownPct,
+                  0,
+                  50,
+                  1,
+                )}
+                {renderField("Interest Rate", "%", rate, setRate, 2, 10, 0.125)}
+                {renderField("Loan Term", " yrs", term, setTerm, 10, 30, 5)}
+                {renderField(
+                  "Tax + Insurance / mo",
+                  "$",
+                  taxInsurance,
+                  setTaxInsurance,
+                  0,
+                  2000,
+                  25,
+                )}
+              </div>
 
-            <div className="corner-marks border border-ink/10 bg-background p-8 flex flex-col justify-center gap-6">
-              <div>
-                <span className="font-mono text-[11px] uppercase tracking-widest text-gulf">
-                  Estimated Monthly Payment
-                </span>
-                <div className="font-display text-5xl font-bold text-foreground mt-2">
-                  {currency(mortgageResults.total)}
-                  <span className="text-base font-sans text-foreground/50">
-                    {" "}
-                    / mo
+              <div className="corner-marks border border-ink/10 bg-background p-8 flex flex-col justify-center gap-6">
+                <div>
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-gulf">
+                    Estimated Monthly Payment
                   </span>
+                  <AnimatePresence mode="wait">
+                    <m.div
+                      key={mortgageResults.total}
+                      initial={{ opacity: 0, y: -6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="font-display text-5xl font-bold text-foreground mt-2"
+                    >
+                      {currency(mortgageResults.total)}
+                      <span className="text-base font-sans text-foreground/50">
+                        {" "}
+                        / mo
+                      </span>
+                    </m.div>
+                  </AnimatePresence>
+                </div>
+                <div className="grid grid-cols-2 gap-4 pt-6 border-t border-foreground/10">
+                  <div>
+                    <span className="block font-display text-xl font-bold text-foreground">
+                      {currency(mortgageResults.pAndI)}
+                    </span>
+                    <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
+                      Principal & Interest
+                    </span>
+                  </div>
+                  <div>
+                    <span className="block font-display text-xl font-bold text-foreground">
+                      {currency(mortgageResults.downPayment)}
+                    </span>
+                    <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
+                      Down Payment
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-foreground/10">
-                <div>
-                  <span className="block font-display text-xl font-bold text-foreground">
-                    {currency(mortgageResults.pAndI)}
-                  </span>
-                  <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
-                    Principal & Interest
-                  </span>
-                </div>
-                <div>
-                  <span className="block font-display text-xl font-bold text-foreground">
-                    {currency(mortgageResults.downPayment)}
-                  </span>
-                  <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
-                    Down Payment
-                  </span>
-                </div>
+            </m.div>
+          ) : (
+            <m.div
+              key="cap"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="grid lg:grid-cols-2 gap-10"
+            >
+              <div className="corner-marks border border-ink/10 p-8 space-y-6">
+                {renderField(
+                  "Purchase Price",
+                  "$",
+                  purchasePrice,
+                  setPurchasePrice,
+                  100000,
+                  1500000,
+                  5000,
+                )}
+                {renderField("Monthly Rent", "$", rent, setRent, 500, 8000, 50)}
+                {renderField(
+                  "Monthly Expenses",
+                  "$",
+                  expenses,
+                  setExpenses,
+                  0,
+                  4000,
+                  25,
+                )}
+                <p className="text-xs text-ink/50 leading-relaxed pt-2 border-t border-ink/10">
+                  Expenses should include estimated property management, HOA,
+                  maintenance reserve, taxes, and insurance — everything besides
+                  the mortgage payment itself.
+                </p>
               </div>
-            </div>
-          </div>
-        ) : (
-          <div className="grid lg:grid-cols-2 gap-10">
-            <div className="corner-marks border border-ink/10 p-8 space-y-6">
-              {renderField(
-                "Purchase Price",
-                "$",
-                purchasePrice,
-                setPurchasePrice,
-                100000,
-                1500000,
-                5000,
-              )}
-              {renderField("Monthly Rent", "$", rent, setRent, 500, 8000, 50)}
-              {renderField(
-                "Monthly Expenses",
-                "$",
-                expenses,
-                setExpenses,
-                0,
-                4000,
-                25,
-              )}
-              <p className="text-xs text-ink/50 leading-relaxed pt-2 border-t border-ink/10">
-                Expenses should include estimated property management, HOA,
-                maintenance reserve, taxes, and insurance — everything besides
-                the mortgage payment itself.
-              </p>
-            </div>
 
-            <div className="corner-marks border border-ink/10 bg-background p-8 flex flex-col justify-center gap-6">
-              <div>
-                <span className="font-mono text-[11px] uppercase tracking-widest text-gulf">
-                  CAP Rate
-                </span>
-                <div className="font-display text-5xl font-bold text-foreground mt-2">
-                  {capResults.capRate}%
+              <div className="corner-marks border border-ink/10 bg-background p-8 flex flex-col justify-center gap-6">
+                <div>
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-gulf">
+                    CAP Rate
+                  </span>
+                  <AnimatePresence mode="wait">
+                    <m.div
+                      key={capResults.capRate}
+                      initial={{ opacity: 0, y: -6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="font-display text-5xl font-bold text-foreground mt-2"
+                    >
+                      {capResults.capRate}%
+                    </m.div>
+                  </AnimatePresence>
+                </div>
+                <div className="grid grid-cols-2 gap-4 pt-6 border-t border-foreground/10">
+                  <div>
+                    <span
+                      className={`block font-display text-xl font-bold ${capResults.monthlyCashFlow >= 0 ? "text-emerald-400" : "text-signal"}`}
+                    >
+                      {currency(capResults.monthlyCashFlow)}
+                    </span>
+                    <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
+                      Est. Monthly Cash Flow
+                    </span>
+                  </div>
+                  <div>
+                    <span className="block font-display text-xl font-bold text-foreground">
+                      {currency(capResults.noi)}
+                    </span>
+                    <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
+                      Annual NOI
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-foreground/10">
-                <div>
-                  <span
-                    className={`block font-display text-xl font-bold ${capResults.monthlyCashFlow >= 0 ? "text-emerald-400" : "text-signal"}`}
-                  >
-                    {currency(capResults.monthlyCashFlow)}
-                  </span>
-                  <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
-                    Est. Monthly Cash Flow
-                  </span>
-                </div>
-                <div>
-                  <span className="block font-display text-xl font-bold text-foreground">
-                    {currency(capResults.noi)}
-                  </span>
-                  <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
-                    Annual NOI
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+            </m.div>
+          )}
+        </AnimatePresence>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 p-8 border border-ink/10">
           <div>
