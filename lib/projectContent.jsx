@@ -1,0 +1,418 @@
+// lib/projectContent.jsx
+// Shared project case-study data — used by both the server metadata
+// generator (app/projects/[id]/page.jsx) and the client renderer.
+import React from "react";
+import Link from "next/link";
+
+const projectContent = {
+  "master-drill": {
+    title: "The Master Drill: Engineering a Smarter Way to Study",
+    description:
+      "A full-stack study environment built to master the 63-hour Florida real estate pre-licensing curriculum, with logic-driven progress tracking across 19 units.",
+    tags: "#PropTech #NextJS15 #RealEstate #WebDevelopment",
+    image: "/images/master-drill-ui.jpg",
+    githubUrl: "https://github.com/CodeLikeAGirl29/fl-re-drill",
+    liveUrl: "https://fl-re-drill.netlify.app",
+    content: (
+      <>
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Success in the Florida real estate market begins with a license, but
+          true market mastery requires an underlying technical infrastructure.
+          The <strong>Florida Real Estate Master Drill</strong> full-stack study
+          environment was engineered from scratch to address a clear gap in
+          traditional learning tools: the absolute lack of programmatic state
+          tracking and logic-driven retention systems required for high-stakes
+          examinations.
+        </p>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+          Architecting 19 Units of Compliance
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The 63-hour Florida pre-licensing curriculum is massive, spanning
+          rigorous regulatory compliance frameworks, complex mathematical
+          calculations, and deep-dives into Florida statutes. Instead of relying
+          on passive flashcards, this platform breaks the material into an
+          active testing engine. Leveraging React Hooks and the Context API, the
+          codebase actively evaluates weak performance areas across all 19
+          mandatory instructional units, automatically adapting the question
+          rotation to optimize study workflows.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          By integrating a full MERN stack architecture, user progress
+          isn&apos;t just stored—it&apos;s analyzed. The database actively
+          queries past performance to surface concepts right before the
+          &quot;forgetting curve&quot; sets in, ensuring that complex topics
+          like property taxation formulas and closing cost prorations become
+          second nature.
+        </p>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground text-2xl font-bold mb-2">
+            Nearly half of candidates fail on their first attempt.
+          </p>
+          <p className="text-muted text-base leading-relaxed">
+            Florida&apos;s real estate license exam has one of the toughest
+            first-attempt pass rates in the country—roughly 50% of test-takers
+            don&apos;t pass the first time, largely because 55% of the exam is
+            Florida-specific law that generic study tools skim over. The Master
+            Drill was built to close that exact gap.
+          </p>
+        </div>
+
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl">
+            &quot;High-stakes retention demands precision engineering. Standard
+            applications track completion; this architecture enforces zero-fail
+            accuracy.&quot;
+          </p>
+        </div>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4">
+          UI/UX Designed for Deep Work
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Studying complex legal frameworks requires immense cognitive focus.
+          The interface was explicitly designed with a high-contrast dark mode
+          aesthetic to reduce eye strain during late-night study sessions. By
+          utilizing Tailwind CSS to strip away visual clutter and present
+          information through a clean, minimalist lens, the application keeps
+          the user focused purely on the data.
+        </p>
+      </>
+    ),
+  },
+  "dock-and-dune": {
+    title: "Dock & Dune — Marine Construction & Shoreline Advisory",
+    category: "Full-Stack Web App & Coastal Tool",
+    tagline:
+      "High-performance coastal marine engineering platform, flood loss history explorer, and Florida coastal insurance estimator.",
+    date: "2026",
+    role: "Lead Developer & UI Designer",
+    tech: [
+      "Next.js (App Router)",
+      "JavaScript / React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "OpenFEMA API",
+      "Turso (libSQL)",
+    ],
+    liveUrl: "https://dock-and-dune.vercel.app", // update with your custom domain or deployment URL
+    githubUrl: "https://github.com/CodeLikeAGirl29/dock-and-dune",
+    image: "/images/img-1.jpg",
+    tags: "PropTech / Data Platform",
+    description:
+      "Coastal marine construction showcase, insurance cost estimator, and historical FEMA flood loss tracker for Northwest Florida.",
+    overview: `Dock & Dune is a high-performance web platform and coastal intelligence suite engineered for waterfront homeowners, marine construction contractors, and coastal property buyers across Northwest Florida. 
+
+Combining coastal structural showcases with practical financial and regulatory tools, the platform features a real-time Florida windstorm/flood insurance estimator, OpenFEMA-backed NFIP historical claims intelligence, and permitting guides for dock builds, seawalls, and dune walkovers.`,
+    highlights: [
+      {
+        title: "FEMA Flood Insurance & Dock Cost Estimator",
+        description:
+          "Interactive escrow calculator that estimates annual premium swings across FEMA Flood Zones (X, AE, VE) and factors in Wind Mitigation discounts and dock riders.",
+      },
+      {
+        title: "Historical Hurricane & NFIP Loss Dataset",
+        description:
+          "Public loss explorer querying OpenFEMA data cross-referenced with major Gulf storms (Hurricanes Sally, Michael, Idalia, Ivan) by coastal county.",
+      },
+      {
+        title: "DEP & Environmental Permitting Compliance",
+        description:
+          "Direct guidance on Florida CCCL (Coastal Construction Control Line), submerged land leases, and state environmental setback requirements.",
+      },
+      {
+        title: "Modern Coastal UI Architecture",
+        description:
+          "High-contrast, accessible coastal palette with smooth micro-interactions built using Tailwind CSS and Framer Motion.",
+      },
+    ],
+    architecture: [
+      "Next.js App Router with serverless API route integration for OpenFEMA OData queries",
+      "Turso (libSQL) distributed serverless database for resilient offline/cached logging",
+      "Client-side formula engines with Framer Motion animations for instant cost estimations",
+    ],
+    content: (
+      <>
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Dock &amp; Dune is a high-performance web platform and coastal
+          intelligence suite engineered for waterfront homeowners, marine
+          construction contractors, and coastal property buyers across Northwest
+          Florida. Combining coastal structural showcases with practical
+          financial and regulatory tools, the platform features a real-time
+          Florida windstorm/flood insurance estimator, OpenFEMA-backed NFIP
+          historical claims intelligence, and permitting guides for dock builds,
+          seawalls, and dune walkovers.
+        </p>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+          What It Does
+        </h3>
+        <ul className="space-y-4 mb-6">
+          <li className="text-muted text-lg">
+            <strong className="text-foreground">
+              FEMA Flood Insurance &amp; Dock Cost Estimator
+            </strong>{" "}
+            &mdash; an interactive escrow calculator that estimates annual
+            premium swings across FEMA Flood Zones (X, AE, VE) and factors in
+            Wind Mitigation discounts and dock riders.
+          </li>
+          <li className="text-muted text-lg">
+            <strong className="text-foreground">
+              Historical Hurricane &amp; NFIP Loss Dataset
+            </strong>{" "}
+            &mdash; a public loss explorer querying OpenFEMA data
+            cross-referenced with major Gulf storms (Hurricanes Sally, Michael,
+            Idalia, Ivan) by coastal county.
+          </li>
+          <li className="text-muted text-lg">
+            <strong className="text-foreground">
+              DEP &amp; Environmental Permitting Compliance
+            </strong>{" "}
+            &mdash; direct guidance on Florida CCCL (Coastal Construction
+            Control Line), submerged land leases, and state environmental
+            setback requirements.
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+          Architecture
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Built on the Next.js App Router with serverless API routes integrating
+          OpenFEMA&apos;s OData queries, backed by a Turso (libSQL) distributed
+          database for resilient offline and cached logging. Client-side formula
+          engines paired with Framer Motion animations deliver instant cost
+          estimations without a server round-trip.
+        </p>
+      </>
+    ),
+  },
+  "shadow-slate": {
+    title: "Shadow + Slate: Engineering Interactive Space Curation",
+    description:
+      "An interactive mood board canvas where agents, designers, and buyers can drag furniture and finishes onto a room photo to preview a space in real time.",
+    tags: "#PropTech #TypeScript #ReactKonva #InteriorDesign",
+    image: "/images/shadow-slate-ui.jpg",
+    content: (
+      <>
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Every listing photo tells a buyer what a room looks like. It rarely
+          tells them what it could look like. <strong>Shadow + Slate</strong>{" "}
+          was built to close that gap — an interactive mood board canvas where
+          agents, designers, and buyers can drag furniture, finishes, and color
+          palettes directly onto a room and see the possibilities in real time,
+          instead of imagining them from a static listing photo.
+        </p>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+          Canvas Logic, Not Just a Slideshow
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The core engine runs on <strong>React Konva</strong>, giving the board
+          true canvas-level interactivity: layered elements, free transforms,
+          and drag-and-drop that responds instantly rather than re-rendering the
+          page. Built in TypeScript, the component tree strictly types every
+          board element — swatches, furniture tiles, layout frames — so the
+          canvas stays predictable even as boards grow complex with dozens of
+          layered pieces.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          Each board persists as structured state rather than a flattened image,
+          which means a saved mood board isn&apos;t just a picture — it&apos;s
+          an editable spatial document. A client can hand it back with notes,
+          swap a finish, and reopen the exact same layout with nothing lost.
+        </p>
+
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl">
+            &quot;A listing photo is a fact. A mood board is a conversation —
+            the interface just needed to keep up with how fast that conversation
+            moves.&quot;
+          </p>
+        </div>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4">
+          Built for the Handoff Between Agent and Client
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The interface intentionally stays minimal — dark canvas, light tools —
+          so the focus never leaves the space being designed. It&apos;s the kind
+          of tool that shows a client you&apos;re not just selling a house;
+          you&apos;re helping them see themselves living in it.
+        </p>
+      </>
+    ),
+  },
+  "okaloosa-guide": {
+    title: "Okaloosa Guide",
+    description:
+      "A working reference for the structural and infrastructure factors that actually move property value across Fort Walton Beach, Destin, and Shalimar.",
+    tags: "#LocalGuide #RealEstate #OkaloosaCounty #DataDriven",
+    image: "/images/local-coastline.jpg",
+    content: (
+      <>
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Most local guides for buyers are lists of restaurants and beach access
+          points. The <strong>Okaloosa Guide</strong> project takes a different
+          angle: it&apos;s a working reference for the structural and
+          infrastructure factors that actually move property value across Fort
+          Walton Beach, Destin, and Shalimar — the kind of detail a buyer&apos;s
+          agent should already know cold.
+        </p>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+          Mapping Compliance to Neighborhoods
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The guide breaks Okaloosa County down by construction era and
+          compliance tier — flagging which pockets fall under stricter coastal
+          building standards, where flood zone designations shift, and which
+          secondary residential tiers around Spanish Villas and Shalimar tend to
+          offer the strongest CAP rates relative to their compliance
+          requirements.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          It&apos;s organized less like a brochure and more like a working
+          reference doc — the same one I use when walking a buyer through why
+          two houses three blocks apart can carry very different insurance and
+          resale profiles.
+        </p>
+
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl">
+            &quot;Two houses with the same view can carry very different risk
+            profiles. The difference is almost always in the infrastructure, not
+            the paint color.&quot;
+          </p>
+        </div>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4">
+          A Living Document
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Infrastructure projects, zoning updates, and flood maps change — so
+          this guide is treated as a living reference rather than a one-time
+          write-up, updated as Okaloosa County&apos;s growth zones shift.
+        </p>
+      </>
+    ),
+  },
+  "beyond-the-beach": {
+    title: "Beyond the Beach: The Blueprint",
+    description:
+      "A data-driven framework for reading Okaloosa County growth zones by infrastructure signal — permitting activity, fiber buildout, and zoning — instead of curb appeal.",
+    tags: "#Investment #DataAnalysis #OkaloosaCounty #PropTech",
+    image: "/images/img-1.jpg",
+    content: (
+      <>
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          <strong>Beyond the Beach</strong> started as a question I kept getting
+          from out-of-state investors: where in Okaloosa County is growth
+          actually happening, versus where it just looks like it is from the
+          drone photos? This project is the data-side answer — a framework for
+          reading growth zones by infrastructure signal instead of curb appeal.
+        </p>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+          Reading the Signals Before the Listings Do
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The methodology behind this project tracks three leading indicators
+          ahead of price: permitting activity, utility and fiber buildout, and
+          zoning amendments. Each tends to move months before a neighborhood
+          shows up in comparable sales data, which is exactly the window an
+          investor wants visibility into.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          Applied to the Prop-Tech pivot happening across the county, the
+          pattern is consistent: markets with better digital property management
+          infrastructure post lower vacancy and tighter management overhead — a
+          real, measurable edge for investors willing to look past the view.
+        </p>
+
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl">
+            &quot;By the time a growth zone shows up in the comps, the best
+            entry point has usually already passed.&quot;
+          </p>
+        </div>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4">
+          From Analysis to Advisory
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The full write-up and market commentary built on this framework lives
+          on{" "}
+          <Link
+            href="/blog/beyond-the-beach"
+            className="text-reef hover:underline"
+          >
+            the Digital Ledger
+          </Link>
+          — this page covers the underlying approach; the blog post covers the
+          current market read.
+        </p>
+      </>
+    ),
+  },
+  "emerald-coast-insider": {
+    title: "The Emerald Coast Insider",
+    description:
+      "A curated lifestyle guide to daily life on the Emerald Coast, built to help relocating clients get a feel for the area beyond square footage.",
+    tags: "#Lifestyle #PropTech #ClientExperience #EmeraldCoast",
+    image: "/images/img-2.jpg",
+    content: (
+      <>
+        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Not every part of representing a place is technical. The{" "}
+          <strong>Emerald Coast Insider</strong> project is the lifestyle layer
+          — a curated set of local knowledge (paddleboard launches, coffee
+          spots, beach access points with the least crowd) built to give
+          relocating clients a feel for daily life here, not just a feel for
+          square footage.
+        </p>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+          Why This Sits Next to the Technical Work
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Clients moving from out of state are rarely just buying a structure —
+          they&apos;re buying a rhythm of life they&apos;ve usually only
+          experienced on vacation. This project exists to translate that
+          vacation feeling into an honest picture of what living here full time
+          is actually like, good and mundane parts included.
+        </p>
+
+        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl">
+            &quot;Some places you visit. Others, you live. Helping a client tell
+            the difference is part of the job.&quot;
+          </p>
+        </div>
+
+        <h3 className="text-2xl font-bold text-foreground mb-4">
+          Read the Full Guide
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The full lifestyle write-up, including the current insider picks list,
+          lives on{" "}
+          <Link
+            href="/blog/emerald-coast-insider"
+            className="text-reef hover:underline"
+          >
+            the Digital Ledger
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+};
+
+export default projectContent;

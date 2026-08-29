@@ -1,0 +1,15 @@
+# Normalize all text files to LF in the repository, regardless of the
+# checkout OS. Git still checks files out using core.autocrlf on your
+# machine, so your local files can stay CRLF — this just stops every
+# file from showing as "modified" purely over line-ending differences.
+* text=auto eol=lf
+
+# Never touch binary files.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
