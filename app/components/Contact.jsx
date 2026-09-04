@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
-import { FaCircleCheck, FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
+import {
+  FaCircleCheck,
+  FaEnvelope,
+  FaLocationDot,
+  FaPhone,
+} from "react-icons/fa6";
 import { m } from "framer-motion";
 
 export default function Contact() {
@@ -9,7 +14,7 @@ export default function Contact() {
   const [mapLoaded, setMapLoaded] = useState(false);
 
   // Picks up an address handed off from the Hero valuation form (see
-  // Hero.jsx) so a visitor who asks for a CMA there doesn'''t have to
+  // Hero.jsx) so a visitor who asks for a CMA there doesn't have to
   // retype it here.
   const [prefillMessage] = useState(() => {
     if (typeof window === "undefined") return "";
@@ -17,7 +22,7 @@ export default function Contact() {
       const storedAddress = sessionStorage.getItem("cma_address");
       if (storedAddress) {
         sessionStorage.removeItem("cma_address");
-        return `I'''d like a home value estimate for: ${storedAddress}`;
+        return `I'd like a home value estimate for: ${storedAddress}`;
       }
     } catch {}
     return "";
