@@ -28,7 +28,7 @@ export default function BlogPostClient({ post }) {
               href="/blog"
               className="inline-flex items-center gap-2 text-reef mb-6 hover:text-foreground transition-colors font-bold text-xs uppercase tracking-widest"
             >
-              <FaArrowLeft /> Back to the Ledger
+              <FaArrowLeft /> Back to The Coast Is Clear
             </Link>
             <h1 className="font-display text-4xl lg:text-6xl font-black text-foreground leading-tight mb-4">
               {post.title}

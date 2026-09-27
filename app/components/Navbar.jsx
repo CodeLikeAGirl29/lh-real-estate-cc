@@ -44,7 +44,7 @@ export default function Navbar() {
     { name: "Home Value", href: "/#cma" },
     { name: "Market Map", href: "/#market-map" },
     { name: "Experience", href: "/#experience" },
-    { name: "The Ledger", href: "/blog" },
+    { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
     { name: "For Mentors", href: "/about#mentor" },
   ];

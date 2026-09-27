@@ -86,10 +86,10 @@ export default function Hero() {
               variants={item}
               className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight leading-[1.08] text-foreground"
             >
-              Passion. Persistence.
-              <br className="hidden sm:inline" />
+              Okaloosa County Real Estate,
+              <br className="hidden sm:inline" />{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-reef to-steel">
-                Properties.
+                Backed by Real Numbers.
               </span>
             </m.h1>
 
@@ -98,9 +98,10 @@ export default function Hero() {
               variants={item}
               className="mt-5 text-lg sm:text-xl text-muted max-w-xl leading-relaxed"
             >
-              Your goals are my mission. I approach every deal with relentless
-              focus and determination, ensuring every step moves you closer to
-              success.
+              Buying or selling in Fort Walton Beach, Destin, Niceville, or
+              Crestview? I show you the true monthly cost first — BAH, flood
+              zone, and insurance — whether you&apos;re PCSing to Eglin or
+              Hurlburt or moving to the coast.
             </m.p>
 
             {/* Valuation Lead Capture Form (Framed) */}
@@ -115,6 +116,8 @@ export default function Hero() {
                   <input
                     type="text"
                     placeholder="Enter your property address..."
+                    aria-label="Property address for a free home valuation"
+                    autoComplete="street-address"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     className="w-full pl-12 pr-4 py-3.5 bg-transparent text-foreground placeholder-muted focus:outline-none text-sm font-sans"

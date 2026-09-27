@@ -6,6 +6,9 @@ import Image from "next/image";
 
 const blogPosts = {
   "okaloosa-insider": {
+    seoTitle: "Fort Walton Beach Real Estate Guide: Okaloosa County Insider",
+    seoDescription:
+      "Why Fort Walton Beach is the Emerald Coast's steady market: year-round rentals near Eglin AFB and Hurlburt Field, Shalimar, and the Brooks Bridge project.",
     title: "The Okaloosa Blueprint",
     excerpt:
       "A developer's deep dive into the Emerald Coast. From Spanish Villas to Shalimar, we explore the local infrastructure and structural standards that define our community.",
@@ -118,6 +121,9 @@ const blogPosts = {
     ),
   },
   "beyond-the-beach": {
+    seoTitle: "Okaloosa County Growth Zones: A Real Estate Investor's Guide",
+    seoDescription:
+      "Where Okaloosa County growth is really happening: reading permits, fiber buildout, and zoning to spot investment areas before they show up in the comps.",
     title: "Beyond the Beach: The Blueprint",
     excerpt:
       "Moving past the aesthetics to analyze the data. An investment-focused breakdown of Okaloosa County's growth zones and Prop-Tech trends.",
@@ -220,6 +226,9 @@ const blogPosts = {
   },
 
   "emerald-coast-insider": {
+    seoTitle: "Living in Fort Walton Beach: Emerald Coast Lifestyle Guide",
+    seoDescription:
+      "Thinking of moving to Fort Walton Beach? A local's guide to bay-side launches, hidden gems, and everyday life on the Emerald Coast beyond vacation mode.",
     title: "Emerald Coast Insider: Living Handled",
     excerpt:
       "Living 'Handled' in the Panhandle. A lifestyle guide featuring local hidden gems, the best bay-side launches, and navigating FWB with a developer's edge.",
@@ -414,6 +423,9 @@ const blogPosts = {
     ),
   },
   "pensacola-pivot": {
+    seoTitle: "Pensacola Real Estate 2026: Infrastructure and Growth",
+    seoDescription:
+      "How the Pensacola Gateway Project and defense-driven growth are shaping Pensacola real estate in 2026, and what it means for buyers and investors.",
     title: "The Pensacola Pivot: Infrastructure and Innovation in 2026",
     excerpt:
       "Analyzing the $6.5M Gateway Project and the defense-driven growth of Florida's 'Cradle of Aviation'.",
@@ -516,6 +528,9 @@ const blogPosts = {
     ),
   },
   "buying-waterfront-florida-flood-zones-dock-permits": {
+    seoTitle: "Buying Waterfront in NW Florida: Flood Zones & Dock Permits",
+    seoDescription:
+      "Buying canal or bayfront property on the Emerald Coast? How FEMA flood zones, seawall condition, and dock permits change your true monthly cost.",
     title:
       "Buying Waterfront in NW Florida: Flood Zones, Seawalls & Dock Permits Explained",
     excerpt:
@@ -682,6 +697,9 @@ const blogPosts = {
     ),
   },
   "destin-playbook": {
+    seoTitle: "Destin FL Luxury Real Estate: What Drives Home Prices",
+    seoDescription:
+      "What actually drives Destin home prices along the Harbor and Scenic 98, and where the price ceiling really is. A local breakdown for luxury buyers and sellers.",
     title: "The Destin Playbook: Reading the Luxury Corridor",
     excerpt:
       "Destin runs on different physics than the rest of Okaloosa County. A breakdown of what actually drives price along the Harbor and Scenic 98—and where the ceiling really is.",
@@ -781,6 +799,9 @@ const blogPosts = {
     ),
   },
   "flood-zones-decoded": {
+    seoTitle: "Florida Flood Zones & Wind Mitigation: What They Cost Buyers",
+    seoDescription:
+      "A plain-language guide to Okaloosa County flood zones, wind mitigation credits, and how to budget for insurance before you make an offer on a Florida home.",
     title: "Flood Zones, Wind Mitigation, and What They Actually Cost You",
     excerpt:
       "The line item that surprises more out-of-state buyers than anything else at closing. A plain-language breakdown of flood zones, wind mitigation, and how to budget for both before you write an offer.",
