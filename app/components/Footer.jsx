@@ -25,6 +25,14 @@ export default function Footer() {
           </li>
           <li>
             <Link
+              href="/blog"
+              className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
+            >
+              The Coast Is Clear
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/#projects"
               className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
             >
@@ -65,6 +73,7 @@ export default function Footer() {
                 href="https://github.com/codelikeagirl29"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Lindsey Howard on GitHub"
                 className="block text-muted hover:text-reef"
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
@@ -78,6 +87,7 @@ export default function Footer() {
                 href="https://linkedin.com/in/lindsey-howard"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Lindsey Howard on LinkedIn"
                 className="block text-muted hover:text-steel"
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
@@ -91,6 +101,7 @@ export default function Footer() {
                 href="https://www.facebook.com/lindseyhowardrealestate"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Lindsey Howard on Facebook"
                 className="block text-muted hover:text-reef"
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
@@ -109,8 +120,15 @@ export default function Footer() {
             <span className="text-reef font-bold">by LINDSEY HOWARD</span>
             {" — Built with Next.js & Tailwind CSS"}
           </p>
+          <address className="not-italic font-mono text-[10px] text-muted/50 uppercase tracking-widest leading-relaxed">
+            Lindsey Howard, REALTOR® · eXp Realty · Fort Walton Beach, FL ·{" "}
+            <a href="tel:+18505335877" className="hover:text-foreground">
+              (850) 533-5877
+            </a>
+          </address>
           <p className="font-mono text-[10px] text-muted/50 uppercase tracking-widest">
-            Fort Walton Beach, Florida — Real Estate Sales Professional
+            Serving Fort Walton Beach, Destin, Niceville, Crestview, Shalimar,
+            Eglin AFB &amp; Hurlburt Field
           </p>
         </div>
       </div>

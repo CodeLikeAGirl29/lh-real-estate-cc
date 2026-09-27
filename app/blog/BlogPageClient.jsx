@@ -55,11 +55,12 @@ export default function BlogPageClient() {
             Insights & Intelligence
           </span>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
-            The <span className="text-reef italic">Digital</span> Ledger
+            The Coast Is <span className="text-reef italic">Clear</span>
           </h1>
           <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
-            Where Florida Real Estate logic meets Full-Stack precision.
-            Engineering the Emerald Coast lifestyle, one entry at a time.
+            Okaloosa County real estate, explained with real numbers — PCS and
+            BAH, flood zones, insurance, and market moves across Fort Walton
+            Beach, Destin, Niceville, and Crestview.
           </p>
         </m.div>
       </div>

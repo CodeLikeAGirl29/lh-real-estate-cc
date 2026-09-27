@@ -1,7 +1,8 @@
 import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
-import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { LazyMotion, domAnimation } from "framer-motion";
+import FloatingContact from "./components/FloatingContact";
+import { SITE_URL, SITE_NAME, agentSchema, websiteSchema, jsonLd } from "@/lib/seo";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
@@ -22,69 +23,72 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const DEFAULT_TITLE =
+  "Fort Walton Beach & Okaloosa County Real Estate | Lindsey Howard, eXp Realty";
+const DEFAULT_DESCRIPTION =
+  "Buy or sell in Fort Walton Beach, Destin, Niceville, and Crestview with Lindsey Howard, eXp Realty. Real numbers on BAH, flood zones, and insurance for PCS families and coastal buyers.";
+
 export const metadata = {
-  metadataBase: new URL("https://www.lindseykhoward.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Lindsey Howard | eXp Realty — Okaloosa County, FL",
+    default: DEFAULT_TITLE,
     template: "%s | Lindsey Howard, eXp Realty",
   },
-  description:
-    "Lindsey Howard is a Florida REALTOR® with eXp Realty and full-stack developer serving buyers, sellers, and investors in Fort Walton Beach, Destin, Shalimar, and Okaloosa County.",
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
   keywords: [
-    "Fort Walton Beach real estate",
-    "Okaloosa County real estate agent",
-    "eXp Realty Florida",
+    "Fort Walton Beach real estate agent",
+    "Okaloosa County real estate",
     "Destin FL homes for sale",
+    "Niceville FL real estate",
+    "Crestview FL homes for sale",
+    "Eglin AFB PCS realtor",
+    "Hurlburt Field relocation",
+    "VA loan realtor Florida",
     "Emerald Coast real estate",
-    "Lindsey Howard real estate",
+    "eXp Realty Florida",
+    "Lindsey Howard realtor",
   ],
-  authors: [{ name: "Lindsey Howard" }],
-  robots: { index: true, follow: true },
+  authors: [{ name: "Lindsey Howard", url: SITE_URL }],
+  creator: "Lindsey Howard",
+  publisher: "Lindsey Howard, eXp Realty",
+  category: "Real Estate",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  // Set these env vars in Vercel after verifying in Google Search Console /
+  // Bing Webmaster Tools. Undefined values are omitted from the page.
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
+  },
   openGraph: {
-    title: "Lindsey Howard | eXp Realty — Okaloosa County, FL",
-    description:
-      "Florida REALTOR® with eXp Realty, serving buyers, sellers, and investors across the Emerald Coast.",
-    url: "https://www.lindseykhoward.com",
-    siteName: "Lindsey Howard | Home, Handled.",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lindsey Howard | eXp Realty — Okaloosa County, FL",
-    description:
-      "Florida REALTOR® with eXp Realty, serving buyers, sellers, and investors across the Emerald Coast.",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
   },
-};
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  name: "Lindsey Howard",
-  jobTitle: "REALTOR®",
-  worksFor: {
-    "@type": "Organization",
-    name: "eXp Realty",
+  other: {
+    "geo.region": "US-FL",
+    "geo.placename": "Fort Walton Beach",
   },
-  url: "https://www.lindseykhoward.com",
-  email: "mailto:lindsey.howard.re@outlook.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Fort Walton Beach",
-    addressRegion: "FL",
-    addressCountry: "US",
-  },
-  areaServed: [
-    "Fort Walton Beach, FL",
-    "Destin, FL",
-    "Shalimar, FL",
-    "Okaloosa County, FL",
-  ],
-  sameAs: [
-    "https://github.com/codelikeagirl29",
-    "https://linkedin.com/in/lindsey-howard",
-    "https://www.facebook.com/lindseyhowardrealestate",
-  ],
 };
 
 export default function RootLayout({ children }) {
@@ -104,18 +108,14 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-sans bg-background text-foreground antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(agentSchema)} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(websiteSchema)} />
         <LazyMotion features={domAnimation} strict>
           {children}
+          <FloatingContact />
         </LazyMotion>
-        import FloatingContact from "./components/FloatingContact";
+        {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
-
-      {/* Simply pass the ID to the component you imported */}
-      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }

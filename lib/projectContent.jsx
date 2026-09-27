@@ -353,7 +353,7 @@ Combining coastal structural showcases with practical financial and regulatory t
             href="/blog/beyond-the-beach"
             className="text-reef hover:underline"
           >
-            the Digital Ledger
+            The Coast Is Clear
           </Link>
           — this page covers the underlying approach; the blog post covers the
           current market read.
@@ -406,7 +406,7 @@ Combining coastal structural showcases with practical financial and regulatory t
             href="/blog/emerald-coast-insider"
             className="text-reef hover:underline"
           >
-            the Digital Ledger
+            The Coast Is Clear
           </Link>
           .
         </p>

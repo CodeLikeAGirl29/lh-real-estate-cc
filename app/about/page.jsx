@@ -10,7 +10,7 @@ export const metadata = {
   title: "About Lindsey Howard | eXp Realty, Fort Walton Beach",
   description:
     "Florida REALTOR® at eXp Realty and full-stack developer based in Fort Walton Beach, FL, serving buyers, sellers, and investors across Okaloosa County.",
-  alternates: { canonical: "https://www.lindseykhoward.com/about" },
+  alternates: { canonical: "/about" },
   openGraph: {
     title: "About Lindsey Howard | eXp Realty, Fort Walton Beach",
     description:
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 {/* Replace with your professional headshot */}
                 <Image
                   src="/images/lindsey-profile.jpg"
-                  alt="Lindsey Howard"
+                  alt="Lindsey Howard, REALTOR® with eXp Realty in Fort Walton Beach, FL"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
