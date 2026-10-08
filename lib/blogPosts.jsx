@@ -906,6 +906,467 @@ const blogPosts = {
       </>
     ),
   },
+  "fall-2026-real-estate-trends-okaloosa-county": {
+    seoTitle: "Fall 2026 Real Estate Trends: Rates, Inventory & Okaloosa County",
+    seoDescription:
+      "Mortgage rates are back over 7%, national inventory is at a decade high, and Florida supply is tightening. What it means for Okaloosa County buyers and sellers.",
+    title: "The Market Just Changed Its Mind (Again): Fall 2026 Real Estate Trends",
+    excerpt:
+      "Rates are back over 7%, there are more homes for sale nationally than we've seen in years, and Florida is doing its own thing. Here's where the market actually stands, from the national headlines down to your Okaloosa County zip code.",
+    date: "October 8, 2026",
+    category: "Market Analysis",
+    readTime: "7 min read",
+    image: "/images/img-3.jpg",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          So... remember back in the spring when everybody was saying rates were
+          finally coming down and 2026 was gonna be the year the market
+          &quot;reset&quot;??
+        </p>
+
+        <p className="mb-6 text-muted text-lg">Yeah. About that.</p>
+
+        <p className="mb-6 text-muted text-lg">
+          I&apos;ve been staring at the numbers for the last couple weeks and
+          the short version is this: the story changed. Not in a scary,
+          sky-is-falling way. But it changed, and if you&apos;re thinking about
+          buying or selling anytime soon, the stuff you read in March is already
+          out of date.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          So here&apos;s where things actually stand right now. National first,
+          then Florida, then right here in Okaloosa County... bc the national
+          headlines and what&apos;s happening on your street are not always the
+          same thing. Like, at all.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Trend 1: Rates Went the Wrong Direction
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The 30-year fixed averaged <strong>7.28%</strong> as of October 1, per
+          Freddie Mac. A year ago it was 6.34%. Earlier this year it got as low
+          as about 6.09%.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          So what happened? A few things stacked up at once:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Inflation came back.</strong> Oil prices spiked with the
+            conflict in Iran, and that pushed prices up across the board.
+          </li>
+          <li>
+            <strong>The Fed raised rates.</strong> On September 16 it hiked a
+            quarter point, the first increase since July 2023, and most
+            policymakers expect at least one more before the end of the year.
+          </li>
+          <li>
+            <strong>The bond market got nervous.</strong> The 10-year Treasury
+            climbed above 5%, and mortgage rates pretty much follow that number
+            around like a shadow.
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          Mortgage rates crossed 7% on September 24 for the first time since
+          January 2025, and they&apos;ve kept climbing since.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Ok but what does that actually <em>mean</em> for a real person? Let me
+          put it in dollars.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Say you&apos;re buying a $350,000 home with 10% down, so a $315,000
+          loan. Principal and interest only:
+        </p>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <thead>
+              <tr className="border-b border-foreground/20">
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Rate
+                </th>
+                <th className="py-3 font-display font-bold text-foreground">
+                  Monthly payment (P&amp;I)
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">6.34% (a year ago)</td>
+                <td className="py-3">about $1,958</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">7.28% (now)</td>
+                <td className="py-3">about $2,155</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          That&apos;s roughly <strong>$197 more a month</strong> for the exact
+          same house. Same kitchen. Same yard. Same everything. And that&apos;s
+          before taxes and insurance.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Not gonna sugarcoat it... that stings. But it&apos;s also not the
+          whole story, which is why you gotta keep reading.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Trend 2: More Homes for Sale Than We&apos;ve Seen in Years
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Here&apos;s the part the scary rate headlines leave out.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Nationally, there were <strong>1.62 million</strong> existing homes
+          for sale at the end of August. That&apos;s up 5.9% from a year ago,
+          and it&apos;s the first time inventory has topped 1.6 million since
+          November 2019. Supply sits at 4.9 months, the highest in more than a
+          decade.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Meanwhile sales slowed down. Existing-home sales fell 2% in August to
+          an annual pace of 3.98 million, the slowest since June 2025.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          More homes + fewer buyers = leverage shifting toward buyers.
+          That&apos;s just math.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          But here&apos;s the weird part. Prices didn&apos;t drop. The national
+          median hit <strong>$429,100</strong> in August, up 1.6% from last
+          year, and that&apos;s the 38th month in a row of year-over-year gains.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          So like... prices are still going up, just barely. The frenzy is gone.
+          What&apos;s left is a slower, pickier market where homes sit a median
+          of 31 days and sellers can&apos;t just name a number and watch the
+          offers roll in.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          A couple other things worth knowing:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>First-time buyers</strong> made up 30% of August sales.
+          </li>
+          <li>
+            <strong>Cash buyers</strong> were 27% of sales. When rates are high,
+            cash gets loud.
+          </li>
+        </ul>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            Rates are making it more expensive to borrow, but buyers have more
+            choices and more room to negotiate than they&apos;ve had in a long
+            time. Both things are true at once.
+          </p>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Trend 3: Florida Is Doing Its Own Thing
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Idk who needs to hear this, but Florida is not the national market. It
+          never has been.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          While inventory is climbing across the country, Florida&apos;s went
+          the <em>other</em> way. Single-family inventory statewide dropped 13%
+          from August 2025, and condo and townhouse inventory fell 11.5%.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          That tightening is exactly why prices are holding:
+        </p>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <thead>
+              <tr className="border-b border-foreground/20">
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Florida, August 2026
+                </th>
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Median sale price
+                </th>
+                <th className="py-3 font-display font-bold text-foreground">
+                  Change from a year ago
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Single-family homes</td>
+                <td className="py-3 pr-6">$415,000</td>
+                <td className="py-3">up 1.2%</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Condos and townhouses</td>
+                <td className="py-3 pr-6">$298,000</td>
+                <td className="py-3">up 2.8%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          Closed sales dipped a little, about 1.4% for single-family and 1.8%
+          for condos and townhouses. Florida Realtors called it a market
+          that&apos;s &quot;leveling off,&quot; and honestly that feels right.
+          Not booming. Not crashing. Just... steadier.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Now, those August numbers are from before rates jumped over 7%. So the
+          next couple of reports are the ones to watch. If I had to guess, sales
+          soften a bit more. But with fewer homes on the market, I&apos;m not
+          expecting prices to fall off a cliff.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          And I can&apos;t talk about Florida without mentioning insurance.
+          It&apos;s still the line item that surprises people the most. The good
+          news is that after the legal reforms of the last few years and a
+          quieter stretch of storms, experts have been describing the insurance
+          market as slowly softening. The better news is that there are things
+          you can actually control here, like a wind mitigation inspection. More
+          on that in another post, bc it deserves its own.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Trend 4: Okaloosa County Is Balanced, and It Depends on Your Zip Code
+        </h3>
+        <p className="mb-6 text-muted text-lg">Ok, home turf.</p>
+        <p className="mb-6 text-muted text-lg">
+          County-wide, the typical home value is sitting around{" "}
+          <strong>$353,000</strong>, basically flat over the past year. Homes
+          are taking a little over two months to sell, sellers are getting
+          roughly 96% of asking price, and about 1 in 4 listings has taken a
+          price cut.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Read that last part again. One in four. That&apos;s not a market in
+          trouble. That&apos;s a market where the list price is an opening offer
+          and not a final answer.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          But the county number hides a lot. Look at what happens when you zoom
+          in:
+        </p>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <thead>
+              <tr className="border-b border-foreground/20">
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Area
+                </th>
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Median sale price
+                </th>
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Change from a year ago
+                </th>
+                <th className="py-3 font-display font-bold text-foreground">
+                  Days to contract
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Fort Walton Beach (32547)</td>
+                <td className="py-3 pr-6">$357,000</td>
+                <td className="py-3 pr-6">up 11.2%</td>
+                <td className="py-3">about 38</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Fort Walton Beach (32548)</td>
+                <td className="py-3 pr-6">$333,000</td>
+                <td className="py-3 pr-6">up 9.3%</td>
+                <td className="py-3">about 42</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Mary Esther (32569)</td>
+                <td className="py-3 pr-6">$325,250</td>
+                <td className="py-3 pr-6">up 2.1%</td>
+                <td className="py-3">about 53</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Crestview (32536)</td>
+                <td className="py-3 pr-6">$325,000</td>
+                <td className="py-3 pr-6">up 9.3%</td>
+                <td className="py-3">about 78</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-muted text-sm italic">
+            Zip-level MLS sales data as of early August 2026.
+          </p>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          Fort Walton Beach is moving in about five or six weeks. Crestview is
+          taking closer to eleven. Same county. Totally different experience for
+          a seller.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Not sure exactly why the gap is that wide, but my read is it comes
+          down to two things: proximity to the bases and the water, and how much
+          new construction you&apos;re competing with. Crestview has a lot of
+          builders offering incentives right now, and a resale home has to hold
+          its own against a brand new one with a rate buydown attached.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Which is exactly why I keep saying hyper-local matters. &quot;The
+          market&quot; is not one thing here.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          So What Do You Actually Do With All This?
+        </h3>
+
+        <h4 className="font-display text-xl font-bold text-foreground mt-8 mb-3">
+          If you&apos;re buying
+        </h4>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Negotiate. For real.</strong> With one in four local
+            listings cutting price, you have room. Ask for closing costs. Ask
+            for repairs. Ask for a rate buydown.
+          </li>
+          <li>
+            <strong>Shop your lender.</strong> At 7%+ the difference between two
+            quotes is real money every single month.
+          </li>
+          <li>
+            <strong>Look hard at new construction.</strong> Builders have been
+            using incentives to keep homes moving, and a builder-paid buydown
+            can take a real bite out of that payment.
+          </li>
+          <li>
+            <strong>Budget the whole payment.</strong> Principal, interest,
+            taxes, insurance, HOA. In Florida the last three are not small.
+          </li>
+          <li>
+            <strong>Stop trying to time rates.</strong> Nobody saw this fall
+            coming in March. Buy the house that works for your budget today, and
+            refinance later if rates give you the chance.
+          </li>
+        </ul>
+
+        <h4 className="font-display text-xl font-bold text-foreground mt-8 mb-3">
+          If you&apos;re selling
+        </h4>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Price it right the first time.</strong> The days of
+            &quot;let&apos;s just try a high number and see&quot; are over.
+            Overpriced homes sit, and then they chase the market down.
+          </li>
+          <li>
+            <strong>Know your zip code, not your county.</strong> 38 days in
+            Fort Walton Beach and 78 in Crestview are two different strategies.
+          </li>
+          <li>
+            <strong>Condition matters again.</strong> Buyers have options now.
+            The house that&apos;s clean, repaired and ready wins.
+          </li>
+          <li>
+            <strong>Expect to give a little.</strong> Concessions are part of
+            the deal in this market. Build that into your number up front.
+          </li>
+        </ul>
+
+        <h4 className="font-display text-xl font-bold text-foreground mt-8 mb-3">
+          If you&apos;re PCSing to Eglin or Hurlburt
+        </h4>
+        <p className="mb-6 text-muted text-lg">
+          You don&apos;t get to pick your timing, which is stressful... I get
+          it. The upside is you&apos;re landing in a balanced market with real
+          negotiating room, and a VA loan is a strong tool here. Run your BAH
+          against the <em>full</em> monthly payment, not just the mortgage,
+          before you fall in love with a house.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Bottom Line
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Rates are up. Inventory nationally is up. Florida&apos;s supply is
+          tightening. And Okaloosa County is sitting right in the middle,
+          balanced, with a lot of variation from one neighborhood to the next.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          It&apos;s not a great market or a terrible market. It&apos;s a market
+          that rewards people who actually know their numbers.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          If you want to know what yours look like, your street and your price
+          point, reach out. That&apos;s literally what I&apos;m here for.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Sources
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-base">
+          <li>
+            <a
+              href="https://www.freddiemac.com/pmms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Freddie Mac Primary Mortgage Market Survey
+            </a>
+            , week of October 1, 2026
+          </li>
+          <li>
+            <a
+              href="https://www.federalreserve.gov/newsevents/pressreleases.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Federal Reserve FOMC statement
+            </a>
+            , September 16, 2026
+          </li>
+          <li>
+            <a
+              href="https://www.nar.realtor/newsroom/nar-existing-home-sales-report-shows-2-0-decrease-in-august"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              National Association of REALTORS&reg; Existing-Home Sales Report
+            </a>
+            , August 2026
+          </li>
+          <li>
+            <a
+              href="https://www.floridarealtors.org/newsroom/flas-housing-market-median-prices-hold-steady-pace-eases"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Florida Realtors&reg; statewide housing report
+            </a>
+            , August 2026
+          </li>
+          <li>Okaloosa County zip-level MLS sales data, early August 2026</li>
+        </ul>
+        <p className="mb-6 text-muted text-sm italic">
+          This post is general market information, not financial or legal
+          advice. Payment examples are principal and interest only.
+        </p>
+      </>
+    ),
+  },
 };
 
 export default blogPosts;
