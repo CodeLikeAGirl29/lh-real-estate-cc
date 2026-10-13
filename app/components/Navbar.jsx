@@ -6,6 +6,28 @@ import { m, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 
 const CONTACT_EMAIL = "lindsey.howard.re@outlook.com";
+const PHONE_DISPLAY = "(850) 533-5877";
+const PHONE_HREF = "tel:+18505335877";
+
+const navLinks = [
+  { name: "Home value", href: "/#cma", desktop: true },
+  { name: "Payment calculator", href: "/#calculator", desktop: true },
+  { name: "Neighborhoods", href: "/#market-map", desktop: true },
+  { name: "Blog", href: "/blog", desktop: true },
+  { name: "About", href: "/about", desktop: true },
+  { name: "Projects", href: "/#projects" },
+  { name: "For mentors", href: "/about#mentor" },
+];
+
+const socials = [
+  { name: "GitHub", href: "https://github.com/codelikeagirl29", Icon: FaGithub },
+  { name: "LinkedIn", href: "https://linkedin.com/in/lindsey-howard", Icon: FaLinkedin },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/lindseyhowardrealestate",
+    Icon: FaFacebook,
+  },
+];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +35,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -38,152 +61,85 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [mobileMenuOpen]);
 
-  const navLinks = [
-    { name: "Innovations", href: "/#projects" },
-    { name: "Calculator", href: "/#calculator" },
-    { name: "Home Value", href: "/#cma" },
-    { name: "Market Map", href: "/#market-map" },
-    { name: "Experience", href: "/#experience" },
-    { name: "Blog", href: "/blog" },
-    { name: "About", href: "/about" },
-    { name: "For Mentors", href: "/about#mentor" },
-  ];
-
   return (
     <>
-      <m.header
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-background/80 backdrop-blur-md border-b ${
+      <header
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color] duration-300 ${
           scrolled
-            ? "border-muted/20 py-2 bg-background/95"
-            : "border-muted/10 py-4"
+            ? "bg-background/95 backdrop-blur-sm border-foreground/10"
+            : "bg-background/80 border-transparent"
         }`}
       >
         <nav
           aria-label="Global"
-          className="mx-auto flex max-w-full items-center justify-between gap-x-4 p-6 pl-4 xl:gap-x-8 xl:px-8"
+          className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-x-6 px-4 sm:px-6 lg:h-[72px] lg:px-8"
         >
-          {/* Brand/Logo */}
-          <div className="flex shrink-0 xl:flex-1">
-            <Link
-              href="/"
-              className="-m-1.5 p-1.5 font-display text-xl font-bold tracking-tighter text-foreground group whitespace-nowrap"
-            >
-              L. HOWARD{" "}
-              <span className="font-mono text-xs align-middle text-reef transition-colors duration-300 group-hover:text-steel ml-1">
-                {"// RE + DEV"}
-              </span>
-            </Link>
+          {/* Name, set like a sign on the door */}
+          <Link href="/" className="group flex shrink-0 items-baseline gap-2.5 whitespace-nowrap">
+            <span className="font-display text-[1.375rem] font-semibold leading-none text-foreground">
+              Lindsey Howard
+            </span>
+            <span className="hidden text-sm text-muted sm:inline">eXp Realty</span>
+          </Link>
+
+          {/* Desktop links */}
+          <div className="hidden items-center gap-x-6 xl:flex">
+            {navLinks.filter((link) => link.desktop).map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="whitespace-nowrap text-[0.9375rem] text-foreground/75 underline-offset-[6px] decoration-reef decoration-2 transition-colors hover:text-foreground hover:underline"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
 
-          {/* Mobile Menu Trigger */}
-          <div className="flex xl:hidden items-center gap-x-1">
+          <div className="hidden items-center gap-x-5 xl:flex">
+            <ThemeToggle />
+            <a
+              href={PHONE_HREF}
+              className="hidden text-[0.9375rem] font-medium tabular text-foreground hover:text-reef 2xl:inline"
+            >
+              {PHONE_DISPLAY}
+            </a>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="rounded-full bg-reef px-5 py-2.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+            >
+              Email me
+            </a>
+          </div>
+
+          {/* Mobile trigger */}
+          <div className="flex items-center gap-x-1 xl:hidden">
             <ThemeToggle className="p-2.5" />
-            <m.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+            <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu-drawer"
               aria-label="Open main menu"
-              className="-m-2.5 inline-flex items-center justify-center p-2.5 text-foreground hover:text-reef"
+              className="-mr-2 inline-flex items-center justify-center p-2.5 text-foreground hover:text-reef"
             >
               <FaBars className="size-6" />
-            </m.button>
-          </div>
-
-          {/* Desktop Navigation Links & Socials */}
-          <div className="hidden xl:flex xl:gap-x-5 2xl:gap-x-8 items-center">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="font-mono text-xs uppercase tracking-wide 2xl:tracking-widest whitespace-nowrap text-muted hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
-              >
-                {link.name}
-              </Link>
-            ))}
-
-            <div className="h-4 w-px bg-muted/20" />
-            <ThemeToggle />
-
-            {/* Framer Motion Social Icons — brand-colored hovers; shown at 2xl+ once there's room */}
-            <div className="hidden 2xl:flex items-center gap-x-2">
-              <div className="h-4 w-px bg-muted/20 mx-2" />
-              <m.a
-                href="https://github.com/codelikeagirl29"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="p-1.5 text-muted transition-colors duration-200 hover:text-white"
-                whileHover={{ y: -4, scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <FaGithub size={18} />
-              </m.a>
-              <m.a
-                href="https://linkedin.com/in/lindsey-howard"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="p-1.5 text-muted transition-colors duration-200 hover:text-[#0A66C2]"
-                whileHover={{ y: -4, scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <FaLinkedin size={18} />
-              </m.a>
-              <m.a
-                href="https://www.facebook.com/lindseyhowardrealestate"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="p-1.5 text-muted transition-colors duration-200 hover:text-[#1877F2]"
-                whileHover={{ y: -4, scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <FaFacebook size={18} />
-              </m.a>
-            </div>
-          </div>
-
-          {/* Primary CTA */}
-          <div className="hidden xl:flex xl:flex-1 xl:justify-end">
-            <m.a
-              href={`mailto:${CONTACT_EMAIL}`}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="frame group px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-widest text-reef bg-surface/30 border border-muted/10 hover:border-transparent hover:bg-surface hover:text-foreground transition-colors duration-300 whitespace-nowrap"
-            >
-              Contact Me{" "}
-              <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-steel group-hover:text-reef">
-                &rarr;
-              </span>
-            </m.a>
+            </button>
           </div>
         </nav>
-      </m.header>
+      </header>
 
-      {/* Framer Motion Mobile Drawer Slideout */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <div className="xl:hidden relative z-50">
-            {/* Backdrop */}
+          <div className="relative z-50 xl:hidden">
             <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-background/40 backdrop-blur-sm"
+              transition={{ duration: 0.25 }}
+              className="fixed inset-0 bg-foreground/30"
               onClick={() => setMobileMenuOpen(false)}
             />
 
-            {/* Drawer */}
             <m.div
               id="mobile-menu-drawer"
               role="dialog"
@@ -192,113 +148,64 @@ export default function Navbar() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-surface p-6 sm:max-w-sm border-l border-muted/10 shadow-2xl"
+              transition={{ type: "tween", duration: 0.3, ease: [0.22, 0.8, 0.2, 1] }}
+              className="fixed inset-y-0 right-0 flex w-full flex-col overflow-y-auto bg-background px-6 pb-8 pt-4 sm:max-w-sm sm:border-l sm:border-foreground/10"
             >
-              <div className="flex items-center justify-between">
-                <span className="font-display text-xl font-bold text-foreground tracking-tighter">
-                  L. HOWARD
+              <div className="flex h-12 items-center justify-between">
+                <span className="font-display text-[1.375rem] font-semibold text-foreground">
+                  Lindsey Howard
                 </span>
-                <m.button
-                  whileHover={{ scale: 1.1, rotate: 90 }}
-                  whileTap={{ scale: 0.9 }}
+                <button
+                  type="button"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-muted hover:text-reef"
+                  aria-label="Close menu"
+                  className="-mr-2 p-2 text-muted hover:text-foreground"
                 >
                   <FaXmark className="size-6" />
-                </m.button>
+                </button>
               </div>
 
-              <div className="mt-12 flow-root">
-                <div className="space-y-2 py-6">
-                  {/* Staggered Nav Links */}
-                  <m.div
-                    initial="closed"
-                    animate="open"
-                    variants={{
-                      open: {
-                        transition: {
-                          staggerChildren: 0.05,
-                          delayChildren: 0.1,
-                        },
-                      },
-                      closed: {
-                        transition: {
-                          staggerChildren: 0.05,
-                          staggerDirection: -1,
-                        },
-                      },
-                    }}
-                    className="flex flex-col gap-2"
+              <nav aria-label="Mobile" className="mt-8 flex flex-col">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="border-b border-foreground/10 py-4 font-display text-2xl text-foreground hover:text-reef"
                   >
-                    {navLinks.map((link) => (
-                      <m.div
-                        key={link.name}
-                        variants={{
-                          open: { opacity: 1, x: 0 },
-                          closed: { opacity: 0, x: 20 },
-                        }}
-                      >
-                        <Link
-                          href={link.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="block px-4 py-3 font-display text-lg font-bold text-foreground hover:text-steel hover:bg-background/50 rounded-lg transition-colors"
-                        >
-                          {link.name}
-                        </Link>
-                      </m.div>
-                    ))}
-                  </m.div>
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
 
-                  <m.a
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    href={`mailto:${CONTACT_EMAIL}`}
-                    className="frame group mt-8 block text-center py-4 font-mono text-sm font-bold uppercase tracking-widest text-reef bg-background border border-muted/10 transition-colors"
-                  >
-                    Get in Touch{" "}
-                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                      &rarr;
-                    </span>
-                  </m.a>
+              <div className="mt-10 flex flex-col gap-3">
+                <a
+                  href={PHONE_HREF}
+                  className="rounded-full bg-reef px-5 py-3.5 text-center font-semibold text-background"
+                >
+                  Call or text {PHONE_DISPLAY}
+                </a>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="rounded-full border border-foreground/20 px-5 py-3.5 text-center font-semibold text-foreground"
+                >
+                  Email me
+                </a>
+              </div>
 
-                  <m.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.45 }}
-                    className="mt-6 flex items-center justify-center gap-6"
+              <div className="mt-auto flex items-center gap-5 pt-10">
+                {socials.map(({ name, href, Icon }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                    className="p-1 text-muted hover:text-foreground"
                   >
-                    <a
-                      href="https://github.com/codelikeagirl29"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="GitHub"
-                      className="p-1.5 text-muted hover:text-white transition-colors"
-                    >
-                      <FaGithub size={20} />
-                    </a>
-                    <a
-                      href="https://linkedin.com/in/lindsey-howard"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="LinkedIn"
-                      className="p-1.5 text-muted hover:text-[#0A66C2] transition-colors"
-                    >
-                      <FaLinkedin size={20} />
-                    </a>
-                    <a
-                      href="https://www.facebook.com/lindseyhowardrealestate"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Facebook"
-                      className="p-1.5 text-muted hover:text-[#1877F2] transition-colors"
-                    >
-                      <FaFacebook size={20} />
-                    </a>
-                    <ThemeToggle className="p-1.5" />
-                  </m.div>
-                </div>
+                    <Icon size={20} />
+                  </a>
+                ))}
               </div>
             </m.div>
           </div>

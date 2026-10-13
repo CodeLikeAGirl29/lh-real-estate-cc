@@ -86,7 +86,7 @@ export default function MarketMap() {
 
   return (
     <div className="grid lg:grid-cols-[320px_1fr] gap-6">
-      <div className="corner-marks border border-ink/10 divide-y divide-ink/10 max-h-[520px] overflow-y-auto order-2 lg:order-1">
+      <div className="panel overflow-hidden divide-y divide-ink/10 max-h-[520px] overflow-y-auto order-2 lg:order-1">
         {neighborhoods.map((n) => (
           <button
             key={n.id}
@@ -96,24 +96,24 @@ export default function MarketMap() {
             }`}
           >
             <div className="flex items-center justify-between">
-              <span className="font-display font-bold text-ink">{n.name}</span>
+              <span className="font-display text-lg font-semibold text-ink">{n.name}</span>
               {n.featured && (
-                <span className="font-mono text-[9px] uppercase tracking-widest text-signal font-bold">
+                <span className="text-xs font-semibold text-reef">
                   Hot
                 </span>
               )}
             </div>
-            <span className="font-mono text-[10px] uppercase tracking-widest text-gulf block mt-1">
-              {n.vibe} · {n.medianPrice} median
+            <span className="tabular text-sm text-steel block mt-1">
+              {n.vibe}, {n.medianPrice} median
             </span>
-            <p className="text-xs text-ink/60 mt-2 leading-relaxed">
+            <p className="text-sm text-ink/70 mt-2 leading-relaxed">
               {n.blurb}
             </p>
           </button>
         ))}
       </div>
 
-      <div className="corner-marks border border-ink/10 h-[420px] lg:h-[520px] order-1 lg:order-2 overflow-hidden">
+      <div className="panel h-[420px] lg:h-[520px] order-1 lg:order-2 overflow-hidden">
         <MapContainer
           center={[30.48, -86.55]}
           zoom={10}

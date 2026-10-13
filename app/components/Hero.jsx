@@ -2,37 +2,25 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { m } from "framer-motion";
-import {
-  Search,
-  TrendingUp,
-  Home as HomeIcon,
-  Clock,
-  Sparkles,
-  MapPin,
-} from "lucide-react";
-import CornerArrow from "./CornerArrow";
+import Link from "next/link";
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+const towns = [
+  {
+    name: "Fort Walton Beach",
+    note: "Close to Hurlburt and the island. Steady year-round demand, not just summer.",
   },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  {
+    name: "Niceville",
+    note: "Right next to Eglin, on the bay. Quieter streets and a lot of military families.",
   },
-};
-
-const marketStats = [
-  { icon: TrendingUp, label: "Median Price", value: "$440,000" },
-  { icon: Clock, label: "Avg Days on Market", value: "32 Days" },
-  { icon: HomeIcon, label: "Market Activity", value: "High Demand" },
+  {
+    name: "Crestview",
+    note: "Newer neighborhoods and more house for the money, if you don't mind the drive.",
+  },
+  {
+    name: "Destin",
+    note: "Vacation rentals, the busiest summers, and the priciest sand in the county.",
+  },
 ];
 
 export default function Hero() {
@@ -49,170 +37,113 @@ export default function Hero() {
   };
 
   return (
-    <section
-      id="hero"
-      className="charcoal-section relative overflow-hidden pt-28 pb-24 lg:pt-36 lg:pb-32 border-b border-muted/20"
-    >
-      {/* Background Ambience Glow */}
-      <div
-        className="absolute -top-36 -right-36 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-20"
-        style={{ background: "var(--reef)" }}
-      />
-      <div
-        className="absolute -bottom-48 -left-48 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-10"
-        style={{ background: "var(--steel)" }}
-      />
+    <>
+      <section id="hero" className="relative pt-16 lg:pt-[72px]">
+        <div className="lg:grid lg:min-h-[calc(100svh-72px)] lg:grid-cols-2">
+          {/* The photo: Crab Island from above. The one loud thing on the page. */}
+          <figure className="relative h-[42svh] min-h-[280px] overflow-hidden lg:order-last lg:h-auto">
+            <div className="tide-in absolute inset-0">
+              <Image
+                src="/images/local-coastline.jpg"
+                alt="Boats anchored in clear emerald water at Crab Island in Destin, seen from above"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-5 pb-4 pt-16 text-sm text-white sm:px-6 lg:px-8 lg:pb-6">
+              Crab Island, Destin. Yes, the water really is that color.
+            </figcaption>
+          </figure>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-8 items-center">
-          {/* Left Column — Copy + Valuation Form */}
-          <m.div
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            className="lg:col-span-7"
-          >
-            {/* Eyebrow Badge */}
-            <m.div
-              variants={item}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-reef/40 bg-reef/10 text-reef text-xs font-mono font-medium tracking-wider uppercase mb-6 backdrop-blur-sm"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Emerald Coast Real Estate</span>
-            </m.div>
+          {/* The pitch */}
+          <div className="flex items-center px-4 py-12 sm:px-6 sm:py-16 lg:py-20 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-14">
+            <div className="max-w-[34rem]">
+              <h1 className="font-display text-[2.5rem] font-semibold leading-[1.05] text-foreground sm:text-[3.25rem] lg:text-[3.75rem]">
+                Know the real monthly cost before you fall for the house.
+              </h1>
 
-            {/* Main Headline */}
-            <m.h1
-              variants={item}
-              className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight leading-[1.08] text-foreground"
-            >
-              Okaloosa County Real Estate,
-              <br className="hidden sm:inline" />{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-reef to-steel">
-                Backed by Real Numbers.
-              </span>
-            </m.h1>
+              <p className="mt-6 text-lg leading-relaxed text-foreground/80">
+                I&apos;m Lindsey, a Fort Walton Beach agent with eXp Realty.
+                Before you tour a single home, I&apos;ll show you what it
+                actually costs each month: the mortgage, the flood zone, the
+                insurance, and your BAH if you&apos;re PCSing to Eglin or
+                Hurlburt.
+              </p>
 
-            {/* Subtitle */}
-            <m.p
-              variants={item}
-              className="mt-5 text-lg sm:text-xl text-muted max-w-xl leading-relaxed"
-            >
-              Buying or selling in Fort Walton Beach, Destin, Niceville, or
-              Crestview? I show you the true monthly cost first — BAH, flood
-              zone, and insurance — whether you&apos;re PCSing to Eglin or
-              Hurlburt or moving to the coast.
-            </m.p>
-
-            {/* Valuation Lead Capture Form (Framed) */}
-            <m.form
-              variants={item}
-              onSubmit={handleValuationSubmit}
-              className="mt-8 max-w-xl"
-            >
-              <div className="frame flex flex-col sm:flex-row gap-3 p-2 bg-surface rounded-xl border border-muted/20 shadow-2xl">
-                <div className="relative flex-grow flex items-center">
-                  <Search className="absolute left-4 w-5 h-5 text-muted pointer-events-none" />
+              <form onSubmit={handleValuationSubmit} className="mt-10">
+                <label
+                  htmlFor="hero-address"
+                  className="block font-display text-xl font-semibold text-foreground"
+                >
+                  Selling? See what your home is worth.
+                </label>
+                <div className="mt-3 flex flex-col gap-3 sm:flex-row">
                   <input
+                    id="hero-address"
                     type="text"
-                    placeholder="Enter your property address..."
-                    aria-label="Property address for a free home valuation"
+                    placeholder="Your street address"
                     autoComplete="street-address"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3.5 bg-transparent text-foreground placeholder-muted focus:outline-none text-sm font-sans"
+                    className="min-w-0 flex-1 rounded-full border border-foreground/20 bg-background px-5 py-3.5 text-base text-foreground placeholder:text-muted focus:border-reef focus:outline-none"
                     required
                   />
+                  <button
+                    type="submit"
+                    className="shrink-0 cursor-pointer rounded-full bg-reef px-7 py-3.5 font-semibold text-background transition-opacity hover:opacity-90"
+                  >
+                    Get my home value
+                  </button>
                 </div>
-                <button
-                  type="submit"
-                  className="px-8 py-3.5 rounded-lg bg-reef hover:brightness-110 active:scale-[0.98] text-foreground font-semibold text-sm transition-all duration-150 shadow-md shadow-reef/20 flex items-center justify-center shrink-0 cursor-pointer"
-                >
-                  Get CMA
-                </button>
-              </div>
-            </m.form>
-
-            <m.p variants={item} className="mt-3 text-xs text-muted font-mono">
-              *No obligation. Accurate valuations backed by verified local MLS
-              data.
-            </m.p>
-
-            {/* Trust Strip */}
-            <m.div
-              variants={item}
-              className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-widest text-muted"
-            >
-              <span>eXp Realty</span>
-              <span className="h-3 w-px bg-muted/30" />
-              <span>Okaloosa County, FL</span>
-              <span className="h-3 w-px bg-muted/30" />
-              <span>MLS-Verified Data</span>
-            </m.div>
-          </m.div>
-
-          {/* Right Column — Framed Visual */}
-          <div className="lg:col-span-5">
-            <m.div
-              initial={{ opacity: 0, scale: 0.96, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.3,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="relative max-w-md mx-auto"
-            >
-              {/* Framed coastline photo */}
-              <div className="frame relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-muted/20 shadow-2xl">
-                <Image
-                  src="/images/hero-img.png"
-                  alt="Aerial view of the turquoise Emerald Coast waters near Fort Walton Beach, FL"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 90vw, 448px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/0 to-background/10 pointer-events-none" />
-                <CornerArrow />
-
-                {/* Location Badge */}
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/70 backdrop-blur-md border border-foreground/10 text-foreground text-[11px] font-mono uppercase tracking-wider">
-                  <MapPin className="w-3 h-3 text-reef" />
-                  <span>Fort Walton Beach, FL</span>
-                </div>
-              </div>
-
-              {/* Floating Live Market Snapshot Card */}
-              <div className="frame relative mt-6 w-full bg-surface/95 backdrop-blur-md border border-muted/20 rounded-xl shadow-2xl p-5">
-                <p className="text-[11px] font-mono uppercase tracking-widest text-reef mb-4">
-                  Live Market Snapshot
+                <p className="mt-3 text-sm text-muted">
+                  Free, no obligation. I price it against real sold homes from
+                  the local MLS.
                 </p>
-                <div className="grid grid-cols-3 gap-3">
-                  {marketStats.map(({ icon: Icon, label, value }) => (
-                    <div
-                      key={label}
-                      className="flex flex-col items-start gap-2 min-w-0"
-                    >
-                      <div className="p-2 rounded-md bg-reef/10 border border-reef/30 text-reef shrink-0">
-                        <Icon className="w-4 h-4" />
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-[10px] text-muted uppercase font-mono tracking-wider leading-tight">
-                          {label}
-                        </p>
-                        <p className="text-sm font-bold text-foreground font-mono truncate">
-                          {value}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </m.div>
+              </form>
+
+              <p className="mt-8 text-base text-foreground/80">
+                Buying instead?{" "}
+                <Link
+                  href="#calculator"
+                  className="font-semibold text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
+                >
+                  Estimate a monthly payment
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Where I work: one honest line per town */}
+      <section aria-labelledby="towns-heading" className="border-y border-foreground/10">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 id="towns-heading" className="font-display text-2xl font-semibold text-foreground">
+            Where I work
+          </h2>
+          <ul className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+            {towns.map((town) => (
+              <li key={town.name} className="border-l-2 border-reef/50 pl-4">
+                <p className="font-display text-xl font-semibold text-foreground">
+                  {town.name}
+                </p>
+                <p className="mt-2 leading-relaxed text-foreground/75">{town.note}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-10 text-foreground/80">
+            Plus Shalimar, Mary Esther, Valparaiso and everywhere in between.{" "}
+            <Link
+              href="#market-map"
+              className="font-semibold text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
+            >
+              Compare neighborhoods on the map
+            </Link>
+          </p>
+        </div>
+      </section>
+    </>
   );
 }

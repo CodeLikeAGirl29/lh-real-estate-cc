@@ -916,7 +916,7 @@ const blogPosts = {
     date: "October 8, 2026",
     category: "Market Analysis",
     readTime: "7 min read",
-    image: "/images/img-3.jpg",
+    image: "/images/local-coastline.jpg",
     content: (
       <>
         <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">

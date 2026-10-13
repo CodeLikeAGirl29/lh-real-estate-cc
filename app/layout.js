@@ -1,4 +1,4 @@
-import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Petrona, Public_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { LazyMotion, domAnimation } from "framer-motion";
 import FloatingContact from "./components/FloatingContact";
@@ -6,21 +6,18 @@ import { SITE_URL, SITE_NAME, agentSchema, websiteSchema, jsonLd } from "@/lib/s
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
-const manrope = Manrope({
+// Petrona: a warm, slightly old-Florida serif for headlines.
+// Public Sans: plain, sturdy, very readable body text.
+const petrona = Petrona({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "700", "800"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const inter = Inter({
+const publicSans = Public_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "500"],
 });
 
 const DEFAULT_TITLE =
@@ -97,13 +94,13 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${inter.variable} ${plexMono.variable}`}
+      className={`${petrona.variable} ${publicSans.variable}`}
       suppressHydrationWarning
     >
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||(!t&&!window.matchMedia("(prefers-color-scheme: dark)").matches&&window.matchMedia("(prefers-color-scheme: light)").matches)){document.documentElement.dataset.theme="light";}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.dataset.theme="dark";}}catch(e){}})();`,
           }}
         />
       </head>

@@ -1,44 +1,37 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+/* Emerald Water palette.
+   Light ("sunny") is the default; night mode is opt-in via
+   data-theme="dark" or the visitor's system preference (see the
+   pre-hydration script in layout.js and ThemeToggle.jsx).
+   Token names are kept from the previous theme so every component
+   picks up the new palette without renaming classes. */
 :root {
-  --background: #101113;
-  /* Charcoal Ink — primary dark canvas */
-  --foreground: #ECE9E4;
-  /* Warm Ivory — primary text on dark */
-  --surface: #1A1C1F;
-  /* Elevated Graphite — cards, secondary panels */
-  --muted: #8A8D93;
-  /* Cool Gray — labels, secondary text, borders */
-  --paper: #F5F3EE;
-  /* Warm Paper — form fields, light contrast blocks */
-  --ink: #17181A;
-  /* text color used on --paper */
-  --reef: #2c5c8c;
-  /* primary accent — CTAs, emphasis (deep navy blue) */
-  --steel: #9a722d;
-  /* secondary accent — links, hover states (warm sand/gold) */
+  --background: #F5F7F4; /* sugar sand: page canvas */
+  --foreground: #12312E; /* deep gulf: primary text */
+  --surface: #E9EEEA;    /* wet sand: quiet panels */
+  --muted: #566965;      /* dune grass: secondary text */
+  --paper: #DDEEE8;      /* shallow water: tool sections */
+  --ink: #12312E;        /* text on --paper */
+  --reef: #0B6A5E;       /* emerald: actions, links, emphasis */
+  --steel: #7C5E1E;      /* sea oat: small warm details */
   --signal: var(--reef);
-  /* primary accent on paper sections (Calculator, Market Map) — same
-     hue as reef, named separately so paper-section components read
-     clearly as "the accent for this section" rather than reaching
-     across to a dark-section token */
   --gulf: var(--steel);
-  /* secondary accent on paper sections — same hue as steel */
+  --font-mono: var(--font-sans);
+  color-scheme: light;
 }
 
-/* Light mode: the page's own base flips to the warm paper tone, and
-   the "paper section" contrast blocks (Calculator, Market Map, etc.)
-   flip to the dark charcoal — preserving the same alternating-rhythm
-   relationship the dark theme uses, just mirrored. Accent colors
-   (reef/steel) stay identical in both themes for brand consistency. */
-:root[data-theme="light"] {
-  --background: #F5F3EE;
-  --foreground: #17181A;
-  --surface: #EAE7DF;
-  --muted: #6B6E74;
-  --paper: #101113;
-  --ink: #ECE9E4;
+:root[data-theme="dark"] {
+  --background: #0C2220; /* gulf at night */
+  --foreground: #E4EDE9;
+  --surface: #12302D;
+  --muted: #9AAFAA;
+  --paper: #103230;
+  --ink: #E4EDE9;
+  --reef: #46BCA7;
+  --steel: #D4B26C;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -52,129 +45,102 @@
   --color-steel: var(--steel);
   --color-signal: var(--signal);
   --color-gulf: var(--gulf);
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern", "liga";
 }
 
-/* Primary dark sections (Hero, Experience, Footer, etc.) */
+/* Numbers in tools and stats line up in columns */
+.font-mono,
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--reef);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--reef) 22%, transparent);
+}
+
 .charcoal-section {
   background: var(--background);
   color: var(--foreground);
 }
 
-/* Slightly elevated dark sections — for alternating rhythm without
-   dropping all the way to a light background */
 .surface-section {
   background: var(--surface);
   color: var(--foreground);
 }
 
-/* Light sections — used sparingly, e.g. Contact form, image-heavy
-   Collections grid, anywhere legibility matters more than mood */
 .paper-section {
   background: var(--paper);
   color: var(--ink);
 }
 
-/* Signature device: corner brackets in reef, tightening on hover */
-.frame {
-  position: relative;
+/* Footer stays deep gulf green in both themes */
+.site-footer {
+  background: #12312e;
+  color: #eef4f1;
 }
 
-.frame::before,
-.frame::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-color: var(--reef);
-  border-style: solid;
-  pointer-events: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+:root[data-theme="dark"] .site-footer {
+  background: #081917;
 }
 
-.frame::before {
-  top: -1px;
-  left: -1px;
-  border-width: 1.5px 0 0 1.5px;
-}
-
-.frame::after {
-  bottom: -1px;
-  right: -1px;
-  border-width: 0 1.5px 1.5px 0;
-}
-
-.frame:hover::before {
-  top: -3px;
-  left: -3px;
-  width: 16px;
-  height: 16px;
-}
-
-.frame:hover::after {
-  bottom: -3px;
-  right: -3px;
-  width: 16px;
-  height: 16px;
-}
-
-/* On paper sections, frame lines should stay legible against light bg */
-.paper-section .frame::before,
-.paper-section .frame::after {
-  border-color: var(--steel);
-}
-
-/* corner-marks: the same signature bracket device as .frame, used by
-   paper-section components (Calculator, Market Map). Kept as its own
-   class (rather than requiring .frame everywhere) since these
-   components were built against --gulf/--ink directly, but the visual
-   language should stay identical site-wide. */
+/* The old corner-bracket device is retired. These classes stay as
+   no-op hooks (several pages still use them) so layout is unchanged. */
+.frame,
 .corner-marks {
   position: relative;
 }
 
-.corner-marks::before,
-.corner-marks::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-color: var(--gulf);
-  border-style: solid;
-  pointer-events: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+/* Quiet panel used by the tools: a hairline and a soft radius, no shadow */
+.panel {
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  border-radius: 10px;
 }
 
-.corner-marks::before {
-  top: -1px;
-  left: -1px;
-  border-width: 1.5px 0 0 1.5px;
+/* Hero photo: the one orchestrated moment on the page. The image is
+   revealed from the bottom up, like the tide coming in, once on load. */
+@keyframes tide-in {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
-.corner-marks::after {
-  bottom: -1px;
-  right: -1px;
-  border-width: 0 1.5px 1.5px 0;
+.tide-in {
+  animation: tide-in 1.4s cubic-bezier(0.22, 0.8, 0.2, 1) 0.15s both;
 }
 
-.corner-marks:hover::before {
-  top: -3px;
-  left: -3px;
-  width: 16px;
-  height: 16px;
-}
+@media (prefers-reduced-motion: reduce) {
+  .tide-in {
+    animation: none;
+  }
 
-.corner-marks:hover::after {
-  bottom: -3px;
-  right: -3px;
-  width: 16px;
-  height: 16px;
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Leaflet's own stylesheet already guards against this, but Tailwind's

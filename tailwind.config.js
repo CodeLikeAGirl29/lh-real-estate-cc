@@ -6,7 +6,7 @@ module.exports = {
       fontFamily: {
         display: ["var(--font-display)", "sans-serif"],
         sans: ["var(--font-sans)", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        mono: ["var(--font-mono)", "sans-serif"],
       },
       colors: {
         background: "var(--background)",

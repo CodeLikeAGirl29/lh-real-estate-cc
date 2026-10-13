@@ -67,15 +67,16 @@ export default function Contact() {
   };
 
   return (
-    <section className="paper-section py-12" id="contact">
-      <div className="overflow-hidden max-w-6xl max-lg:max-w-2xl mx-auto p-4">
-        <div className="grid lg:grid-cols-2 items-center gap-8">
-          <div className="frame py-8 px-8 sm:px-10 border border-ink/10">
-            <h2 className="font-display text-3xl text-ink font-bold">
-              Get In <span className="text-reef">Touch</span>
+    <section className="py-20 sm:py-28" id="contact">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 max-lg:max-w-2xl">
+        <div className="grid items-stretch gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="font-display text-4xl font-semibold text-foreground sm:text-5xl">
+              Get in touch
             </h2>
-            <p className="text-[15px] text-ink/60 mt-4 leading-relaxed">
-              Have a specific inquiry? Ready to engage to find the perfect home.
+            <p className="mt-4 text-lg leading-relaxed text-foreground/75">
+              Tell me what you&apos;re looking for, or ask me anything about the
+              area. I&apos;ll get back to you personally.
             </p>
 
             {status === "success" ? (
@@ -83,7 +84,7 @@ export default function Contact() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="mt-8 flex flex-col items-center justify-center p-8 border border-emerald-600/20"
+                className="panel mt-8 flex flex-col items-center justify-center p-8"
               >
                 <m.div
                   initial={{ scale: 0, rotate: -45 }}
@@ -95,17 +96,17 @@ export default function Contact() {
                     damping: 15,
                   }}
                 >
-                  <FaCircleCheck className="text-emerald-600 size-12 mb-4" />
+                  <FaCircleCheck className="mb-4 size-12 text-reef" />
                 </m.div>
-                <h3 className="font-display text-xl font-bold text-ink">
-                  Message Sent!
+                <h3 className="font-display text-2xl font-semibold text-foreground">
+                  Message sent
                 </h3>
-                <p className="text-ink/60 mt-2 text-center text-sm">
-                  Response will be provided as soon as possible.
+                <p className="mt-2 text-center text-foreground/75">
+                  Thanks. I&apos;ll get back to you soon.
                 </p>
                 <button
                   onClick={() => setStatus("idle")}
-                  className="mt-6 text-sm font-bold text-steel hover:underline"
+                  className="mt-6 font-semibold text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
                 >
                   Send another message
                 </button>
@@ -127,49 +128,46 @@ export default function Contact() {
                     required
                     name="name"
                     type="text"
-                    placeholder="Full Name"
-                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
+                    placeholder="Name"
+                    className="w-full rounded-lg border border-foreground/20 bg-background px-4 py-3 text-base text-foreground placeholder:text-muted outline-0 transition-colors focus:border-reef"
                   />
                   <input
                     required
                     name="phone"
                     type="text"
-                    placeholder="Phone No."
-                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
+                    placeholder="Phone"
+                    className="w-full rounded-lg border border-foreground/20 bg-background px-4 py-3 text-base text-foreground placeholder:text-muted outline-0 transition-colors focus:border-reef"
                   />
                   <input
                     required
                     name="email"
                     type="email"
                     placeholder="Email"
-                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
+                    className="w-full rounded-lg border border-foreground/20 bg-background px-4 py-3 text-base text-foreground placeholder:text-muted outline-0 transition-colors focus:border-reef"
                   />
                   <input
                     name="subject"
                     type="text"
                     placeholder="Subject"
-                    className="px-4 py-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
+                    className="w-full rounded-lg border border-foreground/20 bg-background px-4 py-3 text-base text-foreground placeholder:text-muted outline-0 transition-colors focus:border-reef"
                   />
                   <textarea
                     required
                     name="message"
-                    placeholder="Write Message"
+                    placeholder="What can I help with?"
                     rows="5"
                     defaultValue={prefillMessage}
-                    className="px-4 pt-3 bg-transparent text-ink w-full text-sm border border-ink/20 focus:border-steel outline-0 transition-all"
+                    className="w-full rounded-lg border border-foreground/20 bg-background px-4 pt-3 text-base text-foreground placeholder:text-muted outline-0 transition-colors focus:border-reef"
                   />
                 </div>
 
                 <m.button
                   type="submit"
                   disabled={status === "sending"}
-                  whileHover={status !== "sending" ? { y: -3 } : {}}
-                  whileTap={status !== "sending" ? { y: 0 } : {}}
-                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                  className={`mt-8 flex items-center justify-center text-sm font-medium w-full px-4 py-3 tracking-wide transition-all border-0 ${
+                  className={`mt-6 flex w-full items-center justify-center rounded-full border-0 px-4 py-3.5 font-semibold transition-opacity ${
                     status === "sending"
-                      ? "bg-ink/20 text-ink/50 cursor-not-allowed"
-                      : "bg-reef text-ink hover:opacity-90 cursor-pointer"
+                      ? "bg-foreground/15 text-foreground/50 cursor-not-allowed"
+                      : "bg-reef text-background hover:opacity-90 cursor-pointer"
                   }`}
                 >
                   {status === "sending" ? (
@@ -224,28 +222,28 @@ export default function Contact() {
                 </m.button>
 
                 {status === "error" && (
-                  <p className="mt-4 text-red-600 text-xs text-center">
+                  <p className="mt-4 text-center text-sm text-red-600">
                     {errorMessage || "Something went wrong. Please try again."}
                   </p>
                 )}
               </form>
             )}
 
-            <ul className="mt-8 flex flex-wrap justify-center gap-4 lg:space-x-6 max-lg:flex-col max-lg:items-center max-lg:space-y-2 border-t border-ink/10 pt-6">
+            <ul className="mt-8 flex flex-col gap-3 border-t border-foreground/10 pt-6 sm:flex-row sm:gap-8">
               <li className="flex items-center font-medium">
-                <FaEnvelope className="size-4 text-steel" />
+                <FaEnvelope className="size-4 text-reef" />
                 <a
                   href="mailto:lindsey.howard.re@outlook.com"
-                  className="text-ink/70 text-sm ml-3 hover:text-reef transition-colors"
+                  className="ml-3 text-foreground/80 transition-colors hover:text-reef"
                 >
                   lindsey.howard.re@outlook.com
                 </a>
               </li>
               <li className="flex items-center font-medium">
-                <FaPhone className="size-4 text-steel" />
+                <FaPhone className="size-4 text-reef" />
                 <a
                   href="tel:+18505335877"
-                  className="text-ink/70 text-sm ml-3 hover:text-reef transition-colors"
+                  className="ml-3 text-foreground/80 transition-colors hover:text-reef"
                 >
                   +1 (850) 533-5877
                 </a>
@@ -253,7 +251,7 @@ export default function Contact() {
             </ul>
           </div>
 
-          <div className="frame z-10 relative h-full max-lg:min-h-[400px] overflow-hidden border border-ink/10">
+          <div className="relative z-10 h-full overflow-hidden rounded-[14px] border border-foreground/10 max-lg:min-h-[400px]">
             {mapLoaded ? (
               <m.iframe
                 initial={{ opacity: 0 }}
@@ -271,14 +269,14 @@ export default function Contact() {
                 type="button"
                 onClick={() => setMapLoaded(true)}
                 aria-label="Load interactive map of Fort Walton Beach, FL"
-                className="group absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[linear-gradient(to_right,#8A8D9312_1px,transparent_1px),linear-gradient(to_bottom,#8A8D9312_1px,transparent_1px)] bg-[size:2.5rem_2.5rem] bg-background cursor-pointer"
+                className="group absolute inset-0 flex cursor-pointer flex-col items-center justify-center gap-3 bg-paper"
               >
                 <FaLocationDot className="size-8 text-reef transition-transform duration-300 group-hover:-translate-y-1" />
-                <span className="font-display text-lg font-bold text-ink">
+                <span className="font-display text-2xl font-semibold text-ink">
                   Fort Walton Beach, FL
                 </span>
-                <span className="frame px-5 py-2 font-mono text-[11px] uppercase tracking-widest text-steel border border-ink/10 group-hover:border-transparent group-hover:bg-surface group-hover:text-foreground transition-colors">
-                  Load Interactive Map
+                <span className="rounded-full border border-ink/20 px-5 py-2 text-sm font-semibold text-ink transition-colors group-hover:border-ink/50">
+                  Load the map
                 </span>
               </button>
             )}
