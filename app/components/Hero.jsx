@@ -41,7 +41,7 @@ export default function Hero() {
       <section id="hero" className="relative pt-16 lg:pt-[72px]">
         <div className="lg:grid lg:min-h-[calc(100svh-72px)] lg:grid-cols-2">
           {/* The photo: Crab Island from above. The one loud thing on the page. */}
-          <figure className="relative h-[52svh] min-h-[320px] overflow-hidden lg:order-last lg:h-auto">
+          <figure className="relative h-[42svh] min-h-[280px] overflow-hidden lg:order-last lg:h-auto">
             <div className="tide-in absolute inset-0">
               <Image
                 src="/images/local-coastline.jpg"

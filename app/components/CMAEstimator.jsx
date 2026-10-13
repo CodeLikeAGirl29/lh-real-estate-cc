@@ -88,7 +88,7 @@ export default function CMAEstimator() {
             </h2>
                         <p className="mt-4 max-w-xl text-ink/75 text-lg leading-relaxed">
               A do-it-yourself estimate using comps you already know about.
-              It&apos;s a starting point, not a verified number — for that,
+              It&apos;s a starting point, not a verified number. For that,
               I&apos;ll run the real thing against actual MLS data.
             </p>
           </m.div>
@@ -101,12 +101,12 @@ export default function CMAEstimator() {
           >
             <div className="panel p-8 space-y-6">
               <div className="flex items-center gap-2 text-sm font-semibold text-reef">
-                <FaHouse className="size-3" /> Your Property
+                <FaHouse className="size-3" /> Your property
               </div>
 
               <label className="flex flex-col gap-2">
                 <span className="flex items-baseline justify-between text-sm font-medium text-ink/70">
-                  Square Footage
+                  Square footage
                   <span className="font-display text-base text-ink font-semibold tabular">
                     {subjectSqft.toLocaleString()} sqft
                   </span>
@@ -170,7 +170,7 @@ export default function CMAEstimator() {
 
               <label className="flex flex-col gap-2">
                 <span className="flex items-baseline justify-between text-sm font-medium text-ink/70">
-                  Condition / Upgrade Adjustment
+                  Condition or upgrades
                   <span className="font-display text-base text-ink font-semibold tabular">
                     {adjustment > 0 ? "+" : ""}
                     {adjustment}%
@@ -198,7 +198,7 @@ export default function CMAEstimator() {
                 />
                 <span className="text-sm text-ink/60 leading-relaxed">
                   Nudge this if your property is meaningfully nicer or rougher
-                  than the comps below — recent renovations, deferred
+                  than the comps below, like recent renovations, deferred
                   maintenance, lot size, etc.
                 </span>
               </label>
@@ -207,7 +207,7 @@ export default function CMAEstimator() {
             <div className="panel bg-background p-8 flex flex-col justify-center gap-6">
               <div>
                 <span className="text-sm font-semibold text-reef">
-                  Estimated Value Range
+                  Estimated value range
                 </span>
                 {results.count > 0 ? (
                   <AnimatePresence mode="wait">
@@ -236,7 +236,7 @@ export default function CMAEstimator() {
                 <div className="flex flex-col gap-4 pt-6 border-t border-foreground/10">
                   <div className="flex items-baseline justify-between gap-4">
                     <span className="text-sm text-foreground/65">
-                      Midpoint Estimate
+                      Midpoint
                     </span>
                     <span className="font-display text-xl font-bold text-foreground whitespace-nowrap">
                       {currency(results.mid)}
@@ -244,7 +244,7 @@ export default function CMAEstimator() {
                   </div>
                   <div className="flex items-baseline justify-between gap-4">
                     <span className="text-sm text-foreground/65">
-                      Avg. Comp Price/Sqft
+                      Average comp price per sqft
                     </span>
                     <span className="font-display text-xl font-bold text-foreground whitespace-nowrap">
                       ${results.avgPsf}/sqft
@@ -260,7 +260,7 @@ export default function CMAEstimator() {
             className="panel p-8"
           >
             <div className="flex items-center gap-2 text-sm font-semibold text-reef mb-6">
-              <FaScaleBalanced className="size-3" /> Comparable Sales
+              <FaScaleBalanced className="size-3" /> Comparable sales
             </div>
             <div className="space-y-5">
               <AnimatePresence initial={false}>
@@ -281,7 +281,7 @@ export default function CMAEstimator() {
                     >
                       <label className="flex flex-col gap-1">
                         <span className="text-xs font-medium text-ink/65">
-                          Address / Label
+                          Address or label
                         </span>
                         <input
                           type="text"
@@ -295,7 +295,7 @@ export default function CMAEstimator() {
                       </label>
                       <label className="flex flex-col gap-1">
                         <span className="text-xs font-medium text-ink/65">
-                          Sold Price
+                          Sold price
                         </span>
                         <input
                           type="number"
@@ -348,7 +348,7 @@ export default function CMAEstimator() {
             </button>
 
             <p className="text-sm text-ink/65 leading-relaxed pt-6 mt-2 border-t border-ink/10">
-              Pull these from recent sold listings in your neighborhood — a
+              Pull these from recent sold listings in your neighborhood, from a
               public listing site, or a house down the street you know sold
               recently. The more similar the comp, the better this estimate.
             </p>
@@ -362,14 +362,14 @@ export default function CMAEstimator() {
             </h4>
             <p className="text-ink/75">
               This is a ballpark. I&apos;ll run a full CMA against verified MLS
-              comps — free, no obligation.
+              comps, free and no obligation.
             </p>
           </div>
           <a
             href="#contact"
             className="rounded-full px-7 py-3.5 bg-reef text-background font-semibold hover:opacity-90 transition whitespace-nowrap"
           >
-            Get My Verified CMA
+            Get my verified CMA
           </a>
         </div>
       </div>

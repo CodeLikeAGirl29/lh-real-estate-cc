@@ -120,8 +120,8 @@ export default function InvestmentCalculator() {
               Run the numbers
             </h2>
                         <p className="mt-4 max-w-xl text-ink/75 text-lg leading-relaxed">
-              A data-driven look at what a property actually costs — and what it
-              could return. Estimates only; always verify with a lender and a
+              What a property actually costs each month, and what it could
+              return as a rental. Estimates only; always verify with a lender and a
               full CMA.
             </p>
           </m.div>
@@ -155,7 +155,7 @@ export default function InvestmentCalculator() {
                   className="absolute inset-0 -z-10 rounded-full bg-reef"
                 />
               )}
-              <FaChartLine className="size-3" /> CAP Rate
+              <FaChartLine className="size-3" /> Cap rate
             </button>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function InvestmentCalculator() {
             >
               <div className="panel p-8 space-y-6">
                 {renderField(
-                  "Home Price",
+                  "Home price",
                   "$",
                   price,
                   setPrice,
@@ -181,7 +181,7 @@ export default function InvestmentCalculator() {
                   5000,
                 )}
                 {renderField(
-                  "Down Payment",
+                  "Down payment",
                   "%",
                   downPct,
                   setDownPct,
@@ -189,10 +189,10 @@ export default function InvestmentCalculator() {
                   50,
                   1,
                 )}
-                {renderField("Interest Rate", "%", rate, setRate, 2, 10, 0.125)}
-                {renderField("Loan Term", " yrs", term, setTerm, 10, 30, 5)}
+                {renderField("Interest rate", "%", rate, setRate, 2, 10, 0.125)}
+                {renderField("Loan term", " yrs", term, setTerm, 10, 30, 5)}
                 {renderField(
-                  "Tax + Insurance / mo",
+                  "Taxes + insurance per month",
                   "$",
                   taxInsurance,
                   setTaxInsurance,
@@ -205,7 +205,7 @@ export default function InvestmentCalculator() {
               <div className="panel bg-background p-8 flex flex-col justify-center gap-6">
                 <div>
                   <span className="text-sm font-semibold text-reef">
-                    Estimated Monthly Payment
+                    Estimated monthly payment
                   </span>
                   <AnimatePresence mode="wait">
                     <m.div
@@ -229,7 +229,7 @@ export default function InvestmentCalculator() {
                       {currency(mortgageResults.pAndI)}
                     </span>
                     <span className="text-sm text-foreground/65">
-                      Principal & Interest
+                      Principal and interest
                     </span>
                   </div>
                   <div>
@@ -237,7 +237,7 @@ export default function InvestmentCalculator() {
                       {currency(mortgageResults.downPayment)}
                     </span>
                     <span className="text-sm text-foreground/65">
-                      Down Payment
+                      Down payment
                     </span>
                   </div>
                 </div>
@@ -254,7 +254,7 @@ export default function InvestmentCalculator() {
             >
               <div className="panel p-8 space-y-6">
                 {renderField(
-                  "Purchase Price",
+                  "Purchase price",
                   "$",
                   purchasePrice,
                   setPurchasePrice,
@@ -262,9 +262,9 @@ export default function InvestmentCalculator() {
                   1500000,
                   5000,
                 )}
-                {renderField("Monthly Rent", "$", rent, setRent, 500, 8000, 50)}
+                {renderField("Monthly rent", "$", rent, setRent, 500, 8000, 50)}
                 {renderField(
-                  "Monthly Expenses",
+                  "Monthly expenses",
                   "$",
                   expenses,
                   setExpenses,
@@ -274,7 +274,7 @@ export default function InvestmentCalculator() {
                 )}
                 <p className="text-sm text-ink/65 leading-relaxed pt-2 border-t border-ink/10">
                   Expenses should include estimated property management, HOA,
-                  maintenance reserve, taxes, and insurance — everything besides
+                  maintenance reserve, taxes, and insurance: everything besides
                   the mortgage payment itself.
                 </p>
               </div>
@@ -282,7 +282,7 @@ export default function InvestmentCalculator() {
               <div className="panel bg-background p-8 flex flex-col justify-center gap-6">
                 <div>
                   <span className="text-sm font-semibold text-reef">
-                    CAP Rate
+                    Cap rate
                   </span>
                   <AnimatePresence mode="wait">
                     <m.div
@@ -304,7 +304,7 @@ export default function InvestmentCalculator() {
                       {currency(capResults.monthlyCashFlow)}
                     </span>
                     <span className="text-sm text-foreground/65">
-                      Est. Monthly Cash Flow
+                      Estimated monthly cash flow
                     </span>
                   </div>
                   <div>
@@ -312,7 +312,7 @@ export default function InvestmentCalculator() {
                       {currency(capResults.noi)}
                     </span>
                     <span className="text-sm text-foreground/65">
-                      Annual NOI
+                      Annual net operating income
                     </span>
                   </div>
                 </div>
@@ -327,15 +327,15 @@ export default function InvestmentCalculator() {
               Want a ballpark for a specific address?
             </h4>
             <p className="text-ink/75">
-              Try the interactive home value estimator below — plug in your own
-              comps and see a range in seconds.
+              Try the home value estimator below. Plug in your own comps and
+              see a range in seconds.
             </p>
           </div>
           <Link
             href="#cma"
             className="rounded-full px-7 py-3.5 bg-reef text-background font-semibold hover:opacity-90 transition whitespace-nowrap"
           >
-            Get My Free CMA
+            Get my free CMA
           </Link>
         </div>
       </div>
