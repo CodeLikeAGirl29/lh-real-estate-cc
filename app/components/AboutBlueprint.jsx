@@ -1,126 +1,67 @@
-"use client";
-import React from "react";
-import {
-  FaUserShield,
-  FaBriefcase,
-  FaMicrochip,
-  FaArrowRight,
-} from "react-icons/fa6";
-import { m } from "framer-motion";
-import CornerArrow from "./CornerArrow";
+import Image from "next/image";
+import Link from "next/link";
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-  },
-};
-
-const specifications = [
+const points = [
   {
-    id: 1,
-    icon: <FaUserShield />,
-    title: "The Identity",
-    content:
-      "Decades of local immersion combined with a developer's eye. High-resolution views of Fort Walton Beach real estate are provided, ranging from zoning nuances to the long-term potential of specific coastal blocks.",
+    title: "The whole payment, up front",
+    body: "Mortgage, taxes, insurance, flood zone and HOA. You'll know the real monthly number before you write an offer, not at the closing table.",
   },
   {
-    id: 2,
-    icon: <FaBriefcase />,
-    title: "The Work Ethic",
-    content:
-      "Built on high-pressure service and technical precision. The wrench and the brush have been traded for the code editor to build a more efficient way to move property.",
+    title: "Built around PCS moves",
+    body: "Tight timelines, BAH math, VA loans and buying from out of state. I plan around your orders instead of the other way around.",
   },
   {
-    id: 3,
-    icon: <FaMicrochip />,
-    title: "The Engine",
-    content:
-      "The 'Florida Real Estate Master Drill' serves as a proof of concept. Full-stack tools (Next.js/Node) are engineered to ensure the absolute highest level of preparation.",
+    title: "Tools you can use too",
+    body: "The calculators on this page, plus Dock & Dune for waterfront flood and insurance costs. Use them anytime, no sign-up.",
   },
 ];
 
 export default function AboutBlueprint() {
   return (
-    <section
-      className="surface-section py-24 border-t border-foreground/5 relative overflow-hidden"
-      id="blueprint"
-    >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        <m.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-2xl mb-20"
-        >
-          <p className="text-xs font-mono font-bold text-steel uppercase tracking-[0.3em] mb-4">
-            [ Strategic Foundation ]
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-foreground uppercase leading-tight">
-            The Hybrid <br />
-            <span className="text-reef">Advantage</span>
-          </h2>
-          <p className="mt-6 text-base font-sans text-foreground/60 leading-relaxed">
-            While technology is widely utilized across the industry, customized
-            platforms are built directly from scratch here. This approach
-            combines real estate licensure parameters with software engineering
-            principles to deliver advanced analysis for the Fort Walton Beach
-            market.
-          </p>
-        </m.div>
-
-        <m.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          {specifications.map((spec) => (
-            <m.div
-              key={spec.id}
-              variants={item}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 12px 28px -10px rgba(20,143,126,0.35)",
-              }}
-              transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="frame relative p-8 border border-foreground/10 transition-[colors,filter] duration-300 hover:border-reef/30 hover:brightness-110 group"
-            >
-              <CornerArrow />
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground/10 text-reef text-xl group-hover:border-reef/40 transition-colors duration-300">
-                {spec.icon}
-              </div>
-
-              <h3 className="font-display text-lg font-bold text-foreground mb-3 tracking-tight">
-                {spec.title}
-              </h3>
-
-              <p className="text-foreground/60 font-sans leading-relaxed text-sm">
-                {spec.content}
-              </p>
-            </m.div>
-          ))}
-        </m.div>
-
-        <div className="mt-16 flex items-center justify-between border-t border-foreground/5 pt-8">
-          <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-reef animate-pulse" />
-            <span className="text-[10px] font-mono text-foreground/40 uppercase tracking-widest">
-              L. Howard // System Active // FWB_FL
-            </span>
+    <section id="blueprint" className="py-20 sm:py-28">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+        <div className="lg:col-span-5">
+          <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[14px]">
+            <Image
+              src="/images/lindsey-profile.jpg"
+              alt="Lindsey Howard"
+              fill
+              sizes="(max-width: 1024px) 90vw, 420px"
+              className="object-cover"
+            />
           </div>
-          <FaArrowRight className="text-foreground/30 group-hover:text-reef transition-colors duration-300" />
+        </div>
+
+        <div className="lg:col-span-7 lg:pt-6">
+          <h2 className="max-w-xl font-display text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl">
+            An agent who builds her own tools
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
+            I came to real estate from software. So when the usual tools
+            couldn&apos;t answer a client&apos;s question, like what flood
+            insurance really runs on a canal lot, I built one that could. You
+            get an agent who checks the math, and then checks it again.
+          </p>
+
+          <dl className="mt-12 max-w-2xl divide-y divide-foreground/10 border-y border-foreground/10">
+            {points.map((point) => (
+              <div key={point.title} className="grid gap-2 py-6 sm:grid-cols-[14rem_1fr] sm:gap-8">
+                <dt className="font-display text-xl font-semibold text-foreground">
+                  {point.title}
+                </dt>
+                <dd className="leading-relaxed text-foreground/75">{point.body}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <p className="mt-8">
+            <Link
+              href="/about"
+              className="font-semibold text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
+            >
+              More about me
+            </Link>
+          </p>
         </div>
       </div>
     </section>

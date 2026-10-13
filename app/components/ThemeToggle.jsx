@@ -14,12 +14,12 @@ function getSnapshot() {
   try {
     stored = window.localStorage.getItem("theme");
   } catch {}
-  const isLight =
-    stored === "light" ||
-    (!stored &&
-      window.matchMedia("(prefers-color-scheme: light)").matches &&
-      !window.matchMedia("(prefers-color-scheme: dark)").matches);
-  return isLight ? "light" : "dark";
+  // Sunny (light) is the default; night mode only when chosen or when
+  // the visitor's system asks for it.
+  const isDark =
+    stored === "dark" ||
+    (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  return isDark ? "dark" : "light";
 }
 
 // Unknown on the server — matches whatever the pre-hydration <script> in
@@ -29,8 +29,8 @@ function getServerSnapshot() {
 }
 
 function setTheme(next) {
-  if (next === "light") {
-    document.documentElement.dataset.theme = "light";
+  if (next === "dark") {
+    document.documentElement.dataset.theme = "dark";
   } else {
     delete document.documentElement.dataset.theme;
   }
@@ -48,9 +48,9 @@ export default function ThemeToggle({ className = "" }) {
   // clears attributes the pre-hydration <script> set outside React's view.
   // See next/dist/docs/01-app/02-guides/preventing-flash-before-hydration.md.
   useLayoutEffect(() => {
-    if (theme === "light") {
-      document.documentElement.dataset.theme = "light";
-    } else if (theme === "dark") {
+    if (theme === "dark") {
+      document.documentElement.dataset.theme = "dark";
+    } else if (theme === "light") {
       delete document.documentElement.dataset.theme;
     }
   }, [theme]);

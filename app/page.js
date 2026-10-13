@@ -19,10 +19,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutBlueprint />
-      <Collections />
       <InvestmentCalculator />
       <CMAEstimator />
       <MarketMapSection />
+      <Collections />
       <Experience />
       <Contact />
       <Footer />

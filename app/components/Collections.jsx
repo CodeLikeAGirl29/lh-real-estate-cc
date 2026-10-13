@@ -1,25 +1,6 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { m } from "framer-motion";
-import CornerArrow from "./CornerArrow";
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-  },
-};
 
 const projects = [
   {
@@ -77,86 +58,98 @@ const projects = [
 ];
 
 export default function Collections() {
-  return (
-    <section
-      className="charcoal-section py-24 border-t border-foreground/5"
-      id="projects"
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <m.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12"
-        >
-          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Featured Collections
-          </h2>
-          <span className="mt-2 block h-[3px] w-12 bg-steel" />
-        </m.div>
+  const featured = projects.find((p) => p.featured);
+  const rest = projects.filter((p) => !p.featured);
+  const hrefFor = (project) => project.link || `/projects/${project.id}`;
 
-        <m.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {projects.map((project) => (
-            <m.article
-              key={project.id}
-              variants={item}
-              whileHover={{
-                y: -8,
-                boxShadow: "0 12px 28px -10px rgba(20,143,126,0.35)",
-              }}
-              transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="frame relative overflow-hidden border border-foreground/10 bg-surface transition-[colors,filter] duration-300 hover:border-reef/40 hover:brightness-110 group"
+  return (
+    <section id="projects" className="border-t border-foreground/10 py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="max-w-2xl font-display text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl">
+          Things I&apos;ve built and written
+        </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-foreground/75">
+          Tools for buyers and agents, plus longer guides to living and buying
+          on the Emerald Coast.
+        </p>
+
+        {featured && (
+          <article className="mt-14 grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
+            <Link
+              href={hrefFor(featured)}
+              className="relative block aspect-[16/10] overflow-hidden rounded-[14px] border border-foreground/10 lg:col-span-7"
             >
-              <CornerArrow />
-              <div className="relative h-56 w-full overflow-hidden">
+              <Image
+                alt={featured.title}
+                src={featured.image}
+                fill
+                sizes="(max-width: 1024px) 100vw, 58vw"
+                className="object-cover"
+              />
+            </Link>
+            <div className="lg:col-span-5">
+              <p className="text-sm text-muted">{featured.tags}</p>
+              <h3 className="mt-2 font-display text-3xl font-semibold text-foreground">
+                <Link href={hrefFor(featured)} className="hover:text-reef">
+                  {featured.title}
+                </Link>
+              </h3>
+              {featured.subtitle && (
+                <p className="mt-1 text-lg text-foreground/80">{featured.subtitle}</p>
+              )}
+              <p className="mt-4 leading-relaxed text-foreground/75">{featured.desc}</p>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+                <Link
+                  href={hrefFor(featured)}
+                  className="font-semibold text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
+                >
+                  Read the case study
+                </Link>
+                {featured.externalLink && (
+                  <a
+                    href={featured.externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-foreground underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
+                  >
+                    Open Dock &amp; Dune
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        )}
+
+        <div className="mt-16 grid gap-x-8 gap-y-14 border-t border-foreground/10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
+          {rest.map((project) => (
+            <article key={project.id}>
+              <Link
+                href={hrefFor(project)}
+                className="relative block aspect-[3/2] overflow-hidden rounded-[10px] border border-foreground/10"
+              >
                 <Image
                   alt={project.title}
                   src={project.image}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
                 />
-              </div>
-
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-2">
-                  <time className="block font-mono text-xs text-steel font-bold uppercase tracking-widest">
-                    {project.date || "Featured"}
-                  </time>
-                  <span className="font-mono text-[10px] border border-foreground/10 px-2 py-1 text-foreground/40 font-bold">
-                    {Array.isArray(project.tags)
-                      ? project.tags.join(" / ")
-                      : project.tags}
-                  </span>
-                </div>
-
-                <Link href={project.link || `/projects/${project.id}`}>
-                  <h3 className="font-display text-xl font-bold text-foreground hover:text-reef transition-colors">
-                    {project.title}
-                  </h3>
+              </Link>
+              <p className="mt-5 text-sm text-muted">
+                {project.tags}
+                {project.date ? `, ${project.date}` : ""}
+              </p>
+              <h3 className="mt-1.5 font-display text-xl font-semibold leading-snug text-foreground">
+                <Link href={hrefFor(project)} className="hover:text-reef">
+                  {project.title}
                 </Link>
-
-                <p className="mt-3 line-clamp-3 text-sm/relaxed text-foreground/60">
-                  {project.desc}
-                </p>
-
-                <Link
-                  href={project.link || `/projects/${project.id}`}
-                  className="mt-6 flex items-center gap-1 text-sm font-bold text-steel hover:text-reef transition-colors"
-                >
-                  View Project <span>&rarr;</span>
-                </Link>
-              </div>
-            </m.article>
+              </h3>
+              <p className="mt-2 line-clamp-3 leading-relaxed text-foreground/75">
+                {project.desc}
+              </p>
+            </article>
           ))}
-        </m.div>
+        </div>
       </div>
     </section>
   );

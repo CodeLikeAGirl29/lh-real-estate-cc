@@ -1,136 +1,82 @@
-"use client";
-import React from "react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa6";
-import { m } from "framer-motion";
+
+const links = [
+  { name: "About", href: "/about" },
+  { name: "The Coast Is Clear blog", href: "/blog" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Experience", href: "/#experience" },
+  { name: "For mentors", href: "/about#mentor" },
+];
+
+const socials = [
+  { name: "GitHub", href: "https://github.com/codelikeagirl29", Icon: FaGithub },
+  { name: "LinkedIn", href: "https://linkedin.com/in/lindsey-howard", Icon: FaLinkedin },
+  { name: "Facebook", href: "https://www.facebook.com/lindseyhowardrealestate", Icon: FaFacebook },
+];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="charcoal-section pt-16 pb-8 px-4 tracking-wide border-t border-muted/10 relative overflow-hidden">
-      {/* Architectural Grid Accent - highly transparent */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8A8D9305_1px,transparent_1px),linear-gradient(to_bottom,#8A8D9305_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
-
-      <div className="max-w-7xl mx-auto text-center relative z-10">
-        {/* Navigation Links */}
-        <ul className="flex gap-x-10 gap-y-6 justify-center flex-wrap mb-12 font-mono text-xs uppercase tracking-widest">
-          <li>
-            <Link
-              href="/about"
-              className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/blog"
-              className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
-            >
-              The Coast Is Clear
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#projects"
-              className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#experience"
-              className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
-            >
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="mailto:lindsey.howard.re@outlook.com"
-              className="text-muted hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-steel hover:after:w-full after:transition-all after:duration-300"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-
-        {/* Social Connections */}
-        <div className="mt-12">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="h-px w-8 bg-muted/20"></div>
-            <p className="font-mono text-xs text-muted/60 tracking-widest uppercase">
-              Connect
-            </p>
-            <div className="h-px w-8 bg-muted/20"></div>
-          </div>
-
-          <ul className="flex flex-wrap justify-center gap-8">
-            <li>
-              <m.a
-                href="https://github.com/codelikeagirl29"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Lindsey Howard on GitHub"
-                className="block text-muted hover:text-reef"
-                whileHover={{ y: -4, scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <FaGithub className="w-6 h-6" />
-              </m.a>
-            </li>
-            <li>
-              <m.a
-                href="https://linkedin.com/in/lindsey-howard"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Lindsey Howard on LinkedIn"
-                className="block text-muted hover:text-steel"
-                whileHover={{ y: -4, scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <FaLinkedin className="w-6 h-6" />
-              </m.a>
-            </li>
-            <li>
-              <m.a
-                href="https://www.facebook.com/lindseyhowardrealestate"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Lindsey Howard on Facebook"
-                className="block text-muted hover:text-reef"
-                whileHover={{ y: -4, scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <FaFacebook className="w-6 h-6" />
-              </m.a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Legal & Location */}
-        <div className="border-t border-muted/10 pt-8 mt-16 flex flex-col items-center gap-2">
-          <p className="font-mono text-xs text-muted">
-            © {currentYear}{" "}
-            <span className="text-reef font-bold">by LINDSEY HOWARD</span>
-            {" — Built with Next.js & Tailwind CSS"}
-          </p>
-          <address className="not-italic font-mono text-[10px] text-muted/50 uppercase tracking-widest leading-relaxed">
-            Lindsey Howard, REALTOR® · eXp Realty · Fort Walton Beach, FL ·{" "}
-            <a href="tel:+18505335877" className="hover:text-foreground">
+    <footer className="site-footer">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:px-8">
+        <div className="lg:col-span-5">
+          <p className="font-display text-3xl font-semibold">Lindsey Howard</p>
+          <address className="mt-4 not-italic leading-relaxed text-white/75">
+            REALTOR® with eXp Realty
+            <br />
+            Fort Walton Beach, Florida
+            <br />
+            <a href="tel:+18505335877" className="tabular hover:text-white">
               (850) 533-5877
             </a>
+            <br />
+            <a href="mailto:lindsey.howard.re@outlook.com" className="hover:text-white">
+              lindsey.howard.re@outlook.com
+            </a>
           </address>
-          <p className="font-mono text-[10px] text-muted/50 uppercase tracking-widest">
-            Serving Fort Walton Beach, Destin, Niceville, Crestview, Shalimar,
-            Eglin AFB &amp; Hurlburt Field
-          </p>
         </div>
+
+        <nav aria-label="Footer" className="lg:col-span-3">
+          <ul className="space-y-3">
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link href={link.href} className="text-white/80 hover:text-white hover:underline underline-offset-4">
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="lg:col-span-4">
+          <p className="leading-relaxed text-white/75">
+            Serving Fort Walton Beach, Destin, Niceville, Crestview, Shalimar,
+            and families stationed at Eglin AFB and Hurlburt Field.
+          </p>
+          <ul className="mt-6 flex gap-5">
+            {socials.map(({ name, href, Icon }) => (
+              <li key={name}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Lindsey Howard on ${name}`}
+                  className="block text-white/70 hover:text-white"
+                >
+                  <Icon className="size-6" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/15">
+        <p className="mx-auto max-w-7xl px-4 py-6 text-sm text-white/60 sm:px-6 lg:px-8">
+          © {currentYear} Lindsey Howard. I built this site myself with Next.js.
+        </p>
       </div>
     </footer>
   );
