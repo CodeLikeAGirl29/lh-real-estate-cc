@@ -2329,6 +2329,736 @@ const blogPosts = {
       </>
     ),
   },
+  "first-time-home-buyer-guide-okaloosa-county-florida": {
+    seoTitle: "First-Time Home Buyer Guide for Okaloosa County, FL (2026)",
+    seoDescription:
+      "Everything first-time buyers in Fort Walton Beach, Niceville, Crestview and Destin need to know: loans, down payment help, closing costs, inspections, insurance and the whole process start to finish.",
+    title: "The First-Time Home Buyer Guide I Wish Somebody Had Handed Me",
+    excerpt:
+      "From figuring out what you can actually afford to getting the keys, here's the whole process for buying your first home in Okaloosa County. Loans, down payment help, Florida closing costs, inspections, insurance... all of it, in plain English.",
+    date: "October 13, 2026",
+    category: "Buyer Guide",
+    readTime: "15 min read",
+    image: "/images/hero-img.png",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Buying your first house is a weird mix of exciting and terrifying.
+          Like, you&apos;re about to make the biggest purchase of your life
+          and half the words people throw at you sound made up. Escrow.
+          Contingency. Intangible tax?? What even is that.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          So this is the guide I wish someone had just handed me. It&apos;s
+          long, bc there&apos;s a lot to it. But it goes in order, start to
+          finish, and it&apos;s written for buying here in Okaloosa County
+          specifically, not some generic national version that forgets
+          Florida has hurricanes and flood zones.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          Grab a coffee. Let&apos;s go.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          First, Are You Actually a &quot;First-Time&quot; Buyer?
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Probably more than you think. For most loan and assistance programs,
+          you count as a first-time buyer if you haven&apos;t owned a home you
+          lived in during the <strong>last three years</strong>. So if you
+          owned a place a while back, sold it, and you&apos;ve been renting
+          since... you may still qualify. Always worth asking.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Whole Process, Start to Finish
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Here&apos;s the big picture before we dig into each piece:
+        </p>
+        <ol className="mb-6 list-decimal list-inside space-y-2 text-muted text-lg">
+          <li>Figure out what you can comfortably afford (not just what a lender says).</li>
+          <li>Check your credit and start saving for cash to close.</li>
+          <li>Get pre-approved with a lender.</li>
+          <li>Pick your agent and sign a buyer agreement.</li>
+          <li>Tour homes and narrow it down.</li>
+          <li>Make an offer and negotiate.</li>
+          <li>Go under contract and send your escrow deposit.</li>
+          <li>Inspections, insurance quotes, and the appraisal.</li>
+          <li>Final loan approval.</li>
+          <li>Final walkthrough and closing day. Keys!</li>
+          <li>File for homestead by March 1.</li>
+        </ol>
+        <p className="mb-6 text-muted text-lg">
+          From accepted offer to closing usually takes somewhere around 30 to
+          45 days with financing. The part before that, getting ready and
+          shopping, is totally up to you.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 1: Figure Out What You Can Actually Afford
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Here&apos;s something nobody tells you: the number a lender approves
+          you for is the <em>maximum</em> they&apos;ll lend. It is not the
+          number you should spend. Those are two very different things.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Start with what you&apos;re comfortable paying every month, all in.
+          And in Florida &quot;all in&quot; means a lot more than the mortgage:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li><strong>Principal and interest</strong> on the loan</li>
+          <li><strong>Property taxes</strong>, based on <em>your</em> purchase price, not the seller&apos;s old bill</li>
+          <li><strong>Homeowners insurance</strong>, which can be a big number here</li>
+          <li><strong>Flood insurance</strong>, if the home is in a high-risk flood zone (and honestly worth considering even when it&apos;s not)</li>
+          <li><strong>Mortgage insurance</strong> (PMI or FHA&apos;s MIP), if you put less than 20% down</li>
+          <li><strong>HOA dues</strong>, and in some newer communities, <strong>CDD fees</strong></li>
+          <li><strong>Maintenance</strong>. A common rule of thumb is to set aside 1% of the home&apos;s price per year for repairs.</li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          Lenders mostly look at your <strong>debt-to-income ratio</strong>:
+          your total monthly debts (including the new house payment) divided by
+          your gross monthly income. Every loan type has its own limits, but
+          just know that car payments, student loans and credit cards all eat
+          into what you can borrow.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Want to play with the numbers? The{" "}
+          <a
+            href="/#calculator"
+            className="text-reef underline underline-offset-4 hover:text-reef/80"
+          >
+            payment calculator on my homepage
+          </a>{" "}
+          lets you plug in price, down payment, rate, and taxes plus insurance.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 2: Credit and Cash
+        </h3>
+        <h4 className="font-display text-xl font-bold text-foreground mt-8 mb-3">
+          Your credit score
+        </h4>
+        <p className="mb-6 text-muted text-lg">
+          Pull your credit reports for free at AnnualCreditReport.com and look
+          for mistakes. They happen more than you&apos;d think. Then, for the
+          next few months:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>Pay everything on time. Every single thing.</li>
+          <li>Pay down credit card balances if you can. Lower utilization helps your score.</li>
+          <li>
+            <strong>Do not</strong> open new credit cards, finance a car, or buy
+            furniture on credit. Not before you close. I&apos;ve seen this blow
+            up deals at the very last minute.
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          A higher score gets you a better rate, and a better rate is real
+          money every month. But you don&apos;t need perfect credit to buy.
+          FHA loans, for example, allow 3.5% down with a score of 580 or
+          higher.
+        </p>
+
+        <h4 className="font-display text-xl font-bold text-foreground mt-8 mb-3">
+          The cash you&apos;ll need
+        </h4>
+        <p className="mb-6 text-muted text-lg">
+          There are three buckets of money, and people forget the last two
+          constantly:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Down payment.</strong> Anywhere from 0% to 20%+ depending on
+            your loan (more on that below).
+          </li>
+          <li>
+            <strong>Closing costs.</strong> In Florida these often land in the
+            range of 2% to 5% of the price for buyers, depending on your loan
+            and what you negotiate.
+          </li>
+          <li>
+            <strong>Upfront out-of-pocket costs.</strong> Your escrow deposit
+            (which gets credited back to you at closing), plus the inspection
+            and appraisal, which you usually pay before closing.
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          And please keep a cushion after closing. Owning a home means the AC
+          breaks in August and it&apos;s on you now. Nobody wants to be house
+          rich and broke.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Quick tip: lenders want to see where your money came from. Avoid big
+          cash deposits you can&apos;t explain, and if family is gifting you
+          money for the down payment, tell your lender early. They&apos;ll need
+          a gift letter.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 3: Pick Your Loan
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          This is where people&apos;s eyes glaze over, so here&apos;s the short
+          version:
+        </p>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <thead>
+              <tr className="border-b border-foreground/20">
+                <th className="py-3 pr-6 font-display font-bold text-foreground">Loan</th>
+                <th className="py-3 pr-6 font-display font-bold text-foreground">Minimum down</th>
+                <th className="py-3 font-display font-bold text-foreground">Good to know</th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Conventional</td>
+                <td className="py-3 pr-6">3% for many first-time buyers</td>
+                <td className="py-3">
+                  PMI if under 20% down, but it comes off once you build
+                  enough equity. Usually best with stronger credit.
+                </td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">FHA</td>
+                <td className="py-3 pr-6">3.5% (580+ credit)</td>
+                <td className="py-3">
+                  More forgiving on credit. Mortgage insurance usually stays
+                  for the life of the loan if you put under 10% down, unless
+                  you refinance later.
+                </td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">VA</td>
+                <td className="py-3 pr-6">0%</td>
+                <td className="py-3">
+                  For eligible service members, veterans and some surviving
+                  spouses. No monthly mortgage insurance. There&apos;s a
+                  one-time funding fee unless you&apos;re exempt.
+                </td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">USDA</td>
+                <td className="py-3 pr-6">0%</td>
+                <td className="py-3">
+                  Only in eligible rural areas, with income limits. Some
+                  parts of north Okaloosa may qualify. Check the address on
+                  USDA&apos;s eligibility map.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          For 2026 in Okaloosa County, the loan limits are{" "}
+          <strong>$832,750</strong> for conventional and VA loans,{" "}
+          <strong>$603,750</strong> for FHA, and <strong>$433,020</strong>{" "}
+          for USDA. Most first-time buyers here are well under those, but
+          it&apos;s good to know they exist.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          If you&apos;re military, honestly look hard at VA first. Zero down
+          and no monthly mortgage insurance is a huge deal, and with Eglin and
+          Hurlburt right here, a lot of local lenders do VA loans all day long.
+        </p>
+
+        <h4 className="font-display text-xl font-bold text-foreground mt-8 mb-3">
+          What it looks like in real numbers
+        </h4>
+        <p className="mb-6 text-muted text-lg">
+          Say you buy a $300,000 home with an FHA loan and 3.5% down:
+        </p>
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Down payment (3.5%)</td>
+                <td className="py-3">$10,500</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Base loan amount</td>
+                <td className="py-3">$289,500</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Principal and interest at 7%</td>
+                <td className="py-3">about $1,926 a month</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mb-6 text-muted text-lg">
+          Then add taxes, insurance, mortgage insurance and any HOA on top of
+          that. This is exactly why I always say: know the full monthly number
+          before you fall in love with a house.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 4: Look Into Down Payment Help
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Florida has real programs that help with down payment and closing
+          costs. The catch is they come and go with funding, so you&apos;ve
+          gotta move fast and check what&apos;s open right now. The big ones:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Florida Hometown Heroes.</strong> For income-qualified
+            first-time buyers who work in fields like teaching, nursing and
+            healthcare, law enforcement and first response, plus some active
+            military and veterans. It&apos;s a 0% deferred second mortgage,
+            generally 5% of your first mortgage up to $35,000. A new $50
+            million round opened in July 2026, and past rounds have run out
+            fast, so ask a lender if funds are still available.
+          </li>
+          <li>
+            <strong>FL Assist.</strong> Up to $10,000 as a 0% deferred second
+            mortgage. No monthly payment, but you pay it back when you sell,
+            refinance or pay off the house.
+          </li>
+          <li>
+            <strong>HFA Preferred grants.</strong> A percentage of your loan
+            amount toward down payment and closing costs that can be forgiven
+            if you stay in the home long enough. These have tighter income
+            limits.
+          </li>
+          <li>
+            <strong>Okaloosa County SHIP.</strong> The county&apos;s own
+            purchase assistance for low-income first-time buyers. Right now
+            the county says it isn&apos;t taking new applications, but you
+            can email housing@myokaloosa.com to get on the waitlist.
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          A few things to know going in. These programs only work through
+          participating lenders, they have income and purchase price limits,
+          and most require a short homebuyer education course (usually online,
+          a few hours). Also, &quot;deferred&quot; isn&apos;t the same as
+          &quot;free.&quot; Read whether it&apos;s forgiven or repaid.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 5: Get Pre-Approved (Not Just Pre-Qualified)
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          A pre-qualification is basically a lender guessing based on what you
+          told them. A <strong>pre-approval</strong> means they actually pulled
+          your credit and looked at your documents. Sellers take pre-approvals
+          way more seriously, and in a competitive situation it matters.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Have these ready:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>Recent pay stubs (usually about 30 days&apos; worth)</li>
+          <li>W-2s and tax returns for the last two years</li>
+          <li>Two months of bank statements, every page</li>
+          <li>Photo ID</li>
+          <li>Your LES and Certificate of Eligibility if you&apos;re using a VA loan</li>
+          <li>Extra docs if you&apos;re self-employed (lenders will want more history)</li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          And shop around. Get quotes from at least two or three lenders and
+          compare the Loan Estimates side by side. Multiple mortgage credit
+          checks within a short shopping window generally count as one
+          inquiry for your score, so don&apos;t let that scare you off.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 6: Pick Your Agent
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Since 2024, you sign a written agreement with your buyer&apos;s
+          agent before you tour homes together. It spells out what they&apos;ll
+          do for you and how they get paid. That pay is negotiable, and a lot
+          of the time the seller or builder ends up covering some or all of it,
+          but you should know exactly what you&apos;re agreeing to. Ask
+          questions. A good agent will happily walk you through it line by line.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          What you want in an agent: someone who knows the specific
+          neighborhoods, answers the phone, and tells you the truth even when
+          it&apos;s not what you want to hear. Like, &quot;this house is
+          gorgeous but the flood insurance is going to wreck your budget.&quot;
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 7: House Hunting (Florida Edition)
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Make a list of must-haves vs. nice-to-haves before you start
+          touring. Then, on top of the usual stuff, here&apos;s what to look at
+          on every Florida house:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Roof age.</strong> Older roofs can make insurance harder
+            and pricier to get. Ask how old it is, right away.
+          </li>
+          <li>
+            <strong>Flood zone.</strong> Look it up on FEMA&apos;s flood map
+            for every address. It changes your costs a lot.
+          </li>
+          <li>
+            <strong>Wind mitigation report.</strong> Ask if the seller has one.
+            It can lower your insurance. I wrote a whole{" "}
+            <a
+              href="/blog/florida-wind-mitigation-inspection-guide"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              guide on wind mitigation
+            </a>
+            .
+          </li>
+          <li>
+            <strong>AC, water heater and electrical.</strong> Ages matter.
+            These are expensive to replace.
+          </li>
+          <li>
+            <strong>HOA rules and fees.</strong> Boats, fences, rentals,
+            parking. Read them before you fall in love.
+          </li>
+          <li>
+            <strong>Commute.</strong> Drive it at rush hour. Seriously. The
+            trip to Eglin or Hurlburt at 7:30am is not the same trip at noon.
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          Thinking about a brand new build? There&apos;s a whole other set of
+          stuff to know about builder incentives, so read my{" "}
+          <a
+            href="/blog/new-construction-vs-resale-okaloosa-county"
+            className="text-reef underline underline-offset-4 hover:text-reef/80"
+          >
+            new construction vs. resale breakdown
+          </a>{" "}
+          first.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 8: Making an Offer
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Your agent pulls recent sales of similar homes nearby so you know
+          what the house is actually worth, not just what it&apos;s listed for.
+          Then you decide on your offer. It&apos;s more than just a price:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li><strong>Price</strong></li>
+          <li><strong>Escrow deposit</strong> (your good-faith money)</li>
+          <li><strong>Closing date</strong></li>
+          <li><strong>Inspection period</strong> (how many days you get to inspect)</li>
+          <li><strong>Financing and appraisal terms</strong></li>
+          <li><strong>Seller concessions</strong>, like asking the seller to pay toward your closing costs</li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          Right now there&apos;s a lot of room to negotiate in Okaloosa County.
+          Asking a seller to help with closing costs is totally normal, and
+          each loan type has its own cap on how much they can chip in. Your
+          lender can tell you yours.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Most Florida deals use the FAR/BAR contract, and a lot of them use
+          the &quot;AS IS&quot; version. Don&apos;t let that name freak you
+          out. It still gives you an inspection period where you can walk
+          away if you don&apos;t like what you find. It just means the seller
+          isn&apos;t automatically on the hook for repairs, so anything you
+          want fixed gets negotiated.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 9: Under Contract! Now the Clock Starts
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Once both sides sign, things move fast and there are deadlines
+          everywhere. Here&apos;s what happens:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Escrow deposit.</strong> Usually due within a few days to
+            the title company or escrow agent. Only ever wire money after you
+            call the title company at a number you looked up yourself. More
+            on that in a sec.
+          </li>
+          <li>
+            <strong>Inspections.</strong> Schedule them right away so you have
+            time to react before the inspection period ends.
+          </li>
+          <li>
+            <strong>Insurance quotes.</strong> Get real quotes now, during the
+            inspection period. Not the week before closing.
+          </li>
+          <li>
+            <strong>Appraisal.</strong> Your lender orders it to make sure the
+            house is worth what you&apos;re paying.
+          </li>
+          <li>
+            <strong>Title work.</strong> The title company checks for liens,
+            open permits and any other problems with ownership.
+          </li>
+        </ul>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            Wire fraud is real and it targets homebuyers. Before you send a
+            single dollar, call the title company at a number you found
+            yourself and confirm the instructions out loud.
+          </p>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 10: Inspections (Don&apos;t Skip These)
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The inspection is your chance to find out what you&apos;re really
+          buying. In Florida, you might end up with a few different ones:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li><strong>General home inspection.</strong> The big one. Roof to foundation.</li>
+          <li><strong>Wood-destroying organism (termite) inspection.</strong> Very Florida. Very worth it.</li>
+          <li><strong>4-point inspection.</strong> Roof, electrical, plumbing and HVAC. Insurance companies often require it on older homes.</li>
+          <li><strong>Wind mitigation inspection.</strong> Can lower your insurance premium.</li>
+          <li><strong>Others as needed:</strong> pool, septic, sewer scope, mold, or a seawall check on waterfront property.</li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          Every house has issues. Even new ones. What you&apos;re looking for
+          are the expensive surprises: roof, foundation, water damage,
+          electrical, HVAC. Then you decide whether to ask for repairs, ask
+          for a credit, renegotiate the price, or walk away. And you&apos;ve
+          gotta decide before your inspection period runs out.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 11: Homeowners and Flood Insurance
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Your lender requires homeowners insurance, and in a high-risk flood
+          zone they&apos;ll require flood insurance too. Here&apos;s my honest
+          advice: get quotes early and get more than one. Insurance in Florida
+          varies a LOT from house to house, and it can genuinely make one home
+          affordable and another one not.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          A few things that move your premium: roof age and type, the wind
+          mitigation features, distance from the water, the flood zone, and
+          your deductible. An independent insurance agent who can shop
+          multiple companies is your friend here.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 12: Florida Closing Costs, Decoded
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Here&apos;s what usually shows up on the buyer&apos;s side when you
+          finance a home in Florida:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Lender fees.</strong> Origination, underwriting, and any
+            points you pay to lower your rate.
+          </li>
+          <li>
+            <strong>Appraisal and credit report.</strong>
+          </li>
+          <li>
+            <strong>Documentary stamp tax on your mortgage note:</strong> $0.35
+            per $100 you borrow.
+          </li>
+          <li>
+            <strong>Intangible tax on your mortgage:</strong> $0.002 per dollar
+            you borrow. (Yep, that&apos;s the made-up-sounding one from the
+            beginning. It&apos;s a real Florida tax.)
+          </li>
+          <li>
+            <strong>Lender&apos;s title insurance</strong>, plus title search
+            and settlement fees.
+          </li>
+          <li>
+            <strong>Owner&apos;s title insurance</strong>, which protects you.
+            Who pays for it depends on local custom and what&apos;s written in
+            your contract, so ask.
+          </li>
+          <li><strong>Survey</strong> and <strong>recording fees.</strong></li>
+          <li>
+            <strong>Prepaids and escrows.</strong> Your first year of
+            homeowners insurance, plus a few months of taxes and insurance to
+            start your escrow account.
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          On that $300,000 FHA example with a $289,500 loan, the mortgage doc
+          stamps alone come to about $1,013 and the intangible tax is about
+          $579. Little line items add up fast.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Your lender gives you a <strong>Loan Estimate</strong> within three
+          business days of applying, and you get your final{" "}
+          <strong>Closing Disclosure</strong> at least three business days
+          before closing. Compare them. If something jumped, ask why.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 13: Final Walkthrough and Closing Day
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Right before closing, you walk through the house one more time. Make
+          sure any agreed repairs were done, nothing new got broken during the
+          move-out, and the appliances that are supposed to stay actually
+          stayed. Run the water, flip the switches, turn on the AC.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          On closing day, bring your photo ID and send your remaining funds the
+          way the title company tells you to (and yes, verify those wire
+          instructions by phone again). You&apos;ll sign a stack of papers,
+          they&apos;ll record the deed, and then... you get the keys. That
+          moment never gets old.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Step 14: After You Move In
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>File for homestead.</strong> If it&apos;s your primary
+            home, file with the Okaloosa County Property Appraiser by March 1.
+            This one saves you real money every year. Here&apos;s my{" "}
+            <a
+              href="/blog/florida-homestead-exemption-amendment-3-2026"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              full homestead guide
+            </a>
+            .
+          </li>
+          <li><strong>Change the locks.</strong> You have no idea who has old keys.</li>
+          <li>
+            <strong>Set up utilities</strong> in your name, ideally before
+            closing so there&apos;s no gap.
+          </li>
+          <li>
+            <strong>Make a hurricane plan.</strong> Know where your shutters
+            are, what your deductible is, and keep photos of your stuff for
+            insurance.
+          </li>
+          <li>
+            <strong>Keep a home fund.</strong> Little things will pop up. They
+            always do.
+          </li>
+        </ul>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Mistakes I See Most
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>Shopping for houses before getting pre-approved.</li>
+          <li>Budgeting off the mortgage alone and forgetting insurance, taxes and HOA.</li>
+          <li>Opening new credit or changing jobs in the middle of the process.</li>
+          <li>Skipping inspections to look &quot;more competitive.&quot;</li>
+          <li>Waiting until the last week to get insurance quotes.</li>
+          <li>Draining every dollar for the down payment and leaving no cushion.</li>
+          <li>Wiring money based on an email without calling to confirm.</li>
+        </ul>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Bottom Line
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Buying your first home is a lot. But it&apos;s not magic, it&apos;s
+          just a bunch of steps in order. Know your real monthly number, get
+          pre-approved, look into down payment help, inspect everything, and
+          get insurance quotes early. Do those and you&apos;re already ahead
+          of most people.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          And you don&apos;t have to figure it out alone. If you&apos;re
+          thinking about buying your first home in Fort Walton Beach, Niceville,
+          Crestview, Destin or anywhere around here, reach out. I&apos;ll walk
+          you through it, no pressure, and I promise there&apos;s no such thing
+          as a dumb question. I asked all of them too.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Sources
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-base">
+          <li>
+            <a
+              href="https://homebuyer.com/mortgage-loan-limits/okaloosa-county-florida"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              2026 loan limits for Okaloosa County
+            </a>{" "}
+            (Homebuyer.com)
+          </li>
+          <li>
+            <a
+              href="https://hoodline.com/2026/07/miami-s-hometown-heroes-score-50-million-down-payment-boost/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Hometown Heroes $50 million down payment boost
+            </a>{" "}
+            (Hoodline, July 2026)
+          </li>
+          <li>
+            <a
+              href="https://www.maxliferealty.com/blog/florida-down-payment-assistance-programs-2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Florida down payment assistance programs 2026
+            </a>{" "}
+            (Max Life Realty)
+          </li>
+          <li>
+            <a
+              href="https://myokaloosa.gov/gm/ship"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Okaloosa County SHIP program
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://barneswalker.com/who-pays-what-in-a-florida-closing/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Who pays what in a Florida closing
+            </a>{" "}
+            (Barnes Walker)
+          </li>
+          <li>
+            <a
+              href="https://www.floridahousing.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Florida Housing Finance Corporation
+            </a>
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-sm italic">
+          This post is general information, not financial, legal or tax
+          advice. Loan programs, assistance funding and limits change often, so
+          confirm current terms with a lender before you count on them.
+        </p>
+      </>
+    ),
+  },
 };
 
 export default blogPosts;
