@@ -1,119 +1,96 @@
 "use client";
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Link from "next/link";
 import { event as gaEvent } from "@/lib/gtag";
-import {
-  FaArrowLeft,
-  FaMapLocationDot,
-  FaUmbrellaBeach,
-  FaGithub,
-  FaArrowUpRightFromSquare,
-} from "react-icons/fa6";
 
 export default function ProjectPostClient({ project }) {
+  const tags = Array.isArray(project.tags) ? project.tags.join(", ") : project.tags;
+
   return (
-    <main className="bg-background min-h-screen selection:bg-steel/30">
+    <main className="min-h-screen">
       <Navbar />
 
-      <section className="p-8 pt-32 lg:pt-40">
-        <div className="mx-auto max-w-screen-md">
-          {/* Breadcrumb */}
-          <Link
-            href="/#projects"
-            className="flex items-center gap-2 text-reef mb-8 font-mono text-[10px] font-bold uppercase tracking-widest hover:text-foreground transition-colors"
-          >
-            <FaArrowLeft /> Back to Collections
-          </Link>
+      <article>
+        <header className="mx-auto max-w-3xl px-4 pt-32 sm:px-6 lg:pt-40">
+          <p className="text-sm text-muted">
+            <Link
+              href="/#projects"
+              className="font-semibold text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
+            >
+              Projects
+            </Link>
+            {tags && <span className="ml-3">{tags}</span>}
+          </p>
+          <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl lg:text-[3.5rem]">
+            {project.title}
+          </h1>
+          {(project.liveUrl || project.githubUrl) && (
+            <div className="mt-8 flex flex-wrap gap-3">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-reef px-5 py-2.5 text-sm font-semibold text-background hover:opacity-90"
+                >
+                  Open the live site
+                </a>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground hover:border-foreground/50"
+                >
+                  View the code
+                </a>
+              )}
+            </div>
+          )}
+        </header>
 
-          {/* Featured Image */}
-          <div className="relative h-[25rem] w-full mb-10 overflow-hidden border border-muted/20">
+        <div className="mx-auto mt-10 max-w-5xl px-4 sm:px-6">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-[14px] border border-foreground/10">
             <Image
               src={project.image}
               alt={project.title}
               fill
-              sizes="(max-width: 768px) 100vw, 768px"
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
             />
           </div>
-
-          {/* Tags */}
-          <div className="mb-6 font-mono text-[10px] font-bold uppercase tracking-widest text-reef">
-            {Array.isArray(project.tags)
-              ? project.tags.join(" / ")
-              : project.tags}
-          </div>
-
-          {/* Title */}
-          <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
-            {project.title}
-          </h1>
-
-          {/* Metadata Badges */}
-          <div className="flex gap-4 mb-12 flex-wrap">
-            <span className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface">
-              <FaMapLocationDot className="text-reef" /> Okaloosa County, FL
-            </span>
-            <span className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface">
-              <FaUmbrellaBeach className="text-reef" /> Emerald Coast
-            </span>
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface hover:text-foreground hover:border-reef/50 transition-colors"
-              >
-                <FaGithub className="text-reef" /> View Code
-              </a>
-            )}
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted border border-muted/20 px-3 py-1 bg-surface hover:text-foreground hover:border-reef/50 transition-colors"
-              >
-                <FaArrowUpRightFromSquare className="text-reef" /> Live Site
-              </a>
-            )}
-          </div>
-
-          {/* Content Body */}
-          <div className="text-foreground/80 text-lg leading-relaxed space-y-8">
-            {project.content}
-          </div>
-
-          {/* Travel Guide Call to Action */}
-          <div className="mt-20 p-8 border border-reef/20 bg-surface/50 flex flex-col items-center text-center">
-            <h4 className="text-xl font-bold text-foreground mb-3">
-              Planning a move to the Panhandle?
-            </h4>
-            <p className="text-muted text-sm mb-8 max-w-sm">
-              Get the technical breakdown on the best neighborhoods, school
-              districts, and investment zones in Okaloosa County.
-            </p>
-            <a
-              href="/files/local-insider-guide.pdf"
-              download="Fort-Walton-Beach-Local-Insider-Guide.pdf"
-              onClick={() =>
-                gaEvent({
-                  action: "download",
-                  category: "engagement",
-                  label: "insider_guide_download",
-                })
-              }
-            >
-              <button className="px-8 py-3 bg-reef text-background font-mono text-xs font-bold uppercase tracking-widest hover:bg-steel transition-colors flex items-center gap-2">
-                Get My Local Insider Guide <FaMapLocationDot />
-              </button>
-            </a>
-          </div>
         </div>
-      </section>
+
+        <div className="prose-coast mx-auto max-w-[42rem] space-y-6 px-4 py-14 sm:px-6">
+          {project.content}
+        </div>
+      </article>
+
+      <aside className="mx-auto max-w-[42rem] px-4 pb-24 sm:px-6">
+        <div className="rounded-[14px] bg-paper p-6 sm:p-8">
+          <p className="font-display text-2xl font-semibold text-ink">
+            Moving to the Emerald Coast?
+          </p>
+          <p className="mt-2 leading-relaxed text-ink/75">
+            My free local guide covers neighborhoods, schools and where people
+            actually like living in Okaloosa County.
+          </p>
+          <a
+            href="/files/local-insider-guide.pdf"
+            download="Fort-Walton-Beach-Local-Insider-Guide.pdf"
+            onClick={() =>
+              gaEvent({ action: "download", category: "engagement", label: "insider_guide_download" })
+            }
+            className="mt-5 inline-block rounded-full bg-reef px-6 py-3 font-semibold text-background hover:opacity-90"
+          >
+            Download the local guide (PDF)
+          </a>
+        </div>
+      </aside>
 
       <Footer />
     </main>

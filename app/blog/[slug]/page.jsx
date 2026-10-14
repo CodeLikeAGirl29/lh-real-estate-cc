@@ -103,7 +103,14 @@ export default async function BlogPostPage({ params }) {
           ])
         )}
       />
-      <BlogPostClient post={post} />
+      <BlogPostClient
+        post={post}
+        morePosts={Object.entries(blogPosts)
+          .filter(([id]) => id !== slug)
+          .map(([id, p]) => ({ id, title: p.title, date: p.date, image: p.image }))
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+          .slice(0, 3)}
+      />
     </>
   );
 }

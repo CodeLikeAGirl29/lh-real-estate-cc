@@ -3,7 +3,6 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutStats from "../components/AboutStats";
-import AboutBlueprint from "../components/AboutBlueprint";
 import SponsorPitch from "../components/SponsorPitch";
 
 export const metadata = {
@@ -22,86 +21,66 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="charcoal-section min-h-screen">
+    <main className="min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
-      <div className="relative pt-40 pb-24 px-6 border-b border-surface">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
-            The Agent <span className="text-reef">+</span> The Architect
+      <section className="mx-auto grid max-w-7xl gap-12 px-4 pb-20 pt-32 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pt-40">
+        <div className="lg:col-span-7 lg:pt-4">
+          <h1 className="font-display text-5xl font-semibold leading-[1.05] text-foreground sm:text-6xl">
+            Hi, I&apos;m Lindsey.
           </h1>
-          <p className="text-muted text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-            I don’t just show properties; I analyze the data, understand the
-            structure, and engineer a seamless transition for every client.
-          </p>
-        </div>
-      </div>
-
-      <AboutStats />
-
-      {/* Main Content Section */}
-      <section className="charcoal-section py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-foreground mb-8 border-l-[3px] border-reef pl-6">
-              My Mission: <br />
-              <span className="text-muted font-normal">
-                Strategy Meets Home.
-              </span>
-            </h2>
-
-            <p className="text-foreground/80 text-[15px] mb-6 leading-relaxed">
-              With a background in{" "}
-              <span className="font-bold text-reef">high-volume sales</span> and{" "}
-              <span className="font-bold text-reef">web development</span>, I
-              bring a unique perspective to the Florida Panhandle market. I
-              believe real estate should be high-tech but high-touch—where every
-              detail is managed with the precision of a codebase.
+          <div className="mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-foreground/80">
+            <p>
+              I&apos;m a REALTOR® with eXp Realty, based in Fort Walton Beach,
+              and I work with buyers and sellers across Okaloosa County.
             </p>
-
-            <p className="text-foreground/80 text-[15px] mb-10 leading-relaxed">
-              Based in{" "}
-              <span className="font-bold text-steel">Fort Walton Beach</span>{" "}
-              and licensed with{" "}
-              <span className="font-bold text-steel">eXp Realty</span>, I bridge
-              the gap between traditional service and modern digital
-              intelligence.
+            <p>
+              I took a slightly roundabout way here. I spent years in sales
+              and client work, then a few more building websites and apps.
+              Along the way I did residential painting, which taught me to
+              look at a house&apos;s surfaces, finishes and upkeep instead of
+              just the staging.
             </p>
-
-            <div className="flex flex-wrap gap-3">
-              <span className="px-4 py-2 bg-surface border border-muted/20 font-mono text-[10px] text-steel font-bold uppercase tracking-widest">
-                Client-First Logic
-              </span>
-              <span className="px-4 py-2 bg-surface border border-muted/20 font-mono text-[10px] text-steel font-bold uppercase tracking-widest">
-                Data-Driven Marketing
-              </span>
-              <span className="px-4 py-2 bg-surface border border-muted/20 font-mono text-[10px] text-steel font-bold uppercase tracking-widest">
-                Structural Integrity
-              </span>
-            </div>
+            <p>
+              All of that shows up in how I work now. I&apos;m going to run
+              the real numbers with you, flood zone and insurance included,
+              and when the usual tools can&apos;t answer a question, I
+              build one that can. That&apos;s where the calculators on this
+              site and Dock &amp; Dune came from.
+            </p>
           </div>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <a
+              href="tel:+18505335877"
+              className="rounded-full bg-reef px-6 py-3 font-semibold text-background hover:opacity-90"
+            >
+              Call or text (850) 533-5877
+            </a>
+            <a
+              href="mailto:lindsey.howard.re@outlook.com"
+              className="rounded-full border border-foreground/20 px-6 py-3 font-semibold text-foreground hover:border-foreground/50"
+            >
+              Email me
+            </a>
+          </div>
+        </div>
 
-          <div className="relative">
-            <div className="frame relative aspect-square p-2 border border-muted/20 bg-surface">
-              <div className="relative w-full h-full overflow-hidden bg-background">
-                {/* Replace with your professional headshot */}
-                <Image
-                  src="/images/lindsey-profile.jpg"
-                  alt="Lindsey Howard, REALTOR® with eXp Realty in Fort Walton Beach, FL"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                />
-              </div>
-            </div>
-            {/* Architectural accent block behind image */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-reef/5 border border-reef/10 -z-10 hidden md:block"></div>
+        <div className="lg:col-span-5">
+          <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[14px]">
+            {/* Swap in a professional headshot when you have one */}
+            <Image
+              src="/images/lindsey-profile.jpg"
+              alt="Lindsey Howard, REALTOR® with eXp Realty in Fort Walton Beach, FL"
+              fill
+              priority
+              sizes="(max-width: 1024px) 90vw, 420px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
 
-      <AboutBlueprint />
+      <AboutStats />
       <SponsorPitch />
       <Footer />
     </main>

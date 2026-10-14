@@ -151,3 +151,108 @@ p {
   max-width: none !important;
   max-height: none !important;
 }
+/* Long-form reading (blog posts and project write-ups).
+   Post content in lib/blogPosts.jsx and lib/projectContent.jsx carries
+   its own utility classes; these unlayered rules sit on top of them so
+   every post reads the same without editing each one. */
+.prose-coast {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: color-mix(in srgb, var(--foreground) 86%, transparent);
+}
+
+.prose-coast p,
+.prose-coast li {
+  color: inherit;
+  font-size: inherit;
+}
+
+.prose-coast > p:first-child::first-letter,
+.prose-coast > p::first-letter {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  float: none;
+  margin: 0;
+}
+
+.prose-coast > p:first-child {
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  color: var(--foreground);
+}
+
+.prose-coast h2,
+.prose-coast h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  color: var(--foreground);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.prose-coast h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  color: var(--foreground);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-coast strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.prose-coast ul,
+.prose-coast ol {
+  list-style-position: outside;
+  padding-left: 1.25rem;
+}
+
+.prose-coast li::marker {
+  color: var(--reef);
+}
+
+.prose-coast a {
+  color: var(--reef);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--reef) 40%, transparent);
+  text-underline-offset: 4px;
+}
+
+.prose-coast a:hover {
+  text-decoration-color: var(--reef);
+}
+
+/* Pull quotes: posts mark these with bg-surface + border-l-4 */
+.prose-coast > div.border-l-4 {
+  background: transparent;
+  border-left: 3px solid var(--reef);
+  border-radius: 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.prose-coast > div.border-l-4 p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--foreground);
+}
+
+.prose-coast table {
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose-coast th {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}

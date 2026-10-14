@@ -1,30 +1,8 @@
-// blog/page.jsx
-"use client";
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Link from "next/link";
-import { FaArrowRight, FaCalendarDays } from "react-icons/fa6";
-import { m } from "framer-motion";
-import CornerArrow from "../components/CornerArrow";
 import blogPosts from "@/lib/blogPosts";
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-  },
-};
 
 const posts = Object.entries(blogPosts)
   .map(([id, post]) => ({
@@ -33,101 +11,109 @@ const posts = Object.entries(blogPosts)
     excerpt: post.excerpt,
     date: post.date,
     category: post.category,
+    readTime: post.readTime,
     image: post.image,
   }))
   .sort((a, b) => new Date(b.date) - new Date(a.date));
 
 export default function BlogPageClient() {
+  const [latest, ...rest] = posts;
+
   return (
-    <main className="charcoal-section min-h-screen selection:bg-steel/30">
+    <main className="min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
-      <div className="relative pt-32 pb-16 px-6 lg:px-8 border-b border-surface">
-        <m.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-6xl mx-auto text-center mt-12 mb-8"
-        >
-          <span className="inline-block px-4 py-1.5 bg-steel/10 text-steel font-mono text-[10px] font-bold uppercase tracking-widest mb-6">
-            Insights & Intelligence
-          </span>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
-            The Coast Is <span className="text-reef italic">Clear</span>
-          </h1>
-          <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
-            Okaloosa County real estate, explained with real numbers — PCS and
-            BAH, flood zones, insurance, and market moves across Fort Walton
-            Beach, Destin, Niceville, and Crestview.
-          </p>
-        </m.div>
-      </div>
+      <header className="mx-auto max-w-7xl px-4 pb-12 pt-32 sm:px-6 lg:px-8 lg:pt-40">
+        <h1 className="font-display text-5xl font-semibold text-foreground sm:text-6xl">
+          The Coast Is Clear
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-foreground/80">
+          Okaloosa County real estate with the actual numbers in it. PCS moves,
+          flood zones, insurance, taxes, and what the market is doing in Fort
+          Walton Beach, Niceville, Crestview and Destin.
+        </p>
+      </header>
 
-      {/* Blog Grid */}
-      <div className="charcoal-section py-24">
-        <m.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {posts.map((post) => (
-            <m.article
-              key={post.id}
-              variants={item}
-              whileHover={{
-                y: -8,
-                boxShadow: "0 12px 28px -10px rgba(20,143,126,0.35)",
-              }}
-              transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="group frame surface-section relative flex flex-col border border-muted/10 transition-[colors,filter] duration-500 hover:border-reef/50 hover:brightness-110"
+      {latest && (
+        <section aria-label="Latest post" className="border-y border-foreground/10">
+          <article className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
+            <Link
+              href={`/blog/${latest.id}`}
+              className="relative block aspect-[16/10] overflow-hidden rounded-[14px] lg:col-span-7"
             >
-              <CornerArrow />
-              {/* Image Container */}
-              <div className="aspect-[16/10] overflow-hidden relative border-b border-muted/10">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
-              </div>
+              <Image
+                src={latest.image}
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 58vw"
+                className="object-cover"
+              />
+            </Link>
+            <div className="lg:col-span-5">
+              <p className="text-sm text-muted">
+                Latest post, {latest.date}
+              </p>
+              <h2 className="mt-2 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
+                <Link href={`/blog/${latest.id}`} className="hover:text-reef">
+                  {latest.title}
+                </Link>
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-foreground/75">
+                {latest.excerpt}
+              </p>
+              <p className="mt-6">
+                <Link
+                  href={`/blog/${latest.id}`}
+                  className="font-semibold text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
+                >
+                  Read it
+                </Link>
+                <span className="ml-3 text-sm text-muted">{latest.readTime}</span>
+              </p>
+            </div>
+          </article>
+        </section>
+      )}
 
-              {/* Content Container */}
-              <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center justify-between gap-4 mb-5 pb-5 border-b border-muted/10">
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-reef">
-                    {post.category}
-                  </span>
-                  <span className="flex items-center gap-2 text-muted text-[11px] font-mono uppercase tracking-widest">
-                    <FaCalendarDays className="text-muted/50" /> {post.date}
-                  </span>
-                </div>
-
-                <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-reef transition-colors leading-snug">
-                  {post.title}
-                </h3>
-
-                <p className="text-muted text-sm leading-relaxed mb-8 flex-1 line-clamp-3">
-                  {post.excerpt}
+      <section aria-label="All posts" className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+        <ul>
+          {rest.map((post) => (
+            <li key={post.id} className="border-b border-foreground/10">
+              <article className="grid gap-5 py-10 sm:grid-cols-[1fr_12rem] sm:gap-10 lg:grid-cols-[10rem_1fr_14rem]">
+                <p className="text-sm text-muted lg:pt-2">
+                  <span className="block">{post.date}</span>
+                  <span className="block text-steel">{post.category}</span>
                 </p>
-
+                <div>
+                  <h2 className="font-display text-2xl font-semibold leading-snug text-foreground sm:text-[1.75rem]">
+                    <Link href={`/blog/${post.id}`} className="hover:text-reef">
+                      {post.title}
+                    </Link>
+                  </h2>
+                  <p className="mt-3 max-w-2xl leading-relaxed text-foreground/75 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                </div>
                 <Link
                   href={`/blog/${post.id}`}
-                  className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-foreground group-hover:text-steel transition-colors"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                  className="relative hidden aspect-[4/3] overflow-hidden rounded-[10px] sm:block"
                 >
-                  Read Article{" "}
-                  <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Image
+                    src={post.image}
+                    alt=""
+                    fill
+                    sizes="224px"
+                    className="object-cover"
+                  />
                 </Link>
-              </div>
-            </m.article>
+              </article>
+            </li>
           ))}
-        </m.div>
-      </div>
+        </ul>
+      </section>
 
       <Footer />
     </main>
