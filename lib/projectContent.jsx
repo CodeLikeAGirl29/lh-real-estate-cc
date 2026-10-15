@@ -15,7 +15,7 @@ const projectContent = {
     liveUrl: "https://fl-re-drill.netlify.app",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-foreground/80 text-lg leading-relaxed text-xl text-foreground/85">
           Success in the Florida real estate market begins with a license, but
           true market mastery requires an underlying technical infrastructure.
           The <strong>Florida Real Estate Master Drill</strong> full-stack study
@@ -25,10 +25,10 @@ const projectContent = {
           examinations.
         </p>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Architecting 19 Units of Compliance
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           The 63-hour Florida pre-licensing curriculum is massive, spanning
           rigorous regulatory compliance frameworks, complex mathematical
           calculations, and deep-dives into Florida statutes. Instead of relying
@@ -39,7 +39,7 @@ const projectContent = {
           rotation to optimize study workflows.
         </p>
 
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           By integrating a full MERN stack architecture, user progress
           isn&apos;t just stored—it&apos;s analyzed. The database actively
           queries past performance to surface concepts right before the
@@ -48,11 +48,11 @@ const projectContent = {
           second nature.
         </p>
 
-        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
-          <p className="text-foreground text-2xl font-bold mb-2">
+        <div className="my-12 rounded-[14px] bg-paper p-8">
+          <p className="font-display text-ink text-2xl font-semibold mb-2">
             Nearly half of candidates fail on their first attempt.
           </p>
-          <p className="text-muted text-base leading-relaxed">
+          <p className="text-ink/75 text-base leading-relaxed">
             Florida&apos;s real estate license exam has one of the toughest
             first-attempt pass rates in the country—roughly 50% of test-takers
             don&apos;t pass the first time, largely because 55% of the exam is
@@ -61,18 +61,18 @@ const projectContent = {
           </p>
         </div>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
-          <p className="text-foreground italic font-serif text-xl">
+        <div className="my-12 border-l-2 border-reef pl-6">
+          <p className="font-display text-foreground italic text-2xl leading-snug">
             &quot;High-stakes retention demands precision engineering. Standard
             applications track completion; this architecture enforces zero-fail
             accuracy.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           UI/UX Designed for Deep Work
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           Studying complex legal frameworks requires immense cognitive focus.
           The interface was explicitly designed with a high-contrast dark mode
           aesthetic to reduce eye strain during late-night study sessions. By
@@ -136,7 +136,7 @@ Combining coastal structural showcases with practical financial and regulatory t
     ],
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-foreground/80 text-lg leading-relaxed text-xl text-foreground/85">
           Dock &amp; Dune is a high-performance web platform and coastal
           intelligence suite engineered for waterfront homeowners, marine
           construction contractors, and coastal property buyers across Northwest
@@ -147,11 +147,11 @@ Combining coastal structural showcases with practical financial and regulatory t
           seawalls, and dune walkovers.
         </p>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           What It Does
         </h3>
         <ul className="space-y-4 mb-6">
-          <li className="text-muted text-lg">
+          <li className="text-foreground/80 text-lg">
             <strong className="text-foreground">
               FEMA Flood Insurance &amp; Dock Cost Estimator
             </strong>{" "}
@@ -159,7 +159,7 @@ Combining coastal structural showcases with practical financial and regulatory t
             premium swings across FEMA Flood Zones (X, AE, VE) and factors in
             Wind Mitigation discounts and dock riders.
           </li>
-          <li className="text-muted text-lg">
+          <li className="text-foreground/80 text-lg">
             <strong className="text-foreground">
               Historical Hurricane &amp; NFIP Loss Dataset
             </strong>{" "}
@@ -167,7 +167,7 @@ Combining coastal structural showcases with practical financial and regulatory t
             cross-referenced with major Gulf storms (Hurricanes Sally, Michael,
             Idalia, Ivan) by coastal county.
           </li>
-          <li className="text-muted text-lg">
+          <li className="text-foreground/80 text-lg">
             <strong className="text-foreground">
               DEP &amp; Environmental Permitting Compliance
             </strong>{" "}
@@ -177,10 +177,10 @@ Combining coastal structural showcases with practical financial and regulatory t
           </li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Architecture
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           Built on the Next.js App Router with serverless API routes integrating
           OpenFEMA&apos;s OData queries, backed by a Turso (libSQL) distributed
           database for resilient offline and cached logging. Client-side formula
@@ -198,7 +198,7 @@ Combining coastal structural showcases with practical financial and regulatory t
     image: "/images/shadow-slate-ui.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-foreground/80 text-lg leading-relaxed text-xl text-foreground/85">
           Every listing photo tells a buyer what a room looks like. It rarely
           tells them what it could look like. <strong>Shadow + Slate</strong>{" "}
           was built to close that gap — an interactive mood board canvas where
@@ -207,10 +207,10 @@ Combining coastal structural showcases with practical financial and regulatory t
           instead of imagining them from a static listing photo.
         </p>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Canvas Logic, Not Just a Slideshow
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           The core engine runs on <strong>React Konva</strong>, giving the board
           true canvas-level interactivity: layered elements, free transforms,
           and drag-and-drop that responds instantly rather than re-rendering the
@@ -220,25 +220,25 @@ Combining coastal structural showcases with practical financial and regulatory t
           layered pieces.
         </p>
 
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           Each board persists as structured state rather than a flattened image,
           which means a saved mood board isn&apos;t just a picture — it&apos;s
           an editable spatial document. A client can hand it back with notes,
           swap a finish, and reopen the exact same layout with nothing lost.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
-          <p className="text-foreground italic font-serif text-xl">
+        <div className="my-12 border-l-2 border-reef pl-6">
+          <p className="font-display text-foreground italic text-2xl leading-snug">
             &quot;A listing photo is a fact. A mood board is a conversation —
             the interface just needed to keep up with how fast that conversation
             moves.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Built for the Handoff Between Agent and Client
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           The interface intentionally stays minimal — dark canvas, light tools —
           so the focus never leaves the space being designed. It&apos;s the kind
           of tool that shows a client you&apos;re not just selling a house;
@@ -255,7 +255,7 @@ Combining coastal structural showcases with practical financial and regulatory t
     image: "/images/local-coastline.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-foreground/80 text-lg leading-relaxed text-xl text-foreground/85">
           Most local guides for buyers are lists of restaurants and beach access
           points. The <strong>Okaloosa Guide</strong> project takes a different
           angle: it&apos;s a working reference for the structural and
@@ -264,10 +264,10 @@ Combining coastal structural showcases with practical financial and regulatory t
           agent should already know cold.
         </p>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Mapping Compliance to Neighborhoods
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           The guide breaks Okaloosa County down by construction era and
           compliance tier — flagging which pockets fall under stricter coastal
           building standards, where flood zone designations shift, and which
@@ -276,25 +276,25 @@ Combining coastal structural showcases with practical financial and regulatory t
           requirements.
         </p>
 
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           It&apos;s organized less like a brochure and more like a working
           reference doc — the same one I use when walking a buyer through why
           two houses three blocks apart can carry very different insurance and
           resale profiles.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
-          <p className="text-foreground italic font-serif text-xl">
+        <div className="my-12 border-l-2 border-reef pl-6">
+          <p className="font-display text-foreground italic text-2xl leading-snug">
             &quot;Two houses with the same view can carry very different risk
             profiles. The difference is almost always in the infrastructure, not
             the paint color.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           A Living Document
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           Infrastructure projects, zoning updates, and flood maps change — so
           this guide is treated as a living reference rather than a one-time
           write-up, updated as Okaloosa County&apos;s growth zones shift.
@@ -310,7 +310,7 @@ Combining coastal structural showcases with practical financial and regulatory t
     image: "/images/img-1.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-foreground/80 text-lg leading-relaxed text-xl text-foreground/85">
           <strong>Beyond the Beach</strong> started as a question I kept getting
           from out-of-state investors: where in Okaloosa County is growth
           actually happening, versus where it just looks like it is from the
@@ -318,10 +318,10 @@ Combining coastal structural showcases with practical financial and regulatory t
           reading growth zones by infrastructure signal instead of curb appeal.
         </p>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Reading the Signals Before the Listings Do
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           The methodology behind this project tracks three leading indicators
           ahead of price: permitting activity, utility and fiber buildout, and
           zoning amendments. Each tends to move months before a neighborhood
@@ -329,29 +329,29 @@ Combining coastal structural showcases with practical financial and regulatory t
           investor wants visibility into.
         </p>
 
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           Applied to the Prop-Tech pivot happening across the county, the
           pattern is consistent: markets with better digital property management
           infrastructure post lower vacancy and tighter management overhead — a
           real, measurable edge for investors willing to look past the view.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
-          <p className="text-foreground italic font-serif text-xl">
+        <div className="my-12 border-l-2 border-reef pl-6">
+          <p className="font-display text-foreground italic text-2xl leading-snug">
             &quot;By the time a growth zone shows up in the comps, the best
             entry point has usually already passed.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           From Analysis to Advisory
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           The full write-up and market commentary built on this framework lives
           on{" "}
           <Link
             href="/blog/beyond-the-beach"
-            className="text-reef hover:underline"
+            className="text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
           >
             The Coast Is Clear
           </Link>
@@ -369,7 +369,7 @@ Combining coastal structural showcases with practical financial and regulatory t
     image: "/images/img-2.jpg",
     content: (
       <>
-        <p className="mb-6 text-muted text-lg leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+        <p className="mb-6 text-foreground/80 text-lg leading-relaxed text-xl text-foreground/85">
           Not every part of representing a place is technical. The{" "}
           <strong>Emerald Coast Insider</strong> project is the lifestyle layer
           — a curated set of local knowledge (paddleboard launches, coffee
@@ -378,10 +378,10 @@ Combining coastal structural showcases with practical financial and regulatory t
           square footage.
         </p>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4 mt-10">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Why This Sits Next to the Technical Work
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           Clients moving from out of state are rarely just buying a structure —
           they&apos;re buying a rhythm of life they&apos;ve usually only
           experienced on vacation. This project exists to translate that
@@ -389,22 +389,22 @@ Combining coastal structural showcases with practical financial and regulatory t
           is actually like, good and mundane parts included.
         </p>
 
-        <div className="my-10 p-6 bg-surface border-l-4 border-reef rounded-r-xl">
-          <p className="text-foreground italic font-serif text-xl">
+        <div className="my-12 border-l-2 border-reef pl-6">
+          <p className="font-display text-foreground italic text-2xl leading-snug">
             &quot;Some places you visit. Others, you live. Helping a client tell
             the difference is part of the job.&quot;
           </p>
         </div>
 
-        <h3 className="text-2xl font-bold text-foreground mb-4">
+        <h3 className="font-display text-3xl font-semibold text-foreground mb-4 mt-12">
           Read the Full Guide
         </h3>
-        <p className="mb-6 text-muted text-lg">
+        <p className="mb-6 text-foreground/80 text-lg">
           The full lifestyle write-up, including the current insider picks list,
           lives on{" "}
           <Link
             href="/blog/emerald-coast-insider"
-            className="text-reef hover:underline"
+            className="text-reef underline decoration-reef/40 underline-offset-4 hover:decoration-reef"
           >
             The Coast Is Clear
           </Link>
