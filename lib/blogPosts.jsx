@@ -3059,6 +3059,1069 @@ const blogPosts = {
       </>
     ),
   },
+  "pcs-eglin-hurlburt-bah-va-loan-guide": {
+    seoTitle: "PCS to Eglin AFB or Hurlburt Field: BAH, VA Loans & Buying a Home (2026)",
+    seoDescription:
+      "Moving to Eglin or Hurlburt? How 2026 BAH turns into a realistic purchase price, how the VA loan and funding fee actually work, and which Okaloosa County areas make sense for military families.",
+    title: "PCSing to Eglin or Hurlburt? Here's How Your BAH Turns Into a House",
+    excerpt:
+      "Orders in hand, house-hunting from 800 miles away, and everyone's got an opinion. Here's the real math on 2026 BAH, the VA loan, the funding fee, and where military families actually end up living in Okaloosa County.",
+    date: "November 12, 2026",
+    category: "Military & PCS",
+    readTime: "12 min read",
+    image: "/images/img-3.jpg",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          So you got orders to Eglin. Or Hurlburt. Or Duke Field. And now
+          you&apos;re trying to figure out where to live in a place you&apos;ve
+          maybe never been, on a timeline you don&apos;t control, while
+          everyone in your shop tells you something different about where
+          &quot;everybody&quot; lives. Like... okay. Deep breath.
+        </p>
+
+        <p className="mb-6 text-muted text-lg">
+          This is the post I send to every military family that calls me. It
+          covers how much house your BAH realistically buys here, how the VA
+          loan actually works (and what it costs), and how the different parts
+          of Okaloosa County stack up for the commute. Real numbers, no fluff.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          First: What&apos;s Your 2026 BAH?
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Eglin AFB falls in the Eglin AFB, FL Military Housing Area (MHA
+          FL056), and Hurlburt Field is covered by the same area. For 2026,
+          here&apos;s what a few common pay grades look like per month:
+        </p>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <thead>
+              <tr className="border-b border-foreground/20">
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Pay grade
+                </th>
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  With dependents
+                </th>
+                <th className="py-3 font-display font-bold text-foreground">
+                  Without dependents
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">E-5</td>
+                <td className="py-3 pr-6">$2,433</td>
+                <td className="py-3">$2,157</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">O-3</td>
+                <td className="py-3 pr-6">$3,399</td>
+                <td className="py-3">varies, check DTMO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          Always pull your exact number from the official{" "}
+          <a
+            href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-reef underline underline-offset-4 hover:text-reef/80"
+          >
+            DTMO BAH calculator
+          </a>
+          . Your rate is tied to your duty station on your orders, not the ZIP
+          code you end up living in. So living in Crestview vs. Destin
+          doesn&apos;t change your BAH. It just changes how far it goes.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Turning BAH Into a Purchase Price
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Here&apos;s the move a lot of families make: use BAH as the ceiling
+          for the <em>whole</em> monthly payment. Not just the mortgage. The
+          whole thing, taxes and insurance included. That way the house is
+          covered even if your other pay changes.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Rough example, using a 30-year VA loan at 6.75% with zero down and
+          the funding fee rolled in. I&apos;m estimating taxes plus homeowners
+          insurance at around $550 a month for the E-5 example and $700 for
+          the O-3, which is in the normal range here (but get real quotes):
+        </p>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <thead>
+              <tr className="border-b border-foreground/20">
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Scenario
+                </th>
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Left for P&amp;I
+                </th>
+                <th className="py-3 font-display font-bold text-foreground">
+                  Approx. price
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">E-5 w/ dependents ($2,433)</td>
+                <td className="py-3 pr-6">about $1,883/mo</td>
+                <td className="py-3">around $284,000</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">O-3 w/ dependents ($3,399)</td>
+                <td className="py-3 pr-6">about $2,699/mo</td>
+                <td className="py-3">around $407,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          That&apos;s not a rule, it&apos;s a starting point. You can
+          absolutely spend more than BAH if your budget works. Plenty of people
+          do. But this is the &quot;sleep at night&quot; number. And notice
+          what it tells you right away: at the E-5 level, Crestview and parts
+          of Fort Walton Beach are realistic. Most of Niceville and pretty much
+          all of Destin are a stretch.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Want to run your own numbers? The{" "}
+          <a
+            href="/#calculator"
+            className="text-reef underline underline-offset-4 hover:text-reef/80"
+          >
+            payment calculator on my homepage
+          </a>{" "}
+          lets you plug in price, rate, taxes and insurance.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The VA Loan, Explained Like a Normal Person
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The VA loan is honestly one of the best loans out there. The big
+          stuff:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            <strong>Zero down</strong> is allowed.
+          </li>
+          <li>
+            <strong>No monthly mortgage insurance.</strong> FHA and low-down
+            conventional loans charge it. VA doesn&apos;t.
+          </li>
+          <li>
+            <strong>No VA loan limit</strong> if you have full entitlement.
+            Your lender still decides what you qualify for based on income and
+            debts.
+          </li>
+          <li>
+            It&apos;s for a home you&apos;ll <strong>live in</strong>. Not a
+            pure investment property.
+          </li>
+        </ul>
+
+        <h4 className="font-display text-xl font-bold text-foreground mt-8 mb-3">
+          The funding fee (the part people forget)
+        </h4>
+        <p className="mb-6 text-muted text-lg">
+          Instead of monthly mortgage insurance, VA charges a one-time funding
+          fee. Most people roll it into the loan. For purchase loans in 2026:
+        </p>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="w-full text-left text-lg border-collapse">
+            <thead>
+              <tr className="border-b border-foreground/20">
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  Down payment
+                </th>
+                <th className="py-3 pr-6 font-display font-bold text-foreground">
+                  First use
+                </th>
+                <th className="py-3 font-display font-bold text-foreground">
+                  After first use
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-muted">
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">Less than 5%</td>
+                <td className="py-3 pr-6">2.15%</td>
+                <td className="py-3">3.3%</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">5% to under 10%</td>
+                <td className="py-3 pr-6">1.5%</td>
+                <td className="py-3">1.5%</td>
+              </tr>
+              <tr className="border-b border-foreground/10">
+                <td className="py-3 pr-6">10% or more</td>
+                <td className="py-3 pr-6">1.25%</td>
+                <td className="py-3">1.25%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          On a $300,000 loan with zero down on first use, that&apos;s about
+          $6,450. Not nothing. <strong>But</strong> if you receive VA
+          disability compensation, you&apos;re generally exempt from the fee
+          entirely, and there are a few other exemptions too (like active duty
+          Purple Heart recipients). If you have a pending disability claim,
+          tell your lender early. It matters.
+        </p>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            &quot;Your BAH doesn&apos;t care where you live. Your commute
+            does. Pick the area first, then the house.&quot;
+          </p>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Where Military Families Actually Live
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Okaloosa County is bigger than it looks on a map, and the bases are
+          spread out. Main Eglin, Hurlburt (out by Mary Esther), and Duke Field
+          (north, toward Crestview) are all in different directions. So the
+          first question I ask is: which gate, and what time do you have to be
+          there?
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-3 text-muted text-lg">
+          <li>
+            <strong>Fort Walton Beach / Mary Esther / Shalimar.</strong> The
+            short-commute option for Hurlburt and the southern side of Eglin.
+            Older housing stock in a lot of spots, which means more variety in
+            price. Watch flood zones near the sound.{" "}
+            <a
+              href="/blog/okaloosa-insider"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              My FWB breakdown is here.
+            </a>
+          </li>
+          <li>
+            <strong>Niceville / Bluewater Bay.</strong> Close to main Eglin,
+            schools people move here for, quieter feel. Also pricier.{" "}
+            <a
+              href="/blog/niceville-bluewater-bay-guide"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Full Niceville guide here.
+            </a>
+          </li>
+          <li>
+            <strong>Crestview.</strong> Where your BAH goes the furthest, lots
+            of newer construction, and handy for Duke Field. The tradeoff is
+            the drive south on 85.{" "}
+            <a
+              href="/blog/crestview-fl-guide-2026"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Crestview guide here.
+            </a>
+          </li>
+          <li>
+            <strong>Destin.</strong> Beautiful, expensive, and the bridge
+            traffic in summer is no joke. Usually a stretch on BAH alone.
+          </li>
+        </ul>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Think About Year Three Before You Buy
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Most assignments here are two to four years. So the real question
+          isn&apos;t just &quot;can I afford this?&quot; It&apos;s &quot;what
+          happens when I PCS out?&quot; Your two options are sell or rent it
+          out. If there&apos;s any chance you&apos;ll keep it as a rental:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>Buy where long-term rentals are steady (base-adjacent areas are, bc there&apos;s always another family PCSing in).</li>
+          <li>Run the rent numbers before you buy, not after.</li>
+          <li>Check the HOA rules. Some communities restrict renting.</li>
+          <li>Budget for a property manager if you&apos;ll be across the country.</li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          And depending on how much entitlement you used, keeping this one as
+          a rental may still leave you room to use a VA loan at your next
+          station. Ask your lender to walk you through your remaining
+          entitlement before you decide.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Buying From Out of State (Without Losing Your Mind)
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li><strong>Get pre-approved with a lender who does a lot of VA loans.</strong> VA appraisals and timelines have quirks.</li>
+          <li><strong>Video tours are your friend.</strong> I&apos;ll walk the house live and show you the stuff listing photos skip... the street, the neighbors&apos; yards, the water stains.</li>
+          <li><strong>Get insurance and flood quotes during your inspection period.</strong> In Florida this can swing your payment a lot.</li>
+          <li><strong>Line up your closing date with your report date.</strong> Ask about remote closing options if you can&apos;t be here in person.</li>
+          <li><strong>File for homestead after you move in.</strong> Deadline is March 1 of the year after you buy. <a href="/blog/florida-homestead-exemption-amendment-3-2026" className="text-reef underline underline-offset-4 hover:text-reef/80">Homestead 101 is here.</a></li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          Disabled veterans: Florida has extra property tax exemptions, up to
+          a full exemption for veterans with a 100% permanent and total
+          service-connected disability. Bring your VA letter when you file.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Bottom Line
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Start with your BAH, figure out your gate, and then pick the area.
+          The house part gets way easier once those two are locked in. If you
+          want, send me your rank, dependents, which base, and your report
+          date, and I&apos;ll send you a short list of areas and what your
+          money actually buys there right now. That&apos;s literally what
+          I&apos;m here for.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Sources
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-base">
+          <li>
+            <a
+              href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              DTMO BAH rate lookup
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://fedratecalc.com/bah-rates-2026/eglin-afb-fl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Eglin AFB, FL BAH rates 2026
+            </a>{" "}
+            (FedRateCalc)
+          </li>
+          <li>
+            <a
+              href="https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              VA funding fee and closing costs
+            </a>{" "}
+            (VA.gov)
+          </li>
+          <li>
+            <a
+              href="https://valoannetwork.com/va-loans/data/funding-fee/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              VA funding fee rate charts
+            </a>{" "}
+            (VA Loan Network)
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-sm italic">
+          This post is general information, not financial or legal advice.
+          BAH, VA rules and rates change. Confirm your numbers with DTMO and a
+          VA-approved lender before you make decisions.
+        </p>
+      </>
+    ),
+  },
+  "crestview-fl-guide-2026": {
+    seoTitle: "Living in Crestview, FL (2026): Home Prices, the New Bypass & Who It's For",
+    seoDescription:
+      "A local's guide to buying in Crestview, Florida in 2026: home values, the new $212M Southwest Crestview Bypass, commutes to Eglin, Hurlburt and Duke Field, new construction and what to watch.",
+    title: "Crestview Is Not 'Too Far' Anymore: A 2026 Buyer's Guide",
+    excerpt:
+      "Crestview used to get written off as the long-commute option. Then the bypass opened. Here's what homes actually cost up there now, who it's a great fit for, and the stuff I'd check before buying.",
+    date: "November 12, 2026",
+    category: "Local Guide",
+    readTime: "9 min read",
+    image: "/images/img-1.jpg",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Every time I mention Crestview to someone new to the area, I get the
+          same face. &quot;Isn&apos;t that kinda far?&quot; And like... it
+          depends where you&apos;re going. But for a lot of buyers, Crestview
+          is quietly the best value in Okaloosa County. Especially now.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          What Homes Cost in Crestview Right Now
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Zillow puts the typical Crestview home value around{" "}
+          <strong>$288,000</strong> (data through August 2026), basically flat
+          over the past year, with homes going pending in roughly 51 days.
+          Compare that to Niceville, where the typical value is around
+          $441,000. That gap is the whole story.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Quick heads up on data: you&apos;ll see much higher &quot;Crestview
+          median&quot; numbers floating around online. A lot of those are for
+          the <em>Crestview–Fort Walton Beach–Destin metro</em>, which includes
+          Destin. Not the same thing. If a number looks wild, check what area
+          it&apos;s actually measuring.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Flat prices plus a few hundred homes for sale means buyers have some
+          room to negotiate right now. Seller-paid closing costs, rate
+          buydowns, repairs... all on the table, especially with builders.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Bypass Changed Things
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          The <strong>Southwest Crestview Bypass</strong> opened on May 1,
+          2026. It&apos;s about 3.5 miles of new road, cost about $212 million,
+          and was literally two decades in the making. The point is getting
+          traffic around the mess on Ferdon Blvd (SR 85) instead of through it.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          It also ties into FDOT&apos;s new I-10 interchange at P.J. Adams
+          Parkway, which is still being finished. Once that&apos;s done, the
+          south and west sides of Crestview get a much more direct shot to
+          the interstate. And the county has put money toward widening the
+          stretch of SR 85 between P.J. Adams and I-10 too.
+        </p>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            &quot;Infrastructure shows up in the commute before it shows up in
+            the price. That window is where the value is.&quot;
+          </p>
+        </div>
+
+        <p className="mb-6 text-muted text-lg">
+          As a developer I always look at roads first. New access usually
+          means new subdivisions, new retail, and eventually, higher prices
+          near the new access points. I&apos;m not promising appreciation
+          (nobody honestly can), but the neighborhoods closest to the new
+          roads are the ones I&apos;d watch.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Who Crestview Is Great For
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-3 text-muted text-lg">
+          <li>
+            <strong>Military families on a BAH budget.</strong> Especially E-5
+            to E-7 with dependents. Your money buys more house here, often
+            newer, with a yard. Duke Field is close, and main Eglin is
+            reachable via 85.{" "}
+            <a
+              href="/blog/pcs-eglin-hurlburt-bah-va-loan-guide"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              (BAH-to-house math here.)
+            </a>
+          </li>
+          <li>
+            <strong>First-time buyers.</strong> Lower price points mean lower
+            closing costs and a more doable down payment.
+          </li>
+          <li>
+            <strong>People who want space.</strong> Bigger lots, less of the
+            stacked-on-top-of-each-other feel you get closer to the beach.
+          </li>
+          <li>
+            <strong>Remote workers and I-10 commuters.</strong> Interstate
+            access matters if you&apos;re heading toward Pensacola or
+            Tallahassee.
+          </li>
+        </ul>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Who It&apos;s Probably Not For
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          If you have to be at Hurlburt every morning, or you want to be at
+          the beach every weekend without thinking about it, Crestview is a
+          real drive. It&apos;s doable, people do it daily, but go test the
+          drive at your actual commute time before you buy. Not on a Sunday
+          afternoon. At 6:45 a.m. on a Tuesday.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          New Construction: What to Check
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          A lot of Crestview inventory is new or newer builds. That&apos;s
+          great (new roof, new systems, often better wind ratings) but check
+          these:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li><strong>CDD fees.</strong> Some communities have them, and they show up on your tax bill. Ask before you fall in love.</li>
+          <li><strong>HOA rules.</strong> Especially if you might rent it out after a PCS.</li>
+          <li><strong>Get your own inspection.</strong> Yes, even on brand new. Builders miss stuff.</li>
+          <li><strong>Builder incentives.</strong> Rate buydowns can beat a price cut. Do the math both ways.</li>
+          <li><strong>Drainage.</strong> Walk the lot after a heavy rain if you can.</li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          I went deeper on this in{" "}
+          <a
+            href="/blog/new-construction-vs-resale-okaloosa-county"
+            className="text-reef underline underline-offset-4 hover:text-reef/80"
+          >
+            New Build or Resale? How to Actually Compare Them
+          </a>
+          .
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Insurance Upside Nobody Mentions
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Being inland has a perk: a lot of Crestview homes sit outside the
+          high-risk flood zones, and newer construction tends to score well on
+          a{" "}
+          <a
+            href="/blog/florida-wind-mitigation-inspection-guide"
+            className="text-reef underline underline-offset-4 hover:text-reef/80"
+          >
+            wind mitigation inspection
+          </a>
+          . That can mean a noticeably lower insurance bill than a similar
+          house near the water. Still get quotes during your inspection period
+          though. Every house is different.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Bottom Line
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Crestview isn&apos;t the &quot;settle for it&quot; option anymore.
+          It&apos;s the get-more-house, newer-roads, lower-insurance option, as
+          long as the commute works for your life. If you want, tell me your
+          budget and where you need to be each morning, and I&apos;ll tell you
+          honestly whether Crestview makes sense for you.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Sources
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-base">
+          <li>
+            <a
+              href="https://www.zillow.com/crestview-fl/home-values/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Crestview, FL home values
+            </a>{" "}
+            (Zillow)
+          </li>
+          <li>
+            <a
+              href="https://getthecoast.com/welcome-to-your-new-road-okaloosa-county-opens-212m-southwest-crestview-bypass/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Okaloosa County opens $212M Southwest Crestview Bypass
+            </a>{" "}
+            (Get The Coast)
+          </li>
+          <li>
+            <a
+              href="https://myokaloosa.com/sites/default/files/Users/piouser/SouthwestCrestviewBypassOpeningEvent.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Southwest Crestview Bypass grand opening
+            </a>{" "}
+            (Okaloosa County)
+          </li>
+          <li>
+            <a
+              href="https://www.getthecoast.com/okaloosa-commits-10m-toward-widening-a-stretch-of-state-road-85-in-crestview/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Okaloosa commits $10M toward widening SR 85 in Crestview
+            </a>{" "}
+            (Get The Coast)
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-sm italic">
+          Market numbers change monthly. This is general information, not a
+          prediction of future values.
+        </p>
+      </>
+    ),
+  },
+  "niceville-bluewater-bay-guide": {
+    seoTitle: "Niceville & Bluewater Bay, FL: 2026 Neighborhood & Home Buying Guide",
+    seoDescription:
+      "What it's really like to buy in Niceville and Bluewater Bay, Florida: 2026 home values, schools, the Eglin commute, HOA vs. no-HOA pockets, and what drives prices in the Mid-Bay area.",
+    title: "Niceville & Bluewater Bay: Why People Move Here and Never Leave",
+    excerpt:
+      "Niceville is the place people say they'll 'just rent for a year' and then buy, then stay for a decade. Here's what homes cost, why the schools come up in every conversation, and how Bluewater Bay actually works.",
+    date: "November 12, 2026",
+    category: "Local Guide",
+    readTime: "9 min read",
+    image: "/images/florida-coast.png",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          Niceville has a reputation. Quiet, safe, great schools, everybody
+          knows everybody at Publix. And honestly? It mostly earns it. But
+          there&apos;s a price for that, and it&apos;s worth knowing exactly
+          what you&apos;re paying for before you start touring.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          What Homes Cost in Niceville
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Zillow puts the typical Niceville home value around{" "}
+          <strong>$441,000</strong> (data through June 2026), flat
+          year-over-year, with homes going pending in about 29 days. That
+          faster pace vs. other parts of the county tells you something:
+          demand here holds up, even in a slower market.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          Inside Bluewater Bay, prices range a lot. Older 1980s brick homes on
+          cul-de-sacs, golf course homes, gated sections, and waterfront on
+          Choctawhatchee Bay are all basically different markets wearing the
+          same name. A 3-bed, 2-bath can be in the mid-$400s while bay-front
+          property is a whole other conversation.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Why Everyone Brings Up the Schools
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          It&apos;s the number one reason families tell me they want
+          Niceville. Okaloosa County schools have a strong reputation overall,
+          and Niceville&apos;s get mentioned constantly. Bluewater Bay homes
+          commonly feed into Bluewater Elementary, Ruckel Middle and Niceville
+          High, but zoning can change street by street, so always verify the
+          exact address with the district before you write an offer.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          The investor angle: school reputation is a big part of why Niceville
+          prices tend to hold up. Families keep showing up, every PCS cycle.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Bluewater Bay 101
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Bluewater Bay sits east of Niceville proper along Highway 20. It&apos;s
+          a big master-planned area with golf, tennis, a marina on the bay, and
+          tons of trees (which people love until it&apos;s time to clean the
+          gutters lol). A few things to know:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-3 text-muted text-lg">
+          <li>
+            <strong>It&apos;s made of a bunch of smaller neighborhoods.</strong>{" "}
+            Each one has its own vibe, age, and price range.
+          </li>
+          <li>
+            <strong>HOA situations vary.</strong> Some sections are gated with
+            HOAs, and some homes have no HOA at all. Ask for the documents and
+            read the rental rules if you might rent it out later.
+          </li>
+          <li>
+            <strong>Lots of 1980s and 90s homes.</strong> Check the roof age,
+            the AC, the plumbing (especially older pipe types), and the
+            electrical panel.
+          </li>
+          <li>
+            <strong>The Mid-Bay Bridge is right there.</strong> Fast route to
+            Destin and the beach, but it&apos;s a toll bridge, so factor that
+            into a daily commute.
+          </li>
+        </ul>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            &quot;Same zip code, totally different houses. In Bluewater Bay,
+            you&apos;re buying the street and the year it was built, not just
+            the name.&quot;
+          </p>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Eglin Commute
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          This is Niceville&apos;s superpower. Main Eglin is right next door,
+          so for a lot of people working on base, the commute is short and
+          predictable. Hurlburt is a longer haul. If you or your spouse works
+          there, test the drive at rush hour before you commit.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Life Stuff
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li><strong>Northwest Florida State College</strong> is in Niceville, including the Mattie Kelly Arts Center for shows and events.</li>
+          <li><strong>The Boggy Bayou Mullet Festival</strong> every October. Yes, it&apos;s named after a fish. Yes, everyone goes.</li>
+          <li><strong>Water everywhere.</strong> Boggy Bayou, Rocky Bayou, Choctawhatchee Bay. Kayaks, paddleboards, boats.</li>
+          <li><strong>Fred Gannon Rocky Bayou State Park</strong> for trails and camping close to home.</li>
+        </ul>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          What I&apos;d Check Before Buying Here
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li><strong>Flood zone.</strong> Anything near the bayous or the bay, check the FEMA map and get a flood quote. <a href="/blog/flood-zones-decoded" className="text-reef underline underline-offset-4 hover:text-reef/80">Flood zones, explained.</a></li>
+          <li><strong>Roof age.</strong> It matters for insurance. A lot. <a href="/blog/florida-home-insurance-2026-what-changed" className="text-reef underline underline-offset-4 hover:text-reef/80">Here&apos;s why.</a></li>
+          <li><strong>Trees over the house.</strong> Pretty, but think about storms and your insurance inspector.</li>
+          <li><strong>Waterfront extras.</strong> Docks, seawalls and permits are their own thing. <a href="/blog/buying-waterfront-florida-flood-zones-dock-permits" className="text-reef underline underline-offset-4 hover:text-reef/80">Waterfront guide here.</a></li>
+          <li><strong>School zoning for the exact address.</strong> Don&apos;t assume.</li>
+        </ul>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Bottom Line
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Niceville costs more than most of the county, and you&apos;re paying
+          for the commute to Eglin, the schools, and the feel of the place.
+          For a lot of families that&apos;s 100% worth it. If you want help
+          figuring out which pocket of Niceville or Bluewater Bay fits your
+          budget, reach out. I&apos;ll give you the honest version.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Sources
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-base">
+          <li>
+            <a
+              href="https://www.zillow.com/niceville-fl/home-values/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Niceville, FL home values
+            </a>{" "}
+            (Zillow)
+          </li>
+          <li>
+            <a
+              href="https://www.redfin.com/neighborhood/572785/FL/Niceville/Bluewater-Bay/housing-market"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Bluewater Bay housing market
+            </a>{" "}
+            (Redfin)
+          </li>
+          <li>
+            <a
+              href="https://www.okaloosaschools.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Okaloosa County School District
+            </a>
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-sm italic">
+          Market numbers change monthly and school zones can change. Verify
+          with the source before making decisions.
+        </p>
+      </>
+    ),
+  },
+  "florida-home-insurance-2026-what-changed": {
+    seoTitle: "Florida Home Insurance in 2026: Rate Cuts, Citizens & the Roof Rule",
+    seoDescription:
+      "Florida homeowners insurance is finally easing in 2026. What the Citizens rate cuts mean, why your roof age matters, the 15-year roof rule, and how buyers in Okaloosa County can lower their premium.",
+    title: "Florida Home Insurance Is Finally Calming Down. Here's What Changed in 2026",
+    excerpt:
+      "For the first time in years, Florida insurance news is... kind of good? Citizens cut rates, private insurers are back, and there are real rules protecting your roof. Here's what it means for your bill.",
+    date: "November 12, 2026",
+    category: "Coastal Advisory",
+    readTime: "8 min read",
+    image: "/images/pensacola-header.jpg",
+    content: (
+      <>
+        <p className="mb-6 font-normal text-muted text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-reef first-letter:mr-3 first-letter:float-left">
+          If you&apos;ve been in Florida the last few years, you know the
+          insurance story. Companies leaving, premiums doubling, everyone
+          getting dumped onto Citizens. It was rough. So I genuinely did not
+          expect to be writing a mostly-good-news insurance post in 2026. But
+          here we are.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Citizens Cut Rates (For the First Time in a Decade)
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Citizens Property Insurance, the state-backed &quot;insurer of last
+          resort,&quot; got approval in March 2026 to cut rates for its
+          homeowners multiperil policies by an <strong>average of 8.8%</strong>,
+          with wind-only policies down about 5.5% on average. It&apos;s the
+          first time Citizens has lowered average personal lines rates since
+          2015.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          &quot;Average&quot; is doing a lot of work there, though. South
+          Florida got the biggest cuts. Your renewal could be down more, less,
+          or not at all depending on your house and your area. Read the actual
+          renewal.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Why: The Market Is Coming Back
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Citizens peaked at about 1.42 million policies in October 2023. Since
+          then its policy count has dropped by roughly three quarters, as
+          private insurers came back and took policies out. Lawmakers credit
+          the 2022 and 2023 reforms that cut down on lawsuits, and more
+          companies have been getting approved for rate <em>decreases</em>. In
+          September, Florida approved cuts of up to 10.4% for more than 62,000
+          policies across four private insurers.
+        </p>
+
+        <div className="my-10 p-8 bg-surface border-l-4 border-reef rounded-r-xl">
+          <p className="text-foreground italic font-serif text-xl leading-relaxed">
+            &quot;Lower than last year is still not cheap. Florida insurance is
+            calming down, not cheap. Budget accordingly.&quot;
+          </p>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          If You&apos;re on Citizens, Expect Offers
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Citizens is required to try to move policies to private companies.
+          So if you have Citizens, you may get a &quot;takeout&quot; offer from
+          a private insurer. Here&apos;s the catch: if a private company offers
+          comparable coverage close enough in price to your Citizens renewal,
+          you can lose eligibility to stay with Citizens. You aren&apos;t
+          forced to take that specific offer, but you&apos;d need to find
+          coverage somewhere else.
+        </p>
+        <p className="mb-6 text-muted text-lg">
+          My advice? Don&apos;t panic, don&apos;t ignore it. Compare coverage
+          line by line (deductibles, especially the hurricane deductible),
+          check the company&apos;s financial rating, and talk to an independent
+          agent who can quote several carriers.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          The Roof Rule Every Buyer Should Know
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Roofs are the number one thing insurers care about here. Florida law
+          gives you some real protection:
+        </p>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-lg">
+          <li>
+            If the roof is <strong>less than 15 years old</strong>, an insurer
+            can&apos;t refuse to issue or renew your homeowners policy{" "}
+            <em>solely</em> because of the roof&apos;s age.
+          </li>
+          <li>
+            If it&apos;s <strong>15 or older</strong>, you can pay for an
+            inspection, and if an authorized inspector says it has{" "}
+            <strong>at least 5 years of useful life left</strong>, they
+            can&apos;t refuse coverage solely because of age.
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-lg">
+          &quot;Solely&quot; is the key word. Insurers can still decline for
+          condition, damage, or other reasons. So when you&apos;re buying, ask
+          for the roof permit date (I&apos;ll pull it), and if the roof is
+          getting up there, get insurance quotes early in your inspection
+          period. A roof issue found on day 14 is way better than day 29.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          How to Actually Lower Your Premium
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-3 text-muted text-lg">
+          <li>
+            <strong>Get a wind mitigation inspection.</strong> Around $150, and
+            it documents roof straps, shutters, roof shape and more. The
+            discounts can be big.{" "}
+            <a
+              href="/blog/florida-wind-mitigation-inspection-guide"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Full breakdown here.
+            </a>
+          </li>
+          <li>
+            <strong>Shop at every renewal.</strong> With more companies back in
+            the market, loyalty doesn&apos;t pay like it used to.
+          </li>
+          <li>
+            <strong>Look at your hurricane deductible.</strong> A higher one
+            lowers the premium, but make sure you could actually cover it.
+          </li>
+          <li>
+            <strong>Watch for My Safe Florida Home.</strong> The state program
+            offers free wind mitigation inspections and matching grants for
+            upgrades like impact windows and roof hardening. Funding opens in
+            rounds and has filled up fast before, so check{" "}
+            <a
+              href="https://mysafeflhome.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              mysafeflhome.com
+            </a>{" "}
+            for current status.
+          </li>
+          <li>
+            <strong>Bundle and ask about discounts.</strong> Alarm systems,
+            newer roofs, impact glass. Ask what they offer. They won&apos;t
+            always volunteer it.
+          </li>
+        </ul>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Don&apos;t Forget Flood (It&apos;s Separate)
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Homeowners insurance doesn&apos;t cover flooding. That&apos;s a
+          separate policy, and in a high-risk zone with a federally backed
+          mortgage, it&apos;s required. Even outside those zones, it&apos;s
+          worth pricing. Lots of Okaloosa homes near the sound and bayous sit
+          close to the line.{" "}
+          <a
+            href="/blog/flood-zones-decoded"
+            className="text-reef underline underline-offset-4 hover:text-reef/80"
+          >
+            Flood zones decoded here.
+          </a>
+        </p>
+
+        {/* CALLOUT BANNER LINKING TO DOCK & DUNE */}
+        <div className="corner-marks my-12 p-8 bg-surface border border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h4 className="font-display text-xl font-bold text-foreground mb-2">
+              🌊 Ballpark Coastal Insurance & Permitting Costs
+            </h4>
+            <p className="text-muted text-sm max-w-xl">
+              Explore live OpenFEMA flood loss histories and test annual
+              insurance swings across zones with our dedicated coastal platform,{" "}
+              <strong>Dock &amp; Dune</strong>.
+            </p>
+          </div>
+          <a
+            href="https://dock-and-dune.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full px-6 py-3 bg-reef text-white font-semibold hover:bg-reef/90 transition-colors whitespace-nowrap text-sm"
+          >
+            Launch Dock &amp; Dune
+          </a>
+        </div>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Bottom Line
+        </h3>
+        <p className="mb-6 text-muted text-lg">
+          Insurance in Florida is moving in the right direction for once. For
+          buyers, that means more options and fewer nasty surprises, as long
+          as you get quotes early, know your roof age, and get the wind mit
+          done. If you&apos;re looking at a specific house and want to know
+          what to watch for, send it over. I&apos;ll tell you.
+        </p>
+
+        <h3 className="font-display text-2xl font-bold text-foreground mt-12 mb-4">
+          Sources
+        </h3>
+        <ul className="mb-6 list-disc list-inside space-y-2 text-muted text-base">
+          <li>
+            <a
+              href="https://www.citizensfla.com/-/20260304-citizens-2026-multiperil-rates-to-drop-statewide"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Citizens&apos; 2026 multiperil rates to drop statewide
+            </a>{" "}
+            (Citizens, March 2026)
+          </li>
+          <li>
+            <a
+              href="https://www.reinsurancene.ws/citizens-rates-fall-as-policy-count-decline-drives-lower-reinsurance-demand/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Citizens rates fall as policy count declines
+            </a>{" "}
+            (Reinsurance News, March 2026)
+          </li>
+          <li>
+            <a
+              href="https://www.floridarealtors.org/news-media/news-articles/2026/09/florida-approves-more-home-insurance-rate-cuts"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Florida approves more home insurance rate cuts
+            </a>{" "}
+            (Florida Realtors, September 2026)
+          </li>
+          <li>
+            <a
+              href="https://www.kin.com/blog/15-year-roof-rule-florida/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Florida&apos;s 15-year roof rule
+            </a>{" "}
+            (Kin)
+          </li>
+          <li>
+            <a
+              href="https://codes.findlaw.com/fl/title-xxxvii-insurance/fl-st-sect-627-7011/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-reef underline underline-offset-4 hover:text-reef/80"
+            >
+              Florida Statute 627.7011
+            </a>
+          </li>
+        </ul>
+        <p className="mb-6 text-muted text-sm italic">
+          This post is general information, not insurance or legal advice.
+          Rates and rules change. Talk to a licensed insurance agent about your
+          specific property.
+        </p>
+      </>
+    ),
+  },
 };
 
 export default blogPosts;
